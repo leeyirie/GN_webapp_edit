@@ -139,7 +139,7 @@ body {
     align-items: center; /* 세로 중앙 정렬 */
     justify-content: space-between; /* 양쪽 정렬 */
     width: 100%;
-    padding: 24px 50px;
+    padding: 12px 48px;
     border: 1.2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
 }
@@ -225,6 +225,7 @@ body {
 .surgery-list-con {
     max-width: 780px;
     margin: 0 auto;
+    justify-content: center;
 }
 .surgery-list-con .surgery-list {
     display: flex;
@@ -232,7 +233,7 @@ body {
 }
 .surgery-list-con .surgery-list .surgery-item {
     margin: 0 0px 20px;
-    width: calc(100% / 6);
+    width: calc(100% / 5);
     text-align: center;
 }
 
@@ -258,7 +259,7 @@ body {
 .inter-select-con .tit {
     font-size: 2.4rem;
     color: #000;
-    font-weight: 800;
+    font-weight: 500; //[수정]폰트 굵기 변경
     margin-bottom: 30px;
 }
 
@@ -754,55 +755,222 @@ body {
 
 /* 로그인 페이지 */
 #content.login-page {
-    padding: 160px 0;
+    max-width: 460px;
+    margin: 200px auto;
+    padding: 0 20px;
+    background: none;
 }
+
+/* [수정] 로그인 컨테이너 */
+.login-container {
+    border-radius: 20px;
+    padding: 50px 40px;
+}
+
+/* [수정] 로그인 상단 */
 .login-top-con {
     text-align: center;
+    margin-bottom: 40px;
 }
+
 .login-top-con h2 {
-    font-size: 30px;
-    color: #000;
-    font-weight: 800;
-    margin: 20px 0;
-    line-height: 1.3;
+    font-size: 36px;
+    font-weight: 700;
+    color: #4d3dbf;
 }
 
-.login-btn-con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-.login-btn-con a {
+/* [수정] 로그인 폼 */
+.login-form-con {
     width: 100%;
-    margin: 5px 0;
-    max-width: 500px;
-    border-radius: 15px;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 24px;
-    font-weight: 800;
-    display: inline-block;
-}
-.login-btn-con a.kakao {
-    background: #fee502;
-    color: #000;
-}
-.login-btn-con a.line {
-    background: #07c755;
-    color: #fff;
-}
-.login-btn-con a.email {
-    background: #484760;
-    color: #fff;
 }
 
-.warning {
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 30px;
-    text-align: center;
+.login-form .input-row {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.login-form .input-row input {
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 20px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.login-form .input-row input::placeholder {
+    color: #999;
+}
+
+.login-form .input-row input:focus {
+    border-color: #4d3dbf;
+    outline: none;
+}
+
+/* [수정] 로그인 옵션 */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 30px;
+}
+
+.save-id {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.save-id input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4d3dbf;
+}
+
+.save-id span {
+    font-size: 18px;
+    color: #666;
+}
+
+.find-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.find-links a {
+    font-size: 18px;
     color: #777;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.find-links a:hover {
+    color: #4d3dbf;
+}
+
+.find-links .divider {
+    color: #ddd;
+}
+
+/* [수정] 로그인 버튼 */
+.login-submit-btn {
+    width: 100%;
+    height: 56px;
+    background: #4d3dbf;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-submit-btn:hover {
+    background: #3f31a0;
+}
+
+/* [수정] 회원가입 링크 버튼 */
+.signup-link-btn {
+    display: block;
+    width: 100%;
+    height: 56px;
+    background: #fff;
+    color: #4d3dbf;
+    border: 1px solid #4d3dbf;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 54px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.signup-link-btn:hover {
+    background: #f8f7ff;
+}
+
+/* [수정] 반응형 스타일 */
+@media screen and (max-width: 767px) {
+    #content.login-page {
+        margin: 40px auto;
+    }
+
+    .login-container {
+        padding: 40px 24px;
+        border-radius: 16px;
+    }
+
+    .login-top-con {
+        margin-bottom: 30px;
+    }
+
+    .login-top-con h2 {
+        font-size: 28px;
+    }
+
+    .login-form .input-row input {
+        height: 50px;
+        font-size: 15px;
+        border-radius: 10px;
+    }
+
+    .login-options {
+        margin: 16px 0 24px;
+    }
+
+    .login-submit-btn,
+    .signup-link-btn {
+        height: 50px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .signup-link-btn {
+        line-height: 48px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-top-con h2 {
+        font-size: 24px;
+    }
+
+    .login-form .input-row input {
+        height: 46px;
+        font-size: 14px;
+    }
+
+    .login-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .find-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .login-submit-btn,
+    .signup-link-btn {
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .signup-link-btn {
+        line-height: 44px;
+    }
 }
 
 /* 마이페이지 */
@@ -1417,7 +1585,7 @@ body {
     background: #eee;
 }
 
-/* 
+
 .inter-select-slide-con .surgery-list 
 {display:flex; overflow-x:auto; scroll-snap-type:x mandatory}
 
@@ -1427,7 +1595,7 @@ body {
 
 .inter-select-slide-con .surgery-list .slick-list
 {max-width:1200px; overflow:visible;}
- */
+
 .inter-select-slide-con .container {
     padding: 0;
 }
@@ -2125,5 +2293,310 @@ body {
 
     #header .header-search-con .search-input-con .search-label {
         font-size: 14px;
+    }
+}
+
+/* [추가] 로그인 페이지 헤더 배경 스타일 */
+#header.login-header {
+    padding: 20px 0;
+}
+
+#header.login-header:before {
+    height: 100%; /* 배경 높이 축소 */
+}
+
+#header.login-header .header-search-con {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* 로그인 페이지 반응형 대응 */
+@media screen and (max-width: 1199px) {
+    #header.login-header {
+        padding: 18px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #header.login-header {
+        padding: 16px 0;
+    }
+
+    #header.login-header .header-search-con {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #header.login-header {
+        padding: 14px 0;
+    }
+
+    #header.login-header .header-search-con {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* [추가] 회원가입 페이지 헤더 사이즈 줄이기 */
+#header.signup-header {
+    padding: 20px 0;
+}
+
+#header.signup-header:before {
+    height: 100%; /* 배경 높이 축소 */
+}
+
+#header.signup-header .header-search-con {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+/* [추가] 회원가입 페이지 스타일 */
+#content.signup-page {
+    max-width: 560px;
+    margin: 80px auto;
+    padding: 0 20px;
+    background: transparent;
+}
+
+.signup-container {
+    border-radius: 20px;
+    padding: 50px 40px;
+}
+
+.signup-top-con {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.signup-top-con h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* 입력 폼 스타일 */
+.signup-form .input-row {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.signup-form .input-row label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.signup-form .input-row input {
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.signup-form .input-row input:focus {
+    border-color: #4d3dbf;
+    outline: none;
+}
+
+/* 버튼이 있는 입력 필드 */
+.signup-form .input-row.with-button .input-button-wrap {
+    display: flex;
+    gap: 10px;
+}
+
+.signup-form .input-row.with-button input {
+    flex: 1;
+}
+
+.signup-form .check-button,
+.signup-form .verify-button {
+    width: 120px;
+    height: 56px;
+    background: #4d3dbf;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-form .check-button:hover,
+.signup-form .verify-button:hover {
+    background: #3f31a0;
+}
+
+/* 입력 가이드 텍스트 */
+.signup-form .input-guide {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+/* 타이머 */
+.signup-form .timer {
+    color: #ff3b3b;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* 약관 동의 섹션 */
+.terms-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: #f8f8f8;
+    border-radius: 12px;
+}
+
+.terms-all {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.terms-all label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.terms-list label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.terms-list label:last-child {
+    margin-bottom: 0;
+}
+
+.terms-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.terms-list em {
+    color: #ff3b3b;
+    font-style: normal;
+    margin-left: 4px;
+}
+
+.terms-detail {
+    margin-left: auto;
+    color: #666;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* 가입하기 버튼 */
+.signup-submit-btn {
+    width: 100%;
+    height: 56px;
+    background: #4d3dbf;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-submit-btn:hover {
+    background: #3f31a0;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 767px) {
+    #content.signup-page {
+        margin: 40px auto;
+    }
+
+    .signup-container {
+        padding: 30px 20px;
+    }
+
+    .signup-top-con h2 {
+        font-size: 28px;
+    }
+
+    .signup-form .input-row label {
+        font-size: 15px;
+    }
+
+    .signup-form .input-row input {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .signup-form .check-button,
+    .signup-form .verify-button {
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .terms-section {
+        padding: 20px;
+        margin: 30px 0;
+    }
+
+    .terms-all label {
+        font-size: 16px;
+    }
+
+    .terms-list label {
+        font-size: 15px;
+    }
+
+    .signup-submit-btn {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .signup-container {
+        padding: 25px 15px;
+    }
+
+    .signup-top-con h2 {
+        font-size: 24px;
+    }
+
+    .signup-form .input-row input {
+        height: 46px;
+        font-size: 14px;
+    }
+
+    .signup-form .check-button,
+    .signup-form .verify-button {
+        width: 90px;
+        height: 46px;
+        font-size: 14px;
+    }
+
+    .terms-all label {
+        font-size: 15px;
+    }
+
+    .terms-list label {
+        font-size: 14px;
+    }
+
+    .signup-submit-btn {
+        height: 46px;
+        font-size: 15px;
     }
 }

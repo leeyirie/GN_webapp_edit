@@ -22,39 +22,59 @@
     </head>
     <body>
         <div id="wrap">
-            <header id="header">
+            <header id="header" class="login-header">
                 <div class="header-inner">
                     <div class="header-wrap">
-                        <a href="./index.html">
-                            <h1 class="logo" style="background-image: url('./img/logo.png')"></h1>
-                        </a>
-                        <div class="util-box">
-                            <a href="./search.html" class="search-icon-btn">
-                                <i class="search-icon"></i>
-                            </a>
-                            <a href="./loginSelect.html" class="login-btn">
-                                <span>로그인 및 회원가입</span>
+                        <div>
+                            <div class="header-top-text">대부중개업등록번호: 2024-서울강남-0159(대부업)</div>
+                            <a href="./index.html">
+                                <h1 class="logo" style="background-image: url('./img/gn-logo-white.svg')"></h1>
                             </a>
                         </div>
+                        <div class="util-box">
+                            <div class="auth-buttons">
+                                <a href="./login.html" class="login-btn">로그인</a>
+                                <a href="./signup.html" class="signup-btn">회원가입</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-search-con">
+                    <div class="header-search-wrap">
+                        <a href="./search.html" class="search-input-con">
+                            <div class="search-label">병원, 시술, 부위를 검색해보세요</div>
+                            <button class="search-icon"><i></i></button>
+                        </a>
                     </div>
                 </div>
             </header>
             <div id="content" class="login-page">
-                <div class="login-top-con">
-                    <div class="container">
-                        <img src="./img/login-logo.png" />
-                        <h2>성형수술 & 시술 정보부터 <br />맞춤형 대출 상품까지</h2>
-                        <h2>강남오빠와 <br />함께 떠나볼까요</h2>
+                <div class="login-container">
+                    <div class="login-top-con">
+                        <h2>로그인</h2>
                     </div>
-                    <div class="login-btn-con">
-                        <div class="container">
-                            <div class="login-btn-flex-con">
-                                <a href="" class="kakao"> 카카오로 3초만에 시작하기</a>
-                                <a href="" class="line"> 라인으로 시작하기</a>
-                                <a href="" class="email"> 이메일로 시작하기</a>
+                    <div class="login-form-con">
+                        <form class="login-form">
+                            <div class="input-row">
+                                <input type="text" placeholder="아이디" id="userId" name="userId">
                             </div>
-                            <p class="warning">불법 촬영물 업로드시 법적 처벌을 받을 수 있습니다.</p>
-                        </div>
+                            <div class="input-row">
+                                <input type="password" placeholder="비밀번호" id="userPw" name="userPw">
+                            </div>
+                            <div class="login-options">
+                                <label class="save-id">
+                                    <input type="checkbox" id="saveId">
+                                    <span>아이디 저장</span>
+                                </label>
+                                <div class="find-links">
+                                    <a href="/find-id">아이디 찾기</a>
+                                    <span class="divider">|</span>
+                                    <a href="/find-password">비밀번호 찾기</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="login-submit-btn">로그인</button>
+                            <a href="./signup.html" class="signup-link-btn">회원가입</a>
+                        </form>
                     </div>
                 </div>
             </div>
