@@ -2933,13 +2933,13 @@ body {
 }
 
 .hospital-location {
-    font-size: 14px;
+    font-size: 18px;
     color: #666;
     margin-bottom: 8px;
 }
 
 .hospital-info h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
     color: #333;
     margin-bottom: 12px;
@@ -2954,11 +2954,14 @@ body {
 .rating {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-top: 14px;
 }
 
 .rating .stars {
-    color: #FFD700;
+    color: rgb(255, 213, 0);
     margin-right: 4px;
 }
 
@@ -2976,16 +2979,24 @@ body {
 .price-info {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 8px;
+    margin-top: 0;
 }
 
 .price-info .discount {
-    color: #ff3b3b;
+    color: rgb(255, 0, 195);
     font-weight: 600;
+    font-size: 24px;
 }
 
-.price-info .price,
-.price {
+.price-info .price-before {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.price-info .price {
     font-size: 20px;
     font-weight: 600;
     color: #333;
@@ -2993,42 +3004,107 @@ body {
 
 /* 반응형 스타일 */
 @media screen and (max-width: 768px) {
-    .hospital-events {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .hospital-event-item {
+        flex-direction: column;
     }
 
-    .hospital-info h3 {
-        font-size: 16px;
+    .event-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .event-info {
+        padding: 15px;
     }
 
     .hospital-location {
+        font-size: 16px;
+    }
+
+    .event-title {
+        font-size: 20px;
+    }
+
+    .rating {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .rating .reviews {
         font-size: 13px;
     }
 
-    .price-info .price,
-    .price {
+    .price-info {
+        gap: 6px;
+    }
+
+    .price-info .discount {
+        font-size: 20px;
+    }
+
+    .price-info .price-before {
+        font-size: 14px;
+    }
+
+    .price-info .price {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .hospital-events {
-        grid-template-columns: 1fr;
-        margin: 0;
-    }
-
     .hospital-event-item {
-        margin: 0 0 16px;
+        flex-direction: column;
     }
 
-    .hospital-info {
+    .event-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .event-info {
         padding: 12px;
     }
+
+    .hospital-location {
+        font-size: 14px;
+    }
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .rating {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .rating .reviews {
+        font-size: 12px;
+    }
+
+    .price-info {
+        gap: 4px;
+    }
+
+    .price-info .discount {
+        font-size: 18px;
+    }
+
+    .price-info .price-before {
+        font-size: 13px;
+    }
+
+    .price-info .price {
+        font-size: 16px;
+    }
 }
+
+
 
 /* 정렬 옵션 스타일 */
 .sort-options {
     display: flex;
+    justify-content: right;
     gap: 12px;
     margin-bottom: 24px;
     padding: 20px 0;
@@ -3090,19 +3166,21 @@ body {
     width: 200px;
     height: 200px;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .event-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .rank-badge {
     position: absolute;
     left: 10px;
     top: 10px;
-    background: rgba(0, 0, 0, 0.6);
+    background: #4d3dbf;
     color: #fff;
     padding: 4px 8px;
     border-radius: 4px;
@@ -3134,11 +3212,13 @@ body {
 .rating {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
+    justify-content: flex-end;
+    margin-bottom: 4px;
+    font-size: 18px;
 }
 
 .rating .stars {
-    color: #FFD700;
+    color: rgb(255, 213, 0);
     margin-right: 4px;
 }
 
@@ -3156,21 +3236,27 @@ body {
 .price-info {
     margin-top: auto;
     display: flex;
+    justify-content: right;
     align-items: center;
     gap: 8px;
 }
 
+
 .price-info .discount {
-    color: #ff3b3b;
+    color:rgb(255, 0, 195);
     font-weight: 600;
+    font-size: 24px;
 }
 
-.price-info .price,
-.price {
+.price-info .price {
     font-size: 20px;
     font-weight: 600;
     color: #333;
+    display: flex;
+    justify-content: right;
 }
+
+
 
 /* 반응형 스타일 */
 @media screen and (max-width: 768px) {
@@ -3192,7 +3278,7 @@ body {
     }
 
     .hospital-event-item {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .event-image {
@@ -3254,7 +3340,8 @@ body {
     }
 }
 
-/* 페이지네이션 스타일 */
+
+/* [추가] 각 퀵 메뉴에서 클릭시 들어가는 페이지에서 페이지네이션 스타일 */
 .pagination {
     display: flex;
     justify-content: center;
@@ -3340,5 +3427,188 @@ body {
         height: 24px;
         padding: 0 4px;
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hospital-events-list {
+        gap: 15px;
+    }
+
+    .hospital-event-item {
+        flex-direction: row;
+    }
+
+    .event-image {
+        width: 30%;
+        height: 0;
+        padding-top: 100%;
+    }
+
+    .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .event-info {
+        padding: 15px;
+    }
+
+    .hospital-location {
+        font-size: 16px;
+    }
+
+    .event-title {
+        font-size: 20px;
+    }
+
+    .rating {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .rating .reviews {
+        font-size: 13px;
+    }
+
+    .price-info {
+        gap: 6px;
+    }
+
+    .price-info .discount {
+        font-size: 20px;
+    }
+
+    .price-info .price-before {
+        font-size: 14px;
+    }
+
+    .price-info .price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hospital-events-list {
+        gap: 12px;
+    }
+
+    .hospital-event-item {
+        flex-direction: row;
+        width: 100%;
+        height: 150px;
+    }
+
+    .event-image {
+        width: 30%;
+        height: 0;
+        padding-top: 100%;
+    }
+
+    .event-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .event-info {
+        padding: 12px;
+    }
+
+    .hospital-location {
+        font-size: 14px;
+    }
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .rating {
+        font-size: 15px;
+        margin-top: 8px;
+    }
+
+    .rating .reviews {
+        font-size: 12px;
+    }
+
+    .price-info {
+        gap: 4px;
+    }
+
+    .price-info .discount {
+        font-size: 18px;
+    }
+
+    .price-info .price-before {
+        font-size: 13px;
+    }
+
+    .price-info .price {
+        font-size: 16px;
+    }
+}
+
+/* [수정] 이벤트 썸네일 이미지 스타일 */
+.event-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* [수정] 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    .hospital-event-item {
+        flex-direction: row;
+    }
+
+    .event-image {
+        width: 30%;
+        height: 0;
+        padding-top: 30%;
+    }
+
+    .event-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hospital-event-item {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+
+    .event-image {
+        width: 30%;
+        height: 0;
+        padding-top: 30%;
+    }
+
+    .event-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
