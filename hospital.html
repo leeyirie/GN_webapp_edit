@@ -13,6 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/hospital.js"></script>
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -69,37 +70,44 @@
 
       <div id="content" class="hospital-page">
         <div class="container">
-          <div class="cm-title-con">
-            <h2 class="tit">병원 정보</h2>
-          </div>
-
           <!-- 필터 섹션 -->
           <div class="filter-section">
-            <div class="filter-group">
-              <h3>지역</h3>
-              <div class="filter-options">
-                <button class="filter-btn active">전체</button>
-                <button class="filter-btn">서울</button>
-              </div>
+            <div class="cm-title-con">
+              <h2 class="tit">병원 정보</h2>
             </div>
-            <div class="filter-group">
-              <h3>시술</h3>
-              <div class="filter-options">
-                <button class="filter-btn active">전체</button>
-                <button class="filter-btn">눈성형</button>
-                <button class="filter-btn">코성형</button>
-                <button class="filter-btn">안면윤곽</button>
-                <button class="filter-btn">가슴성형</button>
-                <button class="filter-btn">피부</button>
+            <div class="filter-buttons">
+              <div class="filter-group">
+                <button class="filter-btn">
+                  <span class="selected-option">전체</span>
+                </button>
+                <div class="filter-options">
+                  <div class="filter-option active">전체</div>
+                  <div class="filter-option">서울</div>
+                </div>
               </div>
-            </div>
-            <div class="filter-group">
-              <h3>정렬</h3>
-              <div class="filter-options">
-                <button class="filter-btn active">인기순</button>
-                <button class="filter-btn">평점순</button>
-                <button class="filter-btn">가격순</button>
-                <button class="filter-btn">최신순</button>
+              <div class="filter-group">
+                <button class="filter-btn">
+                  <span class="selected-option">전체</span>
+                </button>
+                <div class="filter-options">
+                  <div class="filter-option active">전체</div>
+                  <div class="filter-option">눈성형</div>
+                  <div class="filter-option">코성형</div>
+                  <div class="filter-option">안면윤곽</div>
+                  <div class="filter-option">가슴성형</div>
+                  <div class="filter-option">피부</div>
+                </div>
+              </div>
+              <div class="filter-group">
+                <button class="filter-btn">
+                  <span class="selected-option">인기순</span>
+                </button>
+                <div class="filter-options">
+                  <div class="filter-option active">인기순</div>
+                  <div class="filter-option">평점순</div>
+                  <div class="filter-option">가격순</div>
+                  <div class="filter-option">최신순</div>
+                </div>
               </div>
             </div>
           </div>
