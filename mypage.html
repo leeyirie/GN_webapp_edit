@@ -1,349 +1,295 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>강남오빠</title>
-  <!-- 폰트 로드 -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
-  <!-- jquery 로드 -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="./js/slick.js"></script>
-  <script src="./js/script.js"></script>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강남오빠 - 마이페이지</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <div class="header-wrap">
+            <div>
+              <div class="header-top-text">
+                대부중개업등록번호: 2024-서울강남-0159(대부업)
+              </div>
+              <a href="./index.html">
+                <h1
+                  class="logo"
+                  style="background-image: url('./img/gn-logo-white.svg')"
+                ></h1>
+              </a>
+            </div>
 
-  <link rel="stylesheet" href="./css/slick.css">
-  <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  <div id="wrap">
-    <header id="header">
-      <div class="header-inner">
-        <div class="header-wrap">
-          <a href="./index.html">
-            <h1 class="logo" style="background-image:url('./img/logo.png')"></h1>
-          </a>
-          <div class="util-box">
-            <a href="./search.html" class="search-icon-btn">
-              <i class="search-icon"></i>
-            </a>
-            <a href="" class="login-btn" id="logout">
-              <span>로그아웃</span>
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </header>
-    <div id="content" class="mypage-page">
-      <div class="mypage-top-con">
-        <div class="container">
-          <div class="user-info-con">
-            <div class="user-img-con">
-              <!-- -->
-              <div class="img"></div>
-            </div>
-            <div class="user-profile">
-              <h2 class="name"><span>닉네임</span>입니다.</h2>
-              <div class="user-join"><span>가입일</span><span>2024.12.12</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-        <div class="user-loan-con">
-          <div class="container">
-            <div class="user-loan-wrapper border-top-4-gray">
-              <div class="tit-con ">
-                <h2 class="tit">나의 대출 현황</h2>
-              </div>
-              <div class="loan-status">
-    
-                <div class="status-con using-product">
-                  <h4>이용중인 상품</h4>
-                  <h1>모티바500</h1>
-                </div>
-                <div class="status-con loan-cost">
-                  <h4>대출 잔액</h4>
-                  <h1>5,148,000원</h1>
-                </div>
-              </div>
-              <div class="loan-info">
-                <div class="info-con">
-                  <span class="tit">최초 대출 금액</span>
-                  <span class="txt">5,500,000원 (금리 15%)</span>
-                </div>
-                <div class="info-con">
-                  <span class="tit">대출기간</span>
-                  <span class="txt">24. 09. 22 ~ 29. 09. 20 (60개월)</span>
-                </div>
+            <div class="util-box">
+              <div class="auth-buttons">
+                <a href="./loginSelect.html" class="login-btn">로그인</a>
+                <a href="./signup.html" class="signup-btn">회원가입</a>
               </div>
             </div>
           </div>
-          
         </div>
-        <div class="user-deposit-con">
-          <div class="container">
-            <h4 class="deposit-tit">입금내역</h4>
-            <div class="deposit-box">
-              <ul class="deposit-list">
-                <li>
-                  <span class="type">자동이체입금</span>
-                  <div class="date-bank-des">
-                    <span class="date">12. 20</span>
-                    <span class="bank">국민은행</span>
-                  </div>
-                  <strong class="cost">88,000원</strong>
-                </li>
-                <li>
-                  <span class="type">자동이체입금</span>
-                  <div class="date-bank-des">
-                    <span class="date">12. 20</span>
-                    <span class="bank">국민은행</span>
-                  </div>
-                  <strong class="cost">88,000원</strong>
-                </li>
-                <li>
-                  <span class="type">자동이체입금</span>
-                  <div class="date-bank-des">
-                    <span class="date">12. 20</span>
-                    <span class="bank">국민은행</span>
-                  </div>
-                  <strong class="cost">88,000원</strong>
-                </li>
-                <li>
-                  <span class="type">자동이체입금</span>
-                  <div class="date-bank-des">
-                    <span class="date">12. 20</span>
-                    <span class="bank">국민은행</span>
-                  </div>
-                  <strong class="cost">88,000원</strong>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-        </div>
-        <div class="user-dibs-con">
-          <div class="container">
-            <div class="user-dibs-wrapper border-top-4-gray">
-              <div class="dibs-tit-con">
-                <h2 class="tit">찜 목록</h2>
-                <h2 class="type">성형수술 & 시술</h2>
-              </div>
-              <div class="dibs-list-con">
-                <ul class="dibs-list">
-                  <li class="dibs-item">
-                    <a href="">
-                      <div class="dibs-prd-con">
-                        <div class="img-con">
-    
-                        </div>
-                        <div class="des-con">
-                          <h4 class="tit">상품명 입니다.</h4>
-                          <p class="des">상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다.</p>
-                          <strong class="hospital-name">병원 이름입니다.</strong>
-                          <div class="asterion-con">
-                            <img src="./img/asterion-star-icon.png" alt="">
-                            <strong class="grade">5.0</strong>
-                            <span class="people">(150)</span>
-                          </div>
-                          <div class="money-con">
-                            <span class="cost">880,000원</span>
-                            <strong class="discount-per">46%</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="dibs-item">
-                    <a href="">
-                      <div class="dibs-prd-con">
-                        <div class="img-con">
-    
-                        </div>
-                        <div class="des-con">
-                          <h4 class="tit">상품명 입니다.</h4>
-                          <p class="des">상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다.</p>
-                          <strong class="hospital-name">병원 이름입니다.</strong>
-                          <div class="asterion-con">
-                            <img src="./img/asterion-star-icon.png" alt="">
-                            <strong class="grade">5.0</strong>
-                            <span class="people">(150)</span>
-                          </div>
-                          <div class="money-con">
-                            <span class="cost">880,000원</span>
-                            <strong class="discount-per">46%</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="dibs-item">
-                    <a href="">
-                      <div class="dibs-prd-con">
-                        <div class="img-con">
-    
-                        </div>
-                        <div class="des-con">
-                          <h4 class="tit">상품명 입니다.</h4>
-                          <p class="des">상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다.</p>
-                          <strong class="hospital-name">병원 이름입니다.</strong>
-                          <div class="asterion-con">
-                            <img src="./img/asterion-star-icon.png" alt="">
-                            <strong class="grade">5.0</strong>
-                            <span class="people">(150)</span>
-                          </div>
-                          <div class="money-con">
-                            <span class="cost">880,000원</span>
-                            <strong class="discount-per">46%</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="dibs-item">
-                    <a href="">
-                      <div class="dibs-prd-con">
-                        <div class="img-con">
-    
-                        </div>
-                        <div class="des-con">
-                          <h4 class="tit">상품명 입니다.</h4>
-                          <p class="des">상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다. 상품 상세설명 입니다.</p>
-                          <strong class="hospital-name">병원 이름입니다.</strong>
-                          <div class="asterion-con">
-                            <img src="./img/asterion-star-icon.png" alt="">
-                            <strong class="grade">5.0</strong>
-                            <span class="people">(150)</span>
-                          </div>
-                          <div class="money-con">
-                            <span class="cost">880,000원</span>
-                            <strong class="discount-per">46%</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
+        <div class="header-search-con">
+          <div class="header-search-wrap">
+            <div class="hamburger-menu">
+              <button class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="./index.html">홈</a></li>
+                  <li><a href="./hospital.html">병원정보</a></li>
+                  <li><a href="./loan.html">대출</a></li>
+                  <li><a href="./mypage.html" class="active">마이페이지</a></li>
                 </ul>
               </div>
             </div>
-            
+            <a href="./search.html" class="search-input-con">
+              <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+              <button class="search-icon"><i class="fas fa-search"></i></button>
+            </a>
           </div>
         </div>
-        <div class="user-consult-con">
-          <div class="container">
-            <div class="tit-con">
-              <h2 class="tit">나의 상담 내역</h2>
-            </div>
-            <div class="consult-list-con">
-              <div class="consult-list-head">
-                <span style="width:20%;">분류</span>
-                <span style="width:60%;">문의내역</span>
-                <span style="width:20%;">진행상태</span>
-              </div>
-              <div class="consult-list-row">
-                <div class="type"><span>상담신청</span></div>
-                <div class="tit">
-                  <a href="">
-                    <span>상담 제목입니다. 상담 제목입니다. 상담 제목입니다. </span>
-                  </a>
-                </div>
-                <div class="status" id="progress"><span>상담 진행중</span></div>
-              </div>
-              <div class="consult-list-row">
-                <div class="type"><span>상담신청</span></div>
-                <div class="tit">
-                  <a href="">
-                    <span>상담 제목입니다. 상담 제목입니다. 상담 제목입니다. </span>
-                  </a>
-                </div>
-                <div class="status" id="complete"><span>상담 진행중</span></div>
-              </div>
-              <div class="consult-list-row">
-                <div class="type"><span>상담신청</span></div>
-                <div class="tit">
-                  <a href="">
-                    <span>상담 제목입니다. 상담 제목입니다. 상담 제목입니다. </span>
-                  </a>
-                </div>
-                <div class="status" id="complete"><span>상담 진행중</span></div>
-              </div>
-              <div class="consult-list-row">
-                <div class="type"><span>상담신청</span></div>
-                <div class="tit">
-                  <a href="">
-                    <span>상담 제목입니다. 상담 제목입니다. 상담 제목입니다. </span>
-                  </a>
-                </div>
-                <div class="status" id="progress"><span>상담 진행중</span></div>
-              </div>
-                
+      </header>
 
-            </div>
-            
-          </div>
-        </div>
-      
-      
-        <div class="business-partner-con">
-          <div class="container">
-            <a href="">
-              <img src="./img/business-partner-request.png" alt="" class="">
-              <!--
-              <img src="./img/mo-business-partner-request.png" alt="" class="mo-banner">
-              -->
-            </a>
-          </div>
-          
-        </div>
-    </div>
-    <footer id="footer">
-      <div class="f-container">
-        <div class="footer-con">
-          <div class="f-top-con">
-            <div class="f-logo"></div>
-            <a href="" class="request-btn">
-              병원입점신청
-            </a>
-          </div>
-          <div class="f-info-con">
-            <div class="f-info-left">
-              <div class="left-top-con">
-                <span>주식회사 인크레더블버즈</span>
-                <span>대표이사 임신영</span>
-              </div>
-              <div class="left-bottom-con detail-con">
-                <dl><dd>사업자등록번호: 130-81-32739</dd></dl>
-                <dl><dd>대부중개업등록번호: 2024-서울강남-0000</dd></dl>
-                <dl><dd>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</dd></dl>
-              </div>
-            </div>
-            <div class="f-info-right">
-              <div class="right-top-con">
-                <div class="f-police-list">
-                  <a href="">서비스 이용약관</a>
-                  <a href="">개인정보처리방침</a>
-                </div>
-                <div class="f-police-list">
-                  <a href="">위치기반 서비스 이용약관</a>
-                  <a href="">명예훼손 게시중단 요청</a>
+      <div id="content" class="mypage">
+        <div class="mypage-container">
+          <!-- 프로필 섹션 -->
+          <section class="profile-section">
+            <div class="profile-info">
+              <div class="user-info">
+                <h2>김OO님</h2>
+                <div class="user-meta">
+                  <span>가입일: 2024.01.01</span>
+                  <span>최근 접속일: 2024.03.15</span>
                 </div>
               </div>
-              <div class="right-bottom-con detail-con">
-                <dl><dd>TEL: 02-556-6474</dd></dl>
-                <dl><dd>FAX: 02-508-7752</dd></dl>
-                <dl><dd>E-MAIL: CS@humanwellness.kr</dd></dl>
+              <div class="point-info">
+                <span class="point-label">보유 포인트</span>
+                <span class="point-value">1,000 P</span>
               </div>
+              <button class="edit-profile-btn">
+                <i class="fas fa-user-edit"></i>
+                정보수정
+              </button>
             </div>
-          </div>
-          <div class="f-bottom-con">
-            <p>주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로, 의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지 않습니다</p>
-            <p class="copy">©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+          </section>
+
+          <!-- 메인 컨텐츠 영역 -->
+          <div class="mypage-content">
+            <!-- 퀵 메뉴 -->
+            <section class="quick-menu">
+              <div class="quick-menu-grid">
+                <a
+                  href="#point"
+                  class="quick-item"
+                  data-section="point-section"
+                >
+                  <i class="fas fa-coins"></i>
+                  <span>포인트</span>
+                  <small>1,000 P</small>
+                </a>
+                <a href="#loan" class="quick-item" data-section="loan-section">
+                  <i class="fas fa-hand-holding-usd"></i>
+                  <span>대출내역</span>
+                  <small>4,500,000원</small>
+                </a>
+                <a
+                  href="#appointments"
+                  class="quick-item"
+                  data-section="appointments-section"
+                >
+                  <i class="fas fa-calendar-check"></i>
+                  <span>예약내역</span>
+                  <small>1건</small>
+                </a>
+                <a
+                  href="#wishlist"
+                  class="quick-item"
+                  data-section="wishlist-section"
+                >
+                  <i class="fas fa-heart"></i>
+                  <span>찜한 병원</span>
+                  <small>2건</small>
+                </a>
+              </div>
+            </section>
+
+            <!-- 상세 섹션들 -->
+            <div class="detail-sections">
+              <!-- 포인트 섹션 -->
+              <section id="point-section" class="detail-section">
+                <div class="section-header">
+                  <h3>포인트 내역</h3>
+                  <div class="section-actions">
+                    <button class="view-all-btn">전체보기</button>
+                  </div>
+                </div>
+                <div class="point-list">
+                  <div class="point-item">
+                    <div class="point-info">
+                      <span class="date">2025.07.15</span>
+                      <span class="description">후기 작성 적립</span>
+                    </div>
+                    <span class="amount plus">+500 P</span>
+                  </div>
+                  <div class="point-item">
+                    <div class="point-info">
+                      <span class="date">2025.05.10</span>
+                      <span class="description">상담 예약 적립</span>
+                    </div>
+                    <span class="amount plus">+300 P</span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 대출 섹션 -->
+              <section id="loan-section" class="detail-section">
+                <div class="section-header">
+                  <h3>대출 내역</h3>
+                  <div class="section-actions">
+                    <button class="view-all-btn">전체보기</button>
+                  </div>
+                </div>
+                <div class="loan-summary">
+                  <div class="loan-item">
+                    <div class="loan-info">
+                      <h4>모티바 가슴성형 500만원 대출</h4>
+                      <div class="loan-details">
+                        <span>잔액: 4,500,000원</span>
+                        <span>월 납입금: 416,666원</span>
+                      </div>
+                      <div class="loan-period">
+                        <span>상환 시작일: 2026.02.01</span>
+                        <span>상환 종료일: 2028.01.31</span>
+                      </div>
+                    </div>
+                    <div class="loan-status">
+                      <div class="progress-bar">
+                        <div class="progress" style="width: 10%"></div>
+                      </div>
+                      <span class="progress-text">10% 상환</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 예약 내역 섹션 -->
+              <section id="appointments-section" class="detail-section">
+                <div class="section-header">
+                  <h3>병원 예약 내역</h3>
+                  <div class="section-actions">
+                    <button class="view-all-btn">전체보기</button>
+                  </div>
+                </div>
+                <div class="appointments-list">
+                  <div class="appointment-item">
+                    <div class="appointment-info">
+                      <h4>디에이성형외과</h4>
+                      <p class="procedure">모티바 가슴성형</p>
+                      <p class="datetime">2025.03.20 14:00</p>
+                    </div>
+                    <span class="status confirmed">예약확정</span>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 찜 목록 섹션 -->
+              <section id="wishlist-section" class="detail-section">
+                <div class="section-header">
+                  <h3>찜한 이벤트</h3>
+                  <div class="section-actions">
+                    <button class="view-all-btn">전체보기</button>
+                  </div>
+                </div>
+                <div class="wishlist-grid">
+                  <div class="wishlist-item">
+                    <img src="./img/hospital-thumb.jpg" alt="병원 이미지" />
+                    <div class="wishlist-info">
+                      <h4>팝성형외과</h4>
+                      <p class="procedure">눈 앞트임 + 절개</p>
+                      <p class="price">800,000원</p>
+                      <div class="hospital-tags">
+                        <span class="tag">이벤트</span>
+                        <span class="tag">특가</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
-  
-</body>
+
+      <footer id="footer">
+        <div class="f-container">
+          <div class="footer-con">
+            <div class="f-top-con">
+              <div class="f-logo"></div>
+              <a href="" class="request-btn"> 병원입점신청 </a>
+            </div>
+            <div class="f-info-con">
+              <div class="f-info-left">
+                <div class="left-top-con">
+                  <span>주식회사 인크레더블버즈</span>
+                  <span>대표이사 임신영</span>
+                </div>
+                <div class="left-bottom-con detail-con">
+                  <dl><dd>사업자등록번호: 130-81-32739</dd></dl>
+                  <dl><dd>대부중개업등록번호: 2024-서울강남-0000</dd></dl>
+                  <dl>
+                    <dd>
+                      주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동,
+                      송강빌딩)
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="f-info-right">
+                <div class="right-top-con">
+                  <div class="f-police-list">
+                    <a href="">서비스 이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                  </div>
+                  <div class="f-police-list">
+                    <a href="">위치기반 서비스 이용약관</a>
+                    <a href="">명예훼손 게시중단 요청</a>
+                  </div>
+                </div>
+                <div class="right-bottom-con detail-con">
+                  <dl><dd>TEL: 02-556-6474</dd></dl>
+                  <dl><dd>FAX: 02-508-7752</dd></dl>
+                  <dl><dd>E-MAIL: CS@humanwellness.kr</dd></dl>
+                </div>
+              </div>
+            </div>
+            <div class="f-bottom-con">
+              <p>
+                주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로,
+                의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+                않습니다
+              </p>
+              <p class="copy">©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/mypage.js"></script>
+  </body>
 </html>
