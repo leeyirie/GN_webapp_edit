@@ -1848,7 +1848,7 @@ body {
     #footer .f-info-con .right-top-con a:first-child {
         margin: 2px 10px;
     }
-    #footer .f-info-con .right-top-con a:nth-child(even):before {
+    #footer .f-info-con .right-top-con a:last-child:before {
         display: none;
     }
 
@@ -2954,26 +2954,93 @@ body {
 .rating {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 0px;
-    font-size: 18px;
-    margin-top: 14px;
+    gap: 6px;
+    margin-top: 12px;
+    justify-content: flex-start;
 }
 
 .rating .stars {
     color: rgb(255, 213, 0);
-    margin-right: 4px;
+    font-size: 15px;
 }
 
 .rating .score {
     color: #333;
     font-weight: 600;
-    margin-right: 4px;
+    font-size: 15px;
 }
 
 .rating .reviews {
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
+}
+
+.rating .event {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    padding-left: 8px;
+}
+
+.rating .event:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    .rating {
+        margin-top: 10px;
+        gap: 5px;
+    }
+
+    .rating .stars,
+    .rating .score {
+        font-size: 14px;
+    }
+
+    .rating .reviews,
+    .rating .event {
+        font-size: 12px;
+    }
+
+    .rating .event {
+        padding-left: 6px;
+    }
+
+    .rating .event:before {
+        height: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rating {
+        margin-top: 8px;
+        gap: 4px;
+    }
+
+    .rating .stars,
+    .rating .score {
+        font-size: 13px;
+    }
+
+    .rating .reviews,
+    .rating .event {
+        font-size: 11px;
+    }
+
+    .rating .event {
+        padding-left: 5px;
+    }
+
+    .rating .event:before {
+        height: 9px;
+    }
 }
 
 .price-info {
@@ -3610,5 +3677,302 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+}
+
+/* 병원 정보 페이지 스타일 */
+.hospital-page {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.filter-section {
+    margin-bottom: 40px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-group h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #4d3dbf;
+    color: #fff;
+    border-color: #4d3dbf;
+}
+
+.hospital-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.hospital-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.hospital-image {
+    width: 100%;
+    height: 240px;
+}
+
+.hospital-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hospital-info {
+    padding: 20px;
+}
+
+.hospital-location {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.hospital-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hospital-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    padding: 6px 12px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #333;
+}
+
+.info-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rating .stars {
+    color: rgb(255, 213, 0);
+    font-size: 15px;
+}
+
+.rating .score {
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.rating .reviews {
+    color: #666;
+    font-size: 13px;
+}
+
+.rating .event {
+    position: relative;
+    color: #666;
+    font-size: 13px;
+    padding-left: 8px;
+}
+
+.rating .event:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+}
+
+.hospital-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.hospital-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.detail-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.detail-btn:hover {
+    background-color: #eee;
+}
+
+.consult-btn {
+    background-color: #4d3dbf;
+    color: #fff;
+    border: 1px solid #4d3dbf;
+}
+
+.consult-btn:hover {
+    background-color: #3f31a0;
+}
+
+@media screen and (max-width: 768px) {
+    .hospital-image {
+        height: 200px;
+    }
+
+    .hospital-info {
+        padding: 16px;
+    }
+
+    .hospital-location {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .hospital-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .hospital-tags {
+        margin-bottom: 12px;
+    }
+
+    .tag {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .info-bottom {
+        padding-top: 12px;
+    }
+
+    .rating .stars,
+    .rating .score {
+        font-size: 14px;
+    }
+
+    .rating .reviews,
+    .rating .event {
+        font-size: 12px;
+    }
+
+    .hospital-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hospital-image {
+        height: 180px;
+    }
+
+    .hospital-info {
+        padding: 14px;
+    }
+
+    .hospital-location {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .hospital-name {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .hospital-tags {
+        margin-bottom: 10px;
+    }
+
+    .tag {
+        padding: 3px 8px;
+        font-size: 11px;
+    }
+
+    .info-bottom {
+        padding-top: 10px;
+    }
+
+    .rating .stars,
+    .rating .score {
+        font-size: 13px;
+    }
+
+    .rating .reviews,
+    .rating .event {
+        font-size: 11px;
+    }
+
+    .hospital-btn {
+        padding: 5px 10px;
+        font-size: 12px;
     }
 }

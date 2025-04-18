@@ -1,0 +1,24 @@
+{
+  "name": "gn_webapp_edit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leeyirie/GN_webapp_edit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leeyirie/GN_webapp_edit/issues"
+  },
+  "homepage": "https://github.com/leeyirie/GN_webapp_edit#readme",
+  "description": ""
+}
