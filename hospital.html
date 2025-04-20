@@ -49,6 +49,7 @@
         </div>
         <div class="header-search-con">
           <div class="header-search-wrap">
+            <!-- 햄버거 메뉴 주석 처리
             <div class="hamburger-menu">
               <button class="menu-trigger">
                 <span></span>
@@ -64,6 +65,7 @@
                 </ul>
               </div>
             </div>
+            -->
             <a href="./search.html" class="search-input-con">
               <div class="search-label">병원, 시술부위를 검색해보세요.</div>
               <button class="search-icon" type="button">
@@ -126,7 +128,7 @@
               </div>
               <div class="hospital-info">
                 <div class="hospital-location">서울 강남구</div>
-                <h3 class="hospital-name">강남아름다운성형외과</h3>
+                <h3 class="hospital-name">강남 성형외과</h3>
                 <div class="hospital-tags">
                   <span class="tag">눈성형</span>
                   <span class="tag">코성형</span>
@@ -165,12 +167,21 @@
         </div>
       </div>
 
+      <!-- 병원 입점 광고 배너 -->
+      <div class="hospital-ad-banner-con">
+        <div class="hospital-ad-banner-wrap">
+          <div class="hospital-ad-banner">
+            <h3>병원 입점 광고</h3>
+          </div>
+        </div>
+      </div>
+
       <footer id="footer">
         <div class="f-container">
           <div class="footer-con">
             <div class="f-top-con">
               <div class="f-logo"></div>
-              <a href="" class="request-btn">병원입점신청</a>
+              <a href="" class="request-btn">병원 입점 광고</a>
             </div>
             <div class="f-info-con">
               <div class="f-info-left">
@@ -219,5 +230,77 @@
         </div>
       </footer>
     </div>
+
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item">
+        <i class="fas fa-home"></i>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item active">
+        <i class="fas fa-hospital"></i>
+        <span>병원정보</span>
+      </a>
+      <a href="./loan.html" class="menu-item">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>대출</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <i class="fas fa-user"></i>
+        <span>마이페이지</span>
+      </a>
+    </div>
+
+    <script src="./js/main.js"></script>
+
+    <style>
+      #bottom-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+
+      #bottom-menu .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+      }
+
+      #bottom-menu .menu-item.active {
+        color: #4a90e2;
+      }
+
+      #bottom-menu .menu-item i {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          margin-bottom: 70px;
+        }
+        .header-search-wrap {
+          padding: 15px 20px;
+          display: flex;
+          justify-content: center;
+        }
+        .search-input-con {
+          margin-left: 0;
+          width: 100%;
+          max-width: 90%;
+        }
+      }
+    </style>
   </body>
 </html>

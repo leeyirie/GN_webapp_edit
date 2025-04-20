@@ -51,6 +51,7 @@
         </div>
         <div class="header-search-con">
           <div class="header-search-wrap">
+            <!-- 햄버거 메뉴 주석 처리
             <div class="hamburger-menu">
               <button class="menu-trigger">
                 <span></span>
@@ -66,6 +67,7 @@
                 </ul>
               </div>
             </div>
+            -->
             <a href="./search.html" class="search-input-con">
               <div class="search-label">병원, 시술부위를 검색해보세요.</div>
               <button class="search-icon" type="button">
@@ -368,5 +370,44 @@
         </div>
       </section>
     </div>
+
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item">
+        <i class="fas fa-home"></i>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item">
+        <i class="fas fa-hospital"></i>
+        <span>병원정보</span>
+      </a>
+      <a href="./loan.html" class="menu-item">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>대출</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <i class="fas fa-user"></i>
+        <span>마이페이지</span>
+      </a>
+    </div>
+
+    <style>
+      /* 모바일 반응형에서 검색바 스타일 */
+      @media (max-width: 768px) {
+        .header-search-wrap {
+          padding: 15px 20px;
+          display: flex;
+          justify-content: center;
+        }
+        .search-input-con {
+          margin-left: 0;
+          width: 100%;
+          max-width: 90%;
+        }
+        main {
+          margin-bottom: 70px;
+        }
+      }
+    </style>
   </body>
 </html>

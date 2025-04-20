@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <div id="wrap">
@@ -32,9 +36,7 @@
               <a href="./index.html">
                 <h1
                   class="logo"
-                  style="
-                    background-image: url(&quot;./img/gn-logo-white.svg&quot;);
-                  "
+                  style="background-image: url('./img/gn-logo-white.svg')"
                 ></h1>
               </a>
             </div>
@@ -49,24 +51,11 @@
         </div>
         <div class="header-search-con">
           <div class="header-search-wrap">
-            <div class="hamburger-menu">
-              <button class="menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <div class="dropdown-menu">
-                <ul>
-                  <li><a href="./index.html">홈</a></li>
-                  <li><a href="./hospital.html">병원정보</a></li>
-                  <li><a href="./loan.html">대출</a></li>
-                  <li><a href="./mypage.html">마이페이지</a></li>
-                </ul>
-              </div>
-            </div>
             <a href="./search.html" class="search-input-con">
               <div class="search-label">병원, 시술부위를 검색해보세요.</div>
-              <button class="search-icon"><i></i></button>
+              <button class="search-icon" type="button">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
             </a>
           </div>
         </div>
@@ -84,7 +73,7 @@
           <div class="event-count">이벤트 12건</div>
 
           <div class="hospital-events-list">
-            <div class="hospital-event-item">
+            <a href="./eventDetail.html" class="hospital-event-item">
               <div class="event-image">
                 <img src="./img/best-product-01.png" alt="눈성형" />
                 <span class="rank-badge">41.9만원</span>
@@ -105,9 +94,9 @@
                   <span class="reviews">(12933)</span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="hospital-event-item">
+            <a href="./eventDetail.html" class="hospital-event-item">
               <div class="event-image">
                 <img src="./img/best-product-02.png" alt="눈재수술" />
                 <span class="rank-badge">72만원</span>
@@ -128,9 +117,9 @@
                   <span class="reviews">(12933)</span>
                 </div>
               </div>
-            </div>
+            </a>
 
-            <div class="hospital-event-item">
+            <a href="./eventDetail.html" class="hospital-event-item">
               <div class="event-image">
                 <img src="./img/best-product-03.png" alt="눈재수술" />
                 <span class="rank-badge">42.9만원</span>
@@ -151,8 +140,8 @@
                   <span class="reviews">(12933)</span>
                 </div>
               </div>
-            </div>
-            <div class="hospital-event-item">
+            </a>
+            <a href="./eventDetail.html" class="hospital-event-item">
               <div class="event-image">
                 <img src="./img/best-product-01.png" alt="눈성형" />
                 <span class="rank-badge">41.9만원</span>
@@ -174,8 +163,8 @@
                   <span class="reviews">(12933)</span>
                 </div>
               </div>
-            </div>
-            <div class="hospital-event-item">
+            </a>
+            <a href="./eventDetail.html" class="hospital-event-item">
               <div class="event-image">
                 <img src="./img/best-product-02.png" alt="눈성형" />
                 <span class="rank-badge">41.9만원</span>
@@ -196,7 +185,7 @@
                   <span class="reviews">(12933)</span>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
           <div class="pagination">
@@ -225,7 +214,7 @@
             <a
               href="./index.html"
               class="f-logo"
-              style="background-image: url(&quot;./img/gn-logo.svg&quot;)"
+              style="background-image: url('./img/gn-logo.svg')"
             ></a>
             <a href="#" class="request-btn">상담신청</a>
           </div>
@@ -260,6 +249,26 @@
           </div>
         </div>
       </footer>
+    </div>
+
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item">
+        <i class="fas fa-home"></i>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item active">
+        <i class="fas fa-hospital"></i>
+        <span>병원정보</span>
+      </a>
+      <a href="./loan.html" class="menu-item">
+        <i class="fas fa-hand-holding-usd"></i>
+        <span>대출</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <i class="fas fa-user"></i>
+        <span>마이페이지</span>
+      </a>
     </div>
   </body>
 </html>

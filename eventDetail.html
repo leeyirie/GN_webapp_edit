@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 상세 - 강남오빠</title>
+    <!-- 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <div class="header-wrap">
+            <div>
+              <div class="header-top-text">
+                대부중개업등록번호: 2024-서울강남-0159(대부업)
+              </div>
+              <a href="./index.html">
+                <h1
+                  class="logo"
+                  style="background-image: url('./img/gn-logo-white.svg')"
+                ></h1>
+              </a>
+            </div>
+
+            <div class="util-box">
+              <div class="auth-buttons">
+                <a href="./loginSelect.html" class="login-btn">로그인</a>
+                <a href="./signup.html" class="signup-btn">회원가입</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-search-con">
+          <div class="header-search-wrap">
+            <!-- <div class="hamburger-menu">
+              <button class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="./index.html">홈</a></li>
+                  <li><a href="./hospital.html">병원정보</a></li>
+                  <li><a href="./loan.html">대출</a></li>
+                  <li><a href="./mypage.html">마이페이지</a></li>
+                </ul>
+              </div>
+            </div> -->
+            <a href="./search.html" class="search-input-con">
+              <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+              <button class="search-icon"><i></i></button>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div id="content" class="event-detail-page">
+        <div class="container">
+          <div class="back-button">
+            <a href="javascript:history.back()">
+              <i class="fas fa-arrow-left"></i>
+              <span>뒤로가기</span>
+            </a>
+          </div>
+          <div class="event-detail-top">
+            <div class="event-detail-image">
+              <img src="./img/best-product-01.png" alt="이벤트 이미지" />
+            </div>
+            <div class="event-detail-info">
+              <div class="hospital-name">팝성형외과의원</div>
+              <div class="hospital-location">서울 압구정역 3분거리</div>
+              <h2 class="event-name">자연유착 쌍꺼풀 매몰</h2>
+              <div class="event-price-info">
+                <div class="discount-badge">49% 할인</div>
+                <div class="prices">
+                  <span class="original-price">1,400,000원</span>
+                  <span class="discount-price">720,000원</span>
+                </div>
+              </div>
+              <div class="event-rating">
+                <span class="stars">★★★★★</span>
+                <span class="score">9.5</span>
+                <span class="review-count">(12,933)</span>
+              </div>
+              <div class="event-buttons">
+                <button class="reserve-btn">예약하기</button>
+                <button class="consultation-btn">상담신청</button>
+                <button class="like-btn">♡ 찜하기</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-detail-content">
+            <div class="detail-tabs">
+              <button class="tab-btn active">시술안내</button>
+              <button class="tab-btn">의사정보</button>
+              <button class="tab-btn">병원정보</button>
+              <button class="tab-btn">리뷰</button>
+            </div>
+
+            <div class="tab-content surgery-info active">
+              <h3>시술 상세 정보</h3>
+              <div class="surgery-desc">
+                <p>
+                  자연유착 쌍꺼풀 매몰은 실로 눈 안쪽 조직을 고정하여 자연스러운
+                  쌍꺼풀 라인을 만드는 시술입니다. 흉터가 거의 남지 않고 회복
+                  기간이 짧아 인기 있는 시술입니다.
+                </p>
+                <ul class="surgery-features">
+                  <li>자연스러운 라인 형성</li>
+                  <li>흉터 최소화</li>
+                  <li>빠른 회복</li>
+                  <li>개인별 맞춤 디자인</li>
+                </ul>
+              </div>
+
+              <h3>시술 과정</h3>
+              <div class="surgery-process">
+                <div class="process-item">
+                  <div class="process-num">01</div>
+                  <div class="process-desc">
+                    <h4>상담 및 진단</h4>
+                    <p>
+                      의사와 상담을 통해 눈 형태에 맞는 쌍꺼풀 라인을
+                      디자인합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">02</div>
+                  <div class="process-desc">
+                    <h4>마취</h4>
+                    <p>국소마취를 통해 통증을 최소화합니다.</p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">03</div>
+                  <div class="process-desc">
+                    <h4>시술</h4>
+                    <p>미세한 구멍을 통해 특수 실로 눈 조직을 고정합니다.</p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">04</div>
+                  <div class="process-desc">
+                    <h4>회복</h4>
+                    <p>
+                      시술 후 1~2일간 부기가 있으며, 약 1주일 내 일상 복귀가
+                      가능합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <h3>전후 사진</h3>
+              <div class="before-after-images">
+                <div class="before-after-item">
+                  <img
+                    src="./img/before-after-01.jpg"
+                    alt="전후사진1"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E전후사진%3C/text%3E%3C/svg%3E';"
+                  />
+                  <div class="ba-desc">20대 여성 / 자연유착 쌍꺼풀</div>
+                </div>
+                <div class="before-after-item">
+                  <img
+                    src="./img/before-after-02.jpg"
+                    alt="전후사진2"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E전후사진%3C/text%3E%3C/svg%3E';"
+                  />
+                  <div class="ba-desc">30대 여성 / 자연유착 쌍꺼풀</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content doctor-info">
+              <h3>시술 의사 정보</h3>
+              <div class="doctor-profile">
+                <div class="doctor-image">
+                  <img
+                    src="./img/doctor.jpg"
+                    alt="전문의 프로필"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E의사 사진%3C/text%3E%3C/svg%3E';"
+                  />
+                </div>
+                <div class="doctor-detail">
+                  <h4>김의사 원장</h4>
+                  <div class="doctor-spec">성형외과 전문의</div>
+                  <div class="doctor-career">
+                    <ul>
+                      <li>서울대학교 의과대학 졸업</li>
+                      <li>대한성형외과학회 정회원</li>
+                      <li>눈성형 시술 경력 10년+</li>
+                      <li>연간 쌍꺼풀 수술 1,000건 이상</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content hospital-info">
+              <h3>병원 정보</h3>
+              <div class="hospital-detail">
+                <div class="hospital-image">
+                  <img
+                    src="./img/hospital.jpg"
+                    alt="병원 이미지"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E병원 이미지%3C/text%3E%3C/svg%3E';"
+                  />
+                </div>
+                <div class="hospital-address">
+                  <p>서울특별시 강남구 압구정로 123</p>
+                  <p>압구정역 3번 출구에서 도보 3분</p>
+                </div>
+                <div class="hospital-hours">
+                  <h4>진료시간</h4>
+                  <ul>
+                    <li>평일: 10:00 - 19:00</li>
+                    <li>토요일: 10:00 - 16:00</li>
+                    <li>일요일 및 공휴일: 휴진</li>
+                  </ul>
+                </div>
+                <div class="hospital-map">
+                  <!-- 지도 영역 -->
+                  <div
+                    class="map-placeholder"
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      background-color: #f8f8fa;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    지도 영역
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content reviews">
+              <h3>리뷰 (12,933)</h3>
+              <div class="review-summary">
+                <div class="total-rating">
+                  <div class="rating-score">9.5</div>
+                  <div class="rating-stars">★★★★★</div>
+                </div>
+                <div class="rating-bars">
+                  <div class="rating-bar-item">
+                    <span class="bar-label">만족도</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 95%"></div>
+                    </div>
+                    <span class="bar-value">9.5</span>
+                  </div>
+                  <div class="rating-bar-item">
+                    <span class="bar-label">친절도</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 94%"></div>
+                    </div>
+                    <span class="bar-value">9.4</span>
+                  </div>
+                  <div class="rating-bar-item">
+                    <span class="bar-label">시술결과</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 96%"></div>
+                    </div>
+                    <span class="bar-value">9.6</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="review-list">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">user***</span>
+                      <span class="review-date">2024.05.10</span>
+                    </div>
+                    <div class="review-rating">★★★★★ 9.8</div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      자연스러운 쌍꺼풀로 원하는 결과를 얻었어요! 의사선생님의
+                      섬세한 상담과 시술에 정말 만족합니다. 회복도 빨랐고 결과도
+                      너무 좋아요.
+                    </p>
+                  </div>
+                  <div class="review-images">
+                    <img
+                      src="./img/review-01.jpg"
+                      alt="리뷰이미지"
+                      onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E리뷰 이미지%3C/text%3E%3C/svg%3E';"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">beauty***</span>
+                      <span class="review-date">2024.05.08</span>
+                    </div>
+                    <div class="review-rating">★★★★★ 9.5</div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      상담부터 시술까지 정말 꼼꼼하게 설명해주셔서 안심하고 받을
+                      수 있었어요. 원하던 눈매가 되어서 너무 행복합니다!
+                    </p>
+                  </div>
+                  <div class="review-images">
+                    <img
+                      src="./img/review-02.jpg"
+                      alt="리뷰이미지"
+                      onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E리뷰 이미지%3C/text%3E%3C/svg%3E';"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">happy***</span>
+                      <span class="review-date">2024.05.05</span>
+                    </div>
+                    <div class="review-rating">★★★★★ 9.7</div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      처음에는 걱정이 많았는데, 의사선생님이 친절하게
+                      상담해주시고 내 얼굴형에 맞는 쌍꺼풀을 디자인해주셨어요.
+                      결과가 너무 자연스러워서 주변에서도 호평이에요!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pagination">
+                <button class="page-btn prev" disabled>
+                  <span class="arrow">〈</span>
+                </button>
+                <div class="page-numbers">
+                  <button class="page-number active">1</button>
+                  <button class="page-number">2</button>
+                  <button class="page-number">3</button>
+                  <button class="page-number">4</button>
+                  <button class="page-number">5</button>
+                  <span class="page-dots">...</span>
+                  <button class="page-number">100</button>
+                </div>
+                <button class="page-btn next">
+                  <span class="arrow">〉</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="f-container">
+          <div class="f-top-con">
+            <a
+              href="./index.html"
+              class="f-logo"
+              style="background-image: url('./img/gn-logo.svg')"
+            ></a>
+            <a href="#" class="request-btn">상담신청</a>
+          </div>
+          <div class="f-info-con">
+            <div class="f-info-left">
+              <div class="left-top-con">
+                <span>강남오빠</span>
+                <span>대표이사: 홍길동</span>
+                <span>사업자등록번호: 123-45-67890</span>
+              </div>
+              <div class="detail-con">
+                <dl>
+                  <dd>주소: 서울특별시 강남구 테헤란로 123</dd>
+                  <dd>전화: 02-123-4567</dd>
+                  <dd>이메일: info@gangnamoppa.com</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="f-info-right">
+              <div class="right-top-con">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">고객센터</a>
+              </div>
+            </div>
+          </div>
+          <div class="f-bottom-con">
+            <p>© 2024 강남오빠. All rights reserved.</p>
+            <p class="copy">
+              본 사이트는 개인정보보호법 및 통신비밀보호법을 준수합니다.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <nav class="bottom-menu">
+      <ul>
+        <li>
+          <a href="./index.html" class="active">
+            <i class="fas fa-home"></i>
+            <span>홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="./hospital.html" class="active">
+            <i class="fas fa-hospital"></i>
+            <span>병원정보</span>
+          </a>
+        </li>
+        <li>
+          <a href="./loan.html" class="active">
+            <i class="fas fa-money-bill-wave"></i>
+            <span>대출</span>
+          </a>
+        </li>
+        <li>
+          <a href="./mypage.html" class="active">
+            <i class="fas fa-user"></i>
+            <span>마이페이지</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      $(document).ready(function () {
+        // 탭 전환 기능
+        $('.tab-btn').click(function () {
+          $('.tab-btn').removeClass('active');
+          $(this).addClass('active');
+
+          const tabIndex = $(this).index();
+          $('.tab-content').removeClass('active');
+          $('.tab-content').eq(tabIndex).addClass('active');
+        });
+
+        // 이미지 호버 효과 및 애니메이션
+        $('.event-detail-image img').hover(
+          function () {
+            $(this).css('transform', 'scale(1.03)');
+          },
+          function () {
+            $(this).css('transform', 'scale(1)');
+          }
+        );
+
+        // 리뷰 이미지 클릭 확대 효과
+        $('.review-images img').click(function () {
+          // 이미지 팝업 표시 로직 (실제 구현 시 추가)
+          alert('이미지 확대 기능이 구현될 예정입니다.');
+        });
+
+        // 좋아요 버튼 클릭 효과
+        $('.like-btn').click(function () {
+          $(this).toggleClass('active');
+          if ($(this).hasClass('active')) {
+            $(this).text('♥ 찜완료');
+            $(this).css('background-color', '#fff0f8');
+          } else {
+            $(this).text('♡ 찜하기');
+            $(this).css('background-color', 'white');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
