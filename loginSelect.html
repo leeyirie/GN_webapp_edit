@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강남오빠</title>
-    <!-- 폰트 로드 -->
+    <title>강남오빠 - 로그인</title>
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -18,11 +22,10 @@
 
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div id="wrap">
-      <header id="header" class="login-header">
+      <header id="header">
         <div class="header-inner">
           <div class="header-wrap">
             <div>
@@ -38,7 +41,7 @@
             </div>
             <div class="util-box">
               <div class="auth-buttons">
-                <a href="./login.html" class="login-btn">로그인</a>
+                <a href="./loginSelect.html" class="login-btn">로그인</a>
                 <a href="./signup.html" class="signup-btn">회원가입</a>
               </div>
             </div>
@@ -46,9 +49,26 @@
         </div>
         <div class="header-search-con">
           <div class="header-search-wrap">
+            <div class="hamburger-menu">
+              <button class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul>
+                  <li><a href="./index.html">홈</a></li>
+                  <li><a href="./hospital.html">병원정보</a></li>
+                  <li><a href="./loan.html">대출</a></li>
+                  <li><a href="./mypage.html">마이페이지</a></li>
+                </ul>
+              </div>
+            </div>
             <a href="./search.html" class="search-input-con">
-              <div class="search-label">병원, 시술, 부위를 검색해보세요</div>
-              <button class="search-icon"><i></i></button>
+              <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+              <button class="search-icon" type="button">
+                <i class="fas fa-search" aria-hidden="true"></i>
+              </button>
             </a>
           </div>
         </div>
