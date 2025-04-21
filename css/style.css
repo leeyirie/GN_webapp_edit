@@ -349,14 +349,72 @@ body {
     margin: 0 auto;
     justify-content: center;
 }
+
 .surgery-list-con .surgery-list {
     display: flex;
     flex-wrap: wrap;
 }
+
 .surgery-list-con .surgery-list .surgery-item {
-    margin: 0 0px 20px;
-    width: calc(100% / 5);
+    width: calc(100% / 5);  /* 기본 5개씩 */
+    margin: 0 0 20px;
     text-align: center;
+}
+
+.surgery-list-con .surgery-list .surgery-item .img-con {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.surgery-list-con .surgery-list .surgery-item .txt {
+    font-size: 16px;
+    color: #777777;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+    .surgery-list-con .surgery-list {
+        height: auto;  /* Remove fixed height */
+        overflow: visible;  /* Show all items */
+    }
+    
+    .surgery-list-con .surgery-list .surgery-item {
+        width: calc(100% / 3);  /* 3개씩 정렬 */
+        margin: 0 0 15px;
+    }
+    
+    .surgery-list-con .surgery-list .surgery-item .img-con {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .surgery-list-con .surgery-list .surgery-item .txt {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .surgery-list-con .surgery-list .surgery-item {
+        width: calc(100% / 2);  /* 2개씩 정렬 */
+        margin: 0 0 12px;
+    }
+    
+    .surgery-list-con .surgery-list .surgery-item .img-con {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .surgery-list-con .surgery-list .surgery-item .txt {
+        font-size: 13px;
+        padding: 6px 0;
+    }
 }
 
 /* [수정] 아이콘 보더라인 없애게 수정 */
@@ -366,7 +424,6 @@ body {
     align-items: center;
     width: 100px;
     height: 100px;
-    /* border: 2px solid #e0e0e0;  */
     border-radius: 20px;
 }
 .surgery-list-con .surgery-list .surgery-item .txt {
@@ -6018,60 +6075,107 @@ body {
 .rating-common {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 15px;
-  line-height: 1;
-  margin: 8px 0;
+  gap: 6px;
+  font-size: 16px;
+  transition: all 0.2s ease;
 }
 
 .rating-common .stars {
-  color: #FFD700;
-  font-size: 15px;
+  color: #FFD500;
   letter-spacing: -1px;
+  font-size: 16px;
+  transition: color 0.2s ease;
 }
 
 .rating-common .score {
-  color: #FFD700;
+  color: #333;
   font-weight: 600;
-  margin-right: 2px;
+  font-size: 16px;
 }
 
 .rating-common .reviews {
   color: #666;
   font-size: 14px;
+  position: relative;
+  padding-left: 4px;
+}
+
+.rating-common .reviews::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background-color: #ddd;
 }
 
 .rating-common .event {
   color: #666;
   font-size: 14px;
   position: relative;
-  padding-left: 8px;
+  padding-left: 4px;
 }
 
-.rating-common .event:before {
-  content: "";
+.rating-common .event::before {
+  content: '';
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 10px;
+  height: 12px;
   background-color: #ddd;
 }
 
 @media screen and (max-width: 767px) {
   .rating-common {
+    font-size: 14px;
+    gap: 4px;
+  }
+  
+  .rating-common .stars {
+    font-size: 14px;
+  }
+  
+  .rating-common .score {
+    font-size: 14px;
+  }
+  
+  .rating-common .reviews,
+  .rating-common .event {
+    font-size: 12px;
+  }
+  
+  .rating-common .reviews::before,
+  .rating-common .event::before {
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rating-common {
     font-size: 13px;
-    margin: 6px 0;
+    gap: 3px;
   }
   
   .rating-common .stars {
     font-size: 13px;
   }
   
+  .rating-common .score {
+    font-size: 13px;
+  }
+  
   .rating-common .reviews,
   .rating-common .event {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  
+  .rating-common .reviews::before,
+  .rating-common .event::before {
+    height: 9px;
   }
 }
 
