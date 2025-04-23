@@ -1,0 +1,241 @@
+/* 푸터 영역 */
+#footer {
+  margin-top: 0;
+  background-color: #111;
+}
+
+#footer .f-container {
+  padding: 50px 40px;
+}
+
+#footer .f-top-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#footer .f-top-con .f-logo {
+  display: block;
+  width: 150px;
+  height: 36px;
+  background-image: url('../img/gn-logo-white.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#footer .f-top-con .request-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#footer .f-top-con .request-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#footer .f-info-con {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#footer .f-info-con .f-info-left {
+  width: 50%;
+}
+
+#footer .f-info-con .f-info-left .left-top-con {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#footer .f-info-con .f-info-left .left-top-con span {
+  position: relative;
+  margin-right: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+#footer .f-info-con .f-info-left .left-top-con span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#footer .f-info-con .f-info-left .left-top-con span:last-child:after {
+  display: none;
+}
+
+#footer .f-info-con .detail-con {
+  margin-bottom: 10px;
+}
+
+#footer .f-info-con .detail-con dl dd {
+  position: relative;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+#footer .f-info-con .right-top-con {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .f-info-con .right-top-con .f-police-list {
+  display: flex;
+}
+
+#footer .f-info-con .right-top-con a {
+  position: relative;
+  margin-right: 20px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#footer .f-info-con .right-top-con a:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#footer .f-info-con .right-top-con a:first-child {
+  font-weight: 600;
+}
+
+#footer .f-info-con .right-top-con a:last-child:before {
+  display: none;
+}
+
+#footer .f-bottom-con p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+}
+
+#footer .f-bottom-con p.copy {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* 반응형 */
+@media screen and (max-width: 767px) {
+  #footer .f-container {
+    padding: 30px 20px;
+  }
+
+  #footer .f-info-con .f-info-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #footer .f-info-con .f-info-right {
+    width: 100%;
+  }
+
+  #footer .f-info-con {
+    flex-direction: column;
+  }
+
+  #footer .f-info-con .f-info-left .left-top-con span {
+    font-size: 14px;
+  }
+
+  #footer .f-info-con .detail-con dl dd {
+    font-size: 12px;
+  }
+
+  #footer .f-info-con .right-top-con {
+    margin-bottom: 15px;
+  }
+
+  #footer .f-info-con .right-top-con .f-police-list {
+    flex-wrap: wrap;
+  }
+
+  #footer .f-info-con .right-top-con a {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  #footer .f-info-con .right-top-con a:first-child {
+    font-weight: 500;
+  }
+
+  #footer .f-info-con .right-top-con a:last-child:before {
+    display: none;
+  }
+
+  #footer .f-bottom-con p {
+    font-size: 12px;
+  }
+}
+
+/* 하단 메뉴바 */
+#bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+  display: none;
+}
+
+#bottom-menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+#bottom-menu .menu-item i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+#bottom-menu .menu-item.active {
+  color: #4d3dbf;
+}
+
+@media screen and (max-width: 767px) {
+  #bottom-menu {
+    display: flex;
+  }
+
+  #bottom-menu .menu-item i {
+    font-size: 18px;
+  }
+
+  #bottom-menu .menu-item {
+    font-size: 11px;
+  }
+}

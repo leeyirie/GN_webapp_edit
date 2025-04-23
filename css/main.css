@@ -1,0 +1,514 @@
+/* 시술 선택 섹션 */
+.inter-select-con {
+  padding: 30px 0;
+}
+.inter-select-con .tit {
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.surgery-list-con {
+  position: relative;
+}
+.surgery-list-con .surgery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.surgery-list-con .surgery-list .surgery-item {
+  flex: 0 0 calc(20% - 16px);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.surgery-list-con .surgery-list .surgery-item a {
+  display: block;
+  text-decoration: none;
+}
+.surgery-list-con .surgery-list .surgery-item .img-con {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+}
+.surgery-list-con .surgery-list .surgery-item .img-con img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.surgery-list-con .surgery-list .surgery-item:hover .img-con img {
+  transform: scale(1.05);
+}
+.surgery-list-con .surgery-list .surgery-item .txt {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+.inter-select-con .more-view {
+  display: none;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+.inter-select-con .more-view b {
+  color: #4d3dbf;
+  font-weight: 500;
+  margin-right: 5px;
+}
+.inter-select-con .more-view-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/more-view-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 메인 배너 슬라이드 */
+.main-beauty-banner-con {
+  position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.main-beauty-banner-con::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main-beauty-banner-con::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  z-index: -1;
+}
+.main-beauty-banner-con .banner-slide {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.main-beauty-banner-con .slick-list {
+  margin: 0 -10px;
+  padding: 20px 0;
+}
+.main-beauty-banner-con .banner-item {
+  padding: 0 10px;
+}
+.main-beauty-banner-con .banner-item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 문의 배너 */
+.inquiry-banner-con {
+  padding: 20px 0;
+}
+.inquiry-banner-con a {
+  display: block;
+  cursor: pointer;
+}
+.inquiry-banner-con a img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 인기 상품 */
+.best-product-con {
+  padding: 40px 0;
+}
+.best-product-list-con .best-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.best-product-list-con .best-list .best-item {
+  flex: 0 0 calc(25% - 18px);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.best-product-list-con .best-list .best-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+.best-product-list-con .best-list .best-item a {
+  display: block;
+  text-decoration: none;
+}
+.best-product-list-con .best-list .best-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+}
+.best-product-list-con .best-txt-con {
+  padding: 20px;
+}
+.best-product-list-con .best-txt-con .location {
+  font-size: 14px;
+  color: #4d3dbf;
+  margin-bottom: 5px;
+}
+.best-product-list-con .best-txt-con .tit {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.best-product-list-con .best-txt-con .txt {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  height: 32px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.best-product-list-con .rating-price-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.best-product-list-con .price-info {
+  text-align: right;
+}
+.best-product-list-con .discount-rate {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff3e3e;
+  margin-right: 5px;
+}
+.best-product-list-con .money {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  text-align: right;
+  margin-top: 15px;
+}
+.best-product-list-con .money span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-right: 5px;
+}
+
+/* 인사이트 섹션 */
+.insight-con {
+  padding: 40px 0;
+}
+.insight-list-con {
+  margin-top: 20px;
+}
+.insight-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.insight-list .insight-item {
+  flex: 0 0 calc(33.33% - 16px);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.insight-list .insight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.insight-list .insight-item .img-con {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.insight-list .insight-item .img-con img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.insight-list .insight-item:hover .img-con img {
+  transform: scale(1.05);
+}
+.insight-list .insight-item .des-con {
+  padding: 20px;
+}
+.insight-list .insight-item .des-con .tit {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+.insight-list .insight-item .des-con .des {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  height: 68px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-bottom: 15px;
+}
+.insight-list .insight-item .more-view {
+  display: inline-block;
+  color: #4d3dbf;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 병원 광고 배너 */
+.business-partner-con {
+  padding-bottom: 0;
+}
+
+.hospital-ad-banner {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(90deg, #4d3dbf 0%, #6a5aff 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.hospital-ad-banner h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 인기 상품 상세 스타일 */
+.product-rating-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.product-rating-info .stars {
+  color: #ffca00;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.product-rating-info .score {
+  font-size: 14px;
+  color: #666;
+}
+
+.product-loan-text {
+  font-size: 14px;
+  color: #4d3dbf;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.product-price .discount-rate {
+  color: #ff3e3e;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.product-price .price {
+  color: #222;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 반응형 - 메인 컨텐츠 */
+@media screen and (max-width: 1199px) {
+  .surgery-list-con .surgery-list .surgery-item,
+  .best-product-list-con .best-list .best-item,
+  .insight-list .insight-item {
+    flex: 0 0 calc(33.33% - 16px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inter-select-con .tit {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .surgery-list-con .surgery-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .surgery-list-con .surgery-list::-webkit-scrollbar {
+    display: none;
+  }
+  .surgery-list-con .surgery-list .surgery-item {
+    flex: 0 0 120px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .img-con {
+    border-radius: 15px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .txt {
+    font-size: 16px;
+  }
+  .inter-select-con .more-view {
+    display: block;
+  }
+
+  .main-beauty-banner-con::before,
+  .main-beauty-banner-con::after {
+    display: none;
+  }
+  .main-beauty-banner-con .banner-item img {
+    border-radius: 8px;
+  }
+
+  .best-product-list-con .best-list {
+    gap: 15px;
+  }
+  .best-product-list-con .best-list .best-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .best-product-list-con .best-txt-con {
+    padding: 15px;
+  }
+  .best-product-list-con .best-txt-con .tit {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .best-product-list-con .best-txt-con .txt {
+    font-size: 13px;
+    height: 38px;
+    margin-bottom: 2px;
+  }
+  .best-product-list-con .money {
+    font-size: 16px;
+  }
+
+  .insight-list {
+    gap: 15px;
+  }
+  .insight-list .insight-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .insight-list .insight-item .img-con {
+    height: 150px;
+  }
+  .insight-list .insight-item .des-con {
+    padding: 15px;
+  }
+  .insight-list .insight-item .des-con .tit {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .insight-list .insight-item .des-con .des {
+    font-size: 13px;
+    height: 60px;
+  }
+  .insight-list .insight-item .more-view {
+    font-size: 13px;
+  }
+
+  .best-product-list-con .best-list .best-item img {
+    height: 160px;
+    object-fit: contain;
+  }
+
+  .insight-list .insight-item .img-con {
+    height: 150px;
+  }
+
+  .insight-list .insight-item .img-con img {
+    object-fit: contain;
+  }
+
+  .product-rating-info .stars {
+    font-size: 14px;
+  }
+
+  .product-rating-info .score {
+    font-size: 13px;
+  }
+
+  .product-loan-text {
+    font-size: 13px;
+  }
+
+  .product-price .discount-rate {
+    font-size: 14px;
+  }
+
+  .product-price .price {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .best-product-list-con .best-list .best-item {
+    flex: 0 0 calc(50% - 8px);
+  }
+  .best-product-list-con .best-list .best-item img {
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .insight-list .insight-item {
+    flex: 0 0 100%;
+  }
+
+  .insight-list .insight-item .img-con {
+    height: 200px;
+  }
+
+  .product-rating-info .stars,
+  .product-rating-info .score {
+    font-size: 12px;
+  }
+
+  .product-loan-text {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .product-price .discount-rate {
+    font-size: 13px;
+  }
+
+  .product-price .price {
+    font-size: 15px;
+  }
+}

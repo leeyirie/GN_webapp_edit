@@ -18,7 +18,11 @@
 
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/bottom-menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -29,22 +33,24 @@
       <!-- 헤더 시작 -->
       <header id="header">
         <div class="header-inner">
-          <div class="header-wrap">
-            <div>
-              <div class="header-top-text">
-                대부중개업등록번호: 2024-서울강남-0159(대부업)
-              </div>
+          <div>
+            <div class="header-top-text">
+              대부중개업등록번호: 2024-서울강남-0159(대부업)
+            </div>
+            <div class="logo-line">
               <a href="./index.html">
                 <h1
                   class="logo"
                   style="background-image: url('./img/gn-logo-white.svg')"
                 ></h1>
               </a>
-            </div>
-            <div class="util-box">
-              <div class="auth-buttons">
-                <a href="./loginSelect.html" class="login-btn">로그인</a>
-                <a href="./signup.html" class="signup-btn">회원가입</a>
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                  <!-- <a href="./signup.html" class="signup-btn">회원가입</a> -->
+                </div>
               </div>
             </div>
           </div>
@@ -257,55 +263,5 @@
     </div>
 
     <script src="./js/main.js"></script>
-
-    <style>
-      #bottom-menu {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 0;
-        z-index: 1000;
-      }
-
-      #bottom-menu .menu-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: #333;
-        font-size: 12px;
-      }
-
-      #bottom-menu .menu-item.active {
-        color: #4a90e2;
-      }
-
-      #bottom-menu .menu-item i {
-        font-size: 20px;
-        margin-bottom: 4px;
-      }
-
-      @media (max-width: 768px) {
-        main {
-          margin-bottom: 70px;
-        }
-        .header-search-wrap {
-          padding: 15px 20px;
-          display: flex;
-          justify-content: center;
-        }
-        .search-input-con {
-          margin-left: 0;
-          width: 100%;
-          max-width: 90%;
-        }
-      }
-    </style>
   </body>
 </html>

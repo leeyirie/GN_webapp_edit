@@ -1,0 +1,52 @@
+#bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 9999;
+}
+
+#bottom-menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+#bottom-menu .menu-item.active {
+  color: #4d3dbf;
+}
+
+#bottom-menu .menu-item i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* 태블릿과 모바일 환경에서 메뉴바 표시 및 본문 여백 조정 */
+@media (max-width: 991px) {
+  body {
+    padding-bottom: 60px; /* 하단 메뉴바 높이만큼 패딩 추가 */
+  }
+}
+
+/* 작은 모바일 화면에서의 스타일 조정 */
+@media (max-width: 375px) {
+  #bottom-menu .menu-item {
+    font-size: 10px;
+  }
+
+  #bottom-menu .menu-item i {
+    font-size: 18px;
+  }
+}

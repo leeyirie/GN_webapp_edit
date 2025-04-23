@@ -4,11 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>강남오빠 - 마이페이지</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Pretendard 폰트 로드 -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <style>
+      @supports (font-variation-settings: normal) {
+        * {
+          font-family:
+            'Pretendard Variable',
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            sans-serif;
+        }
+      }
+    </style>
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <!-- 분리된 CSS 파일들 -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/mypage.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/bottom-menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -18,25 +53,25 @@
     <div id="wrap">
       <header id="header">
         <div class="header-inner">
-          <div class="header-wrap">
-            <div>
-              <div class="header-top-text">
-                대부중개업등록번호: 2024-서울강남-0159(대부업)
-              </div>
+          <div>
+            <div class="header-top-text">
+              대부중개업등록번호: 2024-서울강남-0159(대부업)
+            </div>
+            <div class="logo-line">
               <a href="./index.html">
                 <h1
                   class="logo"
                   style="background-image: url('./img/gn-logo-white.svg')"
                 ></h1>
               </a>
-            </div>
-            <div class="util-box">
-              <div class="auth-buttons">
-                <a href="./mypage.html" class="user-profile-btn">
-                  <i class="fas fa-user"></i>
-                  <span>김OO님</span>
-                </a>
-                <a href="#" class="logout-btn">로그아웃</a>
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./mypage.html" class="user-profile-btn">
+                    <i class="fas fa-user"></i>
+                    <span>김OO님</span>
+                  </a>
+                  <a href="#" class="logout-btn">로그아웃</a>
+                </div>
               </div>
             </div>
           </div>
@@ -314,9 +349,6 @@
         <span>마이페이지</span>
       </a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/mypage.js"></script>
 
     <style>
       /* 모바일 반응형에서 검색바 스타일 */

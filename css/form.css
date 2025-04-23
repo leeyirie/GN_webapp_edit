@@ -1,0 +1,546 @@
+/* 팝업 콘텐츠 */
+.popup-content {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* 팝업 내 폼 요소 */
+.popup-content .write-box .input-row {
+  margin-bottom: 15px;
+}
+
+.popup-content .write-box .input-row dl {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.popup-content .write-box .input-row dl.w100 {
+  width: 100%;
+}
+
+.popup-content .write-box .input-row dl.w33 {
+  width: calc(33.33% - 10px);
+}
+
+.popup-content .write-box .input-row dl.w50 {
+  width: calc(50% - 7px);
+}
+
+.popup-content .write-box .input-row dl dt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.popup-content .write-box .input-row dl dt .essential {
+  color: #ff3e3e;
+  margin-left: 2px;
+}
+
+.popup-content .write-box .input-row dl dd {
+  position: relative;
+}
+
+.popup-content .write-box .input-row dl dd input[type='text'],
+.popup-content .write-box .input-row dl dd input[type='password'],
+.popup-content .write-box .input-row dl dd input[type='email'],
+.popup-content .write-box .input-row dl dd input[type='tel'],
+.popup-content .write-box .input-row dl dd input[type='number'] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.popup-content .write-box .input-row dl dd textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: none;
+}
+
+.popup-content .write-box .input-row dl dd input::placeholder {
+  color: #999;
+}
+
+.popup-content .write-box .input-row dl dd .end-txt {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+}
+
+.popup-content .write-box .input-row dl.w100 dd input[type='text'] {
+  width: 100%;
+}
+
+.popup-content .write-box .input-row label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.popup-content .write-box .input-row label input[type='checkbox'],
+.popup-content .write-box .input-row label input[type='radio'] {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+
+.popup-content .write-box .input-row label span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 개인정보 및 마케팅 동의 */
+.popup-police-con {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.popup-police-con label {
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.popup-police-con input {
+  position: absolute;
+  opacity: 0;
+}
+
+.popup-police-con label:before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.popup-police-con label span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.popup-police-con label span b {
+  color: #4d3dbf;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.popup-police-con input:checked + label:before {
+  background: #4d3dbf url('../img/check-icon.png') center center no-repeat;
+  border-color: #4d3dbf;
+}
+
+.popup-submit-btn-con button {
+  width: 100%;
+  padding: 15px;
+  background: #4d3dbf;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.popup-submit-btn-con button:hover {
+  background: #3f31a0;
+}
+
+/* 스크롤바 스타일 */
+.popup-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+/* 로그인 폼 */
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.login-top-con {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-top-con h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.login-form-con {
+  margin-bottom: 30px;
+}
+
+.login-form .input-row {
+  margin-bottom: 15px;
+}
+
+.login-form .input-row input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-form .input-row input::placeholder {
+  color: #999;
+}
+
+.login-form .input-row input:focus {
+  border-color: #4d3dbf;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 61, 191, 0.1);
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.save-id {
+  display: flex;
+  align-items: center;
+}
+
+.save-id input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.save-id span {
+  font-size: 14px;
+  color: #666;
+}
+
+.find-links {
+  display: flex;
+  align-items: center;
+}
+
+.find-links a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.find-links a:hover {
+  color: #4d3dbf;
+  text-decoration: underline;
+}
+
+.find-links .divider {
+  margin: 0 8px;
+  color: #ddd;
+}
+
+.login-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #4d3dbf;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.login-submit-btn:hover {
+  background: #3f31a0;
+}
+
+.signup-link-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  color: #4d3dbf;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #4d3dbf;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.signup-link-btn:hover {
+  background: #f9f8ff;
+}
+
+/* 회원가입 폼 */
+.signup-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.signup-top-con {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.signup-top-con h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.signup-form .input-row {
+  margin-bottom: 20px;
+}
+
+.signup-form .input-row label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.signup-form .input-row input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.signup-form .input-row input:focus {
+  border-color: #4d3dbf;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 61, 191, 0.1);
+}
+
+.signup-form .input-row.with-button .input-button-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-form .input-row.with-button input {
+  flex-grow: 1;
+}
+
+.signup-form .check-button,
+.signup-form .verification-button {
+  padding: 15px;
+  background: #4d3dbf;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.signup-form .check-button:hover,
+.signup-form .verification-button:hover {
+  background: #3f31a0;
+}
+
+.signup-form .input-guide {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+  line-height: 1.4;
+}
+
+.signup-form .timer {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff3e3e;
+  font-weight: 500;
+}
+
+.terms-section {
+  margin-bottom: 30px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.terms-all {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.terms-all label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.terms-list label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.terms-list label:last-child {
+  margin-bottom: 0;
+}
+
+.terms-list input[type='checkbox'] {
+  margin-right: 8px;
+}
+
+.terms-list em {
+  color: #ff3e3e;
+  font-style: normal;
+}
+
+.terms-detail {
+  height: 80px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.signup-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #4d3dbf;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-submit-btn:hover {
+  background: #3f31a0;
+}
+
+/* 반응형 폼 */
+@media screen and (max-width: 767px) {
+  .login-container,
+  .signup-container {
+    padding: 30px 15px;
+  }
+
+  .login-top-con h2,
+  .signup-top-con h2 {
+    font-size: 24px;
+  }
+
+  .login-form .input-row input,
+  .signup-form .input-row input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .login-submit-btn,
+  .signup-link-btn,
+  .signup-submit-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .signup-form .check-button,
+  .signup-form .verification-button {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .login-container,
+  .signup-container {
+    padding: 20px 10px;
+  }
+
+  .login-top-con h2,
+  .signup-top-con h2 {
+    font-size: 22px;
+  }
+
+  .login-form .input-row input,
+  .signup-form .input-row input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .login-options {
+    margin-bottom: 20px;
+  }
+
+  .find-links {
+    flex-wrap: wrap;
+  }
+
+  .login-submit-btn,
+  .signup-link-btn,
+  .signup-submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

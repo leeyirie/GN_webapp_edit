@@ -1,0 +1,267 @@
+/* 회원가입 페이지 스타일 */
+#content.signup-page {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  border-radius: 50px 50px 0 0;
+}
+
+.signup-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.signup-top-con {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.signup-top-con h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+}
+
+.signup-form .input-row {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.signup-form .input-row label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.signup-form .input-row input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.signup-form .input-row input:focus {
+  border-color: #4d3dbf;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 61, 191, 0.1);
+}
+
+.signup-form .input-row.with-button .input-button-wrap {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-form .input-row.with-button input {
+  flex: 1;
+}
+
+.signup-form .check-button,
+.signup-form .verify-button {
+  min-width: 110px;
+  height: 60px;
+  background: #4d3dbf;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-form .check-button:hover,
+.signup-form .verify-button:hover {
+  background: #3c2f96;
+}
+
+.signup-form .input-guide {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #999;
+  line-height: 1.4;
+}
+
+.signup-form .timer {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff4d4d;
+}
+
+.terms-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.terms-all {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.terms-all label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.terms-list label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.terms-list label:last-child {
+  margin-bottom: 0;
+}
+
+.terms-list input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.terms-list em {
+  color: #ff66cc;
+  font-style: normal;
+  margin-left: 5px;
+}
+
+.terms-detail {
+  margin-top: 5px;
+  margin-left: 25px;
+  font-size: 14px;
+  color: #999;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.signup-submit-btn {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(90deg, #4d3dbf 0%, #ff66cc 100%);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* 헤더 회원가입 페이지용 */
+#header.signup-header {
+  padding: 20px 0;
+}
+
+#header.signup-header:before {
+  height: 100%;
+}
+
+#header.signup-header .header-search-con {
+  display: none;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 767px) {
+  #content.signup-page {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+
+  .signup-container {
+    padding: 20px 15px;
+    margin-top: 20px;
+  }
+
+  .signup-top-con h2 {
+    font-size: 24px;
+  }
+
+  .signup-form .input-row label {
+    font-size: 14px;
+  }
+
+  .signup-form .input-row input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .signup-form .check-button,
+  .signup-form .verify-button {
+    height: 50px;
+    font-size: 14px;
+    min-width: 90px;
+  }
+
+  .terms-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .terms-all label {
+    font-size: 16px;
+  }
+
+  .terms-list label {
+    font-size: 14px;
+  }
+
+  .signup-submit-btn {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .signup-container {
+    padding: 15px 10px;
+  }
+
+  .signup-top-con h2 {
+    font-size: 22px;
+  }
+
+  .signup-form .input-row input {
+    height: 45px;
+    padding: 0 15px;
+  }
+
+  .signup-form .check-button,
+  .signup-form .verify-button {
+    height: 45px;
+    font-size: 12px;
+    min-width: 80px;
+  }
+
+  .terms-all label {
+    font-size: 14px;
+  }
+
+  .terms-list label {
+    font-size: 13px;
+  }
+
+  .signup-submit-btn {
+    height: 45px;
+    font-size: 14px;
+  }
+}

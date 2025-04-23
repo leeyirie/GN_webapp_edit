@@ -1,0 +1,157 @@
+/* 공통 스타일 */
+body {
+  background: #f7f7f7;
+}
+#wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#content {
+  padding: 50px 0;
+  border-radius: 50px 50px 0 0;
+  background: #fff;
+}
+.container {
+  padding: 0 80px;
+}
+.mo-br {
+  display: none;
+}
+.mo-banner {
+  display: none;
+}
+
+/* 공통 타이틀 */
+.cm-title-con {
+  position: relative;
+  padding-bottom: 20px;
+}
+.cm-title-con .tit {
+  color: #222;
+  font-size: 32px;
+  font-weight: 600;
+}
+.cm-title-con a {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  color: #555;
+  font-size: 20px;
+}
+
+/* 공통 별점 */
+.rating-common {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.rating-common .stars {
+  color: #ffca00;
+  font-size: 18px;
+}
+.rating-common .score {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+}
+.rating-common .reviews {
+  position: relative;
+  padding-left: 16px;
+  color: #666;
+  font-size: 16px;
+}
+.rating-common .reviews::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  background: #666;
+  transform: translateY(-50%);
+}
+
+/* 모달 팝업 공통 */
+.cm-modal-popup-fixed {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+.cm-modal-popup-fixed.active {
+  display: block;
+}
+.cm-popup-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cm-popup-container {
+  width: 100%;
+}
+.cm-popup-wrapper .cm-popup-con {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.cm-popup-con .cm-popup-inner {
+  background: #fff;
+  border-radius: 10px;
+}
+.cm-popup-con .popup-title-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+.cm-popup-con .popup-title-box .tit {
+  color: #222;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* 미디어 쿼리 - 반응형 공통 */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mo-banner {
+    display: block;
+  }
+  .mo-br {
+    display: block;
+  }
+  .pc-banner {
+    display: none;
+  }
+
+  .cm-title-con .tit {
+    font-size: 24px;
+  }
+  .cm-title-con a {
+    font-size: 16px;
+  }
+
+  .rating-common .stars {
+    font-size: 16px;
+  }
+  .rating-common .score {
+    font-size: 16px;
+  }
+  .rating-common .reviews {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+}
