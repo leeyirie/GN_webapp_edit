@@ -77,7 +77,7 @@
 /* 메인 배너 슬라이드 */
 .main-beauty-banner-con {
   position: relative;
-  padding: 40px 0;
+  padding: 0px 10px;
   overflow: hidden;
 }
 .main-beauty-banner-con::before {
@@ -395,6 +395,7 @@
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 8px;
+    padding: 0px 30px;
   }
 
   .best-product-list-con .best-list {
