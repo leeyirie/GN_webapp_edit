@@ -183,6 +183,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 0.3s ease;
 }
 
 #header .header-search-con .search-input-con .search-label {
@@ -298,15 +299,27 @@
     padding: 12px 24px;
     font-size: 18px;
   }
+
+  #header .header-search-con {
+    margin-top: 25px;
+  }
+
+  #header .header-search-con .search-input-con {
+    padding: 13px 20px;
+  }
+
+  #header .header-search-con .search-input-con .search-label {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   #header {
-    padding: 20px 0;
+    padding: 20px 0 15px;
   }
 
   #header:before {
-    height: 220%;
+    height: 180%;
   }
 
   #header .logo {
@@ -320,6 +333,29 @@
 
   #header .header-search-con {
     margin-top: 15px;
+  }
+
+  #header .header-search-con .header-search-wrap {
+    padding: 0 15px;
+  }
+
+  #header .header-search-con .search-input-con {
+    padding: 10px 15px;
+    gap: 10px;
+    border-radius: 25px;
+  }
+
+  #header .header-search-con .search-input-con .search-label {
+    font-size: 14px;
+  }
+
+  #header .header-search-con .search-input-con .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #header .header-search-con .search-input-con .search-icon i {
+    font-size: 16px;
   }
 
   #header .util-box .auth-buttons {
@@ -343,6 +379,10 @@
 }
 
 @media screen and (max-width: 430px) {
+  #header {
+    padding: 15px 0 12px;
+  }
+
   #header .logo {
     width: 100px;
     height: 25px;
@@ -372,6 +412,33 @@
     padding: 6px 10px;
     font-size: 12px;
   }
+
+  #header .header-search-con {
+    margin-top: 12px;
+  }
+
+  #header .header-search-con .header-search-wrap {
+    padding: 0 10px;
+  }
+
+  #header .header-search-con .search-input-con {
+    padding: 8px 12px;
+    gap: 8px;
+    border-radius: 20px;
+  }
+
+  #header .header-search-con .search-input-con .search-label {
+    font-size: 13px;
+  }
+
+  #header .header-search-con .search-input-con .search-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  #header .header-search-con .search-input-con .search-icon i {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -399,4 +466,30 @@
     padding: 5px 8px;
     font-size: 11px;
   }
+}
+
+/* 마이페이지 로그인 버튼 스타일 */
+.mypage .auth-buttons .user-profile-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.mypage .auth-buttons .user-profile-btn:hover {
+  opacity: 0.8;
+}
+
+/* 기존 로그인 버튼 스타일에 마이페이지 제외 조건 추가 */
+.auth-buttons .login-btn {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-buttons .login-btn:not(.mypage .auth-buttons .login-btn) {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }

@@ -298,7 +298,6 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 .cm-title-con .tit {
     font-size: 24px;
@@ -2085,7 +2084,7 @@ body {
     }
 
     .main-beauty-banner-con {
-        padding: 10px 12px 0;
+        padding: 30px 12px 0;
     }
 
     .best-product-list-con .best-list {

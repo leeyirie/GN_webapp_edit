@@ -4,22 +4,31 @@
 }
 .inter-select-con .tit {
   color: #222;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
 }
 
+/* 시술 선택 리스트 컨테이너 */
 .surgery-list-con {
   position: relative;
 }
+
+/* 시술 아이콘 리스트 */
 .surgery-list-con .surgery-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 8px;
+  justify-content: center;
+  max-width: 580px;
+  margin: 0 auto;
 }
+
+/* 각 시술 아이콘 아이템 */
 .surgery-list-con .surgery-list .surgery-item {
-  flex: 0 0 calc(20% - 16px);
+  flex: 0 0 100px;
+  align-items: center;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -28,20 +37,21 @@
   text-decoration: none;
 }
 .surgery-list-con .surgery-list .surgery-item .img-con {
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+  width: 80px;
+  height: 80px;
+  padding-bottom: 0;
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   background: #f5f5f5;
 }
 .surgery-list-con .surgery-list .surgery-item .img-con img {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 20px;
   transition: transform 0.3s ease;
 }
 .surgery-list-con .surgery-list .surgery-item:hover .img-con img {
@@ -77,7 +87,7 @@
 /* 메인 배너 슬라이드 */
 .main-beauty-banner-con {
   position: relative;
-  padding: 0px 10px;
+  padding: 40px 10px;
   overflow: hidden;
 }
 .main-beauty-banner-con::before {
@@ -111,7 +121,7 @@
 }
 .main-beauty-banner-con .banner-item img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -299,7 +309,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .hospital-ad-banner h3 {
   color: #fff;
@@ -353,49 +363,64 @@
 
 /* 반응형 - 메인 컨텐츠 */
 @media screen and (max-width: 1199px) {
-  .surgery-list-con .surgery-list .surgery-item,
   .best-product-list-con .best-list .best-item,
   .insight-list .insight-item {
     flex: 0 0 calc(33.33% - 16px);
+  }
+  .surgery-list-con .surgery-list {
+    max-width: 480px;
+  }
+  .surgery-list-con .surgery-list .surgery-item {
+    flex: 0 0 80px;
+  }
+  .main-beauty-banner-con {
+    padding: 30px 10px;
+  }
+  .main-beauty-banner-con .banner-item img {
+    border-radius: 15px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .inter-select-con .tit {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
   }
 
   .surgery-list-con .surgery-list {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .surgery-list-con .surgery-list::-webkit-scrollbar {
-    display: none;
+    max-width: 380px;
   }
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 0 0 120px;
+    flex: 0 0 65px;
   }
   .surgery-list-con .surgery-list .surgery-item .img-con {
+    width: 65px;
+    height: 65px;
     border-radius: 15px;
   }
   .surgery-list-con .surgery-list .surgery-item .txt {
-    font-size: 16px;
+    font-size: 14px;
   }
   .inter-select-con .more-view {
     display: block;
   }
 
-  .main-beauty-banner-con::before,
-  .main-beauty-banner-con::after {
-    display: none;
+  .main-beauty-banner-con {
+    padding: 20px 15px;
+  }
+  .main-beauty-banner-con .banner-slide {
+    max-width: 100%;
+  }
+  .main-beauty-banner-con .slick-list {
+    margin: 0;
+    padding: 10px 0;
+  }
+  .main-beauty-banner-con .banner-item {
+    padding: 0 5px;
   }
   .main-beauty-banner-con .banner-item img {
-    border-radius: 8px;
-    padding: 0px 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   }
 
   .best-product-list-con .best-list {
@@ -511,5 +536,74 @@
 
   .product-price .price {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .surgery-list-con .surgery-list {
+    max-width: 320px;
+  }
+  .surgery-list-con .surgery-list .surgery-item {
+    flex: 0 0 55px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .img-con {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .txt {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .img-con img {
+    padding: 15px;
+  }
+
+  .inter-select-con .tit {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .main-beauty-banner-con {
+    padding: 15px 10px;
+  }
+  .main-beauty-banner-con .slick-list {
+    padding: 5px 0;
+  }
+  .main-beauty-banner-con .banner-item {
+    padding: 0 3px;
+  }
+  .main-beauty-banner-con .banner-item img {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* 공통 타이틀 스타일 */
+.cm-title-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cm-title-con .tit {
+  color: #222;
+  font-size: 24px;
+  font-weight: 600;
+}
+.cm-title-con a {
+  color: #666;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .cm-title-con .tit {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .cm-title-con .tit {
+    font-size: 18px;
   }
 }
