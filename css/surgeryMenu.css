@@ -12,6 +12,146 @@
   padding: 24px 80px;
 }
 
+/* Sort options section */
+.sort-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Left section with back button and title */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.back-btn i {
+  font-size: 16px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Dropdown sort styling */
+.dropdown-sort {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-dropdown-btn {
+  padding: 8px 15px;
+  background: #4d3dbf;
+  border: 1px solid #4d3dbf;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-dropdown-btn i {
+  font-size: 12px;
+}
+
+.sort-dropdown-btn:hover {
+  background: #3e31a0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  border-radius: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.dropdown-sort:hover .dropdown-content,
+.dropdown-sort:focus-within .dropdown-content {
+  display: block;
+}
+
+.sort-item {
+  width: 100%;
+  padding: 12px 16px;
+  color: #666;
+  font-size: 14px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-item:hover {
+  background-color: #f5f5f5;
+  color: #4d3dbf;
+}
+
+.sort-item.active {
+  color: #4d3dbf;
+  font-weight: 500;
+  background-color: #f0eeff;
+}
+
+/* Original sort button styles (keeping for reference) */
+.sort-btn {
+  padding: 8px 15px;
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.sort-btn:hover {
+  background: #f0f0f0;
+  color: #4d3dbf;
+}
+
+.sort-btn.active {
+  background: #4d3dbf;
+  color: #fff;
+  border-color: #4d3dbf;
+}
+
 /* Event count */
 .event-count {
   font-size: 24px;
@@ -62,8 +202,6 @@
   position: absolute;
   left: 10px;
   top: 10px;
-  background: #4d3dbf;
-  color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 14px;
@@ -154,62 +292,6 @@
   color: #666;
 }
 
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  gap: 8px;
-}
-
-.page-numbers {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.page-btn,
-.page-number {
-  min-width: 32px;
-  height: 32px;
-  padding: 0 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #fff;
-  color: #666;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.page-btn:hover:not(:disabled),
-.page-number:hover:not(.active) {
-  border-color: #4d3dbf;
-  color: #4d3dbf;
-}
-
-.page-btn:disabled {
-  background: #f5f5f5;
-  color: #999;
-  cursor: not-allowed;
-}
-
-.page-number.active {
-  background: #4d3dbf;
-  color: #fff;
-  border-color: #4d3dbf;
-}
-
-.page-dots {
-  color: #666;
-  padding: 0 4px;
-}
-
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
   .surgery-detail-page .container {
@@ -218,6 +300,53 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* Sort options */
+  .sort-options {
+    gap: 8px;
+    padding: 15px 0;
+    overflow-x: visible;
+  }
+
+  /* Left section responsive */
+  .left-section {
+    gap: 10px;
+  }
+
+  .back-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .back-btn i {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .sort-btn {
+    padding: 6px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Dropdown sort responsive */
+  .sort-dropdown-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .dropdown-content {
+    right: 0;
+    min-width: 140px;
+  }
+
+  .sort-item {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
   .event-count {
     font-size: 20px;
   }
@@ -303,6 +432,50 @@
 }
 
 @media screen and (max-width: 480px) {
+  /* Sort options */
+  .sort-options {
+    padding: 12px 0;
+    justify-content: space-between;
+  }
+
+  /* Left section responsive */
+  .left-section {
+    gap: 8px;
+  }
+
+  .back-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .back-btn i {
+    font-size: 12px;
+  }
+
+  .page-title {
+    font-size: 16px;
+  }
+
+  .sort-btn {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* Dropdown sort responsive */
+  .sort-dropdown-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  .sort-item {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
   .event-count {
     font-size: 18px;
   }
@@ -373,25 +546,220 @@
     font-size: 15px;
     gap: 4px;
   }
+}
 
-  /* Pagination */
-  .pagination {
-    margin-top: 20px;
-    gap: 4px;
+@media screen and (max-width: 450px) {
+  /* Sort options */
+  .sort-options {
+    padding: 12px 0;
+    justify-content: space-between;
   }
 
-  .page-numbers {
-    max-width: 90%;
-    overflow-x: auto;
+  /* Left section responsive */
+  .left-section {
+    gap: 8px;
+  }
+
+  .back-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .back-btn i {
+    font-size: 12px;
+  }
+
+  .page-title {
+    font-size: 16px;
+  }
+
+  .sort-btn {
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* Dropdown sort responsive */
+  .sort-dropdown-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  .sort-item {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .event-count {
+    font-size: 18px;
+  }
+
+  /* Hospital event item */
+  .hospital-event-item {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+  }
+
+  .event-image {
+    width: 30%;
+    height: 0;
+    padding-top: 30%;
+  }
+
+  .event-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .event-info {
+    padding: 12px;
+  }
+
+  .hospital-location {
+    font-size: 13px;
+  }
+
+  .event-title {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  /* Rating common */
+  .rating-common {
+    margin-top: 5px;
+  }
+
+  .rating-common .stars,
+  .rating-common .score {
+    font-size: 13px;
+  }
+
+  .rating-common .score span {
+    font-size: 11px;
+  }
+
+  /* Hospital event item */
+  .hospital-event-item {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 110px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+
+  /* Price info */
+  .price-info {
+    margin-top: 8px;
+  }
+
+  .price-info .discount {
+    font-size: 16px;
+  }
+
+  .price-info .price-before {
+    font-size: 11px;
+  }
+
+  .price-info .price {
+    font-size: 15px;
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Hospital event item */
+  .hospital-event-item {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 90px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    align-items: stretch;
+  }
+
+  .event-image {
+    width: 30%;
+    height: auto;
+    padding-top: 0;
+    position: relative;
+    min-height: 90px;
+  }
+
+  .event-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .event-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hospital-location {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .event-title {
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .price-info {
+    margin-top: 4px;
     gap: 2px;
   }
 
-  .page-btn,
-  .page-number {
-    min-width: 24px;
-    height: 24px;
-    padding: 0 4px;
+  .price-info .discount {
+    font-size: 14px;
+  }
+
+  .price-info .price-before {
+    font-size: 10px;
+  }
+
+  .price-info .price {
+    font-size: 13px;
+    gap: 2px;
+  }
+
+  .rating-common {
+    margin-top: 3px;
+    gap: 4px;
+  }
+
+  .rating-common .stars,
+  .rating-common .score {
     font-size: 12px;
-    margin: 0 3px;
+  }
+
+  .rating-common .score span {
+    font-size: 10px;
   }
 }
