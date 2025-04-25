@@ -542,7 +542,7 @@
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
   .surgery-list-con .surgery-list {
     max-width: 320px;
   }
