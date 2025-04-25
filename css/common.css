@@ -13,7 +13,7 @@ body {
   background: #fff;
 }
 .container {
-  padding: 0 80px;
+  padding: 40px 80px;
 }
 .mo-br {
   display: none;
@@ -118,7 +118,7 @@ body {
 /* 미디어 쿼리 - 반응형 공통 */
 @media screen and (max-width: 1200px) {
   .container {
-    padding: 0 40px;
+    padding: 20px 40px;
   }
 }
 
@@ -153,6 +153,6 @@ body {
 
 @media screen and (max-width: 480px) {
   .container {
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 }

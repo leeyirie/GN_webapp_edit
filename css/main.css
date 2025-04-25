@@ -301,24 +301,28 @@
 
 /* 병원 광고 배너 */
 .business-partner-con {
-  padding-bottom: 0;
+  padding: 40px 0;
 }
 
-.hospital-ad-banner {
-  width: 100%;
-  height: 240px;
-  background: linear-gradient(90deg, #4d3dbf 0%, #6a5aff 100%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-top: 10px;
+.ad-container {
+  max-width: 1040px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-bottom: 48px;
 }
-.hospital-ad-banner h3 {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
+
+.ad-container a {
+  display: block;
+  width: 100%;
+}
+
+.ad-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* 인기 상품 상세 스타일 */
@@ -506,6 +510,14 @@
   .product-price .price {
     font-size: 16px;
   }
+
+  .business-partner-con {
+    padding: 30px 20px;
+  }
+
+  .ad-container {
+    border-radius: 15px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -546,6 +558,14 @@
 
   .product-price .price {
     font-size: 15px;
+  }
+
+  .business-partner-con {
+    padding: 20px 15px;
+  }
+
+  .ad-container {
+    border-radius: 12px;
   }
 }
 
