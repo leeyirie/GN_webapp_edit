@@ -5,18 +5,62 @@ jQuery(function ($) {
       slide: 'div',
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
       infinite: true,
       speed: 1200,
-      centerMode: true,
-      dots: false,
-      draggable: true,
       centerMode: false,
-      centerPadding: '20px',
+      dots: true,
+      arrows: false,
+      draggable: true,
+      centerPadding: '0px',
       prevArrow: '.main-product-controls .prev-btn',
       nextArrow: '.main-product-controls .next-btn',
+      cssEase: 'ease-in-out',
+      adaptiveHeight: true,
+      slidesMargin: 0,
+      customPaging: function (slider, i) {
+        // 숫자 대신 빈 문자열을 반환하여 점으로 표시
+        return '<button type="button"></button>';
+      },
     });
   });
+
+  // Slick 슬라이더 초기화 후 스타일 적용
+  setTimeout(function () {
+    // 배너 이미지에 스타일 적용
+    $('.rounded-banner-img').each(function () {
+      $(this).css({
+        'border-radius': '20px',
+        overflow: 'hidden',
+      });
+    });
+
+    // 슬라이더 컨테이너에도 스타일 적용
+    $('.main-beauty-banner-con .slick-list').css({
+      overflow: 'hidden',
+    });
+
+    $('.main-beauty-banner-con .slick-slide').css({
+      'border-radius': '20px',
+      overflow: 'hidden',
+    });
+
+    $('.main-beauty-banner-con .banner-item').css({
+      'border-radius': '20px',
+      overflow: 'hidden',
+      padding: '0',
+    });
+
+    // 슬라이더 간 간격 제거
+    $('.main-beauty-banner-con').css({
+      overflow: 'hidden',
+    });
+
+    $('.banner-slide').css({
+      overflow: 'hidden',
+    });
+  }, 100);
 
   $('.detail-more-view-con .more-view-btn').click(function () {
     if (!$(this).parents('.product-detail-des-con').hasClass('active')) {
