@@ -443,7 +443,7 @@
     height: 80px;
   }
   .main-beauty-banner-con {
-    padding: 30px 0;
+    padding: 30px 36px;
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 15px;
@@ -480,7 +480,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 20px 0;
+    padding: 20px 30px;
   }
   .main-beauty-banner-con .banner-slide {
     max-width: 100%;
@@ -652,7 +652,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 15px 0;
+    padding: 15px 24px;
   }
 }
 
@@ -685,7 +685,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 15px 0;
+    padding: 15px 20px;
   }
   .main-beauty-banner-con .slick-list {
     padding: 5px 0;
