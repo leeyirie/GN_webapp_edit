@@ -274,6 +274,7 @@
 }
 .insight-list .insight-item .des-con {
   padding: 20px;
+  position: relative;
 }
 .insight-list .insight-item .des-con .tit {
   font-size: 18px;
@@ -293,10 +294,19 @@
   margin-bottom: 15px;
 }
 .insight-list .insight-item .more-view {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: #4d3dbf;
   font-size: 14px;
   font-weight: 500;
+  margin-bottom: 20px;
+  float: right;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+.insight-list .insight-item .more-view:hover {
+  transform: translateX(3px);
 }
 
 /* 병원 광고 배너 */
