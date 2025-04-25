@@ -15,13 +15,119 @@
 /* Sort options section */
 .sort-options {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding: 15px 0;
   border-bottom: 1px solid #eee;
 }
 
+/* Left section with back button and title */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.back-btn i {
+  font-size: 16px;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Dropdown sort styling */
+.dropdown-sort {
+  position: relative;
+  display: inline-block;
+}
+
+.sort-dropdown-btn {
+  padding: 8px 15px;
+  background: #4d3dbf;
+  border: 1px solid #4d3dbf;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-dropdown-btn i {
+  font-size: 12px;
+}
+
+.sort-dropdown-btn:hover {
+  background: #3e31a0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  border-radius: 8px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.dropdown-sort:hover .dropdown-content,
+.dropdown-sort:focus-within .dropdown-content {
+  display: block;
+}
+
+.sort-item {
+  width: 100%;
+  padding: 12px 16px;
+  color: #666;
+  font-size: 14px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-item:hover {
+  background-color: #f5f5f5;
+  color: #4d3dbf;
+}
+
+.sort-item.active {
+  color: #4d3dbf;
+  font-weight: 500;
+  background-color: #f0eeff;
+}
+
+/* Original sort button styles (keeping for reference) */
 .sort-btn {
   padding: 8px 15px;
   background: #f7f7f7;
@@ -256,14 +362,47 @@
   .sort-options {
     gap: 8px;
     padding: 15px 0;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow-x: visible;
+  }
+
+  /* Left section responsive */
+  .left-section {
+    gap: 10px;
+  }
+
+  .back-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .back-btn i {
+    font-size: 14px;
+  }
+
+  .page-title {
+    font-size: 18px;
   }
 
   .sort-btn {
     padding: 6px 16px;
     font-size: 14px;
     white-space: nowrap;
+  }
+
+  /* Dropdown sort responsive */
+  .sort-dropdown-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .dropdown-content {
+    right: 0;
+    min-width: 140px;
+  }
+
+  .sort-item {
+    padding: 10px 14px;
+    font-size: 13px;
   }
 
   .event-count {
@@ -357,9 +496,42 @@
     justify-content: space-between;
   }
 
+  /* Left section responsive */
+  .left-section {
+    gap: 8px;
+  }
+
+  .back-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .back-btn i {
+    font-size: 12px;
+  }
+
+  .page-title {
+    font-size: 16px;
+  }
+
   .sort-btn {
     padding: 5px 14px;
     font-size: 13px;
+  }
+
+  /* Dropdown sort responsive */
+  .sort-dropdown-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .dropdown-content {
+    min-width: 120px;
+  }
+
+  .sort-item {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 
   .event-count {

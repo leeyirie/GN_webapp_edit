@@ -70,11 +70,24 @@
       <div id="content" class="surgery-detail-page">
         <div class="container">
           <div class="sort-options">
-            <button class="sort-btn active">인기순</button>
-            <button class="sort-btn">최신순</button>
-            <button class="sort-btn">가격 낮은순</button>
-            <button class="sort-btn">가격 높은순</button>
-            <button class="sort-btn">평점순</button>
+            <div class="left-section">
+              <a href="javascript:history.back()" class="back-btn"
+                ><i class="fas fa-arrow-left"></i
+              ></a>
+              <h2 class="page-title">눈성형</h2>
+            </div>
+            <div class="dropdown-sort">
+              <button class="sort-dropdown-btn">
+                인기순 <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <button class="sort-item active">인기순</button>
+                <button class="sort-item">최신순</button>
+                <button class="sort-item">가격 낮은순</button>
+                <button class="sort-item">가격 높은순</button>
+                <button class="sort-item">평점순</button>
+              </div>
+            </div>
           </div>
 
           <div class="event-count">이벤트 12건</div>
@@ -309,5 +322,46 @@
         <span>알림</span>
       </a>
     </div>
+
+    <script>
+      // Dropdown sort functionality
+      document.addEventListener('DOMContentLoaded', function () {
+        const sortDropdownBtn = document.querySelector('.sort-dropdown-btn');
+        const sortItems = document.querySelectorAll('.sort-item');
+
+        // Update dropdown button text when an option is selected
+        sortItems.forEach(item => {
+          item.addEventListener('click', function () {
+            // Remove active class from all items
+            sortItems.forEach(el => el.classList.remove('active'));
+
+            // Add active class to clicked item
+            this.classList.add('active');
+
+            // Update dropdown button text
+            sortDropdownBtn.innerHTML =
+              this.textContent + ' <i class="fas fa-chevron-down"></i>';
+
+            // Close dropdown (optional)
+            // document.querySelector('.dropdown-content').style.display = 'none';
+          });
+        });
+
+        // Close dropdown when clicking outside (optional)
+        document.addEventListener('click', function (event) {
+          if (!event.target.closest('.dropdown-sort')) {
+            document.querySelector('.dropdown-content').style.display = 'none';
+          }
+        });
+
+        // Toggle dropdown on button click (optional alternative to hover)
+        sortDropdownBtn.addEventListener('click', function (event) {
+          event.stopPropagation();
+          const dropdown = document.querySelector('.dropdown-content');
+          dropdown.style.display =
+            dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+    </script>
   </body>
 </html>
