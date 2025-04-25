@@ -104,43 +104,23 @@
       <div id="content" class="hospital-page">
         <div class="container">
           <!-- 필터 섹션 -->
-          <div class="filter-section">
-            <div class="cm-title-con">
-              <h2 class="tit">병원 정보</h2>
+          <div class="sort-options">
+            <div class="left-section">
+              <a href="javascript:history.back()" class="back-btn"
+                ><i class="fas fa-arrow-left"></i
+              ></a>
+              <h2 class="page-title">병원정보</h2>
             </div>
-            <div class="filter-buttons">
-              <div class="filter-group">
-                <button class="filter-btn">
-                  <span class="selected-option">전체</span>
-                </button>
-                <div class="filter-options">
-                  <div class="filter-option active">전체</div>
-                  <div class="filter-option">서울</div>
-                </div>
-              </div>
-              <div class="filter-group">
-                <button class="filter-btn">
-                  <span class="selected-option">전체</span>
-                </button>
-                <div class="filter-options">
-                  <div class="filter-option active">전체</div>
-                  <div class="filter-option">눈성형</div>
-                  <div class="filter-option">코성형</div>
-                  <div class="filter-option">안면윤곽</div>
-                  <div class="filter-option">가슴성형</div>
-                  <div class="filter-option">피부</div>
-                </div>
-              </div>
-              <div class="filter-group">
-                <button class="filter-btn">
-                  <span class="selected-option">인기순</span>
-                </button>
-                <div class="filter-options">
-                  <div class="filter-option active">인기순</div>
-                  <div class="filter-option">평점순</div>
-                  <div class="filter-option">가격순</div>
-                  <div class="filter-option">최신순</div>
-                </div>
+            <div class="dropdown-sort">
+              <button class="sort-dropdown-btn">
+                인기순 <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <button class="sort-item active">인기순</button>
+                <button class="sort-item">최신순</button>
+                <button class="sort-item">가격 낮은순</button>
+                <button class="sort-item">가격 높은순</button>
+                <button class="sort-item">평점순</button>
               </div>
             </div>
           </div>
@@ -177,17 +157,22 @@
 
           <!-- 페이지네이션 -->
           <div class="pagination">
+            <button class="page-btn prev" disabled>
+              <span class="arrow">〈</span>
+            </button>
+
             <div class="page-numbers">
-              <button class="page-btn" disabled>처음</button>
-              <button class="page-btn" disabled>이전</button>
               <button class="page-number active">1</button>
               <button class="page-number">2</button>
               <button class="page-number">3</button>
+              <button class="page-number">4</button>
+              <button class="page-number">5</button>
               <span class="page-dots">...</span>
               <button class="page-number">10</button>
-              <button class="page-btn">다음</button>
-              <button class="page-btn">마지막</button>
             </div>
+            <button class="page-btn next">
+              <span class="arrow">〉</span>
+            </button>
           </div>
         </div>
       </div>

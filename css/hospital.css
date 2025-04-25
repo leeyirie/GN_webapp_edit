@@ -472,59 +472,6 @@
   font-weight: 500;
 }
 
-/* 페이지네이션 */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.page-numbers {
-  display: flex;
-  align-items: center;
-}
-
-.page-btn,
-.page-number,
-.page-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  margin: 0 5px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 50%;
-  color: #666;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.page-btn:hover:not(:disabled),
-.page-number:hover:not(.active) {
-  background: #f0eeff;
-  color: #4d3dbf;
-  border-color: #4d3dbf;
-}
-
-.page-btn:disabled {
-  opacity: 0.5;
-  cursor: default;
-}
-
-.page-number.active {
-  background: #4d3dbf;
-  color: #fff;
-  border-color: #4d3dbf;
-}
-
-.page-dots {
-  cursor: default;
-}
-
 @media screen and (max-width: 768px) {
   .pagination {
     margin-top: 30px;
@@ -542,11 +489,6 @@
 @media screen and (max-width: 480px) {
   .pagination {
     margin-top: 20px;
-  }
-
-  .page-numbers {
-    max-width: 90%;
-    overflow-x: auto;
   }
 
   .page-btn,

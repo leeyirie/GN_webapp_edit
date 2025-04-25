@@ -1317,30 +1317,6 @@
   }
 }
 
-/* 뒤로가기 버튼 스타일 */
-.back-button {
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.back-button a {
-  display: flex;
-  align-items: center;
-  color: #666;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.back-button a:hover {
-  color: #4d3dbf;
-}
-
-.back-button i {
-  margin-right: 8px;
-  font-size: 18px;
-}
-
 /* 별점 오른쪽 정렬 수정 */
 .rating-common {
   display: flex;
@@ -1354,18 +1330,4 @@
   align-items: center;
   gap: 10px;
   justify-content: flex-end;
-}
-
-@media screen and (max-width: 768px) {
-  .back-button {
-    margin-bottom: 15px;
-  }
-
-  .back-button a {
-    font-size: 14px;
-  }
-
-  .back-button i {
-    font-size: 16px;
-  }
 }
