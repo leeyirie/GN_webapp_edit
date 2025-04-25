@@ -9,28 +9,48 @@
   background-color: white;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
   z-index: 9999;
+  padding: 0;
+  height: 60px;
 }
 
 #bottom-menu .menu-item {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: #333;
+  color: #999;
   font-size: 12px;
+  height: 100%;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+#bottom-menu .menu-item .svg-icon img {
+  filter: grayscale(1) opacity(0.6);
+  transition: filter 0.3s ease;
 }
 
 #bottom-menu .menu-item.active {
   color: #4d3dbf;
 }
 
-#bottom-menu .menu-item i {
-  font-size: 20px;
-  margin-bottom: 4px;
+#bottom-menu .menu-item.active .svg-icon img {
+  filter: none;
+}
+
+#bottom-menu .menu-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background-color: #4d3dbf;
+  border-radius: 3px 3px 0 0;
 }
 
 #bottom-menu .svg-icon {
@@ -39,13 +59,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 #bottom-menu .svg-icon img {
-  width: 100%;
-  height: 100%;
+  width: 22px;
+  height: 22px;
   object-fit: contain;
+}
+
+#bottom-menu span {
+  white-space: nowrap;
 }
 
 /* 태블릿과 모바일 환경에서 메뉴바 표시 및 본문 여백 조정 */
@@ -61,7 +85,13 @@
     font-size: 10px;
   }
 
-  #bottom-menu .menu-item i {
-    font-size: 18px;
+  #bottom-menu .svg-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #bottom-menu .svg-icon img {
+    width: 18px;
+    height: 18px;
   }
 }

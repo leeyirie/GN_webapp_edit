@@ -106,8 +106,15 @@ body {
 }
 .cm-title-con a::after {
   content: '→';
-  font-size: 16px;
-  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 .cm-title-con a:hover {
   background-color: #eeebff;
@@ -117,6 +124,8 @@ body {
 }
 .cm-title-con a:hover::after {
   transform: translateX(3px);
+  background-color: #4d3dbf;
+  color: #fff;
 }
 
 /* 공통 별점 */
@@ -241,7 +250,15 @@ body {
     font-size: 14px;
   }
   .cm-title-con a::after {
-    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .more-view::after {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
   }
 
   .rating-common .stars {
@@ -268,7 +285,15 @@ body {
     font-size: 13px;
   }
   .cm-title-con a::after {
-    font-size: 13px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+  }
+
+  .more-view::after {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
   }
 }
 
@@ -549,4 +574,23 @@ body {
   .back-txt {
     font-size: 13px;
   }
+}
+
+/* 더보기 버튼 스타일링 */
+.more-view {
+  display: inline-flex;
+  align-items: center;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  align-self: flex-end;
+  margin-left: auto;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+.more-view:hover {
+  transform: translateX(3px);
+  color: #4d3dbf;
 }

@@ -14,21 +14,21 @@
 /* 시술 선택 리스트 컨테이너 */
 .surgery-list-con {
   position: relative;
+  padding: 0 20px;
 }
 
 /* 시술 아이콘 리스트 */
 .surgery-list-con .surgery-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  max-width: 580px;
+  justify-content: space-between;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0;
 }
 
 /* 각 시술 아이콘 아이템 */
 .surgery-list-con .surgery-list .surgery-item {
-  flex: 0 0 100px;
+  flex: 1;
   align-items: center;
   text-align: center;
   transition: all 0.3s ease;
@@ -144,7 +144,7 @@
 
 /* 인기 상품 */
 .best-product-con {
-  padding: 40px 0;
+  padding: 16px 0;
 }
 .best-product-list-con .best-list {
   display: flex;
@@ -231,7 +231,7 @@
 
 /* 인사이트 섹션 */
 .insight-con {
-  padding: 40px 0;
+  padding: 16px 0;
 }
 .insight-list-con {
   margin-top: 20px;
@@ -396,15 +396,17 @@
   }
 
   .surgery-list-con .surgery-list {
-    max-width: 380px;
+    justify-content: space-between;
+    gap: 0;
   }
+
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 0 0 65px;
+    flex: 1;
   }
+
   .surgery-list-con .surgery-list .surgery-item .img-con {
-    width: 65px;
-    height: 65px;
-    border-radius: 999px;
+    width: 80px;
+    height: 80px;
   }
   .surgery-list-con .surgery-list .surgery-item .txt {
     font-size: 14px;
@@ -566,19 +568,26 @@
   .ad-container {
     border-radius: 12px;
   }
+
+  .surgery-list-con .surgery-list .surgery-item .img-con {
+    width: 65px;
+    height: 65px;
+  }
 }
 
 @media screen and (max-width: 390px) {
   .surgery-list-con .surgery-list {
-    max-width: 320px;
+    justify-content: center;
+    gap: 16px;
   }
+
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 0 0 55px;
+    flex: 1;
   }
+
   .surgery-list-con .surgery-list .surgery-item .img-con {
     width: 55px;
     height: 55px;
-    border-radius: 999px;
   }
   .surgery-list-con .surgery-list .surgery-item .txt {
     font-size: 12px;
