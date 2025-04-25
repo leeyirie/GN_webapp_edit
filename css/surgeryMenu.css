@@ -9,7 +9,7 @@
 }
 
 .surgery-detail-page .container {
-  padding: 0 80px;
+  padding: 24px 80px;
 }
 
 /* Sort options section */
@@ -247,7 +247,7 @@
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
   .surgery-detail-page .container {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 }
 
