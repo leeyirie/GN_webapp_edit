@@ -38,8 +38,8 @@
   text-decoration: none;
 }
 .surgery-list-con .surgery-list .surgery-item .img-con {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
@@ -384,11 +384,22 @@
   .insight-list .insight-item {
     flex: 0 0 calc(33.33% - 16px);
   }
+  .surgery-list-con {
+    padding: 0 20px;
+  }
   .surgery-list-con .surgery-list {
-    max-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
   }
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 0 0 80px;
+    flex: 1;
+    padding: 0 10px;
+  }
+  .surgery-list-con .surgery-list .surgery-item .img-con {
+    width: 80px;
+    height: 80px;
   }
   .main-beauty-banner-con {
     padding: 30px 10px;
@@ -406,12 +417,14 @@
   }
 
   .surgery-list-con .surgery-list {
-    justify-content: space-between;
-    gap: 0;
+    justify-content: space-around;
+    gap: 10px;
+    margin: 0 auto;
   }
 
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 1;
+    flex: 0 0 auto;
+    padding: 0;
   }
 
   .surgery-list-con .surgery-list .surgery-item .img-con {
@@ -579,6 +592,15 @@
     border-radius: 12px;
   }
 
+  .surgery-list-con .surgery-list {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .surgery-list-con .surgery-list .surgery-item {
+    flex: 0 0 auto;
+  }
+
   .surgery-list-con .surgery-list .surgery-item .img-con {
     width: 65px;
     height: 65px;
@@ -592,7 +614,7 @@
   }
 
   .surgery-list-con .surgery-list .surgery-item {
-    flex: 1;
+    flex: 0 0 auto;
   }
 
   .surgery-list-con .surgery-list .surgery-item .img-con {
