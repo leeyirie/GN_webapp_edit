@@ -15,7 +15,7 @@
 /* Sort options section */
 .sort-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
   padding: 15px 0;
@@ -352,6 +352,7 @@
   /* Sort options */
   .sort-options {
     padding: 12px 0;
+    justify-content: space-between;
   }
 
   .sort-btn {
