@@ -341,6 +341,16 @@
   transform: translateY(-2px);
 }
 
+.surgery-detail-img img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 8px;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1199px) {
   .procedure-banner {
@@ -460,6 +470,11 @@
     font-size: 22px;
     gap: 8px;
   }
+
+  .surgery-detail-img {
+    max-width: 450px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -510,6 +525,11 @@
   .sale-price .price {
     font-size: 18px;
     gap: 6px;
+  }
+
+  .surgery-detail-img {
+    max-width: 320px;
+    margin-bottom: 15px;
   }
 }
 
