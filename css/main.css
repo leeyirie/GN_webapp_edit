@@ -1,12 +1,13 @@
 /* 시술 선택 섹션 */
 .inter-select-con {
-  padding: 30px 0;
+  padding: 16px 0;
 }
 .inter-select-con .tit {
   color: #222;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 48px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -387,6 +388,7 @@
 @media screen and (max-width: 768px) {
   .inter-select-con .tit {
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 15px;
   }
 
@@ -510,6 +512,11 @@
   .best-product-list-con .best-list .best-item {
     flex: 0 0 calc(50% - 8px);
   }
+  .inter-select-con .tit {
+    font-size: 18px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
   .best-product-list-con .best-list .best-item img {
     height: 150px;
     object-fit: contain;
@@ -564,7 +571,8 @@
 
   .inter-select-con .tit {
     font-size: 18px;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
+    margin-top: 24px;
   }
 
   .main-beauty-banner-con {
