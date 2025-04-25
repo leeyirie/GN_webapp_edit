@@ -625,9 +625,9 @@
 }
 
 .surgery-desc {
-  margin-bottom: 40px;
-  background-color: #f8f8fa;
-  padding: 25px;
+  margin-bottom: 60px;
+  background-color: rgb(255, 255, 255);
+  padding: 0px 10px;
   border-radius: 15px;
 }
 
@@ -636,10 +636,31 @@
   line-height: 1.7;
   color: #555;
   margin-bottom: 20px;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+/* Only hide BR tags on mobile */
+@media screen and (max-width: 768px) {
+  .surgery-desc br {
+    display: none;
+  }
+
+  .surgery-desc p {
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .surgery-desc p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 .surgery-features {
-  margin-bottom: 40px;
   padding: 0 10px;
 }
 
@@ -664,7 +685,7 @@
 }
 
 .surgery-process {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .process-item {
@@ -698,6 +719,8 @@
   margin-right: 20px;
   position: relative;
   z-index: 1;
+  min-width: 40px;
+  aspect-ratio: 1/1;
 }
 
 .process-desc {
@@ -989,8 +1012,10 @@
   }
 
   .process-num {
+    flex: 0 0 35px;
     width: 35px;
     height: 35px;
+    min-width: 35px;
     font-size: 16px;
   }
 
@@ -1018,9 +1043,12 @@
   }
 
   .process-num {
+    flex: 0 0 30px;
     width: 30px;
     height: 30px;
+    min-width: 30px;
     font-size: 14px;
+    border-radius: 50%;
     margin-right: 15px;
   }
 
