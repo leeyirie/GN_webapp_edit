@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/detail.css" />
     <link rel="stylesheet" href="./css/bottom-menu.css" />
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div id="wrap">
@@ -102,15 +101,17 @@
                 <div class="procedure-details">
                   <h2 class="procedure-title">자연유착 쌍꺼풀 매몰</h2>
                   <div class="hospital-title">팝성형외과의원</div>
-                  <div class="price-info">
+                  <div class="sale-price">
                     <span class="discount">49%</span>
-                    <span class="price-before">1,400,000원</span>
-                    <span class="price">720,000원</span>
+                    <span class="price"
+                      ><span class="price-before">1,400,000원</span>
+                      720,000원</span
+                    >
                   </div>
                   <div class="rating-common">
                     <span class="stars">★</span>
                     <span class="score">4.8</span>
-                    <span class="reviews">(12,933)</span>
+                    <span class="score">(150)</span>
                   </div>
                 </div>
               </div>
@@ -124,7 +125,6 @@
           <div class="event-detail-content">
             <div class="detail-tabs">
               <button class="tab-btn active">시술안내</button>
-              <button class="tab-btn">의사정보</button>
               <button class="tab-btn">병원정보</button>
               <button class="tab-btn">리뷰</button>
             </div>
@@ -199,31 +199,6 @@
                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E전후사진%3C/text%3E%3C/svg%3E';"
                   />
                   <div class="ba-desc">30대 여성 / 자연유착 쌍꺼풀</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tab-content doctor-info">
-              <h3>시술 의사 정보</h3>
-              <div class="doctor-profile">
-                <div class="doctor-image">
-                  <img
-                    src="./img/doctor.jpg"
-                    alt="전문의 프로필"
-                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E의사 사진%3C/text%3E%3C/svg%3E';"
-                  />
-                </div>
-                <div class="doctor-detail">
-                  <h4>김의사 원장</h4>
-                  <div class="doctor-spec">성형외과 전문의</div>
-                  <div class="doctor-career">
-                    <ul>
-                      <li>서울대학교 의과대학 졸업</li>
-                      <li>대한성형외과학회 정회원</li>
-                      <li>눈성형 시술 경력 10년+</li>
-                      <li>연간 쌍꺼풀 수술 1,000건 이상</li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>
@@ -452,22 +427,37 @@
       </footer>
     </div>
 
+    <!-- 하단 메뉴바 추가 -->
     <div id="bottom-menu">
-      <a href="./index.html" class="menu-item">
-        <i class="fas fa-home"></i>
+      <a href="./index.html" class="menu-item active">
+        <div class="svg-icon">
+          <img src="./img/home.svg" alt="홈 아이콘" />
+        </div>
         <span>홈</span>
       </a>
-      <a href="./hospital.html" class="menu-item active">
-        <i class="fas fa-hospital"></i>
+      <a href="./hospital.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/hospital.svg" alt="병원 아이콘" />
+        </div>
         <span>병원정보</span>
       </a>
+      <a href="./mypage.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+        </div>
+        <span>마이페이지</span>
+      </a>
       <a href="./loan.html" class="menu-item">
-        <i class="fas fa-hand-holding-usd"></i>
+        <div class="svg-icon">
+          <img src="./img/loan.svg" alt="대출 아이콘" />
+        </div>
         <span>대출</span>
       </a>
-      <a href="./mypage.html" class="menu-item">
-        <i class="fas fa-user"></i>
-        <span>마이페이지</span>
+      <a href="" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/bell.svg" alt="알림 아이콘" />
+        </div>
+        <span>알림</span>
       </a>
     </div>
 

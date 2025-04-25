@@ -131,7 +131,6 @@
   margin-top: auto;
   display: flex;
   justify-content: right;
-  align-items: center;
   gap: 8px;
 }
 
@@ -145,7 +144,8 @@
   color: #999;
   text-decoration: line-through;
   font-size: 14px;
-  margin-right: 10px;
+  margin-right: 0;
+  display: inline-block;
 }
 
 .price-info .price {
@@ -153,7 +153,8 @@
   font-weight: 600;
   color: #333;
   display: flex;
-  justify-content: right;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Rating common */
@@ -328,11 +329,12 @@
   }
 
   .price-info .price-before {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .price-info .price {
     font-size: 18px;
+    gap: 6px;
   }
 
   /* Pagination */
@@ -419,7 +421,7 @@
   }
 
   .price-info .discount {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .price-info .price-before {
@@ -427,7 +429,8 @@
   }
 
   .price-info .price {
-    font-size: 16px;
+    font-size: 15px;
+    gap: 4px;
   }
 
   /* Pagination */
