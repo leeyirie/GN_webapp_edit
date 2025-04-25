@@ -6067,16 +6067,15 @@ body {
 
 .rating-common {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .rating-common .stars {
   color: #FFD500;
   letter-spacing: -1px;
   font-size: 16px;
-  transition: color 0.2s ease;
 }
 
 .rating-common .score {
@@ -6085,31 +6084,16 @@ body {
   font-size: 16px;
 }
 
-.rating-common .reviews {
-  color: #666;
-  font-size: 14px;
-  position: relative;
-  padding-left: 4px;
-}
-
-.rating-common .reviews::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 12px;
-  background-color: #ddd;
-}
-
+.rating-common .reviews,
 .rating-common .event {
   color: #666;
   font-size: 14px;
   position: relative;
-  padding-left: 4px;
+  padding-left: 8px;
+  margin-left: 8px;
 }
 
+.rating-common .reviews::before,
 .rating-common .event::before {
   content: '';
   position: absolute;
@@ -6123,8 +6107,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .rating-common {
-    font-size: 14px;
-    gap: 4px;
+    gap: 6px;
   }
   
   .rating-common .stars {
@@ -6138,6 +6121,8 @@ body {
   .rating-common .reviews,
   .rating-common .event {
     font-size: 12px;
+    padding-left: 6px;
+    margin-left: 6px;
   }
   
   .rating-common .reviews::before,
@@ -6148,8 +6133,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .rating-common {
-    font-size: 13px;
-    gap: 3px;
+    gap: 4px;
   }
   
   .rating-common .stars {
@@ -6163,6 +6147,8 @@ body {
   .rating-common .reviews,
   .rating-common .event {
     font-size: 11px;
+    padding-left: 5px;
+    margin-left: 5px;
   }
   
   .rating-common .reviews::before,

@@ -91,8 +91,10 @@
 /* 메인 배너 슬라이드 */
 .main-beauty-banner-con {
   position: relative;
-  padding: 40px 0;
+  padding: 40px 20px;
   overflow: hidden;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 .main-beauty-banner-con::before {
   content: '';
@@ -116,7 +118,6 @@
   max-width: 1040px;
   margin: 0 auto;
   overflow: hidden;
-  padding: 0;
 }
 .main-beauty-banner-con .slick-list {
   margin: 0 !important;
@@ -124,7 +125,7 @@
   overflow: hidden !important;
 }
 .main-beauty-banner-con .banner-item {
-  padding: 0;
+  padding: 0 10px;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -443,7 +444,7 @@
     height: 80px;
   }
   .main-beauty-banner-con {
-    padding: 30px 36px;
+    padding: 30px 20px;
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 15px;
@@ -480,7 +481,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 20px 30px;
+    padding: 20px 20px;
   }
   .main-beauty-banner-con .banner-slide {
     max-width: 100%;
@@ -490,7 +491,7 @@
     padding: 10px 0;
   }
   .main-beauty-banner-con .banner-item {
-    padding: 0;
+    padding: 0 8px;
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 15px;
@@ -647,12 +648,12 @@
     height: 65px;
   }
 
-  .main-beauty-banner-con .banner-item img {
-    border-radius: 12px;
+  .main-beauty-banner-con {
+    padding: 15px 15px;
   }
 
-  .main-beauty-banner-con {
-    padding: 15px 24px;
+  .main-beauty-banner-con .banner-item {
+    padding: 0 6px;
   }
 }
 
@@ -685,13 +686,13 @@
   }
 
   .main-beauty-banner-con {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
   .main-beauty-banner-con .slick-list {
     padding: 5px 0;
   }
   .main-beauty-banner-con .banner-item {
-    padding: 0;
+    padding: 0 4px;
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 10px;
