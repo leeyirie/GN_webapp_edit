@@ -19,7 +19,7 @@
 .surgery-list-con .surgery-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
   max-width: 580px;
   margin: 0 auto;
@@ -37,21 +37,24 @@
   text-decoration: none;
 }
 .surgery-list-con .surgery-list .surgery-item .img-con {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 999px;
   margin: 0 auto 10px;
   background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .surgery-list-con .surgery-list .surgery-item .img-con img {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 20px;
+  padding: 5px;
   transition: transform 0.3s ease;
 }
 .surgery-list-con .surgery-list .surgery-item:hover .img-con img {
@@ -381,7 +384,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .inter-select-con .tit {
     font-size: 20px;
     margin-bottom: 15px;
@@ -396,7 +399,7 @@
   .surgery-list-con .surgery-list .surgery-item .img-con {
     width: 65px;
     height: 65px;
-    border-radius: 15px;
+    border-radius: 999px;
   }
   .surgery-list-con .surgery-list .surgery-item .txt {
     font-size: 14px;
@@ -549,14 +552,14 @@
   .surgery-list-con .surgery-list .surgery-item .img-con {
     width: 55px;
     height: 55px;
-    border-radius: 12px;
+    border-radius: 999px;
   }
   .surgery-list-con .surgery-list .surgery-item .txt {
     font-size: 12px;
     margin-top: 5px;
   }
   .surgery-list-con .surgery-list .surgery-item .img-con img {
-    padding: 15px;
+    padding: 8px;
   }
 
   .inter-select-con .tit {
