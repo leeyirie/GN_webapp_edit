@@ -206,26 +206,64 @@
             </div>
 
             <div class="tab-content hospital-info">
-              <h3>병원 정보</h3>
+              <h3>병원 위치</h3>
               <div class="hospital-detail">
-                <div class="hospital-image">
+                <!-- <div class="hospital-image">
                   <img
                     src="./img/hospital.jpg"
                     alt="병원 이미지"
                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E병원 이미지%3C/text%3E%3C/svg%3E';"
                   />
-                </div>
+                </div> -->
                 <div class="hospital-address">
+                  <i class="fas fa-map-marker-alt"></i>
                   <p>서울특별시 강남구 압구정로 123</p>
-                  <p>압구정역 3번 출구에서 도보 3분</p>
                 </div>
-                <div class="hospital-hours">
-                  <h4>진료시간</h4>
-                  <ul>
+
+                <h3>진료 시간</h3>
+                <div>
+                  <ul class="surgery-features">
                     <li>평일: 10:00 - 19:00</li>
                     <li>토요일: 10:00 - 16:00</li>
                     <li>일요일 및 공휴일: 휴진</li>
                   </ul>
+                </div>
+                <h3>진료 항목</h3>
+                <div class="treatment-items">
+                  <ul>
+                    <li>
+                      <span class="treatment-name">눈성형</span>
+                    </li>
+                    <li>
+                      <span class="treatment-name">코성형</span>
+                    </li>
+                  </ul>
+                </div>
+                <h3>의사 정보</h3>
+                <div class="doctor-info">
+                  <div class="doctor-profile">
+                    <div class="doctor-image">
+                      <img
+                        src="./img/doctor.jpg"
+                        alt="의사 프로필"
+                        onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E의사 프로필%3C/text%3E%3C/svg%3E';"
+                      />
+                    </div>
+                    <div class="doctor-details">
+                      <div class="doctor-name">
+                        <h4>이름</h4>
+                        <span class="specialist-text">성형외과 전문의</span>
+                      </div>
+                      <div class="doctor-specialties">
+                        <ul>
+                          <li><span class="treatment-name">눈성형</span></li>
+                          <li>
+                            <span class="treatment-name">코성형</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="hospital-map">
                   <!-- 지도 영역 -->
