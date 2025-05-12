@@ -72,10 +72,11 @@
   white-space: nowrap;
 }
 
-/* 태블릿과 모바일 환경에서 메뉴바 표시 및 본문 여백 조정 */
+/* 태블릿과 모바일 환경에서 메뉴바 표시 및 푸터 여백 조정 */
 @media (max-width: 991px) {
-  body {
-    padding-bottom: 60px; /* 하단 메뉴바 높이만큼 패딩 추가 */
+  /* 패딩 제거하고 대신 margin-bottom 적용 */
+  #footer {
+    margin-bottom: 60px; /* 하단 메뉴바 높이만큼 마진 추가하여 메뉴바에 가려지지 않게 함 */
   }
 }
 

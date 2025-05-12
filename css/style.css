@@ -167,11 +167,6 @@ body {
     gap: 15px;
 }
 
-#header .header-search-con .search-input-con .search-label {
-    font-size: 16px;
-    color: #666;
-    flex-grow: 1;
-}
 
 #header .header-search-con .search-input-con .search-icon {
     width: 24px;
@@ -5801,6 +5796,11 @@ body {
   #bottom-menu .menu-item {
     font-size: 10px;
   }
+  
+  /* 푸터가 하단 메뉴바에 가려지지 않도록 마진 추가 */
+  #footer {
+    margin-bottom: 60px;
+  }
 }
 
 /* 하단 메뉴 바 스타일 */
@@ -5845,6 +5845,29 @@ body {
 .bottom-menu a:hover,
 .bottom-menu a.active {
     color: #4d3dbf;
+}
+
+@media screen and (max-width: 768px) {
+    .bottom-menu {
+        padding: 8px 0;
+    }
+    
+    .bottom-menu a {
+        font-size: 11px;
+    }
+    
+    .bottom-menu i {
+        font-size: 18px;
+    }
+    
+    .bottom-menu span {
+        font-size: 10px;
+    }
+    
+    /* 푸터가 하단 메뉴바에 가려지지 않도록 마진 추가 */
+    #footer {
+        margin-bottom: 60px;
+    }
 }
 
 .back-button {

@@ -1,7 +1,7 @@
 /* 상단 헤더 */
 #header {
   position: relative;
-  padding: 28px 0;
+  padding: 42px 28px 28px;
 }
 #header:before {
   content: '';
@@ -28,11 +28,10 @@
 
 /* 대부업 문구 */
 #header .header-top-text {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
   text-align: left;
-  width: 100%;
-  color: rgba(255, 255, 255, 0.9);
-  padding: 8px 0 5px 0px;
-  font-size: 18px;
 }
 
 /* #header .header-wrap {
@@ -49,6 +48,8 @@
 }
 
 #header .util-box {
+  width: auto;
+  min-width: 160px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -56,10 +57,6 @@
 #header .util-box .auth-buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 24px;
-  padding: 4px 4px;
 }
 #header .util-box .user-profile-btn {
   padding: 8px 20px;
@@ -116,13 +113,19 @@
   display: inline-block;
 }
 #header .util-box .login-btn {
-  padding: 12px 20px;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 40px;
+  display: inline-block;
   color: #fff;
-  background: transparent;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 59.008px;
+  background: rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 #header .util-box .signup-btn {
   padding: 12px 24px;
@@ -134,8 +137,9 @@
   transition: all 0.3s ease;
 }
 #header .util-box .login-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 #header .util-box .signup-btn:hover {
   background: rgba(255, 255, 255, 0.9);
@@ -170,39 +174,51 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  font-size: 18px;
   justify-content: center;
 }
 
 #header .header-search-con .search-input-con {
   width: 100%;
-  max-width: 600px;
-  padding: 15px 25px;
-  margin: 20px 17px 0px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 24px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#header .header-search-con .search-input-con:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
 
 #header .header-search-con .search-input-con .search-label {
-  font-size: 16px;
-  color: #666;
+  font-size: 18px !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+  line-height: 1.4;
   flex-grow: 1;
 }
 
 #header .header-search-con .search-input-con .search-icon {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 #header .header-search-con .search-input-con .search-icon i {
-  font-size: 18px;
-  color: #666;
+  font-size: 16px;
+  color: #000;
 }
 
 /* 헤더 로그인 페이지용 */
@@ -284,42 +300,148 @@
 }
 
 /* 반응형 헤더 */
+@media screen and (max-width: 1400px) {
+  .header-inner {
+    max-width: 1100px;
+    padding: 30px 30px 0 30px;
+  }
+
+  .header-top-text {
+    font-size: 0.8rem;
+  }
+
+  .header-search-wrap {
+    max-width: calc(100% - 160px);
+  }
+
+  .util-box .login-btn {
+    padding: 16px 22px;
+  }
+
+  #header .logo {
+    width: 160px;
+    height: 40px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
+  .header-inner {
+    padding: 25px 20px 0 20px;
+  }
+
+  #header .logo {
+    width: 155px;
+    height: 38px;
+  }
+
+  .header-top-text {
+    font-size: 0.75rem;
+  }
+
+  .header-search-wrap {
+    max-width: calc(100% - 140px);
+  }
+
+  .util-box {
+    min-width: 140px;
+  }
+
+  .util-box .login-btn {
+    font-size: 1rem;
+    padding: 6px 20px;
+  }
+
+  .search-input-con {
+    padding: 6px 20px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 17px !important;
+  }
+
+  .search-input-con .search-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    padding: 42px 20px 28px;
+  }
+
+  .header-inner {
+    padding: 20px 15px 0 15px;
+  }
+
   #header .logo {
     width: 140px;
-    height: 30px;
+    height: 34px;
   }
 
-  #header .header-top-text {
-    font-size: 16px;
+  .header-top-bar {
+    margin-bottom: 20px;
   }
 
-  #header .util-box .login-btn,
-  #header .util-box .signup-btn {
-    padding: 12px 24px;
-    font-size: 18px;
+  .header-top-text {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
   }
 
-  #header .header-search-con {
-    margin-top: 25px;
+  .header-bottom-bar {
+    flex-direction: row; /* 검색창과 로그인 버튼을 가로로 유지 */
+    gap: 12px;
+    align-items: center;
   }
 
-  #header .header-search-con .search-input-con {
-    padding: 13px 20px;
+  .header-search-wrap {
+    max-width: calc(100% - 120px);
   }
 
-  #header .header-search-con .search-input-con .search-label {
-    font-size: 15px;
+  .util-box {
+    min-width: 120px;
+  }
+
+  .util-box .login-btn {
+    font-size: 0.95rem;
+    padding: 5px 16px;
+  }
+
+  .search-input-con {
+    padding: 7px 16px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 17px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.9rem;
+    padding: 9px 16px;
+    min-width: 120px;
+  }
+
+  /* 모바일 대부업 문구 */
+  .mobile-dept-text .header-top-text {
+    font-size: 13px !important;
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.4;
   }
 }
 
 @media screen and (max-width: 767px) {
   #header {
-    padding: 20px 0 15px;
+    padding: 35px 15px 20px;
   }
 
-  #header:before {
-    height: 180%;
+  .header-inner {
+    padding: 15px 12px 0 12px;
   }
 
   #header .logo {
@@ -327,144 +449,190 @@
     height: 30px;
   }
 
-  #header .header-inner {
-    padding: 0 15px;
+  .header-top-bar {
+    margin-bottom: 15px;
   }
 
-  #header .header-search-con {
-    margin-top: 15px;
+  .header-top-text {
+    font-size: 0.65rem;
   }
 
-  #header .header-search-con .header-search-wrap {
-    padding: 0 15px;
-  }
-
-  #header .header-search-con .search-input-con {
-    padding: 10px 15px;
-    gap: 10px;
-    border-radius: 10px;
-  }
-
-  #header .header-search-con .search-input-con .search-label {
-    font-size: 14px;
-  }
-
-  #header .header-search-con .search-input-con .search-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  #header .header-search-con .search-input-con .search-icon i {
-    font-size: 16px;
-  }
-
-  #header .util-box .auth-buttons {
+  .header-bottom-bar {
     gap: 8px;
-    width: auto;
-    flex-direction: row;
-    padding: 3px 4px;
   }
 
-  #header .util-box .login-btn,
-  #header .util-box .signup-btn {
-    padding: 8px 15px;
-    font-size: 14px;
-    white-space: nowrap;
+  .header-search-wrap {
+    max-width: calc(100% - 110px);
   }
 
-  #header .util-box .combined-auth-btn {
-    padding: 8px 15px;
-    font-size: 14px;
+  .util-box {
+    min-width: 110px;
+  }
+
+  .search-input-con {
+    padding: 5px 14px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 15px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+    min-width: 110px;
+  }
+
+  /* 모바일 대부업 문구 */
+  .mobile-dept-text .header-top-text {
+    font-size: 11px !important;
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 600px) {
   #header {
-    padding: 15px 0 12px;
+    padding: 30px 12px 18px;
+  }
+
+  #header .logo {
+    width: 110px;
+    height: 27px;
+  }
+
+  .header-top-text {
+    font-size: 0.6rem;
+  }
+
+  .header-search-wrap {
+    max-width: calc(100% - 100px);
+  }
+
+  .util-box {
+    min-width: 100px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 14px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    min-width: 105px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    padding: 25px 10px 15px;
+  }
+
+  .header-inner {
+    padding: 10px 8px 0 8px;
   }
 
   #header .logo {
     width: 100px;
-    height: 25px;
+    height: 24px;
   }
 
-  #header .header-top-text {
-    font-size: 11px;
+  .header-top-bar {
+    margin-bottom: 12px;
   }
 
-  #header .util-box {
-    max-width: 45%;
-    justify-content: flex-end;
+  .header-top-text {
+    font-size: 0.55rem;
+    line-height: 1.2;
   }
 
-  #header .util-box .auth-buttons {
-    width: 100%;
-    padding: 2px 3px;
+  .header-search-wrap {
+    max-width: calc(100% - 90px);
   }
 
-  #header .util-box .login-btn,
-  #header .util-box .signup-btn {
-    padding: 6px 10px;
+  .util-box {
+    min-width: 90px;
+  }
+
+  .search-input-con {
+    padding: 3px 10px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 14px !important;
+    padding-left: 1px;
+  }
+
+  .search-input-con .search-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-input-con .search-icon i {
     font-size: 12px;
   }
 
-  #header .util-box .combined-auth-btn {
-    padding: 6px 10px;
-    font-size: 12px;
+  .mobile-login .util-box .login-btn {
+    font-size: 0.7rem;
+    padding: 5px 9px;
+    min-width: 95px;
   }
 
-  #header .header-search-con {
-    margin-top: 12px;
-  }
-
-  #header .header-search-con .header-search-wrap {
-    padding: 0 10px;
-  }
-
-  #header .header-search-con .search-input-con {
-    padding: 8px 12px;
-    gap: 8px;
-    border-radius: 10px;
-  }
-
-  #header .header-search-con .search-input-con .search-label {
-    font-size: 13px;
-  }
-
-  #header .header-search-con .search-input-con .search-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  #header .header-search-con .search-input-con .search-icon i {
-    font-size: 14px;
+  /* 모바일 대부업 문구 */
+  .mobile-dept-text .header-top-text {
+    font-size: 9px !important;
+    line-height: 1.3;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
+  #header {
+    padding: 20px 8px 12px;
+  }
+
   #header .logo {
     width: 90px;
     height: 22px;
   }
 
-  #header .header-top-text {
-    font-size: 10px;
+  .header-search-wrap {
+    max-width: calc(100% - 80px);
   }
 
-  #header .util-box {
-    max-width: 40%;
-    justify-content: flex-end;
+  .util-box {
+    min-width: 80px;
   }
 
-  #header .util-box .login-btn,
-  #header .util-box .signup-btn {
-    padding: 5px 8px;
-    font-size: 11px;
+  .search-input-con .search-label {
+    font-size: 13px !important;
   }
 
-  #header .util-box .combined-auth-btn {
-    padding: 5px 8px;
-    font-size: 11px;
+  .mobile-login .util-box .login-btn {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* 가장 작은 화면에 대한 추가 최적화 */
+@media screen and (max-width: 380px) {
+  .header-top-text {
+    font-size: 0.5rem;
+    max-width: 55%;
+  }
+
+  #header .logo {
+    width: 85px;
+    height: 21px;
+  }
+
+  .search-input-con .search-label {
+    font-size: 12px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    min-width: 130px;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 }
 
@@ -492,4 +660,491 @@
 .auth-buttons .login-btn:not(.mypage .auth-buttons .login-btn) {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+}
+
+/* 모바일/데스크톱 전환 요소 */
+.mobile-login {
+  display: none;
+}
+
+.desktop-login {
+  display: block;
+}
+
+.mobile-dept-text {
+  display: none;
+}
+
+.desktop-dept-text {
+  display: block;
+}
+
+/* 헤더 레이아웃 */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 48px 0 48px;
+}
+
+.header-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.header-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-search-wrap {
+  flex: 1;
+  display: flex;
+  max-width: calc(100% - 180px); /* 로그인 버튼 영역 고려 */
+}
+
+.search-input-con {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.search-input-con:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.search-input-con .search-label {
+  font-size: 18px !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.search-input-con .search-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.search-input-con .search-icon i {
+  font-size: 16px;
+  color: #4d3dbf;
+}
+
+.util-box .login-btn {
+  background: #c7b6e5;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  margin-left: 16px;
+  transition: background 0.2s;
+}
+
+.util-box .login-btn:hover {
+  background: #a18cd1;
+}
+/* 모바일 레이아웃 전환 */
+@media screen and (max-width: 990px) {
+  .mobile-login {
+    display: block;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .mobile-dept-text {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .desktop-dept-text {
+    display: none;
+  }
+
+  .header-top-text {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-inner {
+    padding: 20px 20px 0 20px;
+  }
+
+  .header-top-bar {
+    margin-bottom: 15px;
+  }
+
+  .header-bottom-bar {
+    width: 100%;
+  }
+
+  .header-search-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 모바일 로그인 버튼 스타일 */
+  .mobile-login .login-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-inner {
+    padding: 15px 15px 0 15px;
+  }
+
+  #header {
+    padding: 15px 10px;
+  }
+
+  .header-top-text {
+    font-size: 1rem;
+  }
+
+  .mobile-login .login-btn {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-inner {
+    padding: 8px 8px 0 8px;
+  }
+
+  .header-top-text {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .mobile-login .login-btn {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .header-top-text {
+    font-size: 0.75rem;
+  }
+
+  .mobile-login .login-btn {
+    font-size: 0.65rem;
+    padding: 5px 8px;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* 대부업 문구 - 데스크탑 */
+.desktop-dept-text .header-top-text {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+  width: 100%;
+  display: block;
+  text-align: right;
+}
+
+/* 레이아웃 전환 */
+@media screen and (max-width: 1400px) {
+  .desktop-dept-text .header-top-text {
+    font-size: 28px;
+  }
+
+  #header .util-box .login-btn {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .desktop-dept-text .header-top-text {
+    font-size: 24px;
+  }
+
+  #header .util-box .login-btn {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .desktop-dept-text .header-top-text {
+    font-size: 22px;
+  }
+
+  #header .util-box .login-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* 모바일 레이아웃 전환 */
+@media screen and (max-width: 990px) {
+  .mobile-login {
+    display: block;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .mobile-dept-text {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .desktop-dept-text {
+    display: none;
+  }
+
+  /* 모바일 대부업 문구 */
+  .mobile-dept-text .header-top-text {
+    font-size: 24px !important;
+    width: 100%;
+    text-align: left;
+    display: block;
+    font-weight: 400;
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  /* 모바일 로그인 버튼 */
+  .mobile-login .util-box .login-btn {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    border: none;
+  }
+
+  /* 로고 크기 조정 */
+  #header .logo {
+    width: 130px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .mobile-dept-text .header-top-text {
+    font-size: 20px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+    min-width: 115px;
+  }
+
+  #header .logo {
+    width: 130px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-inner {
+    padding: 15px 15px 0 15px;
+  }
+
+  #header {
+    padding: 15px 10px;
+  }
+
+  .mobile-dept-text {
+    margin-bottom: 15px;
+  }
+
+  .mobile-dept-text .header-top-text {
+    font-size: 20px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+    min-width: 110px;
+  }
+
+  #header .logo {
+    width: 120px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mobile-dept-text .header-top-text {
+    font-size: 20px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+    min-width: 105px;
+  }
+
+  #header .logo {
+    width: 110px;
+    height: 27px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-inner {
+    padding: 10px 10px 0 10px;
+  }
+
+  .mobile-dept-text {
+    margin-bottom: 12px;
+  }
+
+  .mobile-dept-text .header-top-text {
+    font-size: 16px !important;
+    line-height: 1.3;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.7rem;
+    padding: 7px 12px;
+    min-width: 105px;
+  }
+
+  #header .logo {
+    width: 120px;
+    height: 30px;
+  }
+  #header .header-inner {
+    padding: 0 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mobile-dept-text .header-top-text {
+    font-size: 14px !important;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.65rem;
+    padding: 7px 12px;
+    min-width: 95px;
+  }
+
+  #header .logo {
+    width: 120px;
+    height: 30px;
+  }
+
+  #header .header-inner {
+    padding: 0 14px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mobile-dept-text {
+    margin-bottom: 10px;
+  }
+
+  .mobile-dept-text .header-top-text {
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+
+  .mobile-login .util-box .login-btn {
+    font-size: 0.6rem;
+    padding: 7px 12px;
+    min-width: 80px;
+    letter-spacing: -0.5px;
+  }
+
+  #header .logo {
+    width: 120px;
+    height: 30px;
+  }
+
+  #header .header-search-con .search-input-con,
+  .search-input-con {
+    padding: 2px 14px;
+  }
+
+  #header .header-inner {
+    padding: 0 14px;
+  }
+}
+
+/* 검색창 텍스트 크기 반응형 조정 */
+@media screen and (max-width: 1200px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 17px !important;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 17px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 14px !important;
+    padding-left: 1px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #header .header-search-con .search-input-con .search-label,
+  .search-input-con .search-label {
+    font-size: 13px !important;
+    letter-spacing: -0.3px;
+  }
 }

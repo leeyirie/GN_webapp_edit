@@ -1,18 +1,22 @@
 /* 푸터 영역 */
 #footer {
   margin-top: 0;
-  background-color: #111;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 60px; /* 하단 메뉴바 높이만큼 마진 추가하여 메뉴바에 가려지지 않게 함 */
 }
 
 #footer .f-container {
-  padding: 50px 40px;
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #footer .f-top-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 #footer .f-top-con .f-logo {
@@ -28,214 +32,119 @@
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(103deg, #f6c 12.08%, #4d3dbf 83.91%), #fff;
+  border: none;
   border-radius: 30px;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 #footer .f-top-con .request-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(103deg, #f6c 12.08%, #4d3dbf 83.91%), #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(224, 103, 202, 0.3);
 }
 
-#footer .f-info-con {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-#footer .f-info-con .f-info-left {
-  width: 50%;
-}
-
-#footer .f-info-con .f-info-left .left-top-con {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-#footer .f-info-con .f-info-left .left-top-con span {
-  position: relative;
-  margin-right: 20px;
+/* 푸터 회사 정보 스타일 */
+#footer .company-info {
+  margin-bottom: 20px;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
-}
-
-#footer .f-info-con .f-info-left .left-top-con span:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 14px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-#footer .f-info-con .f-info-left .left-top-con span:last-child:after {
-  display: none;
-}
-
-#footer .f-info-con .detail-con {
-  margin-bottom: 10px;
-}
-
-#footer .f-info-con .detail-con dl dd {
-  position: relative;
-  font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 6px;
+  line-height: 1.6;
 }
 
-#footer .f-info-con .right-top-con {
-  display: flex;
-  flex-direction: column;
+#footer .company-info p {
+  margin: 0;
+  margin-bottom: 4px;
 }
 
-#footer .f-info-con .right-top-con .f-police-list {
-  display: flex;
+/* 금리 및 상환안내 섹션 */
+#footer .loan-info {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
 }
 
-#footer .f-info-con .right-top-con a {
-  position: relative;
-  margin-right: 20px;
-  margin-bottom: 6px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
+#footer .loan-info p {
+  margin: 0;
+  margin-bottom: 4px;
 }
 
-#footer .f-info-con .right-top-con a:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -10px;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 14px;
-  background: rgba(255, 255, 255, 0.3);
+/* 금리 및 상환안내 제목 스타일 */
+#footer .loan-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
 }
 
-#footer .f-info-con .right-top-con a:first-child {
-  font-weight: 600;
+/* 경고 텍스트 스타일 */
+#footer .warning-text {
+  margin-bottom: 20px;
+  font-size: 20px !important;
+  color: #ff3a3a;
+  line-height: 1.6;
 }
 
-#footer .f-info-con .right-top-con a:last-child:before {
-  display: none;
+#footer .warning-text p {
+  margin: 0;
+  margin-bottom: 4px;
 }
 
-#footer .f-bottom-con p {
-  font-size: 14px;
+/* 면책 문구와 저작권 */
+#footer .disclaimer {
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 5px;
+  line-height: 1.5;
 }
 
-#footer .f-bottom-con p.copy {
-  color: rgba(255, 255, 255, 0.3);
+#footer .copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 /* 반응형 */
 @media screen and (max-width: 767px) {
   #footer .f-container {
-    padding: 30px 20px;
+    padding: 25px 15px;
   }
 
-  #footer .f-info-con .f-info-left {
-    width: 100%;
-    margin-bottom: 20px;
+  #footer .f-top-con .f-logo {
+    width: 120px;
+    height: 30px;
   }
 
-  #footer .f-info-con .f-info-right {
-    width: 100%;
+  #footer .f-top-con .request-btn {
+    padding: 8px 16px;
+    font-size: 15px;
   }
 
-  #footer .f-info-con {
-    flex-direction: column;
+  #footer .company-info,
+  #footer .loan-info {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
-  #footer .f-info-con .f-info-left .left-top-con span {
+  #footer .loan-title {
+    font-size: 16px;
+  }
+
+  #footer .warning-text {
     font-size: 14px;
   }
 
-  #footer .f-info-con .detail-con dl dd {
+  #footer .disclaimer,
+  #footer .copyright {
     font-size: 12px;
   }
 
-  #footer .f-info-con .right-top-con {
-    margin-bottom: 15px;
-  }
-
-  #footer .f-info-con .right-top-con .f-police-list {
-    flex-wrap: wrap;
-  }
-
-  #footer .f-info-con .right-top-con a {
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
-
-  #footer .f-info-con .right-top-con a:first-child {
-    font-weight: 500;
-  }
-
-  #footer .f-info-con .right-top-con a:last-child:before {
-    display: none;
-  }
-
-  #footer .f-bottom-con p {
-    font-size: 12px;
+  /* 모바일에서 푸터 하단에 하단 메뉴바 높이만큼 마진 추가 */
+  #footer {
+    margin-bottom: 60px;
   }
 }
 
-/* 하단 메뉴바 */
-#bottom-menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
-  z-index: 1000;
-  display: none;
-}
-
-#bottom-menu .menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 12px;
-}
-
-#bottom-menu .menu-item i {
-  font-size: 20px;
-  margin-bottom: 4px;
-}
-
-#bottom-menu .menu-item.active {
-  color: #4d3dbf;
-}
-
-@media screen and (max-width: 767px) {
-  #bottom-menu {
-    display: flex;
-  }
-
-  #bottom-menu .menu-item i {
-    font-size: 18px;
-  }
-
-  #bottom-menu .menu-item {
-    font-size: 11px;
-  }
-}
+/* 하단 메뉴바는 bottom-menu.css에서 관리합니다 */
