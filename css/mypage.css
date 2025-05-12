@@ -95,7 +95,7 @@
 
 .quick-menu-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
@@ -105,33 +105,37 @@
   align-items: center;
   justify-content: center;
   background: #f9f9f9;
-  padding: 15px;
+  padding: 20px 15px;
   border-radius: 10px;
   transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .quick-item:hover {
   background: #f0eeff;
   transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .quick-item i {
-  font-size: 24px;
+  font-size: 28px;
   color: #4d3dbf;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .quick-item span {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: #333;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .quick-item small {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
-  margin-top: 5px;
+  text-align: center;
 }
 
 /* 마이페이지 상세 섹션 */
@@ -327,67 +331,139 @@
 }
 
 /* 찜 목록 */
-.wishlist-grid {
+.wishlist-events-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.wishlist-item {
-  background: #f9f9f9;
+.wishlist-event-item {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #eee;
+  height: 110px;
 }
 
-.wishlist-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.wishlist-event-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-.wishlist-item img {
+.wishlist-event-item .event-image {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.wishlist-event-item .event-image img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-.wishlist-info {
-  padding: 15px;
+.wishlist-event-item .event-info {
+  flex: 1;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.wishlist-info h4 {
-  font-size: 16px;
+.wishlist-event-item .hospital-location {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.wishlist-event-item .event-title {
+  font-size: 15px;
   font-weight: 600;
   color: #222;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-.wishlist-info .procedure {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+.wishlist-event-item .event-price-rating {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.wishlist-info .price {
-  font-size: 16px;
+.wishlist-event-item .price-info {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 2px;
+  justify-content: flex-end;
+}
+
+.wishlist-event-item .price-info .discount {
+  color: #f06;
   font-weight: 600;
-  color: #4d3dbf;
+  font-size: 18px;
+}
+
+.wishlist-event-item .price-info .price-before {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+.wishlist-event-item .price-info .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+}
+
+.wishlist-event-item .rating-common {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.wishlist-event-item .rating-common .stars {
+  color: #fc0;
+  font-size: 15px;
+  margin-right: 3px;
+}
+
+.wishlist-event-item .rating-common .score {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-right: 2px;
 }
 
 /* 태그 */
 .hospital-tags {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
-  margin-top: 10px;
 }
 
 .tag {
-  font-size: 11px;
+  font-size: 12px;
   color: #4d3dbf;
-  background: #f0eeff;
-  padding: 3px 8px;
-  border-radius: 10px;
+  background-color: #f0eeff;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
 /* 반응형 */
@@ -413,32 +489,123 @@
   }
 
   .quick-menu-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .wishlist-grid {
+  .wishlist-events-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .wishlist-event-item .event-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .wishlist-event-item .event-info {
+    padding: 8px 10px;
+  }
+
+  .wishlist-event-item .hospital-location {
+    font-size: 11px;
+  }
+
+  .wishlist-event-item .event-title {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .wishlist-event-item .event-price-rating {
+    align-items: flex-end;
+  }
+
+  .wishlist-event-item .price-info {
+    justify-content: flex-end;
+  }
+
+  .wishlist-event-item .price-info .discount {
+    font-size: 16px;
+  }
+
+  .wishlist-event-item .price-info .price-before {
+    font-size: 11px;
+  }
+
+  .wishlist-event-item .price-info .price {
+    font-size: 14px;
+  }
+
+  .wishlist-event-item .rating-common .stars,
+  .wishlist-event-item .rating-common .score {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .modal-header {
+    padding: 15px;
+  }
+
+  .modal-body {
+    padding: 15px;
+  }
+
+  .input-with-button {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .input-with-button input {
+    width: 100%;
+  }
+
+  .save-btn,
+  .change-btn {
+    width: 100%;
+  }
+
+  .profile-edit-section {
+    padding: 20px 15px;
+  }
+
+  .profile-edit-section .section-header {
+    margin-bottom: 20px;
+  }
+
+  .profile-edit-section .back-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .profile-edit-section .back-btn i {
+    font-size: 14px;
+  }
+
+  .profile-edit-section h3 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .quick-menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wishlist-events-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
-  .mypage-container {
-    padding: 0 10px;
-    gap: 15px;
-  }
-
+@media (min-width: 992px) {
   .quick-menu-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .appointment-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .status {
-    align-self: flex-start;
+  .wishlist-events-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -682,5 +849,376 @@
   .mypage-auth .user-profile-btn i {
     font-size: 11px;
     margin-right: 2px;
+  }
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.edit-section {
+  margin-bottom: 30px;
+}
+
+.edit-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.edit-form-group {
+  margin-bottom: 20px;
+}
+
+.edit-form-group label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.input-with-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-with-button input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.input-with-button input:disabled {
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+.save-btn,
+.change-btn {
+  padding: 10px 15px;
+  background: #4d3dbf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-btn:hover,
+.change-btn:hover {
+  background: #3c2e9e;
+}
+
+.consent-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.consent-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.consent-option input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+}
+
+.consent-option label {
+  font-size: 15px;
+  color: #333;
+}
+
+.withdraw-section {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.withdraw-btn {
+  padding: 12px 20px;
+  background: #fff;
+  color: #ff3a3a;
+  border: 1px solid #ff3a3a;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.withdraw-btn:hover {
+  background: #fff0f0;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .quick-menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wishlist-events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 정보수정 섹션 */
+.profile-edit-section {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.profile-edit-section .section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  position: relative;
+  justify-content: center;
+}
+
+.profile-edit-section .back-btn {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-edit-section .back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.profile-edit-section .back-btn i {
+  font-size: 16px;
+}
+
+.profile-edit-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.profile-edit-section .edit-content {
+  padding-top: 10px;
+}
+
+.profile-edit-section .edit-section {
+  margin-bottom: 30px;
+}
+
+.profile-edit-section .edit-section h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-edit-section .edit-form-group {
+  margin-bottom: 20px;
+}
+
+.profile-edit-section .edit-form-group label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.profile-edit-section .input-with-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-edit-section .input-with-button input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.profile-edit-section .input-with-button input:disabled {
+  background-color: #f9f9f9;
+  color: #666;
+}
+
+.profile-edit-section .save-btn,
+.profile-edit-section .change-btn {
+  padding: 10px 15px;
+  background: #4d3dbf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.profile-edit-section .save-btn:hover,
+.profile-edit-section .change-btn:hover {
+  background: #3c2e9e;
+}
+
+.profile-edit-section .consent-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-edit-section .consent-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-edit-section .consent-option input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+}
+
+.profile-edit-section .consent-option label {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.profile-edit-section .withdraw-section {
+  margin-top: 40px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.profile-edit-section .withdraw-btn {
+  padding: 12px 20px;
+  background: #fff;
+  color: #ff3a3a;
+  border: 1px solid #ff3a3a;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.profile-edit-section .withdraw-btn:hover {
+  background: #fff0f0;
+}
+
+@media (max-width: 767px) {
+  .profile-edit-section {
+    padding: 20px 15px;
+  }
+
+  .profile-edit-section .section-header {
+    margin-bottom: 20px;
+  }
+
+  .profile-edit-section .back-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .profile-edit-section .back-btn i {
+    font-size: 14px;
+  }
+
+  .profile-edit-section h3 {
+    font-size: 18px;
+  }
+
+  .profile-edit-section .edit-section h4 {
+    font-size: 16px;
+  }
+
+  .profile-edit-section .input-with-button {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .profile-edit-section .input-with-button input {
+    width: 100%;
+  }
+
+  .profile-edit-section .save-btn,
+  .profile-edit-section .change-btn {
+    width: 100%;
   }
 }

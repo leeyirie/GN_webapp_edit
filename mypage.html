@@ -117,31 +117,94 @@
                   <span>최근 접속일: 2024.03.15</span>
                 </div>
               </div>
-              <div class="point-info">
-                <span class="point-label">보유 포인트</span>
-                <span class="point-value">1,000 P</span>
-              </div>
-              <button class="edit-profile-btn">
+              <button class="edit-profile-btn" id="editProfileBtn">
                 <i class="fas fa-user-edit"></i>
                 정보수정
               </button>
             </div>
           </section>
 
+          <!-- 정보수정 섹션 (처음에는 숨겨져 있음) -->
+          <section
+            class="profile-edit-section"
+            id="profileEditSection"
+            style="display: none"
+          >
+            <div class="section-header">
+              <button class="back-btn" id="backToProfileBtn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <h3>내 정보 수정</h3>
+            </div>
+
+            <div class="edit-content">
+              <div class="edit-section">
+                <h4>기본 정보</h4>
+                <div class="edit-form-group">
+                  <label>이름</label>
+                  <div class="input-with-button">
+                    <input type="text" value="김OO" disabled />
+                  </div>
+                </div>
+                <div class="edit-form-group">
+                  <label>닉네임</label>
+                  <div class="input-with-button">
+                    <input type="text" value="뷰티퀸" />
+                    <button class="save-btn">변경</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edit-section">
+                <h4>계정 정보</h4>
+                <div class="edit-form-group">
+                  <label>비밀번호</label>
+                  <div class="input-with-button">
+                    <input type="password" value="********" disabled />
+                    <button class="change-btn">변경</button>
+                  </div>
+                </div>
+                <div class="edit-form-group">
+                  <label>이메일</label>
+                  <div class="input-with-button">
+                    <input type="email" value="example@mail.com" disabled />
+                    <button class="change-btn">변경</button>
+                  </div>
+                </div>
+                <div class="edit-form-group">
+                  <label>휴대폰 번호</label>
+                  <div class="input-with-button">
+                    <input type="tel" value="010-1234-5678" disabled />
+                    <button class="change-btn">변경</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edit-section">
+                <h4>마케팅 정보 수신 동의</h4>
+                <div class="consent-options">
+                  <div class="consent-option">
+                    <input type="checkbox" id="emailConsent" checked />
+                    <label for="emailConsent">이메일 수신 동의</label>
+                  </div>
+                  <div class="consent-option">
+                    <input type="checkbox" id="smsConsent" checked />
+                    <label for="smsConsent">SMS 수신 동의</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="withdraw-section">
+                <button class="withdraw-btn">회원 탈퇴</button>
+              </div>
+            </div>
+          </section>
+
           <!-- 메인 컨텐츠 영역 -->
-          <div class="mypage-content">
+          <div class="mypage-content" id="mypageContent">
             <!-- 퀵 메뉴 -->
             <section class="quick-menu">
               <div class="quick-menu-grid">
-                <a
-                  href="#point"
-                  class="quick-item"
-                  data-section="point-section"
-                >
-                  <i class="fas fa-coins"></i>
-                  <span>포인트</span>
-                  <small>1,000 P</small>
-                </a>
                 <a href="#loan" class="quick-item" data-section="loan-section">
                   <i class="fas fa-hand-holding-usd"></i>
                   <span>대출내역</span>
@@ -163,46 +226,17 @@
                 >
                   <i class="fas fa-heart"></i>
                   <span>찜한 병원</span>
-                  <small>2건</small>
+                  <small>4건</small>
                 </a>
               </div>
             </section>
 
             <!-- 상세 섹션들 -->
             <div class="detail-sections">
-              <!-- 포인트 섹션 -->
-              <section id="point-section" class="detail-section">
-                <div class="section-header">
-                  <h3>포인트 내역</h3>
-                  <div class="section-actions">
-                    <button class="view-all-btn">전체보기</button>
-                  </div>
-                </div>
-                <div class="point-list">
-                  <div class="point-item">
-                    <div class="point-info">
-                      <span class="date">2025.07.15</span>
-                      <span class="description">후기 작성 적립</span>
-                    </div>
-                    <span class="amount plus">+500 P</span>
-                  </div>
-                  <div class="point-item">
-                    <div class="point-info">
-                      <span class="date">2025.05.10</span>
-                      <span class="description">상담 예약 적립</span>
-                    </div>
-                    <span class="amount plus">+300 P</span>
-                  </div>
-                </div>
-              </section>
-
               <!-- 대출 섹션 -->
               <section id="loan-section" class="detail-section">
                 <div class="section-header">
                   <h3>대출 내역</h3>
-                  <div class="section-actions">
-                    <button class="view-all-btn">전체보기</button>
-                  </div>
                 </div>
                 <div class="loan-summary">
                   <div class="loan-item">
@@ -231,9 +265,6 @@
               <section id="appointments-section" class="detail-section">
                 <div class="section-header">
                   <h3>병원 예약 내역</h3>
-                  <div class="section-actions">
-                    <button class="view-all-btn">전체보기</button>
-                  </div>
                 </div>
                 <div class="appointments-list">
                   <div class="appointment-item">
@@ -251,23 +282,103 @@
               <section id="wishlist-section" class="detail-section">
                 <div class="section-header">
                   <h3>찜한 이벤트</h3>
-                  <div class="section-actions">
-                    <button class="view-all-btn">전체보기</button>
-                  </div>
                 </div>
-                <div class="wishlist-grid">
-                  <div class="wishlist-item">
-                    <img src="./img/hospital-thumb.jpg" alt="병원 이미지" />
-                    <div class="wishlist-info">
-                      <h4>팝성형외과</h4>
-                      <p class="procedure">눈 앞트임 + 절개</p>
-                      <p class="price">800,000원</p>
-                      <div class="hospital-tags">
-                        <span class="tag">이벤트</span>
-                        <span class="tag">특가</span>
+                <div class="wishlist-events-list">
+                  <a href="./eventDetail.html" class="wishlist-event-item">
+                    <div class="event-image">
+                      <img src="./img/best-product-01.png" alt="눈성형" />
+                    </div>
+                    <div class="event-info">
+                      <div class="hospital-location">
+                        서울 압구정역 · 팝성형외과의원
+                      </div>
+                      <h4 class="event-title">자연유착 쌍꺼풀 매몰</h4>
+                      <div class="event-price-rating">
+                        <div class="price-info">
+                          <span class="discount">49%</span>
+                          <span class="price-before">1,400,000원</span>
+                          <span class="price">720,000원</span>
+                        </div>
+                        <div class="rating-common">
+                          <span class="stars">★</span>
+                          <span class="score">4.8</span>
+                          <span class="score">(150)</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
+
+                  <a href="./eventDetail.html" class="wishlist-event-item">
+                    <div class="event-image">
+                      <img src="./img/best-product-02.png" alt="눈재수술" />
+                    </div>
+                    <div class="event-info">
+                      <div class="hospital-location">
+                        서울 압구정역 · 디에이성형외과의원
+                      </div>
+                      <h4 class="event-title">눈재수술 비절개</h4>
+                      <div class="event-price-rating">
+                        <div class="price-info">
+                          <span class="discount">49%</span>
+                          <span class="price-before">1,400,000원</span>
+                          <span class="price">720,000원</span>
+                        </div>
+                        <div class="rating-common">
+                          <span class="stars">★</span>
+                          <span class="score">4.8</span>
+                          <span class="score">(150)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="./eventDetail.html" class="wishlist-event-item">
+                    <div class="event-image">
+                      <img src="./img/best-product-03.png" alt="눈성형" />
+                    </div>
+                    <div class="event-info">
+                      <div class="hospital-location">
+                        서울 역삼역 · 라인성형외과의원
+                      </div>
+                      <h4 class="event-title">첫눈자연유착 쌍꺼풀 눈성형</h4>
+                      <div class="event-price-rating">
+                        <div class="price-info">
+                          <span class="discount">30%</span>
+                          <span class="price-before">1,200,000원</span>
+                          <span class="price">840,000원</span>
+                        </div>
+                        <div class="rating-common">
+                          <span class="stars">★</span>
+                          <span class="score">4.9</span>
+                          <span class="score">(120)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="./eventDetail.html" class="wishlist-event-item">
+                    <div class="event-image">
+                      <img src="./img/best-product-01.png" alt="눈성형" />
+                    </div>
+                    <div class="event-info">
+                      <div class="hospital-location">
+                        서울 강남역 · 제이앤제이성형외과의원
+                      </div>
+                      <h4 class="event-title">지방이식 풀패키지</h4>
+                      <div class="event-price-rating">
+                        <div class="price-info">
+                          <span class="discount">35%</span>
+                          <span class="price-before">1,500,000원</span>
+                          <span class="price">975,000원</span>
+                        </div>
+                        <div class="rating-common">
+                          <span class="stars">★</span>
+                          <span class="score">4.7</span>
+                          <span class="score">(98)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </section>
             </div>
@@ -285,8 +396,10 @@
           <!-- 회사 정보 -->
           <div class="company-info">
             <p>주식회사 인크레더블버즈 | 대표이사 임신영</p>
+            <br />
             <p>사업자등록번호: 349-87-02942</p>
             <p>대부중개업등록번호: 2024-서울강남-0159(대부업)</p>
+            <br />
             <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
             <p>TEL: 02-556-6474</p>
             <p>FAX: 02-508-7752</p>
@@ -294,15 +407,18 @@
           </div>
 
           <!-- 대부업 관련 정보 -->
-          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
+          <div
+            class="loan-info"
+            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
+          >
             <p
               style="
                 color: #fff;
                 font-weight: 600;
-                margin-bottom: 15px;
-                margin-top: 10px;
+                margin-bottom: 4px;
+                margin-top: 4px;
                 font-size: 16px;
-                line-height: 1.8;
+                line-height: 1.2;
               "
             >
               <a href="#" style="color: #fff; text-decoration: none"
@@ -310,7 +426,7 @@
               >
               •
               <a href="#" style="color: #fff; text-decoration: none"
-                >개인정보처리방침(워)법인</a
+                >개인정보처리(취급)방침</a
               >
               •
               <a href="#" style="color: #fff; text-decoration: none"
@@ -324,6 +440,7 @@
               <a href="#" style="color: #fff; text-decoration: none"
                 >이메일무단수집</a
               >
+              •
               <a href="#" style="color: #fff; text-decoration: none"
                 >거부고객권리 안내문</a
               >
@@ -333,32 +450,44 @@
               >
               •
               <a href="#" style="color: #fff; text-decoration: none"
-                >블록체인 대응윤리</a
+                >불법추심 대응요령</a
               >
-            </p>
-            <p
-              style="
-                color: #fff;
-                font-weight: 600;
-                margin-bottom: 15px;
-                margin-top: 10px;
-                font-size: 16px;
-                line-height: 1.8;
-              "
-            >
+              •
               <a href="#" style="color: #fff; text-decoration: none"
-                >체지주식회사의 의무와 책임에 관한 개인금융거래의 권리</a
+                >채권추심업무 처리절차</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >추심 사전통보 안내문</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >소멸시효 완성채권</a
+              >
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심에 관한 금융소비자 유의사항</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심 관련 지원제도 안내</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심자의 의무와 추심에 관한 개인금융채무자의 권리</a
               >
             </p>
           </div>
 
           <!-- 금리 및 상환안내 -->
-          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
+          <div
+            class="loan-info"
+            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
+          >
             <p
               style="
                 color: #fff;
                 font-weight: 600;
-                margin-bottom: 15px;
+                margin-bottom: 4px;
                 margin-top: 10px;
                 font-size: 16px;
               "
@@ -368,7 +497,7 @@
             <p>
               대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
             </p>
-            <p>
+            <p style="line-height: 1.2">
               부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
               지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
               근저당말소비용 등 발생
@@ -457,5 +586,35 @@
         }
       }
     </style>
+
+    <!-- 모달 스크립트를 인라인 표시로 변경 -->
+    <script>
+      $(document).ready(function () {
+        // 정보수정 버튼 클릭 시 정보수정 섹션 표시하고 컨텐츠 영역 숨기기
+        $('#editProfileBtn').click(function () {
+          $('#profileEditSection').show();
+          $('#mypageContent').hide();
+        });
+
+        // 뒤로가기 버튼 클릭 시 정보수정 섹션 숨기고 컨텐츠 영역 표시
+        $('#backToProfileBtn').click(function () {
+          $('#profileEditSection').hide();
+          $('#mypageContent').show();
+        });
+
+        // 비밀번호 변경 버튼 클릭 시
+        $('.change-btn').click(function () {
+          alert('준비 중인 기능입니다.');
+        });
+
+        // 회원 탈퇴 버튼 클릭 시
+        $('.withdraw-btn').click(function () {
+          if (confirm('정말 탈퇴하시겠습니까? 이 작업은 되돌릴 수 없습니다.')) {
+            alert('탈퇴 처리되었습니다.');
+            window.location.href = 'index.html';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
