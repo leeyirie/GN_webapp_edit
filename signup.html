@@ -4,13 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>강남오빠 - 회원가입</title>
-    <!-- 폰트 로드 -->
+    <!-- Pretendard 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
     />
+    <style>
+      @supports (font-variation-settings: normal) {
+        * {
+          font-family:
+            'Pretendard Variable',
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            sans-serif;
+        }
+      }
+    </style>
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/slick.js"></script>
@@ -30,7 +49,7 @@
   </head>
   <body>
     <div id="wrap">
-      <header id="header" class="login-header">
+      <header id="header">
         <div class="header-inner">
           <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
           <div class="mobile-dept-text">
@@ -38,7 +57,7 @@
               대부중개업등록번호: 2024-서울강남-0159(대부업)
             </div>
           </div>
-          <!-- 로고와 데스크톱 대부업 문구 라인 -->
+          <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
           <div class="header-top-bar">
             <a href="./index.html">
               <h1
@@ -51,10 +70,38 @@
                 대부중개업등록번호: 2024-서울강남-0159(대부업)
               </div>
             </div>
+            <div class="mobile-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
+          <div class="header-bottom-bar">
+            <div class="header-search-wrap">
+              <a href="./search.html" class="search-input-con">
+                <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+                <button class="search-icon" type="button">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </a>
+            </div>
+            <div class="desktop-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-
       <!-- 컨텐츠 시작 -->
       <div id="content" class="signup-page">
         <div class="signup-container">
@@ -207,7 +254,146 @@
 
       <!-- 푸터 시작 -->
       <footer id="footer">
-        <!-- 기존 푸터 내용 -->
+        <div class="f-container">
+          <div class="f-top-con">
+            <a href="#" class="f-logo"></a>
+            <a href="#" class="request-btn">병원입점신청</a>
+          </div>
+
+          <!-- 회사 정보 -->
+          <div class="company-info">
+            <p>주식회사 인크레더블버즈 | 대표이사 임신영</p>
+            <br />
+            <p>사업자등록번호: 349-87-02942</p>
+            <p>대부중개업등록번호: 2024-서울강남-0159(대부업)</p>
+            <br />
+            <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+            <p>TEL: 02-556-6474</p>
+            <p>FAX: 02-508-7752</p>
+            <p>E-MAIL: CS@humanwellness.kr</p>
+          </div>
+
+          <!-- 대부업 관련 정보 -->
+          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
+            <p
+              style="
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 4px;
+                margin-top: 4px;
+                font-size: 16px;
+                line-height: 1.2;
+              "
+            >
+              <a href="#" style="color: #fff; text-decoration: none"
+                >대부거래표준약관</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >개인정보처리(취급)방침</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >영상정보 운영방침</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >신용정보 활용체제</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >이메일무단수집</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >거부고객권리 안내문</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >전국대부업체 조회</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >불법추심 대응요령</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심업무 처리절차</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >추심 사전통보 안내문</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >소멸시효 완성채권</a
+              >
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심에 관한 금융소비자 유의사항</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심 관련 지원제도 안내</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심자의 의무와 추심에 관한 개인금융채무자의 권리</a
+              >
+            </p>
+          </div>
+
+          <!-- 금리 및 상환안내 -->
+          <div
+            class="loan-info"
+            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
+          >
+            <p
+              style="
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 4px;
+                margin-top: 10px;
+                font-size: 16px;
+              "
+            >
+              금리 및 상환안내
+            </p>
+            <p>
+              대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
+            </p>
+            <p style="line-height: 1.2">
+              부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
+              지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
+              근저당말소비용 등 발생
+            </p>
+            <p>전당포대출 부대비용 : 없음</p>
+            <p>조기상환조건 없음</p>
+            <p>개인정보 관리 책임자 : 대표이사 임신영</p>
+          </div>
+
+          <!-- 경고 텍스트 -->
+          <div class="warning-text">
+            <p>
+              * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+            </p>
+            <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+            <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+          </div>
+
+          <!-- 면책 문구 -->
+          <div class="disclaimer">
+            <p>주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로,</p>
+            <p>
+              의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+              않습니다.
+            </p>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="copyright">
+            <p>©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+          </div>
+        </div>
       </footer>
       <!-- 푸터 끝 -->
     </div>

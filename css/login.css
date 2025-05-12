@@ -8,7 +8,7 @@
 .login-container {
   max-width: 500px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 200px 20px;
 }
 
 .login-top-con {
@@ -18,8 +18,8 @@
 
 .login-top-con h2 {
   font-size: 32px;
-  font-weight: 700;
-  color: #333;
+  font-weight: 600;
+  color: #4d3dbf;
 }
 
 .login-form-con {
@@ -37,7 +37,7 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@
 }
 
 .save-id span {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .find-links a {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -101,7 +101,7 @@
   display: block;
   width: 100%;
   height: 60px;
-  background: linear-gradient(90deg, #4d3dbf 0%, #ff66cc 100%);
+  background: linear-gradient(95deg, #f6c 5.7%, #4d3dbf 84.87%), #f1f1f1;
   border-radius: 10px;
   color: #fff;
   font-size: 18px;
@@ -159,7 +159,7 @@
   }
 
   .login-container {
-    padding: 20px 15px;
+    padding: 120px 20px;
     margin-top: 20px;
   }
 
@@ -193,7 +193,7 @@
 
 @media screen and (max-width: 375px) {
   .login-container {
-    padding: 15px 10px;
+    padding: 100px 20px;
   }
 
   .login-top-con h2 {
@@ -203,17 +203,15 @@
   .login-form .input-row input {
     height: 45px;
     padding: 0 15px;
+    font-size: 14px;
   }
 
-  .login-options {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+  .login-options span {
+    font-size: 12px;
   }
 
-  .find-links {
-    width: 100%;
-    justify-content: space-between;
+  .find-links a {
+    font-size: 12px;
   }
 
   .login-submit-btn,

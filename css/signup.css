@@ -19,8 +19,8 @@
 
 .signup-top-con h2 {
   font-size: 32px;
-  font-weight: 700;
-  color: #333;
+  font-weight: 600;
+  color: #4d3dbf;
 }
 
 .signup-form .input-row {
@@ -152,7 +152,7 @@
   display: block;
   width: 100%;
   height: 60px;
-  background: linear-gradient(90deg, #4d3dbf 0%, #ff66cc 100%);
+  background: linear-gradient(95deg, #f6c 5.7%, #4d3dbf 84.87%), #f1f1f1;
   border-radius: 10px;
   color: #fff;
   font-size: 18px;
@@ -188,7 +188,7 @@
   }
 
   .signup-container {
-    padding: 20px 15px;
+    padding: 20px 22px;
     margin-top: 20px;
   }
 
@@ -233,7 +233,7 @@
 
 @media screen and (max-width: 375px) {
   .signup-container {
-    padding: 15px 10px;
+    padding: 15px 16px;
   }
 
   .signup-top-con h2 {

@@ -4,9 +4,9 @@
 }
 .inter-select-con .tit {
   color: #222;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
   margin-top: 40px;
   text-align: center;
 }
@@ -185,32 +185,41 @@
 .best-product-list-con .best-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
 .best-product-list-con .best-list .best-item {
-  flex: 0 0 calc(25% - 18px);
+  flex: 0 0 calc(25% - 12px);
   background: #fff;
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 .best-product-list-con .best-list .best-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 .best-product-list-con .best-list .best-item a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  height: 100%;
 }
 .best-product-list-con .best-list .best-item img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: contain;
   background-color: rgb(255, 255, 255);
+  border-radius: 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 .best-product-list-con .best-txt-con {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .best-product-list-con .best-txt-con .location {
   font-size: 14px;
@@ -422,7 +431,9 @@
 
 /* 반응형 - 메인 컨텐츠 */
 @media screen and (max-width: 1199px) {
-  .best-product-list-con .best-list .best-item,
+  .best-product-list-con .best-list .best-item {
+    flex: 0 0 calc(25% - 12px);
+  }
   .insight-list .insight-item {
     flex: 0 0 calc(33.33% - 16px);
   }
@@ -453,9 +464,9 @@
 
 @media screen and (max-width: 768px) {
   .inter-select-con .tit {
-    font-size: 20px;
+    font-size: 24px;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 28px;
   }
 
   .surgery-list-con .surgery-list {
@@ -499,10 +510,14 @@
   }
 
   .best-product-list-con .best-list {
-    gap: 15px;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 20px 0;
+    width: 100%;
   }
   .best-product-list-con .best-list .best-item {
-    flex: 0 0 calc(50% - 8px);
+    flex: 0 0 calc(50% - 6px);
+    border-radius: 0 0 20px 20px;
   }
   .best-product-list-con .best-txt-con {
     padding: 15px;
@@ -584,20 +599,34 @@
   .ad-container {
     border-radius: 15px;
   }
+
+  .best-product-con {
+    padding: 16px 0;
+    width: 100%;
+  }
+  .best-product-con .container {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .best-product-list-con .best-list .best-item {
-    flex: 0 0 calc(50% - 8px);
+    flex: 0 0 calc(50% - 6px);
+    margin-bottom: 15px;
+    border-radius: 0 0 20px 20px;
   }
   .inter-select-con .tit {
-    font-size: 18px;
-    margin-bottom: 24px;
+    font-size: 20px;
+    margin-bottom: 32px;
     margin-top: 24px;
   }
   .best-product-list-con .best-list .best-item img {
     height: 150px;
     object-fit: contain;
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
   }
 
   .insight-list .insight-item {
@@ -655,6 +684,10 @@
   .main-beauty-banner-con .banner-item {
     padding: 0 6px;
   }
+
+  .best-product-con .container {
+    padding: 0 10px;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -680,8 +713,8 @@
   }
 
   .inter-select-con .tit {
-    font-size: 18px;
-    margin-bottom: 24px;
+    font-size: 20px;
+    margin-bottom: 28px;
     margin-top: 24px;
   }
 
@@ -701,6 +734,15 @@
 
   .main-beauty-banner-con .banner-item img {
     border-radius: 10px;
+  }
+
+  /* 작은 화면에서도 인기 상품 카드의 위쪽이 직각 유지 */
+  .best-product-list-con .best-list .best-item {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .best-product-list-con .best-list .best-item img {
+    border-radius: 0;
   }
 }
 
@@ -730,6 +772,15 @@
 @media screen and (max-width: 380px) {
   .cm-title-con .tit {
     font-size: 18px;
+  }
+
+  /* 가장 작은 화면에서도 인기 상품 카드의 위쪽 모서리가 직각 유지 */
+  .best-product-list-con .best-list .best-item {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .best-product-list-con .best-list .best-item img {
+    border-radius: 0;
   }
 }
 
