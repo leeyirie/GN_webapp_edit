@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>병원 상세 정보 - 강남오빠</title>
+    <!-- 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/detail.css" />
+    <link rel="stylesheet" href="./css/hospital.css" />
+    <link rel="stylesheet" href="./css/bottom-menu.css" />
+    <link rel="stylesheet" href="./css/surgeryMenu.css" />
+    <link rel="stylesheet" href="./css/hospitalDetail.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
+          <div class="mobile-dept-text">
+            <div class="header-top-text">
+              대부중개업등록번호: 2024-서울강남-0159(대부업)
+            </div>
+          </div>
+          <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
+          <div class="header-top-bar">
+            <a href="./index.html">
+              <h1
+                class="logo"
+                style="background-image: url('./img/gn-logo-white.svg')"
+              ></h1>
+            </a>
+            <div class="desktop-dept-text">
+              <div class="header-top-text">
+                대부중개업등록번호: 2024-서울강남-0159(대부업)
+              </div>
+            </div>
+            <div class="mobile-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
+          <div class="header-bottom-bar">
+            <div class="header-search-wrap">
+              <a href="./search.html" class="search-input-con">
+                <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+                <button class="search-icon" type="button">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </a>
+            </div>
+            <div class="desktop-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="content" class="hospital-page">
+        <div class="container">
+          <div class="sort-options">
+            <div class="left-section">
+              <a href="javascript:history.back()" class="back-btn"
+                ><i class="fas fa-arrow-left"></i
+              ></a>
+              <h2 class="page-title">팝성형외과의원</h2>
+            </div>
+          </div>
+
+          <!-- 병원 소개 섹션 -->
+          <div class="hospital-list">
+            <div class="hospital-item">
+              <div class="hospital-image">
+                <img
+                  src="./img/hospital-thumb.jpg"
+                  alt="병원 이미지"
+                  onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 800 420\'%3E%3Crect fill=\'%23f0f0f0\' width=\'800\' height=\'420\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'28\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E병원 이미지%3C/text%3E%3C/svg%3E';"
+                />
+              </div>
+              <div class="hospital-info">
+                <div class="hospital-location">
+                  서울특별시 강남구 압구정로 123
+                </div>
+                <h3 class="hospital-name">팝성형외과의원</h3>
+                <div class="hospital-tags">
+                  <span class="tag">눈성형</span>
+                  <span class="tag">코성형</span>
+                  <span class="tag">안면성형</span>
+                  <span class="tag">쁘띠성형</span>
+                </div>
+                <div class="info-bottom">
+                  <div class="rating-common">
+                    <div class="stars">★★★★★</div>
+                    <div class="score">4.8</div>
+                    <div class="reviews">(150)</div>
+                    <div class="event">이벤트 12개</div>
+                  </div>
+                  <div class="hospital-buttons">
+                    <button class="hospital-btn consult-btn">예약하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 병원 상세 내용 -->
+          <div class="hospital-detail-content">
+            <div class="detail-tabs">
+              <button class="tab-btn" data-tab="hospital-info">병원정보</button>
+              <button class="tab-btn active" data-tab="hospital-events">
+                병원이벤트
+              </button>
+            </div>
+
+            <!-- 병원정보 탭 -->
+            <div class="tab-content hospital-info">
+              <h3>병원 위치</h3>
+              <div class="hospital-detail">
+                <div class="hospital-address">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>서울특별시 강남구 압구정로 123</p>
+                </div>
+
+                <h3>진료 시간</h3>
+                <div>
+                  <ul class="surgery-features">
+                    <li>평일: 10:00 - 19:00</li>
+                    <li>토요일: 10:00 - 16:00</li>
+                    <li>일요일 및 공휴일: 휴진</li>
+                  </ul>
+                </div>
+                <h3>진료 항목</h3>
+                <div class="treatment-items">
+                  <ul>
+                    <li>
+                      <span class="treatment-name">눈성형</span>
+                    </li>
+                    <li>
+                      <span class="treatment-name">코성형</span>
+                    </li>
+                  </ul>
+                </div>
+                <h3>의사 정보</h3>
+                <div class="doctor-info">
+                  <div class="doctor-profile">
+                    <div class="doctor-image">
+                      <img
+                        src="./img/doctor.jpg"
+                        alt="의사 프로필"
+                        onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E의사 프로필%3C/text%3E%3C/svg%3E';"
+                      />
+                    </div>
+                    <div class="doctor-details">
+                      <div class="doctor-name">
+                        <h4>이름</h4>
+                        <span class="specialist-text">성형외과 전문의</span>
+                      </div>
+                      <div class="doctor-specialties">
+                        <ul>
+                          <li><span class="treatment-name">눈성형</span></li>
+                          <li>
+                            <span class="treatment-name">코성형</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="hospital-map">
+                  지도 영역
+                  <div
+                    class="map-placeholder"
+                    style="
+                      width: 100%;
+                      height: 300px;
+                      background-color: #f8f8fa;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    "
+                  >
+                    지도 영역
+                  </div>
+                </div> -->
+              </div>
+            </div>
+
+            <!-- 병원이벤트 탭 -->
+            <div class="tab-content hospital-events">
+              <div class="event-count">이벤트 12건</div>
+              <div class="hospital-events-list">
+                <a href="./eventDetail.html" class="hospital-event-item">
+                  <div class="event-image">
+                    <img src="./img/best-product-01.png" alt="눈성형" />
+                  </div>
+                  <div class="event-info">
+                    <div class="hospital-location">
+                      서울 압구정역 · 팝성형외과의원
+                    </div>
+                    <h3 class="event-title">자연유착 쌍꺼풀 매몰</h3>
+                    <div class="price-info">
+                      <span class="discount">49%</span>
+                      <span class="price">
+                        <span class="price-before">1,400,000원</span>720,000원
+                      </span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★</span>
+                      <span class="score">4.8</span>
+                      <span class="score">(150)</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="./eventDetail.html" class="hospital-event-item">
+                  <div class="event-image">
+                    <img src="./img/best-product-02.png" alt="눈재수술" />
+                  </div>
+                  <div class="event-info">
+                    <div class="hospital-location">
+                      서울 압구정역 · 팝성형외과의원
+                    </div>
+                    <h3 class="event-title">눈재수술 비절개</h3>
+                    <div class="price-info">
+                      <span class="discount">49%</span>
+                      <span class="price">
+                        <span class="price-before">1,400,000원</span>720,000원
+                      </span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★</span>
+                      <span class="score">4.8</span>
+                      <span class="score">(150)</span>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="./eventDetail.html" class="hospital-event-item">
+                  <div class="event-image">
+                    <img src="./img/best-product-03.png" alt="눈재수술" />
+                  </div>
+                  <div class="event-info">
+                    <div class="hospital-location">
+                      서울 압구정역 · 팝성형외과의원
+                    </div>
+                    <h3 class="event-title">첫눈자연유착 쌍꺼풀 눈성형</h3>
+                    <div class="price-info">
+                      <span class="discount">49%</span>
+                      <span class="price">
+                        <span class="price-before">1,400,000원</span>720,000원
+                      </span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★</span>
+                      <span class="score">4.8</span>
+                      <span class="score">(150)</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- 페이지네이션 -->
+              <div class="pagination">
+                <button class="page-btn prev" disabled>
+                  <span class="arrow">〈</span>
+                </button>
+                <div class="page-numbers">
+                  <button class="page-number active">1</button>
+                  <button class="page-number">2</button>
+                  <button class="page-number">3</button>
+                  <button class="page-number">4</button>
+                  <button class="page-number">5</button>
+                </div>
+                <button class="page-btn next">
+                  <span class="arrow">〉</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="f-container">
+          <div class="f-top-con">
+            <a href="#" class="f-logo"></a>
+            <a href="#" class="request-btn">병원입점신청</a>
+          </div>
+
+          <!-- 회사 정보 -->
+          <div class="company-info">
+            <p>주식회사 인크레더블버즈 | 대표이사 임신영</p>
+            <br />
+            <p>사업자등록번호: 349-87-02942</p>
+            <p>대부중개업등록번호: 2024-서울강남-0159(대부업)</p>
+            <br />
+            <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+            <p>TEL: 02-556-6474</p>
+            <p>FAX: 02-508-7752</p>
+            <p>E-MAIL: CS@humanwellness.kr</p>
+          </div>
+
+          <!-- 대부업 관련 정보 -->
+          <div
+            class="loan-info"
+            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
+          >
+            <p
+              style="
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 4px;
+                margin-top: 4px;
+                font-size: 16px;
+                line-height: 1.2;
+              "
+            >
+              <a href="#" style="color: #fff; text-decoration: none"
+                >대부거래표준약관</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >개인정보처리(취급)방침</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >영상정보 운영방침</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >신용정보 활용체제</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >이메일무단수집</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >거부고객권리 안내문</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >전국대부업체 조회</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >불법추심 대응요령</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심업무 처리절차</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >추심 사전통보 안내문</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >소멸시효 완성채권</a
+              >
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심에 관한 금융소비자 유의사항</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심 관련 지원제도 안내</a
+              >
+              •
+              <a href="#" style="color: #fff; text-decoration: none"
+                >채권추심자의 의무와 추심에 관한 개인금융채무자의 권리</a
+              >
+            </p>
+          </div>
+
+          <!-- 금리 및 상환안내 -->
+          <div
+            class="loan-info"
+            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
+          >
+            <p
+              style="
+                color: #fff;
+                font-weight: 600;
+                margin-bottom: 4px;
+                margin-top: 10px;
+                font-size: 16px;
+              "
+            >
+              금리 및 상환안내
+            </p>
+            <p style="line-height: 1.2">
+              대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
+            </p>
+            <p>
+              부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
+              지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
+              근저당말소비용 등 발생
+            </p>
+            <p>전당포대출 부대비용 : 없음</p>
+            <p>조기상환조건 없음</p>
+            <p>개인정보 관리 책임자 : 대표이사 임신영</p>
+          </div>
+
+          <!-- 경고 텍스트 -->
+          <div class="warning-text">
+            <p>
+              * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+            </p>
+            <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+            <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+          </div>
+
+          <!-- 면책 문구 -->
+          <div class="disclaimer">
+            <p>주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로,</p>
+            <p>
+              의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+              않습니다.
+            </p>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="copyright">
+            <p>©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/home.svg" alt="홈 아이콘" />
+        </div>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item active">
+        <div class="svg-icon">
+          <img src="./img/hospital.svg" alt="병원 아이콘" />
+        </div>
+        <span>병원정보</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+        </div>
+        <span>마이페이지</span>
+      </a>
+      <a href="./loan.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/loan.svg" alt="대출 아이콘" />
+        </div>
+        <span>대출</span>
+      </a>
+      <a href="" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/bell.svg" alt="알림 아이콘" />
+        </div>
+        <span>알림</span>
+      </a>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // 탭 버튼 클릭 시 탭 컨텐츠 전환
+        $('.tab-btn').click(function () {
+          // 모든 탭 버튼의 active 클래스 제거
+          $('.tab-btn').removeClass('active');
+          // 클릭한 탭 버튼에 active 클래스 추가
+          $(this).addClass('active');
+
+          // 모든 탭 컨텐츠 숨기기
+          $('.tab-content').removeClass('active');
+
+          // 클릭한 탭에 해당하는 컨텐츠 표시
+          const tabId = $(this).data('tab');
+          $('.' + tabId).addClass('active');
+        });
+
+        // URL에서 쿼리 파라미터 가져오기
+        function getParameterByName(name, url = window.location.href) {
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // 병원 정보 데이터
+        const hospitalData = {
+          1: {
+            name: '팝성형외과의원',
+            location: '서울특별시 강남구 압구정로 123',
+            district: '압구정역',
+            rating: '4.8',
+            reviews: '150',
+            events: '12',
+            tags: ['눈성형', '코성형', '안면성형', '쁘띠성형'],
+            desc: '2005년 개원 이래 20여년간 오로지 환자의 만족을 위해 최선을 다해온 팝성형외과입니다. 첨단 장비와 숙련된 전문의들의 정성어린 시술로 환자분들께 최상의 결과를 약속합니다.',
+          },
+          2: {
+            name: '디에이성형외과의원',
+            location: '서울특별시 강남구 역삼로 456',
+            district: '역삼역',
+            rating: '4.9',
+            reviews: '120',
+            events: '8',
+            tags: ['눈성형', '코성형', '지방이식'],
+            desc: '디에이성형외과의원은 10년 이상의 경험을 바탕으로 환자 개개인에게 맞춤형 수술을 제공합니다. 모든 시술은 전문의가 직접 진행하며, 수술 후 관리까지 철저하게 도와드립니다.',
+          },
+          3: {
+            name: '제이앤제이성형외과의원',
+            location: '서울특별시 강남구 테헤란로 789',
+            district: '강남역',
+            rating: '4.7',
+            reviews: '98',
+            events: '15',
+            tags: ['안면윤곽', '지방이식', '가슴성형'],
+            desc: '2012년 개원한 제이앤제이성형외과는 특히 안면윤곽 분야에서 뛰어난 실력을 인정받고 있습니다. 첨단 3D 시뮬레이션을 통해 수술 전 결과를 미리 확인할 수 있어 환자 만족도가 높습니다.',
+          },
+        };
+
+        // URL에서 병원 ID 가져오기
+        const hospitalId = getParameterByName('id') || '1'; // 기본값은 1
+        const hospital = hospitalData[hospitalId];
+
+        // URL에서 탭 정보 가져오기
+        const tabParam = getParameterByName('tab');
+        if (tabParam === 'info') {
+          // 병원정보 탭 활성화
+          $('.tab-btn[data-tab="hospital-info"]').addClass('active');
+          $('.tab-btn[data-tab="hospital-events"]').removeClass('active');
+          $('.hospital-info').addClass('active');
+          $('.hospital-events').removeClass('active');
+        }
+
+        if (hospital) {
+          // 상단 페이지 타이틀과 병원 소개 영역 업데이트
+          $('.page-title').text(hospital.name);
+          $('.hospital-name').text(hospital.name);
+
+          // 병원 위치 정보 업데이트
+          $('.hospital-address p').text(hospital.location);
+
+          // 이벤트 수 표시 업데이트
+          $('.event-count').text('이벤트 ' + hospital.events + '건');
+
+          // 이벤트 탭의 병원 위치 표시 업데이트
+          $('.hospital-events-list .hospital-location').each(function () {
+            $(this).text(`서울 ${hospital.district} · ${hospital.name}`);
+          });
+
+          // 이벤트 탭의 평점 업데이트
+          $('.hospital-events-list .rating-common .score:nth-child(2)').each(
+            function () {
+              $(this).text(hospital.rating);
+            }
+          );
+
+          $('.hospital-events-list .rating-common .score:nth-child(3)').each(
+            function () {
+              $(this).text('(' + hospital.reviews + ')');
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
