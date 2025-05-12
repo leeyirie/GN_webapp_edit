@@ -415,7 +415,7 @@
 }
 
 .wishlist-event-item .price-info .discount {
-  color: #f06;
+  color: rgb(255, 0, 195);
   font-weight: 600;
   font-size: 18px;
 }
