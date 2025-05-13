@@ -33,7 +33,7 @@ $(document).ready(function () {
     window.location.href = './profile-edit.html';
   });
 
-  // 포인트 상세 클릭
+  // 포인트 상세 클릭 -> 포인트 없어짐
   $('.point-value').on('click', function () {
     window.location.href = './mypage-point.html';
   });
