@@ -148,3 +148,52 @@
 }
 
 /* 하단 메뉴바는 bottom-menu.css에서 관리합니다 */
+
+/* 대부 관련 정보 스타일 */
+.loan-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.loan-info p {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.loan-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.loan-info-links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.loan-info-rates {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.loan-info-rates p.title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* 경고 텍스트 */
+.warning-text p {
+  line-height: 1.2;
+}
+
+/* 면책 문구 */
+.disclaimer p {
+  line-height: 1.2;
+}

@@ -1,0 +1,101 @@
+/* 검색 페이지 스타일 */
+.search-page {
+  padding: 40px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 500px);
+}
+
+.search-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* 검색 타이틀 */
+.search-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* 검색 창 영역 */
+.search-input-area {
+  position: relative;
+}
+
+/* 인기 검색어 버튼 */
+.popular-searches {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.search-tag {
+  padding: 12px 20px;
+  background: #f5f5f5;
+  border-radius: 24px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.search-tag:hover {
+  background: #eee;
+  border-color: #ddd;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 767px) {
+  .search-page {
+    padding: 30px 0 50px;
+  }
+
+  .search-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .search-tags {
+    gap: 10px;
+  }
+
+  .search-tag {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-page {
+    padding: 20px 0 40px;
+  }
+
+  .search-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .search-tags {
+    gap: 8px;
+  }
+
+  .search-tag {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

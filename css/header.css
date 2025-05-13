@@ -31,7 +31,14 @@
   font-size: 28px;
   font-weight: 400;
   color: #fff;
-  text-align: left;
+}
+
+#header .header-top-text span {
+  display: inline-block;
+}
+
+#header .header-top-text span:first-child {
+  margin-bottom: 4px;
 }
 
 /* #header .header-wrap {
