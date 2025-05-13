@@ -50,8 +50,8 @@
 #footer .company-info {
   margin-bottom: 10px;
   font-weight: 300;
-  font-size: 22px;
-  color: fff;
+  font-size: 30px;
+  color: #fff;
   line-height: 3;
 }
 
@@ -63,14 +63,55 @@
 /* 금리 및 상환안내 섹션 */
 #footer .loan-info {
   margin-bottom: 10px;
-  font-size: 16px;
+  margin-top: 20px;
+  font-size: 26px;
   color: #fff;
   line-height: 2.4;
 }
 
 #footer .loan-info p {
-  margin: 0;
+  margin: 0.2rem;
+  font-size: 20px;
+}
+
+/* 대부업 관련 정보 스타일 (링크 섹션) */
+#footer .loan-info-links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer .loan-info-links p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#footer .loan-info-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 금리 및 상환안내 섹션 */
+#footer .loan-info-rates {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+#footer .loan-info-rates p.title {
+  color: #fff;
+  font-weight: 600;
   margin-bottom: 4px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+#footer .loan-info-rates p {
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 /* 금리 및 상환안내 제목 스타일 */
@@ -78,7 +119,7 @@
   color: #fff;
   font-weight: 700;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 /* 경고 텍스트 스타일 */
@@ -107,7 +148,156 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* 반응형 */
+/* 대부 관련 정보 스타일 */
+.loan-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 반응형 미디어 쿼리 */
+@media screen and (max-width: 1200px) {
+  #footer .f-container {
+    padding: 35px 50px;
+  }
+
+  #footer .company-info {
+    font-size: 28px;
+    line-height: 2.8;
+  }
+
+  #footer .loan-info {
+    font-size: 24px;
+    line-height: 2.2;
+  }
+
+  #footer .loan-info p {
+    font-size: 19px;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 19px;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 22px;
+  }
+
+  #footer .loan-title {
+    font-size: 22px;
+  }
+
+  #footer .warning-text {
+    font-size: 19px !important;
+  }
+
+  #footer .disclaimer {
+    font-size: 13px;
+  }
+
+  #footer .copyright {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #footer .f-container {
+    padding: 30px 40px;
+  }
+
+  #footer .f-top-con .f-logo {
+    width: 140px;
+    height: 34px;
+  }
+
+  #footer .f-top-con .request-btn {
+    font-size: 17px;
+  }
+
+  #footer .company-info {
+    font-size: 26px;
+    line-height: 2.6;
+  }
+
+  #footer .loan-info {
+    font-size: 22px;
+    line-height: 2;
+  }
+
+  #footer .loan-info p {
+    font-size: 17px;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 17px;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 18px;
+  }
+  #footer .loan-info-rates p {
+    font-size: 18px;
+  }
+
+  #footer .loan-title {
+    font-size: 21px;
+  }
+
+  #footer .warning-text {
+    font-size: 17px !important;
+  }
+
+  #footer .disclaimer {
+    font-size: 12px;
+  }
+
+  #footer .copyright {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #footer .company-info {
+    font-size: 24px;
+    line-height: 2.4;
+  }
+
+  #footer .loan-info {
+    font-size: 21px;
+  }
+
+  #footer .loan-info p {
+    font-size: 16px;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 18px;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 18px;
+  }
+
+  #footer .loan-info-rates p {
+    font-size: 16px;
+  }
+
+  #footer .loan-title {
+    font-size: 19px;
+  }
+
+  #footer .warning-text {
+    font-size: 16px !important;
+  }
+
+  #footer .disclaimer {
+    font-size: 11px;
+  }
+
+  #footer .copyright {
+    font-size: 11px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #footer .f-container {
     padding: 25px 15px;
@@ -123,23 +313,46 @@
     font-size: 15px;
   }
 
-  #footer .company-info,
+  #footer .company-info {
+    font-size: 22px;
+    line-height: 2.2;
+  }
+
   #footer .loan-info {
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 19px;
+    line-height: 1.8;
+  }
+
+  #footer .loan-info p {
+    font-size: 15px;
+    margin: 0.15rem;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 18px;
   }
 
   #footer .loan-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   #footer .warning-text {
-    font-size: 14px;
+    font-size: 15px !important;
+    line-height: 1.3;
   }
 
-  #footer .disclaimer,
+  #footer .disclaimer {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
   #footer .copyright {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   /* 모바일에서 푸터 하단에 하단 메뉴바 높이만큼 마진 추가 */
@@ -148,45 +361,148 @@
   }
 }
 
-/* 하단 메뉴바는 bottom-menu.css에서 관리합니다 */
+@media screen and (max-width: 640px) {
+  #footer .f-container {
+    padding: 20px 12px;
+  }
 
-/* 대부 관련 정보 스타일 */
-.loan-info {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  #footer .company-info {
+    font-size: 20px;
+    line-height: 2;
+  }
+
+  #footer .loan-info {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  #footer .loan-info p {
+    font-size: 13px;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 16px;
+  }
+
+  #footer .loan-title {
+    font-size: 16px;
+  }
+
+  #footer .warning-text {
+    font-size: 13px !important;
+  }
+
+  #footer .disclaimer {
+    font-size: 9px;
+  }
+
+  #footer .copyright {
+    font-size: 9px;
+  }
 }
 
-.loan-info p {
-  color: #fff;
-  font-weight: 300;
-  margin-bottom: 4px;
-  margin-top: 4px;
-  font-size: 16px;
-  line-height: 1.2;
+@media screen and (max-width: 480px) {
+  #footer .f-top-con .f-logo {
+    width: 100px;
+    height: 25px;
+  }
+
+  #footer .f-top-con .request-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  #footer .company-info {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  #footer .company-info p {
+    margin-bottom: 3px;
+  }
+
+  #footer .loan-info {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #footer .loan-info p {
+    font-size: 12px;
+    margin: 0.1rem;
+  }
+
+  #footer .loan-info-links p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 14px;
+  }
+
+  #footer .loan-title {
+    font-size: 14px;
+  }
+
+  #footer .warning-text {
+    font-size: 12px !important;
+    line-height: 1.2;
+  }
+
+  #footer .disclaimer {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+
+  #footer .copyright {
+    font-size: 8px;
+  }
 }
 
-.loan-info a {
-  color: #fff;
-  text-decoration: none;
-}
+@media screen and (max-width: 380px) {
+  #footer .company-info {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 
-.loan-info-links {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+  #footer .loan-info {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 
-.loan-info-rates {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
+  #footer .loan-info p {
+    font-size: 11px;
+  }
 
-.loan-info-rates p.title {
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 4px;
-  margin-top: 10px;
-  font-size: 16px;
+  #footer .loan-info-links p {
+    font-size: 11px;
+    line-height: 1.1;
+  }
+
+  #footer .loan-info-rates p.title {
+    font-size: 13px;
+  }
+
+  #footer .loan-title {
+    font-size: 13px;
+  }
+
+  #footer .warning-text {
+    font-size: 11px !important;
+  }
+
+  #footer .disclaimer {
+    font-size: 7px;
+  }
+
+  #footer .copyright {
+    font-size: 7px;
+  }
 }
 
 /* 경고 텍스트 */

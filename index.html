@@ -35,16 +35,21 @@
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 
+    <!-- 라이브러리 CSS -->
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- 분리된 CSS 파일들 -->
+    
+    <!-- 공통 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/bottom-menu.css" />
+    
+    <!-- 페이지별 CSS 파일 -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/form.css" />
-    <link rel="stylesheet" href="./css/bottom-menu.css" />
-    <!-- Font Awesome -->
+    
+    <!-- Font Awesome 아이콘 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -548,67 +553,33 @@
           </div>
 
           <!-- 대부업 관련 정보 -->
-          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
-            <p
-              style="
-                color: #fff;
-                font-weight: 600;
-                margin-bottom: 6px;
-                margin-top: 6px;
-                font-size: 16px;
-                line-height: 1.4;
-              "
-            >
-              <a href="./loanTerms.html" style="color: #fff; text-decoration: none"
-                >대부거래표준약관</a
-              >
+          <div class="loan-info-links">
+            <p>
+              <a href="./loanTerms.html">대부거래표준약관</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >개인정보처리(취급)방침</a
-              >
+              <a href="#">개인정보처리(취급)방침</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >개인정보처리 위탁 및 제 3자제공 현황</a
-              >
+              <a href="#">개인정보처리 위탁 및 제 3자제공 현황</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >신용정보 활용체제</a
-              >
+              <a href="#">신용정보 활용체제</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >채권추심업무 처리절차</a
-              >
+              <a href="#">채권추심업무 처리절차</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >불법채권추심 대응요령</a
-              >
+              <a href="#">불법채권추심 대응요령</a>
               •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >소멸시효완성채권 추심관련유의사항</a
-              >
+              <a href="#">소멸시효완성채권 추심관련유의사항</a>
             </p>
           </div>
 
           <!-- 금리 및 상환안내 -->
-          <div
-            class="loan-info"
-            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
-          >
-            <p
-              style="
-  color: #fff;
-  font-weight: 600;
-                margin-bottom: 4px;
-                margin-top: 10px;
-                font-size: 20px;
-              "
-            >
+          <div class="loan-info-rates">
+            <p class="title">
               금리 및 상환안내
             </p>
             <p>
               대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
             </p>
-            <p style="line-height: 1.2">
+            <p>
               부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
               지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
               근저당말소비용 등 발생
