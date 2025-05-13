@@ -207,14 +207,24 @@
   text-decoration: none;
   height: 100%;
 }
-.best-product-list-con .best-list .best-item img {
+.best-product-list-con .best-list .best-item .img-container {
+  position: relative;
   width: 100%;
-  height: 220px;
-  object-fit: contain;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0;
+  padding-bottom: 100%; /* 정사각형 비율 */
+  overflow: hidden;
+  background-color: #f8f8f8;
   border-bottom: 1px solid #f0f0f0;
 }
+
+.best-product-list-con .best-list .best-item .img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 비율을 유지하면서 컨테이너를 채움 */
+}
+
 .best-product-list-con .best-txt-con {
   padding: 20px;
   flex: 1;
@@ -560,8 +570,8 @@
   }
 
   .best-product-list-con .best-list .best-item img {
-    height: 160px;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
   }
 
   .insight-list .insight-item .img-con {
@@ -623,10 +633,10 @@
     margin-top: 24px;
   }
   .best-product-list-con .best-list .best-item img {
-    height: 150px;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     border-radius: 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: none;
   }
 
   .insight-list .insight-item {
