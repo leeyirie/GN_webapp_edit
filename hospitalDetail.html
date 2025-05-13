@@ -18,9 +18,8 @@
     />
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/slick.js"></script>
-    <script src="./js/script.js"></script>
-
+    <script src="./js/hospital.js"></script>
+    <script src="./js/modal.js"></script>
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -296,12 +295,15 @@
                 <button class="page-btn prev" disabled>
                   <span class="arrow">〈</span>
                 </button>
+
                 <div class="page-numbers">
                   <button class="page-number active">1</button>
                   <button class="page-number">2</button>
                   <button class="page-number">3</button>
                   <button class="page-number">4</button>
                   <button class="page-number">5</button>
+                  <span class="page-dots">...</span>
+                  <button class="page-number">10</button>
                 </div>
                 <button class="page-btn next">
                   <span class="arrow">〉</span>
@@ -333,10 +335,7 @@
           </div>
 
           <!-- 대부업 관련 정보 -->
-          <div
-            class="loan-info"
-            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
-          >
+          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
             <p
               style="
                 color: #fff;
@@ -347,11 +346,15 @@
                 line-height: 1.2;
               "
             >
-              <a href="#" style="color: #fff; text-decoration: none"
+              <a
+                href="./loanTerms.html"
+                style="color: #fff; text-decoration: none"
                 >대부거래표준약관</a
               >
               •
-              <a href="#" style="color: #fff; text-decoration: none"
+              <a
+                href="./privacyPolicy.html"
+                style="color: #fff; text-decoration: none"
                 >개인정보처리(취급)방침</a
               >
               •
@@ -420,10 +423,10 @@
             >
               금리 및 상환안내
             </p>
-            <p style="line-height: 1.2">
+            <p>
               대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
             </p>
-            <p>
+            <p style="line-height: 1.2">
               부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
               지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
               근저당말소비용 등 발생
@@ -493,11 +496,11 @@
       </a>
     </div>
 
-    <!-- 예약하기 모달 팝업 -->
+    <!-- 예약하기 모달 -->
     <div id="reservationModal" class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <h2>병원 예약하기</h2>
+        <h2>예약 상담하기</h2>
         <form id="reservationForm">
           <div class="form-group">
             <label for="name">이름</label>
@@ -514,7 +517,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="treatment">관심 진료 항목</label>
+            <label for="treatment">관심 시술</label>
             <select id="treatment" name="treatment" required>
               <option value="">선택해주세요</option>
               <option value="눈성형">눈성형</option>
@@ -543,7 +546,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="message">상담 요청사항 (선택)</label>
+            <label for="message">요청사항 (선택)</label>
             <textarea id="message" name="message" rows="3"></textarea>
           </div>
           <div class="form-check">
@@ -555,339 +558,9 @@
           <p class="privacy-info">
             * 수집된 개인정보는 병원 예약 및 상담 목적으로만 사용됩니다.
           </p>
-          <button type="submit" class="modal-submit-btn">예약하기</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- 대출상담 모달 팝업 -->
-    <div id="loanModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>시술 대출 상담 신청</h2>
-        <form id="loanForm">
-          <div class="form-group">
-            <label for="loan-name">이름</label>
-            <input type="text" id="loan-name" name="loan-name" required />
-          </div>
-          <div class="form-group">
-            <label for="loan-phone">연락처</label>
-            <input
-              type="tel"
-              id="loan-phone"
-              name="loan-phone"
-              placeholder="010-0000-0000"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="loan-amount">희망 대출 금액</label>
-            <select id="loan-amount" name="loan-amount" required>
-              <option value="">선택해주세요</option>
-              <option value="500000">50만원</option>
-              <option value="1000000">100만원</option>
-              <option value="2000000">200만원</option>
-              <option value="3000000">300만원</option>
-              <option value="5000000">500만원</option>
-              <option value="10000000">1,000만원 이상</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="loan-message">문의 내용 (선택)</label>
-            <textarea id="loan-message" name="loan-message" rows="3"></textarea>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" id="loan-agree" name="loan-agree" required />
-            <label for="loan-agree"
-              >개인정보 수집 및 이용에 동의합니다. (필수)</label
-            >
-          </div>
-          <p class="privacy-info">
-            * 수집된 개인정보는 대출 상담 목적으로만 사용됩니다.
-          </p>
-          <div class="form-check">
-            <input
-              type="checkbox"
-              id="loan-credit-check"
-              name="loan-credit-check"
-              required
-            />
-            <label for="loan-credit-check"
-              >대출 시 신용등급 또는 개인신용평점이 하락할 수 있음을 인지합니다.
-              (필수)</label
-            >
-          </div>
           <button type="submit" class="modal-submit-btn">상담 신청하기</button>
         </form>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        // 탭 버튼 클릭 시 탭 컨텐츠 전환
-        $('.tab-btn').click(function () {
-          // 모든 탭 버튼의 active 클래스 제거
-          $('.tab-btn').removeClass('active');
-          // 클릭한 탭 버튼에 active 클래스 추가
-          $(this).addClass('active');
-
-          // 모든 탭 컨텐츠 숨기기
-          $('.tab-content').removeClass('active');
-
-          // 클릭한 탭에 해당하는 컨텐츠 표시
-          const tabId = $(this).data('tab');
-          $('.' + tabId).addClass('active');
-        });
-
-        // URL에서 쿼리 파라미터 가져오기
-        function getParameterByName(name, url = window.location.href) {
-          name = name.replace(/[\[\]]/g, '\\$&');
-          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-          if (!results) return null;
-          if (!results[2]) return '';
-          return decodeURIComponent(results[2].replace(/\+/g, ' '));
-        }
-
-        // 병원 정보 데이터
-        const hospitalData = {
-          1: {
-            name: '팝성형외과의원',
-            location: '서울특별시 강남구 압구정로 123',
-            district: '압구정역',
-            rating: '4.8',
-            reviews: '150',
-            events: '12',
-            tags: ['눈성형', '코성형', '안면성형', '쁘띠성형'],
-            desc: '2005년 개원 이래 20여년간 오로지 환자의 만족을 위해 최선을 다해온 팝성형외과입니다. 첨단 장비와 숙련된 전문의들의 정성어린 시술로 환자분들께 최상의 결과를 약속합니다.',
-          },
-          2: {
-            name: '디에이성형외과의원',
-            location: '서울특별시 강남구 역삼로 456',
-            district: '역삼역',
-            rating: '4.9',
-            reviews: '120',
-            events: '8',
-            tags: ['눈성형', '코성형', '지방이식'],
-            desc: '디에이성형외과의원은 10년 이상의 경험을 바탕으로 환자 개개인에게 맞춤형 수술을 제공합니다. 모든 시술은 전문의가 직접 진행하며, 수술 후 관리까지 철저하게 도와드립니다.',
-          },
-          3: {
-            name: '제이앤제이성형외과의원',
-            location: '서울특별시 강남구 테헤란로 789',
-            district: '강남역',
-            rating: '4.7',
-            reviews: '98',
-            events: '15',
-            tags: ['안면윤곽', '지방이식', '가슴성형'],
-            desc: '2012년 개원한 제이앤제이성형외과는 특히 안면윤곽 분야에서 뛰어난 실력을 인정받고 있습니다. 첨단 3D 시뮬레이션을 통해 수술 전 결과를 미리 확인할 수 있어 환자 만족도가 높습니다.',
-          },
-        };
-
-        // URL에서 병원 ID 가져오기
-        const hospitalId = getParameterByName('id') || '1'; // 기본값은 1
-        const hospital = hospitalData[hospitalId];
-
-        // URL에서 탭 정보 가져오기
-        const tabParam = getParameterByName('tab');
-        if (tabParam === 'info') {
-          // 병원정보 탭 활성화
-          $('.tab-btn[data-tab="hospital-info"]').addClass('active');
-          $('.tab-btn[data-tab="hospital-events"]').removeClass('active');
-          $('.hospital-info').addClass('active');
-          $('.hospital-events').removeClass('active');
-        }
-
-        if (hospital) {
-          // 상단 페이지 타이틀과 병원 소개 영역 업데이트
-          $('.page-title').text(hospital.name);
-          $('.hospital-name').text(hospital.name);
-
-          // 병원 위치 정보 업데이트
-          $('.hospital-address p').text(hospital.location);
-
-          // 이벤트 수 표시 업데이트
-          $('.event-count').text('이벤트 ' + hospital.events + '건');
-
-          // 이벤트 탭의 병원 위치 표시 업데이트
-          $('.hospital-events-list .hospital-location').each(function () {
-            $(this).text(`서울 ${hospital.district} · ${hospital.name}`);
-          });
-
-          // 이벤트 탭의 평점 업데이트
-          $('.hospital-events-list .rating-common .score:nth-child(2)').each(
-            function () {
-              $(this).text(hospital.rating);
-            }
-          );
-
-          $('.hospital-events-list .rating-common .score:nth-child(3)').each(
-            function () {
-              $(this).text('(' + hospital.reviews + ')');
-            }
-          );
-        }
-
-        // 모달 관련 스크립트
-        // 예약하기 버튼 클릭 시 모달 열기
-        $('.consult-btn').click(function () {
-          $('#reservationModal').css('display', 'flex');
-        });
-
-        // 모달 닫기 버튼 클릭 시 모달 닫기
-        $('.close-btn').click(function () {
-          $(this).closest('.modal').css('display', 'none');
-        });
-
-        // 모달 외부 클릭 시 모달 닫기
-        $(window).click(function (event) {
-          if ($(event.target).hasClass('modal')) {
-            $('.modal').css('display', 'none');
-          }
-        });
-
-        // 예약 폼 제출
-        $('#reservationForm').submit(function (e) {
-          e.preventDefault();
-          alert('예약이 접수되었습니다. 확인 후 연락드리겠습니다.');
-          $('#reservationModal').css('display', 'none');
-          this.reset();
-        });
-
-        // 대출 상담 폼 제출
-        $('#loanForm').submit(function (e) {
-          e.preventDefault();
-          alert('대출 상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.');
-          $('#loanModal').css('display', 'none');
-          this.reset();
-        });
-      });
-    </script>
-
-    <style>
-      /* 모달 스타일 */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .modal-content {
-        background-color: white;
-        width: 90%;
-        max-width: 500px;
-        border-radius: 15px;
-        padding: 30px;
-        position: relative;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        max-height: 90vh;
-        overflow-y: auto;
-      }
-
-      .close-btn {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 28px;
-        cursor: pointer;
-        color: #999;
-      }
-
-      .close-btn:hover {
-        color: #333;
-      }
-
-      .modal h2 {
-        margin-bottom: 20px;
-        color: #4d3dbf;
-        font-size: 22px;
-        font-weight: 600;
-        text-align: center;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: 500;
-        color: #333;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-      }
-
-      .form-check {
-        display: flex;
-        margin-bottom: 15px;
-        align-items: flex-start;
-      }
-
-      .form-check input {
-        margin-top: 3px;
-        margin-right: 10px;
-      }
-
-      .form-check label {
-        font-size: 14px;
-        color: #555;
-      }
-
-      .privacy-info {
-        font-size: 12px;
-        color: #999;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        margin-left: 0;
-      }
-
-      .modal-submit-btn {
-        width: 100%;
-        padding: 12px;
-        background-color: #4d3dbf;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .modal-submit-btn:hover {
-        background-color: #3f31a0;
-      }
-
-      @media screen and (max-width: 480px) {
-        .modal-content {
-          padding: 20px;
-        }
-
-        .modal h2 {
-          font-size: 20px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-          font-size: 14px;
-        }
-      }
-    </style>
   </body>
 </html>

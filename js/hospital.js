@@ -1,84 +1,73 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // 필터 드롭다운 기능
-  const filterGroups = document.querySelectorAll('.filter-group');
+$(document).ready(function () {
+  // 탭 버튼 클릭 시 탭 컨텐츠 전환
+  $('.tab-btn').click(function () {
+    // 모든 탭 버튼의 active 클래스 제거
+    $('.tab-btn').removeClass('active');
+    // 클릭한 탭 버튼에 active 클래스 추가
+    $(this).addClass('active');
 
-  filterGroups.forEach(group => {
-    const filterBtn = group.querySelector('.filter-btn');
-    const options = group.querySelector('.filter-options');
-    const optionsList = group.querySelectorAll('.filter-option');
+    // 모든 탭 컨텐츠 숨기기
+    $('.tab-content').removeClass('active');
 
-    // 드롭다운 토글
-    filterBtn.addEventListener('click', e => {
-      e.stopPropagation();
-
-      // 다른 모든 드롭다운 닫기
-      filterGroups.forEach(otherGroup => {
-        if (otherGroup !== group) {
-          otherGroup.classList.remove('active');
-        }
-      });
-
-      // 현재 드롭다운 토글
-      group.classList.toggle('active');
-    });
-
-    // 옵션 선택
-    optionsList.forEach(option => {
-      option.addEventListener('click', () => {
-        // 활성 상태 변경
-        optionsList.forEach(opt => opt.classList.remove('active'));
-        option.classList.add('active');
-
-        // 선택된 옵션 텍스트 업데이트
-        const selectedOption = group.querySelector('.selected-option');
-        selectedOption.textContent = option.textContent;
-
-        // 드롭다운 닫기
-        group.classList.remove('active');
-      });
-    });
+    // 클릭한 탭에 해당하는 컨텐츠 표시
+    const tabId = $(this).data('tab');
+    $('.' + tabId).addClass('active');
   });
 
-  // 드롭다운 외부 클릭시 닫기
-  document.addEventListener('click', () => {
-    filterGroups.forEach(group => {
-      group.classList.remove('active');
-    });
-  });
-
-  // 상담하기 버튼 클릭 시 모달 열기
-  const consultButtons = document.querySelectorAll('.consult-btn');
-  consultButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modal = document.getElementById('reservationModal');
-      modal.style.display = 'flex';
-    });
-  });
-
-  // 모달 닫기 버튼 클릭 시 모달 닫기
-  const closeButtons = document.querySelectorAll('.close-btn');
-  closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const modal = button.closest('.modal');
-      modal.style.display = 'none';
-    });
-  });
-
-  // 모달 외부 클릭 시 모달 닫기
-  window.addEventListener('click', event => {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = 'none';
-    }
-  });
-
-  // 예약 폼 제출
-  const reservationForm = document.getElementById('reservationForm');
-  if (reservationForm) {
-    reservationForm.addEventListener('submit', e => {
-      e.preventDefault();
-      alert('예약이 접수되었습니다. 확인 후 연락드리겠습니다.');
-      document.getElementById('reservationModal').style.display = 'none';
-      reservationForm.reset();
-    });
+  // URL에서 쿼리 파라미터 가져오기
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
   }
+
+  // URL에서 탭 정보 가져오기
+  const tabParam = getParameterByName('tab');
+  if (tabParam === 'info') {
+    // 병원정보 탭 활성화
+    $('.tab-btn[data-tab="hospital-info"]').addClass('active');
+    $('.tab-btn[data-tab="hospital-events"]').removeClass('active');
+    $('.hospital-info').addClass('active');
+    $('.hospital-events').removeClass('active');
+  }
+
+  // 드롭다운 정렬 기능
+  $('.sort-dropdown-btn').click(function (e) {
+    e.stopPropagation();
+    $('.dropdown-content').toggleClass('show');
+  });
+
+  $('.sort-item').click(function () {
+    // 모든 아이템에서 active 클래스 제거
+    $('.sort-item').removeClass('active');
+
+    // 클릭한 아이템에 active 클래스 추가
+    $(this).addClass('active');
+
+    // 드롭다운 버튼 텍스트 업데이트
+    const selectedText = $(this).text();
+    $('.sort-dropdown-btn').html(
+      selectedText + ' <i class="fas fa-chevron-down"></i>'
+    );
+
+    // 드롭다운 닫기
+    $('.dropdown-content').removeClass('show');
+  });
+
+  // 카테고리 필터 기능
+  $('.category-filter').click(function () {
+    // 모든 필터에서 active 클래스 제거
+    $('.category-filter').removeClass('active');
+
+    // 클릭한 필터에 active 클래스 추가
+    $(this).addClass('active');
+  });
+
+  // 문서 클릭 시 열린 드롭다운 닫기
+  $(document).click(function () {
+    $('.dropdown-content').removeClass('show');
+  });
 });

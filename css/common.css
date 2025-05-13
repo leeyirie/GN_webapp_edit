@@ -151,30 +151,26 @@ body {
   background: #666;
   transform: translateY(-50%);
 }
-
-/* Pagination */
-.pagination {
-  margin-top: 20px;
-  gap: 4px;
+.rating-common .event {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #666;
 }
-
-.page-numbers {
-  max-width: 90%;
-  overflow-x: auto;
-  gap: 2px;
-}
-
-.page-btn,
-.page-number {
-  min-width: 24px;
-  height: 24px;
-  padding: 0 4px;
-  font-size: 12px;
-  margin: 0 3px;
+.rating-common .event::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  background: #666;
+  transform: translateY(-50%);
 }
 
 /* 모달 팝업 공통 */
-.cm-modal-popup-fixed {
+.cm-modal-popup-fixed,
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -184,35 +180,143 @@ body {
   background: rgba(0, 0, 0, 0.7);
   z-index: 9999;
 }
+
 .cm-modal-popup-fixed.active {
   display: block;
 }
+
+.modal {
+  justify-content: center;
+  align-items: center;
+}
+
 .cm-popup-wrapper {
   height: 100%;
   display: flex;
   align-items: center;
 }
+
 .cm-popup-container {
   width: 100%;
 }
+
 .cm-popup-wrapper .cm-popup-con {
   max-width: 500px;
   margin: 0 auto;
 }
+
 .cm-popup-con .cm-popup-inner {
   background: #fff;
   border-radius: 10px;
 }
+
 .cm-popup-con .popup-title-box {
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
   border-bottom: 1px solid #eee;
 }
+
 .cm-popup-con .popup-title-box .tit {
   color: #222;
   font-size: 18px;
   font-weight: 500;
+}
+
+/* 모달 컨텐츠 스타일 */
+.modal-content {
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  color: #4d3dbf;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-check {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.form-check input {
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.form-check label {
+  font-size: 14px;
+  color: #555;
+}
+
+.privacy-info {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.modal-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4d3dbf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-submit-btn:hover {
+  background-color: #3f31a0;
 }
 
 /* 미디어 쿼리 - 반응형 공통 */
@@ -283,6 +387,17 @@ body {
 
   .cm-title-con a::after {
     font-size: 13px;
+  }
+
+  /* Pagination responsive */
+  .pagination {
+    margin-bottom: 30px;
+    gap: 5px;
+  }
+
+  /* 모달 반응형 */
+  .modal-content {
+    padding: 20px;
   }
 }
 
@@ -504,6 +619,26 @@ body {
   .back-txt {
     font-size: 14px;
   }
+
+  /* Pagination responsive */
+  .pagination {
+    margin-top: 30px;
+  }
+
+  .page-numbers {
+    max-width: 90%;
+    overflow-x: auto;
+    gap: 2px;
+  }
+
+  .page-btn,
+  .page-number {
+    min-width: 24px;
+    height: 24px;
+    padding: 0 4px;
+    font-size: 12px;
+    margin: 0 3px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -563,6 +698,12 @@ body {
   .back-txt {
     font-size: 13px;
   }
+
+  /* Pagination responsive */
+  .pagination {
+    margin-bottom: 30px;
+    gap: 5px;
+  }
 }
 
 /* 더보기 버튼 스타일링 */
@@ -582,4 +723,187 @@ body {
 .more-view:hover {
   transform: translateX(3px);
   color: #4d3dbf;
+}
+
+/* 탭 스타일 공통 */
+.detail-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab-btn.active {
+  color: #4d3dbf;
+  font-weight: 600;
+}
+
+.tab-btn.active:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4d3dbf;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px 0;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* 미디어 쿼리에서 탭 스타일 조정 */
+@media screen and (max-width: 768px) {
+  .detail-tabs {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .tab-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .detail-tabs {
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .tab-btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
+
+/* 가격 정보 공통 스타일 */
+.price-info {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: right;
+}
+
+.price-info .discount {
+  color: rgb(255, 0, 195);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.price-info .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.price-info .price-before {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  margin-right: 8px;
+  text-align: right;
+}
+
+/* 미디어 쿼리에서 가격 정보 스타일 조정 */
+@media screen and (max-width: 768px) {
+  .price-info {
+    gap: 6px;
+  }
+
+  .price-info .discount {
+    font-size: 20px;
+  }
+
+  .price-info .price-before {
+    font-size: 13px;
+  }
+
+  .price-info .price {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .price-info .discount {
+    font-size: 18px;
+  }
+
+  .price-info .price-before {
+    font-size: 12px;
+  }
+
+  .price-info .price {
+    font-size: 16px;
+  }
+}
+
+/* 병원 주소 공통 스타일 */
+.hospital-address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.hospital-address i {
+  color: #4d3dbf;
+  font-size: 18px;
+}
+
+.hospital-address p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 미디어 쿼리에서 hospital-address 스타일 조정 */
+@media screen and (max-width: 768px) {
+  .hospital-address {
+    margin-bottom: 12px;
+  }
+
+  .hospital-address i {
+    font-size: 16px;
+  }
+
+  .hospital-address p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hospital-address {
+    margin-bottom: 10px;
+  }
+
+  .hospital-address i {
+    font-size: 14px;
+  }
+
+  .hospital-address p {
+    font-size: 13px;
+  }
 }

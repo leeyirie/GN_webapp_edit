@@ -230,36 +230,7 @@
   line-height: 1.4;
 }
 
-/* Price information */
-.price-info {
-  margin-top: auto;
-  display: flex;
-  justify-content: right;
-  gap: 8px;
-}
-
-.price-info .discount {
-  color: rgb(255, 0, 195);
-  font-weight: 600;
-  font-size: 24px;
-}
-
-.price-info .price-before {
-  color: #999;
-  text-decoration: line-through;
-  font-size: 14px;
-  margin-right: 0;
-  display: inline-block;
-}
-
-.price-info .price {
-  font-size: 20px;
-  font-weight: 600;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* Price information - 공통 스타일은 common.css로 이동되었습니다 */
 
 /* Rating common */
 .rating-common {
@@ -400,23 +371,7 @@
     font-size: 12px;
   }
 
-  /* Price info */
-  .price-info {
-    gap: 6px;
-  }
-
-  .price-info .discount {
-    font-size: 20px;
-  }
-
-  .price-info .price-before {
-    font-size: 13px;
-  }
-
-  .price-info .price {
-    font-size: 18px;
-    gap: 6px;
-  }
+  /* Price info - 공통 스타일은 common.css로 이동되었습니다 */
 
   /* Pagination */
   .pagination {
@@ -529,22 +484,18 @@
     font-size: 11px;
   }
 
-  /* Price info */
-  .price-info {
-    margin-top: 8px;
+  /* Price info - 공통 스타일은 common.css로 이동되었습니다 */
+
+  /* Pagination */
+  .pagination {
+    margin-top: 30px;
   }
 
-  .price-info .discount {
-    font-size: 16px;
-  }
-
-  .price-info .price-before {
-    font-size: 11px;
-  }
-
-  .price-info .price {
-    font-size: 15px;
-    gap: 4px;
+  .page-btn,
+  .page-number {
+    min-width: 28px;
+    height: 28px;
+    font-size: 13px;
   }
 }
 
@@ -646,34 +597,18 @@
     font-size: 11px;
   }
 
-  /* Hospital event item */
-  .hospital-event-item {
-    display: flex;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 100%;
-    height: 110px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
+  /* Price info - 공통 스타일은 common.css로 이동되었습니다 */
+
+  /* Pagination */
+  .pagination {
+    margin-top: 30px;
   }
 
-  /* Price info */
-  .price-info {
-    margin-top: 8px;
-  }
-
-  .price-info .discount {
-    font-size: 16px;
-  }
-
-  .price-info .price-before {
-    font-size: 11px;
-  }
-
-  .price-info .price {
-    font-size: 15px;
-    gap: 4px;
+  .page-btn,
+  .page-number {
+    min-width: 28px;
+    height: 28px;
+    font-size: 13px;
   }
 }
 

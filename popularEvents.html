@@ -13,8 +13,8 @@
     />
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/slick.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/hospital.js"></script>
+    <script src="./js/modal.js"></script>
 
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
@@ -25,65 +25,11 @@
     <link rel="stylesheet" href="./css/detail.css" />
     <link rel="stylesheet" href="./css/bottom-menu.css" />
     <link rel="stylesheet" href="./css/surgeryMenu.css" />
+    <link rel="stylesheet" href="./css/hospital.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      /* 추가 스타일 */
-      .category-filters {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0 30px;
-      }
-
-      .category-filter {
-        padding: 8px 16px;
-        background: #f7f7f7;
-        border: 1px solid #eee;
-        border-radius: 20px;
-        color: #666;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .category-filter:hover {
-        background: #f0f0f0;
-        color: #4d3dbf;
-      }
-
-      .category-filter.active {
-        background: #4d3dbf;
-        color: #fff;
-        border-color: #4d3dbf;
-      }
-
-      @media screen and (max-width: 768px) {
-        .category-filters {
-          gap: 8px;
-          margin: 15px 0 25px;
-          overflow-x: auto;
-          padding-bottom: 5px;
-          flex-wrap: nowrap;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: none; /* Firefox */
-          -ms-overflow-style: none; /* IE and Edge */
-        }
-
-        .category-filters::-webkit-scrollbar {
-          display: none; /* Chrome, Safari, Opera */
-        }
-
-        .category-filter {
-          padding: 6px 12px;
-          font-size: 13px;
-          white-space: nowrap;
-        }
-      }
-    </style>
   </head>
   <body>
     <div id="wrap">
@@ -192,10 +138,15 @@
                     <span class="price-before">1,400,000원</span>720,000원
                   </span>
                 </div>
-                <div class="rating-common">
-                  <span class="stars">★</span>
-                  <span class="score">4.8</span>
-                  <span class="score">(150)</span>
+                <div class="info-bottom">
+                  <div class="rating-common">
+                    <span class="stars">★</span>
+                    <span class="score">4.8</span>
+                    <span class="score">(150)</span>
+                  </div>
+                  <div class="hospital-buttons">
+                    <button class="hospital-btn consult-btn">상담하기</button>
+                  </div>
                 </div>
               </div>
             </a>
@@ -215,10 +166,15 @@
                     <span class="price-before">1,400,000원</span>720,000원
                   </span>
                 </div>
-                <div class="rating-common">
-                  <span class="stars">★</span>
-                  <span class="score">4.8</span>
-                  <span class="score">(150)</span>
+                <div class="info-bottom">
+                  <div class="rating-common">
+                    <span class="stars">★</span>
+                    <span class="score">4.8</span>
+                    <span class="score">(150)</span>
+                  </div>
+                  <div class="hospital-buttons">
+                    <button class="hospital-btn consult-btn">상담하기</button>
+                  </div>
                 </div>
               </div>
             </a>
@@ -238,10 +194,15 @@
                     <span class="price-before">1,400,000원</span>720,000원
                   </span>
                 </div>
-                <div class="rating-common">
-                  <span class="stars">★</span>
-                  <span class="score">4.8</span>
-                  <span class="score">(150)</span>
+                <div class="info-bottom">
+                  <div class="rating-common">
+                    <span class="stars">★</span>
+                    <span class="score">4.8</span>
+                    <span class="score">(150)</span>
+                  </div>
+                  <div class="hospital-buttons">
+                    <button class="hospital-btn consult-btn">상담하기</button>
+                  </div>
                 </div>
               </div>
             </a>
@@ -450,47 +411,71 @@
       </a>
     </div>
 
-    <script>
-      $(document).ready(function () {
-        // 드롭다운 정렬 기능
-        $('.sort-dropdown-btn').click(function (e) {
-          e.stopPropagation();
-          $('.dropdown-content').toggleClass('show');
-        });
-
-        $('.sort-item').click(function () {
-          // 모든 아이템에서 active 클래스 제거
-          $('.sort-item').removeClass('active');
-
-          // 클릭한 아이템에 active 클래스 추가
-          $(this).addClass('active');
-
-          // 드롭다운 버튼 텍스트 업데이트
-          const selectedText = $(this).text();
-          $('.sort-dropdown-btn').html(
-            selectedText + ' <i class="fas fa-chevron-down"></i>'
-          );
-
-          // 드롭다운 닫기
-          $('.dropdown-content').removeClass('show');
-        });
-
-        // 카테고리 필터 기능
-        $('.category-filter').click(function () {
-          // 모든 필터에서 active 클래스 제거
-          $('.category-filter').removeClass('active');
-
-          // 클릭한 필터에 active 클래스 추가
-          $(this).addClass('active');
-
-          // 여기에 필터링 로직 추가
-        });
-
-        // 문서 클릭 시 열린 드롭다운 닫기
-        $(document).click(function () {
-          $('.dropdown-content').removeClass('show');
-        });
-      });
-    </script>
+    <!-- 예약하기 모달 -->
+    <div id="reservationModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>예약 상담하기</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">연락처</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="010-0000-0000"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="treatment">관심 시술</label>
+            <select id="treatment" name="treatment" required>
+              <option value="">선택해주세요</option>
+              <option value="눈성형">눈성형</option>
+              <option value="코성형">코성형</option>
+              <option value="안면성형">안면성형</option>
+              <option value="쁘띠성형">쁘띠성형</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">예약 희망일</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">예약 희망 시간</label>
+            <select id="time" name="time" required>
+              <option value="">선택해주세요</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">요청사항 (선택)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree"
+              >개인정보 수집 및 이용에 동의합니다. (필수)</label
+            >
+          </div>
+          <p class="privacy-info">
+            * 수집된 개인정보는 병원 예약 및 상담 목적으로만 사용됩니다.
+          </p>
+          <button type="submit" class="modal-submit-btn">상담 신청하기</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

@@ -234,11 +234,6 @@
   border-radius: 8px;
 }
 
-.hospital-address i {
-  color: #ff4d4d;
-  font-size: 18px;
-}
-
 .hospital-address p {
   font-size: 15px;
   color: #333;
@@ -542,9 +537,7 @@
 
 /* 상세 페이지 탭 */
 .detail-tabs {
-  display: flex;
   margin-bottom: 40px;
-  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -554,33 +547,19 @@
 .tab-btn {
   padding: 20px 30px;
   font-size: 18px;
-  font-weight: 500;
-  background: transparent;
-  border: none;
-  border-bottom: 3px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: #666;
   letter-spacing: -0.5px;
+  border-bottom: 3px solid transparent;
 }
 
 .tab-btn.active {
-  color: #4d3dbf;
   border-bottom: 3px solid #4d3dbf;
-  font-weight: 600;
-}
-
-.tab-btn:hover:not(.active) {
-  color: #333;
 }
 
 .tab-content {
-  display: none;
   padding: 20px 0 40px;
 }
 
 .tab-content.active {
-  display: block;
   animation: fadeIn 0.5s ease;
 }
 
