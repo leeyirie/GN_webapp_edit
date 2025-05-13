@@ -48,10 +48,11 @@
 
 /* 푸터 회사 정보 스타일 */
 #footer .company-info {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 22px;
+  color: fff;
+  line-height: 3;
 }
 
 #footer .company-info p {
@@ -61,10 +62,10 @@
 
 /* 금리 및 상환안내 섹션 */
 #footer .loan-info {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  color: #fff;
+  line-height: 2.4;
 }
 
 #footer .loan-info p {
@@ -85,7 +86,7 @@
   margin-bottom: 20px;
   font-size: 20px !important;
   color: #ff3a3a;
-  line-height: 1.6;
+  line-height: 1.3;
 }
 
 #footer .warning-text p {
@@ -95,10 +96,10 @@
 
 /* 면책 문구와 저작권 */
 #footer .disclaimer {
-  font-size: 18px;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 5px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 #footer .copyright {
@@ -157,7 +158,7 @@
 
 .loan-info p {
   color: #fff;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 4px;
   margin-top: 4px;
   font-size: 16px;
