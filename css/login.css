@@ -224,3 +224,333 @@
     line-height: 45px;
   }
 }
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  max-width: 480px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: modalOpen 0.3s ease;
+  overflow: hidden;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.close-modal {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #4d3dbf;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-desc {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-submit-btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(95deg, #f6c 5.7%, #4d3dbf 84.87%), #f1f1f1;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.modal-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#resultMessage {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+#resultConfirmBtn {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* 모바일 반응형 조정 */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+  }
+
+  .modal-header {
+    padding: 16px;
+  }
+
+  .modal-header h3 {
+    font-size: 18px;
+  }
+
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-submit-btn {
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+/* 아이디/비밀번호 찾기 공통 스타일 */
+.id-recovery-con,
+.pw-recovery-con {
+  width: 100%;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+.back-button-container {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* 결과 영역 스타일 */
+.id-recovery-result,
+.pw-recovery-result {
+  padding: 20px 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.result-message {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.result-message p {
+  margin: 8px 0;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+  color: #333;
+}
+
+.result-message p:first-child {
+  color: #666;
+}
+
+.result-message p:nth-child(2) {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.result-message strong {
+  color: #4d3dbf;
+  font-weight: 600;
+  font-size: 22px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f0eeff;
+  border-radius: 6px;
+}
+
+.result-message .completed-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.result-message .completed-icon i {
+  font-size: 50px;
+  color: #4d3dbf;
+}
+
+/* 비밀번호 재설정 안내 추가 스타일 */
+.result-message .reset-guide {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-size: 15px;
+  color: #666;
+}
+
+.result-message .reset-guide p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.result-message .reset-time {
+  display: inline-block;
+  background-color: #4d3dbf;
+  color: white;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+
+/* 입력 폼 공통 스타일 */
+#findIdForm .input-row,
+#findPwForm .input-row {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#findIdForm .input-row input,
+#findPwForm .input-row input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+#findIdForm .input-row input::placeholder,
+#findPwForm .input-row input::placeholder {
+  color: #999;
+}
+
+#findIdForm .input-row input:focus,
+#findPwForm .input-row input:focus {
+  border-color: #4d3dbf;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(77, 61, 191, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 반응형 조정 */
+@media screen and (max-width: 767px) {
+  .result-message {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  #findIdForm .input-row input,
+  #findPwForm .input-row input {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .back-button-container {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .back-btn {
+    font-size: 14px;
+  }
+
+  .result-message {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  #findIdForm .input-row input,
+  #findPwForm .input-row input {
+    height: 45px;
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}

@@ -89,6 +89,7 @@
           <div class="login-top-con">
             <h2>로그인</h2>
           </div>
+          <!-- 로그인 폼 섹션 -->
           <div class="login-form-con">
             <form class="login-form">
               <div class="input-row">
@@ -113,17 +114,111 @@
                   <span>아이디 저장</span>
                 </label>
                 <div class="find-links">
-                  <a href="/find-id">아이디 찾기</a>
+                  <a href="#" id="findIdBtn">아이디 찾기</a>
                   <span class="divider">|</span>
-                  <a href="/find-password">비밀번호 찾기</a>
+                  <a href="#" id="findPwBtn">비밀번호 찾기</a>
                 </div>
               </div>
               <button type="submit" class="login-submit-btn">로그인</button>
               <a href="./signup.html" class="signup-link-btn">회원가입</a>
             </form>
+            
+            <!-- 테스트 버튼 영역 -->
+            <div class="test-buttons" style="margin-top: 30px; border-top: 1px dashed #ddd; padding-top: 20px;">
+              <p style="text-align: center; margin-bottom: 15px; color: #999; font-size: 14px;">* 결과 화면 테스트 버튼</p>
+              <div style="display: flex; gap: 10px;">
+                <button type="button" id="testIdResult" style="flex: 1; padding: 10px; background: #f0eeff; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; color: #4d3dbf;">아이디 결과 테스트</button>
+                <button type="button" id="testPwResult" style="flex: 1; padding: 10px; background: #f0eeff; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; color: #4d3dbf;">비밀번호 결과 테스트</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 아이디 찾기 섹션 -->
+          <div class="id-recovery-con" style="display:none;">
+            <div class="back-button-container">
+              <button type="button" class="back-btn" id="idRecoveryBackBtn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </div>
+            <form id="findIdForm">
+              <div class="input-row">
+                <input type="text" id="findIdName" name="name" placeholder="이름" required />
+              </div>
+              <div class="input-row">
+                <input type="tel" id="findIdPhone" name="phone" placeholder="휴대폰 번호 (- 없이 입력)" required />
+              </div>
+              <button type="submit" class="login-submit-btn">아이디 찾기</button>
+            </form>
+            
+            <!-- 아이디 찾기 결과 영역 -->
+            <div class="id-recovery-result" style="display:none;">
+              <div class="result-message">
+                <div class="completed-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <p>회원님의 아이디는</p>
+                <p><strong>user123</strong></p>
+                <p>입니다.</p>
+              </div>
+              <button type="button" class="login-submit-btn" id="backToLoginBtn">로그인 화면으로</button>
+            </div>
+          </div>
+          
+          <!-- 비밀번호 찾기 섹션 -->
+          <div class="pw-recovery-con" style="display:none;">
+            <div class="back-button-container">
+              <button type="button" class="back-btn" id="pwRecoveryBackBtn">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+            </div>
+            <form id="findPwForm">
+              <div class="input-row">
+                <input type="text" id="findPwId" name="userId" placeholder="아이디" required />
+              </div>
+              <div class="input-row">
+                <input type="text" id="findPwName" name="name" placeholder="이름" required />
+              </div>
+              <div class="input-row">
+                <input type="tel" id="findPwPhone" name="phone" placeholder="휴대폰 번호 (- 없이 입력)" required />
+              </div>
+              <button type="submit" class="login-submit-btn">비밀번호 재설정</button>
+            </form>
+            
+            <!-- 비밀번호 찾기 결과 영역 -->
+            <div class="pw-recovery-result" style="display:none;">
+              <div class="result-message">
+                <div class="completed-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <p>입력하신 휴대폰 번호로</p>
+                <p><strong>비밀번호 재설정 링크</strong>가 발송되었습니다.</p>
+                <div class="reset-guide">
+                  <p>* 재설정 링크는 <span class="reset-time">30분</span> 동안 유효합니다.</p>
+                  <p>* 메시지를 받지 못하셨다면 입력한 정보를 확인해 주세요.</p>
+                </div>
+              </div>
+              <button type="button" class="login-submit-btn" id="pwBackToLoginBtn">로그인 화면으로</button>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- 결과 모달 -->
+      <div id="resultModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 id="resultTitle">처리 결과</h3>
+            <span class="close-modal">&times;</span>
+          </div>
+          <div class="modal-body">
+            <p id="resultMessage"></p>
+            <div class="result-buttons">
+              <button id="resultConfirmBtn" class="modal-submit-btn">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer id="footer">
         <div class="f-container">
           <div class="f-top-con">
@@ -273,5 +368,8 @@
         <span>알림</span>
       </a>
     </div>
+
+    <!-- JavaScript 파일 로드 -->
+    <script src="./js/login.js"></script>
   </body>
 </html>
