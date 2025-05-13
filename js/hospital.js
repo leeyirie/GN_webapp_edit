@@ -45,4 +45,40 @@ document.addEventListener('DOMContentLoaded', function () {
       group.classList.remove('active');
     });
   });
+
+  // 상담하기 버튼 클릭 시 모달 열기
+  const consultButtons = document.querySelectorAll('.consult-btn');
+  consultButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = document.getElementById('reservationModal');
+      modal.style.display = 'flex';
+    });
+  });
+
+  // 모달 닫기 버튼 클릭 시 모달 닫기
+  const closeButtons = document.querySelectorAll('.close-btn');
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal');
+      modal.style.display = 'none';
+    });
+  });
+
+  // 모달 외부 클릭 시 모달 닫기
+  window.addEventListener('click', event => {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = 'none';
+    }
+  });
+
+  // 예약 폼 제출
+  const reservationForm = document.getElementById('reservationForm');
+  if (reservationForm) {
+    reservationForm.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('예약이 접수되었습니다. 확인 후 연락드리겠습니다.');
+      document.getElementById('reservationModal').style.display = 'none';
+      reservationForm.reset();
+    });
+  }
 });
