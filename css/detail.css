@@ -1570,3 +1570,271 @@
     font-size: 14px;
   }
 }
+
+/* 리뷰 작성 버튼 및 폼 스타일 */
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reviews-header h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.reviews-header h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  background: #4d3dbf;
+  border-radius: 2px;
+}
+
+.write-review-btn {
+  background-color: #4d3dbf;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+
+.write-review-btn:hover {
+  background-color: #3c2e9e;
+}
+
+.review-form-container {
+  background-color: #f8f8fa;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-form h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.review-form .form-group {
+  margin-bottom: 20px;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* 별점 선택 스타일 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  justify-content: flex-end;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  cursor: pointer;
+  color: #ddd;
+  margin: 0 3px;
+}
+
+.star-rating input:checked ~ label {
+  color: #ffcc00;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #ffcc00;
+}
+
+/* 카테고리 평가 스타일 */
+.category-rating {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-item span {
+  font-size: 14px;
+  color: #555;
+  min-width: 60px;
+}
+
+.category-item select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #444;
+  background-color: #fff;
+}
+
+/* 텍스트 영역 스타일 */
+.review-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  max-height: 200px;
+}
+
+/* 파일 업로드 스타일 */
+.file-upload {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.file-upload input[type='file'] {
+  display: none;
+}
+
+.file-label {
+  background-color: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.file-label:hover {
+  background-color: #e0e0e0;
+}
+
+.selected-file-name {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 체크박스 스타일 */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-check input[type='checkbox'] {
+  margin-top: 3px;
+}
+
+.form-check label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+/* 버튼 스타일 */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #ddd;
+}
+
+.submit-btn {
+  background-color: #4d3dbf;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3c2e9e;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .reviews-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .category-rating {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .category-item {
+    width: 100%;
+  }
+
+  .category-item span {
+    min-width: 70px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
