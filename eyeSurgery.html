@@ -16,15 +16,23 @@
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 
+    <!-- 눈 성형 목록페이지 JS -->
+    <script src="./js/eyeSurgery.js"></script>
+
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/detail.css" />
     <link rel="stylesheet" href="./css/bottom-menu.css" />
+
+
+    <!-- 이벤트 목록페이지 -->
+    <link rel="stylesheet" href="./css/detail.css" />
     <link rel="stylesheet" href="./css/surgeryMenu.css" />
+
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -418,46 +426,5 @@
         <span>알림</span>
       </a>
     </div>
-
-    <script>
-      // Dropdown sort functionality
-      document.addEventListener('DOMContentLoaded', function () {
-        const sortDropdownBtn = document.querySelector('.sort-dropdown-btn');
-        const sortItems = document.querySelectorAll('.sort-item');
-
-        // Update dropdown button text when an option is selected
-        sortItems.forEach(item => {
-          item.addEventListener('click', function () {
-            // Remove active class from all items
-            sortItems.forEach(el => el.classList.remove('active'));
-
-            // Add active class to clicked item
-            this.classList.add('active');
-
-            // Update dropdown button text
-            sortDropdownBtn.innerHTML =
-              this.textContent + ' <i class="fas fa-chevron-down"></i>';
-
-            // Close dropdown (optional)
-            // document.querySelector('.dropdown-content').style.display = 'none';
-          });
-        });
-
-        // Close dropdown when clicking outside (optional)
-        document.addEventListener('click', function (event) {
-          if (!event.target.closest('.dropdown-sort')) {
-            document.querySelector('.dropdown-content').style.display = 'none';
-          }
-        });
-
-        // Toggle dropdown on button click (optional alternative to hover)
-        sortDropdownBtn.addEventListener('click', function (event) {
-          event.stopPropagation();
-          const dropdown = document.querySelector('.dropdown-content');
-          dropdown.style.display =
-            dropdown.style.display === 'block' ? 'none' : 'block';
-        });
-      });
-    </script>
   </body>
 </html>

@@ -35,6 +35,9 @@
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 
+    <!-- 검색 페이지 JS -->
+    <script src="./js/search.js"></script>
+
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <!-- 분리된 CSS 파일들 -->
@@ -284,21 +287,7 @@
       </a>
     </div>
 
-    <script>
-      $(document).ready(function () {
-        // 인기 검색어 클릭 시 검색 수행
-        $('.search-tag').click(function () {
-          const keyword = $(this).text();
-          performSearch(keyword);
-        });
-
-        // 검색 수행 함수
-        function performSearch(keyword) {
-          // 검색 후 다른 페이지로 이동 (index.html로 이동하며 검색어 파라미터 전달)
-          window.location.href =
-            'index.html?search=' + encodeURIComponent(keyword);
-        }
-      });
-    </script>
+    <!-- 검색 페이지 JS -->
+    <script src="./js/search.js"></script>
   </body>
 </html>
