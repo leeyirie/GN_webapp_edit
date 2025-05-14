@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>강남오빠</title>
+        <title>인사이트 - 강남오빠</title>
         <!-- 폰트 로드 -->
         <link
             rel="stylesheet"
@@ -13,12 +13,25 @@
         />
         <!-- jquery 로드 -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="./js/slick.js"></script>
         <script src="./js/script.js"></script>
+        
+        <!-- 인사이트 목록 페이지 JS 제거 -->
 
-        <link rel="stylesheet" href="./css/slick.css" />
         <link rel="stylesheet" href="./css/reset.css" />
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
+        <link rel="stylesheet" href="./css/bottom-menu.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <!-- 인사이트 목록 페이지 CSS -->
+        <link rel="stylesheet" href="./css/insight.css" />
+
+        <!-- 폰트 아이콘 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
     </head>
     <body>
         <div id="wrap">
@@ -26,26 +39,31 @@
                 <div class="header-inner">
                     <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
                     <div class="mobile-dept-text">
-                        <span style="display: inline-block; margin-bottom: 4px"
-                        >2024-서울강남-0159(대부업)</span
-                      ><br />
-                      <span>2024-서울강남-0160(대부중개업)</span>
+                        <div class="header-top-text">
+                            <span>2024-서울강남-0159(대부업)</span><br />
+                            <span>2024-서울강남-0160(대부중개업)</span>
+                        </div>
                     </div>
                     <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
                     <div class="header-top-bar">
                         <a href="./index.html">
-                            <h1 class="logo" style="background-image: url('./img/gn-logo-white.svg')"></h1>
+                            <h1
+                                class="logo"
+                                style="background-image: url('./img/gn-logo-white.svg')"
+                            ></h1>
                         </a>
                         <div class="desktop-dept-text">
                             <div class="header-top-text">
-                                2024-서울강남-0159(대부업)<br>
-                                2024-서울강남-0160(대부중개업)
+                                <span>2024-서울강남-0159(대부업)</span><br />
+                                <span>2024-서울강남-0160(대부중개업)</span>
                             </div>
                         </div>
                         <div class="mobile-login">
                             <div class="util-box">
                                 <div class="auth-buttons">
-                                    <a href="./loginSelect.html" class="login-btn">로그인/회원가입</a>
+                                    <a href="./loginSelect.html" class="login-btn"
+                                        >로그인/회원가입</a
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -63,7 +81,9 @@
                         <div class="desktop-login">
                             <div class="util-box">
                                 <div class="auth-buttons">
-                                    <a href="./loginSelect.html" class="login-btn">로그인/회원가입</a>
+                                    <a href="./loginSelect.html" class="login-btn"
+                                        >로그인/회원가입</a
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -71,124 +91,108 @@
                 </div>
             </header>
 
-            <div id="content" class="insight-list-page">
-                <div class="cm-history-back-con">
-                    <div class="container">
-                        <a href=""> </a>
-                        <!-- 인사이트 제목 가운데 정렬, 왼쪽 되돌아가기 버튼 추가 -->
-                        <div><h1>인사이트</h1></div>
-                    </div>
-                </div>
-                <div class="insight-top-banner-con">
-                    <div class="container">
-                        <img src="./img/insight-con-img1.png" alt="" />
-                    </div>
-                </div>
-                <div class="insight-post-list-con">
-                    <div class="container">
-                        <div class="insight-title-list-con">
-                            <div class="list-post-info">
-                                <!-- <h4 class="category">강남오빠 인사이트</h4> -->
-                                <div class="name-info">
-                                    <!-- <div class="img-box"></div> -->
-                                    <!-- <p class="name">작성자 이름</p> -->
-                                </div>
-                            </div>
-                            <div class="list-tit-con">
-                                <h2 class="tit">
-                                    가슴 성형하기 위해 한국행으로
-                                </h2>
-                                <p class="date">작성일 2024년 00월 00일</p>
-                            </div>
+            <div id="content" class="insight-page insight-list-page">
+                <div class="container">
+                    <div class="page-header">
+                        <div class="left-section">
+                            <a href="javascript:history.back()" class="back-btn"
+                                ><i class="fas fa-arrow-left"></i
+                            ></a>
+                            <h2 class="page-title">강남오빠 인사이트</h2>
                         </div>
-                        <div class="insight-des-list-con">
-                            <div class="list-tit-con">
-                                <!-- <h3 class="tit">애매한 성형 대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?</h3> -->
-                              <p class="des">
-                                    한국은 세계적인 성형 관광지로 자리매김하고 있습니다. 특히 가슴 성형을 포함한 다양한
-                                    미용 시술을 받기 위해 많은 외국인들이 한국을 찾고 있습니다. 2024년 상반기에는 한국을
-                                    방문한 외국인 수가 전년 대비 87% 증가한 486만 명에 달했으며, 이 중 서구권 관광객이
-                                    전체의 약 20%를 차지했습니다.*                              
-                              </p>
-                              <br>
-                              <p class="des">
-                                한국의 성형외과는 첨단 기술과 숙련된 의료진으로 유명하며, 이는 외국인들에게 큰 매력으로 작용하고 있습니다. 
-                                특히 서울 강남구 압구정동 등은 성형외과가 밀집된 지역으로, 외국인 환자들의 주요 방문지가 되고 있습니다.​
-                              </p>
-                            </div>
-                            <div class="list-tit-con">
-                              <h2 class="tit">
-                                  추천하는 신사역, 압구정 로데오역<br>
-                                  가슴 성형 전문 성형외과
-                              </h2>
-                          </div>
-                        </div>
-                        <!-- <div class="insight-webzine-list-con"> -->
-                        <!-- <div class="insight-webzine-list"> -->
-                        <!-- <div class="list-img-con">
-                                    <-- 이미지 추가시 삭제 / 임시로 삽입 된 코드 -->
-                        <!-- <div class="img-box"></div> -->
-                        <!-- 이미지 추가 시 주석 해제 -->
-                        <!-- <img src="" alt=""> -->
-                        <!-- </div> -->
-                        <!-- <div class="list-tit-con">
-                                    <h3 class="tit">애매한 성형 대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?</h3>
-                                    <p class="des">
-                                        애매한 성형 대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형 대출
-                                        기준, 나도 받을 수 있는 대출인지 궁금하셨죠?
-                                    </p>
-                                </div> -->
-                        <!-- </div> -->
-                        <!-- </div> -->
-                        <!-- <div class="insight-des-list-con">
-                            <div class="list-tit-con">
-                                <h3 class="tit">애매한 성형 대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?</h3>
+                    </div>
+
+                    <!-- 카테고리 필터 -->
+                    <div class="category-filters">
+                        <button class="category-filter active">전체</button>
+                        <button class="category-filter">성형관광</button>
+                        <button class="category-filter">피부관리</button>
+                        <button class="category-filter">성형정보</button>
+                        <button class="category-filter">성형후기</button>
+                    </div>
+
+                    <div class="insight-count">인사이트 3건</div>
+
+                    <div class="insight-list-con">
+                        <ul class="insight-list">
+                          <li class="insight-item" data-category="성형관광">
+                            <a href="./insightDetail.html?id=1">
+                              <!-- [수정]인사이트 부분 이미지 수정 및 이미지 사이즈도 CSS 수정하였습니다 -->
+                              <div class="img-con">
+                                <img src="./img/insight1.png" alt="가슴 성형하기 위해 한국행으로" />
+                              </div>
+                              <div class="des-con">
+                                <h4 class="tit">가슴 성형하기 위해 한국행으로</h4>
                                 <p class="des">
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준,
-                                    나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는
-                                    대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? ㅍ
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준,
-                                    나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는
-                                    대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?
+                                  한국은 세계적인 성형 관광지로 자리매김하고 있습니다.
+                                  특히 가슴 성형을 포함한 다양한 미용 시술을 받기 위해
+                                  많은 외국인들이 한국을 찾고 있습니다. 2024년 상반기에는
+                                  한국을 방문한 외국인 수가 전년 대비 87% 증가한 486만
+                                  명에 달했으며, 이 중 서구권 관광객이 전체의 약 20%를
+                                  차지했습니다.
                                 </p>
-                            </div>
-                        </div> -->
-                        <!-- <div class="insight-gallery-list-con"> -->
-                            <!-- <div class="list-img-con"> -->
-                            <!-- 이미지 추가시 삭제 / 임시로 삽입 된 코드 -->
-                            <!-- <div class="img-box"></div> -->
-                            <!-- 이미지 추가 시 주석 해제 -->
-                            <!-- <img src="" alt=""> -->
-                            <!-- </div> -->
-                            <!-- <div class="list-tit-con">
-                                <h3 class="tit">애매한 성형 대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?</h3>
-                                <p class="des">
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준,
-                                    나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는
-                                    대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? ㅍ
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준,
-                                    나도 받을 수 있는 대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는
-                                    대출인지 궁금하셨죠? 애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?
-                                    애매한 성형대출 기준, 나도 받을 수 있는 대출인지 궁금하셨죠?
-                                </p>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="business-partner-con">
-                    <div class="container">
-                        <div class="business-partner-wrap border-top-4-gray">
-                            <a>
-                                <img src="./img/business-partner-request.png" alt="" class="" />
-                                <!--
-                <img src="./img/mo-business-partner-request.png" alt="" class="mo-banner">
-                -->
+                                <span class="more-view">더보기 →</span>
+                              </div>
                             </a>
+                          </li>
+                          <li class="insight-item" data-category="피부관리">
+                            <a href="./insightDetail.html?id=2">
+                              <div class="img-con">
+                                <img src="./img/insight2.png" alt="울쎄라 VS 써마지" />
+                              </div>
+          
+                              <div class="des-con">
+                                <h4 class="tit">울쎄라 VS 써마지</h4>
+                                <p class="des">
+                                  얼굴 리프팅 시술은 나이가 들면서 처지는 피부를 탄력 있게
+                                  개선하는 데 효과적입니다. 그중 써마지와 울쎄라는
+                                  비수술적 방법으로 많은 사람들에게 사랑받고 있지만, 그
+                                  차이점과 효과에 대해 정확히 알지 못하는 경우가 많습니다.
+                                  이번 기사에서는 써마지와 울쎄라의 차이점, 가격, 효과를
+                                  비교하여 어떤 사람에게 더 적합한지 알아보겠습니다.
+                                </p>
+                                <span class="more-view">더보기 →</span>
+                              </div>
+                            </a>
+                          </li>
+                          <li class="insight-item" data-category="피부관리">
+                            <a href="./insightDetail.html?id=3">
+                              <div class="img-con">
+                                <img src="./img/insight3.png" alt="면접 합격을 위한 추천 시술" />
+                              </div>
+          
+                              <div class="des-con">
+                                <h4 class="tit">면접 합격을 위한 추천 시술</h4>
+                                <p class="des">
+                                  취업 면접은 첫인상이 중요한 자리입니다. 외적인 매력이
+                                  자신감을 높이고, 면접관에게 긍정적인 인상을 줄 수 있기
+                                  때문에 많은 사람들이 면접을 앞두고 빠르게 변화할 수 있는
+                                  미용 시술을 고려하고 있습니다. 면접 전, 회복 시간이 짧고
+                                  효과가 즉각적으로 나타나는 시술들을 소개합니다.
+                                </p>
+                                <span class="more-view">더보기 →</span>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled>
+                            <span class="arrow">〈</span>
+                        </button>
+                        <div class="page-numbers">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</button>
+                            <button class="page-number">3</button>
                         </div>
+                        <button class="page-btn next">
+                            <span class="arrow">〉</span>
+                        </button>
                     </div>
                 </div>
             </div>
+
             <footer id="footer">
                 <div class="f-container">
                     <div class="f-top-con">
@@ -210,67 +214,33 @@
                     </div>
 
                     <!-- 대부업 관련 정보 -->
-                    <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
-                        <p
-                            style="
-                                color: #fff;
-                                font-weight: 600;
-                                margin-bottom: 6px;
-                                margin-top: 6px;
-                                font-size: 16px;
-                                line-height: 1.4;
-                            "
-                        >
-                            <a href="./loanTerms.html" style="color: #fff; text-decoration: none"
-                                >대부거래표준약관</a
-                            >
+                    <div class="loan-info-links">
+                        <p>
+                            <a href="./loanTerms.html">대부거래표준약관</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >개인정보처리(취급)방침</a
-                            >
+                            <a href="#">개인정보처리(취급)방침</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >개인정보처리 위탁 및 제 3자제공 현황</a
-                            >
+                            <a href="#">개인정보처리 위탁 및 제 3자제공 현황</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >신용정보 활용체제</a
-                            >
+                            <a href="#">신용정보 활용체제</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >채권추심업무 처리절차</a
-                            >
+                            <a href="#">채권추심업무 처리절차</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >불법채권추심 대응요령</a
-                            >
+                            <a href="#">불법채권추심 대응요령</a>
                             •
-                            <a href="#" style="color: #fff; text-decoration: none"
-                                >소멸시효완성채권 추심관련유의사항</a
-                            >
+                            <a href="#">소멸시효완성채권 추심관련유의사항</a>
                         </p>
                     </div>
 
                     <!-- 금리 및 상환안내 -->
-                    <div
-                        class="loan-info"
-                        style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
-                    >
-                        <p
-                            style="
-                                color: #fff;
-                                font-weight: 600;
-                                margin-bottom: 4px;
-                                margin-top: 10px;
-                                font-size: 20px;
-                            "
-                        >
+                    <div class="loan-info-rates">
+                        <p class="title">
                             금리 및 상환안내
                         </p>
                         <p>
                             대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
                         </p>
-                        <p style="line-height: 1.2">
+                        <p>
                             부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
                             지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
                             근저당말소비용 등 발생
@@ -303,120 +273,41 @@
                     </div>
                 </div>
             </footer>
-            <section id="loanPopup" class="cm-modal-popup-fixed">
-                <div class="cm-popup-wrapper">
-                    <div class="cm-popup-container">
-                        <div class="cm-popup-con">
-                            <div class="cm-popup-inner">
-                                <div class="popup-title-box">
-                                    <h2 class="tit">대출 문의하기</h2>
-                                    <button id="loanPopupClose"><img src="./img/popup-close-icon.png" /></button>
-                                </div>
-                                <div class="popup-content">
-                                    <div class="write-box">
-                                        <div class="input-row">
-                                            <dl class="w100">
-                                                <dt>제목 <span class="essential">*</span></dt>
-                                                <dd><input type="text" id="title" name="title" /></dd>
-                                            </dl>
-                                        </div>
-                                        <div class="input-row">
-                                            <dl class="w50">
-                                                <dt>지역 <span class="essential">*</span></dt>
-                                                <dd><input type="text" id="local" name="local" /></dd>
-                                            </dl>
-                                            <dl class="w50">
-                                                <dt>직업 <span class="essential">*</span></dt>
-                                                <dd><input type="text" id="job" name="job" /></dd>
-                                            </dl>
-                                        </div>
-                                        <div class="input-row">
-                                            <dl class="w50">
-                                                <dt>나이 <span class="essential">*</span></dt>
-                                                <dd>
-                                                    <input type="text" id="age" name="age" /><span class="end-txt"
-                                                        >세</span
-                                                    >
-                                                </dd>
-                                            </dl>
-                                            <dl class="w50">
-                                                <dt>성별 <span class="essential">*</span></dt>
-                                                <dd>
-                                                    <label for="">
-                                                        <input type="radio" id="sex" name="sex" value="M" /><span
-                                                            >남자</span
-                                                        >
-                                                    </label>
-                                                    <label for="">
-                                                        <input
-                                                            type="radio"
-                                                            id="sex"
-                                                            name="sex"
-                                                            value="W"
-                                                            checked=""
-                                                        /><span>여자</span>
-                                                    </label>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="input-row">
-                                            <dl class="w50">
-                                                <dt>희망금액 <span class="essential">*</span></dt>
-                                                <dd>
-                                                    <input type="text" id="amount" name="amount" /><span class="end-txt"
-                                                        >만원</span
-                                                    >
-                                                </dd>
-                                            </dl>
+        </div>
 
-                                            <dl class="w50">
-                                                <dt>휴대폰번호 <span class="essential">*</span></dt>
-                                                <dd>
-                                                    <input
-                                                        type="text"
-                                                        id="tel"
-                                                        name="tel"
-                                                        placeholder="010-0000-0000"
-                                                    />
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                        <div class="input-row">
-                                            <dl class="w100">
-                                                <dt>문의내용 <span class="essential">*</span></dt>
-                                                <dd>
-                                                    <textarea
-                                                        id="askcontent"
-                                                        name="askcontent"
-                                                        placeholder="문의 내용을 입력해 주세요"
-                                                    ></textarea>
-                                                </dd>
-                                            </dl>
-                                        </div>
-                                    </div>
-                                    <div class="popup-bottom-con">
-                                        <div class="popup-police-con">
-                                            <input type="checkbox" id="p_chk" name="p_chk" />
-                                            <label for="p_chk">
-                                                <span>개인정보 수집 및 이용 동의 <b>전문보기</b></span>
-                                            </label>
-                                        </div>
-                                        <div class="popup-police-con">
-                                            <input type="checkbox" id="m_chk" name="m_chk" />
-                                            <label for="m_chk">
-                                                <span>마케팅 수신동의(선택) <b>전문보기</b></span>
-                                            </label>
-                                        </div>
-                                        <div class="popup-submit-btn-con">
-                                            <button id="contactus">신청완료</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- 하단 메뉴바 추가 -->
+        <div id="bottom-menu">
+            <a href="./index.html" class="menu-item active">
+                <div class="svg-icon">
+                    <img src="./img/home.svg" alt="홈 아이콘" />
                 </div>
-            </section>
+                <span>홈</span>
+            </a>
+            <a href="./hospital.html" class="menu-item">
+                <div class="svg-icon">
+                    <img src="./img/hospital.svg" alt="병원 아이콘" />
+                </div>
+                <span>병원정보</span>
+            </a>
+            
+            <a href="./loan.html" class="menu-item">
+                <div class="svg-icon">
+                    <img src="./img/loan.svg" alt="대출 아이콘" />
+                </div>
+                <span>대출</span>
+            </a>
+            <a href="" class="menu-item">
+                <div class="svg-icon">
+                    <img src="./img/bell.svg" alt="알림 아이콘" />
+                </div>
+                <span>공지사항</span>
+            </a>
+            <a href="./mypage.html" class="menu-item">
+                <div class="svg-icon">
+                    <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+                </div>
+                <span>마이페이지</span>
+            </a>
         </div>
     </body>
 </html>
