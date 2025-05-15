@@ -1,0 +1,513 @@
+/* Privacy Policy Page Styles */
+
+/* === 헤더 스타일 === */
+#header {
+  position: relative;
+  padding: 42px 28px 28px;
+}
+
+#header:before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(180deg, #ff66cc 0%, #4d3dbf 45%, #4d3dbf 100%) 0%
+    0% no-repeat padding-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180%;
+  z-index: -1;
+}
+
+#header .logo {
+  display: block;
+  width: 164px;
+  height: 40px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* 로고 밑의 회사명 */
+#header .company-name {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 6px;
+  font-weight: 300;
+}
+
+#header .header-inner {
+  padding: 0 30px;
+}
+
+/* 대부업 문구 */
+#header .header-top-text {
+  font-size: 30px;
+  font-weight: 400;
+  color: #fff;
+}
+
+#header .header-top-text span {
+  display: inline-block;
+}
+
+#header .header-top-text span:first-child {
+  margin-bottom: 4px;
+}
+
+/* 모바일/데스크톱 표시 관련 */
+.mobile-login {
+  display: none;
+}
+
+.desktop-login {
+  display: block;
+}
+
+.mobile-dept-text {
+  display: none;
+}
+
+.desktop-dept-text {
+  display: block;
+}
+
+.header-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* === 메인 컨텐츠 영역 === */
+#content.main {
+  padding-top: 80px;
+  padding-bottom: 65px;
+}
+
+/* Terms content container */
+.terms-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Page Title Styles */
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  color: #222;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 뒤로가기 버튼 */
+.back-btn {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-btn:hover {
+  color: #4d3dbf;
+}
+
+/* Section Styles */
+.terms-section {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Section Title Styles */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Paragraph Styles */
+.terms-section p {
+  margin-bottom: 15px;
+  color: #444;
+  font-size: 15px;
+}
+
+/* List Styles */
+.terms-list {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.terms-list li {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Nested List Styles */
+.terms-list .terms-list {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* === 푸터 스타일 === */
+#footer {
+  margin-top: 0;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 60px; /* 하단 메뉴바 높이만큼 마진 추가하여 메뉴바에 가려지지 않게 함 */
+}
+
+#footer .f-container {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#footer .f-top-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#footer .f-top-con .f-logo {
+  display: block;
+  width: 150px;
+  height: 36px;
+  background-image: url('../img/gn-logo-white.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#footer .f-top-con .request-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: linear-gradient(103deg, #f6c 12.08%, #4d3dbf 83.91%), #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* 푸터 회사 정보 스타일 */
+#footer .company-info {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+#footer .company-info p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+/* 금리 및 상환안내 섹션 */
+#footer .loan-info-rates {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+#footer .loan-info-rates p.title {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#footer .loan-info-rates p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* 대부업 관련 정보 스타일 (링크 섹션) */
+#footer .loan-info-links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer .loan-info-links p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+#footer .loan-info-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 경고 텍스트 스타일 */
+#footer .warning-text {
+  margin-bottom: 20px;
+  font-size: 26px !important;
+  color: #ff3a3a;
+  line-height: 1.4;
+}
+
+#footer .warning-text p {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+/* 면책 문구와 저작권 */
+#footer .disclaimer {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+#footer .copyright {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* === 하단 메뉴 스타일 === */
+#bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  z-index: 9999;
+  padding: 0;
+  height: 60px;
+}
+
+#bottom-menu .menu-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #999;
+  font-size: 12px;
+  height: 100%;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+#bottom-menu .menu-item .svg-icon img {
+  filter: grayscale(1) opacity(0.6);
+  transition: filter 0.3s ease;
+}
+
+#bottom-menu .menu-item.active {
+  color: #4d3dbf;
+}
+
+#bottom-menu .menu-item.active .svg-icon img {
+  filter: none;
+}
+
+#bottom-menu .menu-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background-color: #4d3dbf;
+  border-radius: 3px 3px 0 0;
+}
+
+#bottom-menu .svg-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+#bottom-menu .svg-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+#bottom-menu span {
+  white-space: nowrap;
+}
+
+/* === 반응형 스타일 === */
+
+/* PC - 대형 */
+@media screen and (max-width: 1200px) {
+  #footer .f-container {
+    padding: 35px 50px;
+  }
+
+  #footer .company-info {
+    font-size: 24px;
+  }
+
+  #footer .loan-info-links p,
+  #footer .loan-info-rates p {
+    font-size: 16px;
+  }
+}
+
+/* 태블릿 */
+@media screen and (max-width: 990px) {
+  #header {
+    padding: 20px 15px;
+  }
+
+  .mobile-login {
+    display: block;
+  }
+
+  .desktop-login {
+    display: none;
+  }
+
+  .mobile-dept-text {
+    display: block;
+  }
+
+  .desktop-dept-text {
+    display: none;
+  }
+
+  #header .company-name {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .terms-content {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+  }
+
+  .back-btn {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .terms-section p,
+  .terms-list li {
+    font-size: 14px;
+  }
+
+  #footer .f-container {
+    padding: 30px 40px;
+  }
+
+  #footer .company-info {
+    font-size: 22px;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+  #header {
+    padding: 15px 10px;
+  }
+
+  #header .logo {
+    width: 120px;
+    height: 30px;
+  }
+
+  #header .company-name {
+    font-size: 11px;
+    margin-top: 3px;
+  }
+
+  .terms-content {
+    padding: 12px;
+  }
+
+  .page-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .back-btn {
+    font-size: 16px;
+  }
+
+  .terms-section {
+    margin-bottom: 25px;
+  }
+
+  #footer .f-container {
+    padding: 25px 20px;
+  }
+
+  #footer .company-info {
+    font-size: 18px;
+  }
+
+  #footer .loan-info-links p,
+  #footer .loan-info-rates p {
+    font-size: 14px;
+  }
+}
+
+/* 작은 모바일 */
+@media screen and (max-width: 480px) {
+  #header .company-name {
+    font-size: 10px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+  }
+
+  #footer .company-info {
+    font-size: 16px;
+  }
+
+  #footer .loan-info-links p,
+  #footer .loan-info-rates p,
+  #footer .warning-text {
+    font-size: 13px !important;
+  }
+
+  #footer .disclaimer,
+  #footer .copyright {
+    font-size: 12px;
+  }
+
+  #bottom-menu .menu-item {
+    font-size: 10px;
+  }
+}
