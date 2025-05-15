@@ -419,6 +419,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  #footer .f-container {
+    padding: 20px 24px;
+  }
+
   #footer .f-top-con .f-logo {
     width: 100px;
     height: 25px;
@@ -481,8 +485,12 @@
 }
 
 @media screen and (max-width: 380px) {
+  #footer .f-container {
+    padding: 20px 24px;
+  }
+
   #footer .company-info {
-    font-size: 19px;
+    font-size: 22px;
     line-height: 1.9 !important;
   }
 
@@ -509,7 +517,7 @@
   }
 
   #footer .warning-text {
-    font-size: 19px !important;
+    font-size: 20px !important;
   }
 
   #footer .disclaimer {
