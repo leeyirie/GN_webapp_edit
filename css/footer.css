@@ -148,7 +148,7 @@
 }
 
 #footer .copyright {
-  font-size: 14px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.4);
 }
 
@@ -165,7 +165,7 @@
   }
 
   #footer .company-info {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 2.8;
   }
 
@@ -175,31 +175,39 @@
   }
 
   #footer .loan-info p {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   #footer .loan-info-links p {
-    font-size: 19px;
+    font-size: 20px;
   }
 
   #footer .loan-info-rates p.title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
-  #footer .loan-title {
-    font-size: 22px;
+  #footer .loan-info-rates p {
+    font-size: 20px;
+  }
+
+  #footer .loan-title p {
+    font-size: 20px;
   }
 
   #footer .warning-text {
-    font-size: 19px !important;
+    font-size: 22px !important;
+  }
+
+  #footer .warning-text p:nth-child(3) {
+    text-indent: 16px !important;
   }
 
   #footer .disclaimer {
-    font-size: 13px;
+    font-size: 20px;
   }
 
   #footer .copyright {
-    font-size: 13px;
+    font-size: 20px;
   }
 }
 
@@ -228,11 +236,11 @@
   }
 
   #footer .loan-info p {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   #footer .loan-info-links p {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   #footer .loan-info-rates p.title {
@@ -247,15 +255,19 @@
   }
 
   #footer .warning-text {
-    font-size: 17px !important;
+    font-size: 22px !important;
+  }
+
+  #footer .warning-text p:nth-child(3) {
+    text-indent: 16px !important;
   }
 
   #footer .disclaimer {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   #footer .copyright {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
 
@@ -270,19 +282,19 @@
   }
 
   #footer .loan-info p {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   #footer .loan-info-links p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   #footer .loan-info-rates p.title {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   #footer .loan-info-rates p {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   #footer .loan-title {
@@ -290,23 +302,23 @@
   }
 
   #footer .warning-text {
-    font-size: 16px !important;
+    font-size: 20px !important;
+  }
+
+  #footer .warning-text p:nth-child(3) {
+    text-indent: 14px !important;
   }
 
   #footer .disclaimer {
-    font-size: 11px;
+    font-size: 17px;
   }
 
   #footer .copyright {
-    font-size: 11px;
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  #footer .f-container {
-    padding: 25px 15px;
-  }
-
   #footer .f-top-con .f-logo {
     width: 120px;
     height: 30px;
@@ -318,7 +330,7 @@
   }
 
   #footer .company-info {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 2.2;
   }
 
@@ -328,7 +340,7 @@
   }
 
   #footer .loan-info p {
-    font-size: 15px;
+    font-size: 16px;
     margin: 0.15rem;
   }
 
@@ -338,25 +350,25 @@
   }
 
   #footer .loan-info-rates p.title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #footer .loan-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   #footer .warning-text {
-    font-size: 15px !important;
+    font-size: 20pxpx !important;
     line-height: 1.3;
   }
 
   #footer .disclaimer {
-    font-size: 10px;
+    font-size: 16px;
     line-height: 1.5;
   }
 
   #footer .copyright {
-    font-size: 10px;
+    font-size: 16px;
   }
 
   /* 모바일에서 푸터 하단에 하단 메뉴바 높이만큼 마진 추가 */
@@ -366,12 +378,8 @@
 }
 
 @media screen and (max-width: 640px) {
-  #footer .f-container {
-    padding: 20px 12px;
-  }
-
   #footer .company-info {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 2;
   }
 
@@ -381,11 +389,11 @@
   }
 
   #footer .loan-info p {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   #footer .loan-info-links p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.2;
   }
 
@@ -398,15 +406,15 @@
   }
 
   #footer .warning-text {
-    font-size: 13px !important;
+    font-size: 20px !important;
   }
 
   #footer .disclaimer {
-    font-size: 9px;
+    font-size: 16px;
   }
 
   #footer .copyright {
-    font-size: 9px;
+    font-size: 16px;
   }
 }
 
@@ -422,8 +430,8 @@
   }
 
   #footer .company-info {
-    font-size: 20px;
-    line-height: 1.8;
+    font-size: 22px;
+    line-height: 1.8 !important;
   }
 
   #footer .company-info p {
@@ -436,47 +444,51 @@
   }
 
   #footer .loan-info p {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0.1rem;
   }
 
   #footer .loan-info-links p {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
   #footer .loan-info-rates p.title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #footer .loan-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   #footer .warning-text {
-    font-size: 12px !important;
+    font-size: 20px !important;
     line-height: 1.2;
   }
 
+  #footer .warning-text p:nth-child(3) {
+    text-indent: 0px !important;
+  }
+
   #footer .disclaimer {
-    font-size: 8px;
+    font-size: 16px;
     line-height: 1.4;
   }
 
   #footer .copyright {
-    font-size: 8px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 380px) {
   #footer .company-info {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 19px;
+    line-height: 1.9 !important;
   }
 
   #footer .loan-info {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
   #footer .loan-info p {
@@ -484,28 +496,28 @@
   }
 
   #footer .loan-info-links p {
-    font-size: 11px;
-    line-height: 1.1;
+    font-size: 16px;
+    line-height: 1.4;
   }
 
   #footer .loan-info-rates p.title {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   #footer .loan-title {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   #footer .warning-text {
-    font-size: 11px !important;
+    font-size: 19px !important;
   }
 
   #footer .disclaimer {
-    font-size: 7px;
+    font-size: 16px;
   }
 
   #footer .copyright {
-    font-size: 7px;
+    font-size: 16px;
   }
 }
 
