@@ -117,53 +117,52 @@ jQuery(function ($) {
   });
 });
 
-// 페이지 로드 시 실행되는 함수
+// Function to set the active menu item based on the current page URL
 document.addEventListener('DOMContentLoaded', function () {
-  // 현재 페이지 URL 가져오기
-  const currentPage = window.location.pathname;
+  // Get the current page path
+  const currentPage = window.location.pathname.split('/').pop();
 
-  // 하단 메뉴 아이템들 선택
+  // Select all menu items
   const menuItems = document.querySelectorAll('#bottom-menu .menu-item');
 
-  // 기본적으로 모든 메뉴 아이템에서 active 클래스 제거
+  // Remove active class from all menu items
   menuItems.forEach(item => {
     item.classList.remove('active');
   });
 
-  // 현재 페이지 URL에 따라 적절한 메뉴 아이템에 active 클래스 추가
-  if (
-    currentPage.includes('index.html') ||
-    currentPage === '/' ||
-    currentPage.endsWith('/')
-  ) {
-    // 홈 페이지
+  // Set active class based on current page
+  if (currentPage === '' || currentPage === 'index.html') {
+    // Home page
     document
-      .querySelector('#bottom-menu a[href*="index.html"]')
-      .classList.add('active');
-  } else if (currentPage.includes('hospital.html')) {
-    // 병원정보 페이지
-    document
-      .querySelector('#bottom-menu a[href*="hospital.html"]')
-      .classList.add('active');
-  } else if (currentPage.includes('mypage.html')) {
-    // 마이페이지
-    document
-      .querySelector('#bottom-menu a[href*="mypage.html"]')
-      .classList.add('active');
-  } else if (currentPage.includes('loan.html')) {
-    // 대출 페이지
-    document
-      .querySelector('#bottom-menu a[href*="loan.html"]')
+      .querySelector('#bottom-menu .menu-item[href="./index.html"]')
       .classList.add('active');
   } else if (
-    currentPage.includes('eyeSurgery.html') ||
-    currentPage.includes('eventDetail.html')
+    currentPage.includes('hospital') &&
+    !currentPage.includes('hospitalDetail')
   ) {
-    // 눈수술 관련 페이지들은 홈으로 분류
+    // Hospital page
     document
-      .querySelector('#bottom-menu a[href*="index.html"]')
+      .querySelector('#bottom-menu .menu-item[href="./hospital.html"]')
+      .classList.add('active');
+  } else if (currentPage.includes('loan')) {
+    // Loan page
+    document
+      .querySelector('#bottom-menu .menu-item[href="./loan.html"]')
+      .classList.add('active');
+  } else if (currentPage.includes('notice')) {
+    // Notice page
+    document
+      .querySelector('#bottom-menu .menu-item[href="./notice.html"]')
+      .classList.add('active');
+  } else if (currentPage.includes('mypage')) {
+    // Mypage
+    document
+      .querySelector('#bottom-menu .menu-item[href="./mypage.html"]')
+      .classList.add('active');
+  } else if (currentPage.includes('hospitalDetail')) {
+    // Consider hospital detail pages as part of hospital section
+    document
+      .querySelector('#bottom-menu .menu-item[href="./hospital.html"]')
       .classList.add('active');
   }
-
-  // 알림 메뉴는 특정 페이지가 없으므로 처리하지 않음
 });

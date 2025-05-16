@@ -1,0 +1,121 @@
+/* 공지사항 페이지 스타일 */
+
+/* 페이지 헤더 스타일 */
+.page-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.page-header .back-link {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.page-header .back-link i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* 공지사항 목록 컨테이너 */
+.notice-list-con {
+  padding: 0 20px;
+}
+
+.notice-list-items {
+  margin-top: 20px;
+}
+
+/* 공지사항 아이템 스타일 */
+.notice-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.notice-item:hover {
+  background-color: #f8f8f8;
+}
+
+.notice-item a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #333;
+}
+
+/* 공지사항 제목 스타일 */
+.notice-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.notice-title i {
+  color: #6947cf;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+/* 공지사항 날짜 스타일 */
+.notice-date {
+  color: #999;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+/* 반응형 스타일 */
+@media (min-width: 768px) {
+  .notice-list-con {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .notice-title {
+    font-size: 17px;
+  }
+
+  .page-header .back-link {
+    font-size: 22px;
+  }
+
+  .page-header .back-link i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notice-item {
+    padding: 15px 10px;
+  }
+
+  .notice-title {
+    font-size: 15px;
+  }
+
+  .notice-title i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+
+  .notice-date {
+    font-size: 13px;
+  }
+
+  .page-header {
+    padding: 15px 0 12px;
+    margin-bottom: 15px;
+  }
+}

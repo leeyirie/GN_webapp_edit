@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강남오빠 - 대출</title>
+    <title>공지사항 - 강남오빠</title>
     <!-- Pretendard 폰트 로드 -->
     <link
       rel="stylesheet"
@@ -17,32 +17,27 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
     />
-    <style>
-      @supports (font-variation-settings: normal) {
-        * {
-          font-family:
-            'Pretendard Variable',
-            'Pretendard',
-            -apple-system,
-            BlinkMacSystemFont,
-            system-ui,
-            sans-serif;
-        }
-      }
-    </style>
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 
+    <!-- 라이브러리 CSS -->
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- 분리된 CSS 파일들 -->
+
+    <!-- 공통 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/form.css" />
     <link rel="stylesheet" href="./css/bottom-menu.css" />
+
+    <!-- 메인페이지용 파일 -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/notice.css" />
+
+    <!-- Font Awesome 아이콘 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -107,15 +102,72 @@
           </div>
         </div>
       </header>
+      <div id="content" class="main">
+          <div class="container">
+            <div class="notice-list-con">
+              <div class="container">
+                <div class="page-header">
+                  <a href="javascript:history.back();" class="back-link">
+                    <i class="fas fa-chevron-left"></i> 공지사항
+                  </a>
+                </div>
 
-      <div id="content" class="loan-page">
-        <div class="container">
-          <div class="cm-title-con">
-            <h2 class="tit">대출 상세 페이지(이미지 추가 예정)</h2>
+                <div class="notice-list-items">
+                  <div class="notice-item">
+                    <a href="./noticeDetail1.html">
+                      <div class="notice-title">
+                        <i class="fas fa-file-alt"></i>
+                        채무조정안
+                      </div>
+                      <div class="notice-date">2025.05.13</div>
+                    </a>
+                  </div>
+
+                  <div class="notice-item">
+                    <a href="./noticeDetail2.html">
+                      <div class="notice-title">
+                        <i class="fas fa-file-alt"></i>
+                        채무조정 신청 안내서
+                      </div>
+                      <div class="notice-date">2025.05.13</div>
+                    </a>
+                  </div>
+
+                  <div class="notice-item">
+                    <a href="./noticeDetail3.html">
+                      <div class="notice-title">
+                        <i class="fas fa-file-alt"></i>
+                        채무조정 요청서
+                      </div>
+                      <div class="notice-date">2025.05.13</div>
+                    </a>
+                  </div>
+
+                  <div class="notice-item">
+                    <a href="./noticeDetail4.html">
+                      <div class="notice-title">
+                        <i class="fas fa-file-alt"></i>
+                        개인 정보 수집 이용 및 제공 동의서(계약체결용)
+                      </div>
+                      <div class="notice-date">2025.05.13</div>
+                    </a>
+                  </div>
+
+                  <div class="notice-item">
+                    <a href="./noticeDetail5.html">
+                      <div class="notice-title">
+                        <i class="fas fa-file-alt"></i>
+                        통지 조회하기
+                      </div>
+                      <div class="notice-date">2025.05.13</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <footer id="footer">
         <div class="f-container">
           <div class="f-top-con">
@@ -223,13 +275,13 @@
         <span>병원정보</span>
       </a>
 
-      <a href="./loan.html" class="menu-item active">
+      <a href="./loan.html" class="menu-item">
         <div class="svg-icon">
           <img src="./img/loan.svg" alt="대출 아이콘" />
         </div>
         <span>대출</span>
       </a>
-      <a href="./notice.html" class="menu-item">
+      <a href="./notice.html" class="menu-item active">
         <div class="svg-icon">
           <img src="./img/bell.svg" alt="알림 아이콘" />
         </div>
@@ -242,5 +294,7 @@
         <span>마이페이지</span>
       </a>
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
