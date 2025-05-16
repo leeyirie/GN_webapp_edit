@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>강남오빠 - 대출</title>
+    <title>신용정보활용체제 - 강남오빠</title>
     <!-- Pretendard 폰트 로드 -->
     <link
       rel="stylesheet"
@@ -35,14 +35,17 @@
     <script src="./js/slick.js"></script>
     <script src="./js/script.js"></script>
 
+    <!-- 라이브러리 CSS -->
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- 분리된 CSS 파일들 -->
+
+    <!-- 공통 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/form.css" />
-    <link rel="stylesheet" href="./css/bottom-menu.css" />
+
+    <!-- 하단 푸터 대부 약관용 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/loan-terms.css" />
+
+    <!-- Font Awesome 아이콘 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -64,8 +67,9 @@
             <a href="./index.html">
               <h1
                 class="logo"
-                style="background-image: url('./img/gn-logo-white.svg')"
+                style="background-image: url('./img/logo_purple.svg')"
               ></h1>
+              <div class="company-name">주식회사 인크레더블대부</div>
             </a>
             <div class="desktop-dept-text">
               <div class="header-top-text">
@@ -75,47 +79,108 @@
                 <span>2024-서울강남-0160(대부중개업)</span>
               </div>
             </div>
-            <div class="mobile-login">
-              <div class="util-box">
-                <div class="auth-buttons">
-                  <a href="./loginSelect.html" class="login-btn"
-                    >로그인/회원가입</a
-                  >
-                </div>
-              </div>
-            </div>
           </div>
           <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
-          <div class="header-bottom-bar">
-            <div class="header-search-wrap">
-              <a href="./search.html" class="search-input-con">
-                <div class="search-label">병원, 시술부위를 검색해보세요.</div>
-                <button class="search-icon" type="button">
-                  <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
-              </a>
-            </div>
-            <div class="desktop-login">
-              <div class="util-box">
-                <div class="auth-buttons">
-                  <a href="./loginSelect.html" class="login-btn"
-                    >로그인/회원가입</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </header>
+      <div id="content" class="main">
+        <div class="terms-content">
+          <h2 class="page-title">
+            <a href="javascript:history.back();" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            신용정보 활용체제
+          </h2>
 
-      <div id="content" class="loan-page">
-        <div class="container">
-          <div class="cm-title-con">
-            <h2 class="tit">대출 상세 페이지(이미지 추가 예정)</h2>
+          <div class="terms-section">
+            <p>
+              *신용정보의 이용 및 보호에 관한 법률, 제31조에 의하여
+              신용정보활용체제를 다음과 같이 공시합니다.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제1조 관리하는 신용정보의 종류 및 이용 목적
+            </h3>
+            <p style="margin-top: 6px">1. 신용정보의 종류</p>
+            <p style="padding-left: 20px">
+              가. 개인식별정보<br />
+              나. 신용거래정보<br />
+              다. 신용능력정보<br />
+              라. 신용평가정보<br />
+              마. 연체·신용질서문란 등 신용도판단정보<br />
+              바. 공공정보<br />
+              사. 기타 신용도를 판단할 수 있는 정보
+            </p>
+            <p style="margin-top: 6px">2. 이용목적</p>
+            <p style="padding-left: 20px">
+              가. 금융거래 등 상거래관계의 설정 및 유지여부 등의 판단<br />
+              나. 금융사고 조사, 분쟁해결, 민원처리, 수사협조 및 법령상 의무
+              이행 등<br />
+              다. 채권추심
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제2조 제공대상자, 제공받는자의 이용목적 및 제공하는 신용정보의
+              종류
+            </h3>
+            <p style="padding-left: 20px">
+              * 개인정보 취급방침 제4조 ①항 게시 참조
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제3조 보유 및 이용기간, 신용정보 파기절차 및 방법
+            </h3>
+            <p style="margin-top: 6px">1. 보유기간</p>
+            <p style="padding-left: 20px">
+              회사와의 거래관계 존속 시 또는 고객정보제공 동의 철회 시 까지
+            </p>
+            <p style="margin-top: 6px">2. 파기절차 및 방법</p>
+            <p style="padding-left: 20px">
+              신용정보는 이용목적 또는 제공받은 목적이 달성된 후 내부방침 및
+              기타 관련 법령(상법 등)에 의거 일정기간 저장 된 후, 개인정보의
+              안전한 처리를 위하여 다음과 같은 방법으로 개인정보를 파기합니다.
+              종이 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여
+              파기합니다. 전자적 파일 형태의 개인정보는 기록을 재생할 수 없는
+              기술적 방법을 사용하여 삭제합니다.
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제4조 신용정보처리를 위탁하는 경우에 그 업무의 내용 및 수탁자
+            </h3>
+            <p style="padding-left: 20px">
+              * 개인정보 취급방침 제4조 ②항 게시 참조
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제5조 신용정보주체의 권리와 그 행사방법
+            </h3>
+            <p style="padding-left: 20px">
+              * 개인정보 취급방침 제5조 게시 참조
+            </p>
+          </div>
+
+          <div class="terms-section">
+            <h3 class="section-title" style="margin-bottom: 6px">
+              제6조 신용정보 관리·보호 관련 고충을 처리하는 담당자
+            </h3>
+            <p style="padding-left: 20px">
+              - 개인정보보호책임자: 김승민<br />
+              - 부서: (주)인크레더블버즈대부<br />
+              - 연락처: 02-2135-5574
+            </p>
           </div>
         </div>
       </div>
-
       <footer id="footer">
         <div class="f-container">
           <div class="f-top-con">
@@ -242,5 +307,7 @@
         <span>마이페이지</span>
       </a>
     </div>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

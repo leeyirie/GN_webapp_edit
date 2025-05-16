@@ -17,6 +17,10 @@
   z-index: -1;
 }
 
+#header .header-inner {
+  padding: 0 30px;
+}
+
 #header .logo {
   display: block;
   width: 164px;
@@ -32,10 +36,6 @@
   color: #000;
   margin-top: 6px;
   font-weight: 500;
-}
-
-#header .header-inner {
-  padding: 0 30px;
 }
 
 /* 대부업 문구 */
@@ -90,6 +90,7 @@
   padding: 20px 0px;
   background-color: #fff;
   width: 100%;
+  line-height: 1.6;
 }
 
 /* 약관 타이틀! */
@@ -105,6 +106,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.4;
 }
 
 /* 뒤로가기 버튼 */
@@ -133,6 +135,7 @@
   font-weight: 600;
   margin-bottom: 15px;
   color: #333;
+  line-height: 1.4;
 }
 
 /* Paragraph Styles */
@@ -140,25 +143,35 @@
   margin-bottom: 22px;
   color: #444;
   font-size: 20px;
+  line-height: 1.6;
 }
 
 /* List Styles */
 .terms-list {
   padding-left: 20px;
   margin-bottom: 15px;
+  list-style-type: decimal;
 }
 
 .terms-list li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #444;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.6;
+  padding-left: 5px;
 }
 
 /* Nested List Styles */
 .terms-list .terms-list {
   margin-top: 10px;
   margin-bottom: 5px;
+  padding-left: 20px;
+  list-style-type: lower-alpha;
+}
+
+/* 3단계 중첩 리스트 */
+.terms-list .terms-list .terms-list {
+  list-style-type: lower-roman;
 }
 
 /* === 푸터 스타일 === */
@@ -361,8 +374,34 @@
 
 /* PC - 대형 */
 @media screen and (max-width: 1200px) {
+  #header {
+    padding: 35px 20px 25px;
+  }
+
+  #header .header-inner {
+    padding: 0 20px;
+  }
+
+  #header .logo {
+    width: 150px;
+    height: 36px;
+  }
+
+  #header .company-name {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+
+  #content.main {
+    padding: 40px 40px;
+  }
+
+  .terms-content {
+    padding: 20px 10px;
+  }
+
   #footer .f-container {
-    padding: 35px 50px;
+    padding: 35px 40px;
   }
 
   #footer .company-info {
@@ -373,12 +412,76 @@
   #footer .loan-info-rates p {
     font-size: 16px;
   }
+
+  /* 헤더 탑 텍스트 조정 */
+  #header .header-top-text {
+    font-size: 26px;
+  }
 }
 
 /* 태블릿 */
 @media screen and (max-width: 990px) {
   #header {
-    padding: 20px 15px;
+    padding: 20px 20px 20px;
+    text-align: center;
+  }
+
+  #header .header-inner {
+    padding: 0 15px;
+  }
+
+  #header .header-top-bar {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* 태블릿 로고 크기 증가 */
+  #header .logo {
+    width: 180px;
+    height: 45px;
+    margin-bottom: 10px;
+  }
+
+  #content.main {
+    padding: 30px 30px;
+  }
+
+  .terms-content {
+    padding: 15px 5px;
+  }
+
+  .page-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+
+  .back-btn {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .terms-section p,
+  .terms-list li {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .terms-section {
+    margin-bottom: 25px;
+  }
+
+  #footer .f-container {
+    padding: 30px 30px;
+  }
+
+  #footer .company-info {
+    font-size: 22px;
   }
 
   .mobile-login {
@@ -389,6 +492,33 @@
     display: none;
   }
 
+  /* 회사 이름 크기 증가 */
+  #header .company-name {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* 헤더 탑 텍스트 크기 증가 및 중앙 정렬 */
+  #header .header-top-text {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* 데스크탑 대부 문구 중앙 정렬 */
+  .desktop-dept-text {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #header .header-top-text span {
+    margin-bottom: 2px;
+  }
+}
+
+/* 모바일 레이아웃 변경 지점 - 대부문구와 로고 배치 변경 */
+@media screen and (max-width: 700px) {
+  /* 700px 이하에서 대부 문구 표시 방식 변경 */
   .mobile-dept-text {
     display: block;
   }
@@ -397,75 +527,68 @@
     display: none;
   }
 
-  #header .company-name {
-    font-size: 12px;
-    margin-top: 4px;
-  }
-
-  .terms-content {
-    padding: 15px;
-  }
-
-  .page-title {
-    font-size: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 12px;
-  }
-
-  .back-btn {
+  /* 모바일 대부 문구 스타일 */
+  .mobile-dept-text .header-top-text {
     font-size: 18px;
-  }
-
-  .section-title {
-    font-size: 16px;
-  }
-
-  .terms-section p,
-  .terms-list li {
-    font-size: 14px;
-  }
-
-  #footer .f-container {
-    padding: 30px 40px;
-  }
-
-  #footer .company-info {
-    font-size: 22px;
+    text-align: center;
+    margin-bottom: 15px;
   }
 }
 
 /* 모바일 */
 @media screen and (max-width: 768px) {
   #header {
-    padding: 15px 10px;
+    padding: 20px 15px;
+    text-align: center;
   }
 
-  #header .logo {
-    width: 120px;
-    height: 30px;
+  #header .header-inner {
+    padding: 0 10px;
   }
 
-  #header .company-name {
-    font-size: 11px;
-    margin-top: 3px;
+  #header .header-top-bar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #content.main {
+    padding: 20px 20px;
   }
 
   .terms-content {
-    padding: 12px;
+    padding: 10px 0px;
   }
 
   .page-title {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   .back-btn {
     font-size: 16px;
   }
 
-  .terms-section {
-    margin-bottom: 25px;
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .terms-section p,
+  .terms-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .terms-list {
+    padding-left: 15px;
+  }
+
+  .terms-list .terms-list {
+    padding-left: 15px;
   }
 
   #footer .f-container {
@@ -480,20 +603,80 @@
   #footer .loan-info-rates p {
     font-size: 14px;
   }
+
+  /* 모바일 로고 크기 증가 */
+  #header .logo {
+    width: 160px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  /* 회사 이름 크기 증가 */
+  #header .company-name {
+    font-size: 18px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+  }
+
+  /* 헤더 탑 텍스트 크기 증가 */
+  #header .header-top-text {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 /* 작은 모바일 */
 @media screen and (max-width: 480px) {
-  #header .company-name {
-    font-size: 10px;
+  #header {
+    padding: 22px 15px 0px 15px;
+  }
+
+  #header .header-top-text {
+    margin-bottom: 24px;
+  }
+
+  #header .header-inner {
+    padding: 0 8px;
+  }
+
+  #header .header-top-bar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+    flex-direction: column;
+  }
+
+  #content.main {
+    padding: 15px 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
   }
 
   .back-btn {
     font-size: 14px;
   }
 
+  .section-title {
+    font-size: 18px;
+  }
+
+  .terms-section p,
+  .terms-list li {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #footer .f-container {
+    padding: 20px 15px;
+  }
+
   #footer .company-info {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   #footer .loan-info-links p,
@@ -510,4 +693,45 @@
   #bottom-menu .menu-item {
     font-size: 10px;
   }
+
+  #header .company-name {
+    font-size: 20px;
+  }
+
+  /* 로고 사이즈 조정 */
+  #header .logo {
+    width: 140px;
+    height: 35px;
+    margin-bottom: 8px;
+  }
+
+  /* 헤더 탑 텍스트 조정 */
+  #header .header-top-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .mobile-dept-text .header-top-text {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Privacy Policy specific styles */
+.terms-section .section-title {
+  margin-bottom: 6px;
+}
+
+.terms-section p {
+  margin-bottom: 10px;
+}
+
+.terms-section p[style='margin-top: 6px;'] {
+  margin-top: 6px;
+}
+
+.terms-section .note {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 6px;
 }

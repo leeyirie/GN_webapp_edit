@@ -311,32 +311,64 @@
             <div class="tab-content reviews">
               <div class="reviews-header">
                 <h3>리뷰 (10)</h3>
-                <button id="write-review-btn" class="write-review-btn">리뷰 작성하기</button>
+                <button id="write-review-btn" class="write-review-btn">
+                  리뷰 작성하기
+                </button>
               </div>
-              
+
               <!-- 리뷰 작성 폼 -->
-              <div id="review-form-container" class="review-form-container" style="display: none;">
+              <div
+                id="review-form-container"
+                class="review-form-container"
+                style="display: none"
+              >
                 <form id="review-form" class="review-form">
                   <h4>리뷰 작성하기</h4>
-                  
+
                   <div class="form-group">
                     <label>평점</label>
                     <div class="rating-input">
                       <div class="star-rating">
-                        <input type="radio" id="star5" name="rating" value="5" checked />
+                        <input
+                          type="radio"
+                          id="star5"
+                          name="rating"
+                          value="5"
+                          checked
+                        />
                         <label for="star5">★</label>
-                        <input type="radio" id="star4" name="rating" value="4" />
+                        <input
+                          type="radio"
+                          id="star4"
+                          name="rating"
+                          value="4"
+                        />
                         <label for="star4">★</label>
-                        <input type="radio" id="star3" name="rating" value="3" />
+                        <input
+                          type="radio"
+                          id="star3"
+                          name="rating"
+                          value="3"
+                        />
                         <label for="star3">★</label>
-                        <input type="radio" id="star2" name="rating" value="2" />
+                        <input
+                          type="radio"
+                          id="star2"
+                          name="rating"
+                          value="2"
+                        />
                         <label for="star2">★</label>
-                        <input type="radio" id="star1" name="rating" value="1" />
+                        <input
+                          type="radio"
+                          id="star1"
+                          name="rating"
+                          value="1"
+                        />
                         <label for="star1">★</label>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="form-group">
                     <label for="review-category">평가 항목</label>
                     <div class="category-rating">
@@ -375,33 +407,59 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="form-group">
                     <label for="review-content">리뷰 내용</label>
-                    <textarea id="review-content" name="content" rows="5" placeholder="시술 경험에 대한 솔직한 리뷰를 작성해주세요."></textarea>
+                    <textarea
+                      id="review-content"
+                      name="content"
+                      rows="5"
+                      placeholder="시술 경험에 대한 솔직한 리뷰를 작성해주세요."
+                    ></textarea>
                   </div>
-                  
+
                   <div class="form-group">
                     <label>사진 첨부 (선택)</label>
                     <div class="file-upload">
-                      <input type="file" id="review-image" name="image" accept="image/*" />
-                      <label for="review-image" class="file-label">사진 선택</label>
+                      <input
+                        type="file"
+                        id="review-image"
+                        name="image"
+                        accept="image/*"
+                      />
+                      <label for="review-image" class="file-label"
+                        >사진 선택</label
+                      >
                       <span class="selected-file-name">선택된 파일 없음</span>
                     </div>
                   </div>
-                  
+
                   <div class="form-check">
-                    <input type="checkbox" id="review-agree" name="agree" required />
-                    <label for="review-agree">작성한 리뷰의 수정 및 삭제에 제한이 있을 수 있음을 인지합니다. (필수)</label>
+                    <input
+                      type="checkbox"
+                      id="review-agree"
+                      name="agree"
+                      required
+                    />
+                    <label for="review-agree"
+                      >작성한 리뷰의 수정 및 삭제에 제한이 있을 수 있음을
+                      인지합니다. (필수)</label
+                    >
                   </div>
-                  
+
                   <div class="form-actions">
-                    <button type="button" id="cancel-review-btn" class="cancel-btn">취소</button>
+                    <button
+                      type="button"
+                      id="cancel-review-btn"
+                      class="cancel-btn"
+                    >
+                      취소
+                    </button>
                     <button type="submit" class="submit-btn">등록하기</button>
                   </div>
                 </form>
               </div>
-              
+
               <div class="review-summary">
                 <div class="total-rating">
                   <div class="rating-score">4.8</div>
@@ -537,82 +595,57 @@
 
           <!-- 회사 정보 -->
           <div class="company-info">
-            <p>주식회사 인크레더블버즈대부 | 대표이사 임신영</p>
+            <p style="margin-bottom: 20px">
+              주식회사 인크레더블대부 | 대표이사 임신영
+            </p>
             <p>사업자등록번호: 349-87-02942</p>
-            <p>주식회사 인크레더블대부 : 대부업 2024-서울강남-0159</p>
-            <p>대부중개업 2024 - 서울강남 - 0160</p>
-            <p>대부업등록기관: 강남구청 지역경제과 02-3423-5524</p>
+            <p>
+              주식회사 인크레더블대부: 대부업 2024-서울강남-0159 |
+              <br />대부중개업 2024 - 서울강남 - 0160
+            </p>
+            <p style="margin-bottom: 20px">
+              대부업등록기관: 강남구청 지역경제과 02-3423-5524
+            </p>
             <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+            <p>
+              <a
+                style="color: #fff"
+                href="https://inbuzzloan.com/"
+                target="_blank"
+                >홈페이지: https://inbuzzloan.com/</a
+              >
+            </p>
             <p>TEL: 02-556-6474</p>
             <p>FAX: 02-508-7752</p>
             <p>E-MAIL: cs@ctwh.co.kr</p>
           </div>
 
           <!-- 대부업 관련 정보 -->
-          <div class="loan-info" style="margin-top: 20px; margin-bottom: 20px">
-            <p
-              style="
-                color: #fff;
-                font-weight: 600;
-                margin-bottom: 6px;
-                margin-top: 6px;
-                font-size: 16px;
-                line-height: 1.4;
-              "
-            >
-              <a href="./loanTerms.html" style="color: #fff; text-decoration: none"
-                >대부거래표준약관</a
-              >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >개인정보처리(취급)방침</a
-              >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >개인정보처리 위탁 및 제 3자제공 현황</a
-              >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >신용정보 활용체제</a
-              >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
+          <div class="loan-info-links">
+            <p>
+              <a href="./loanTerms.html">대부거래표준약관</a> |
+              <a href="./privacyPolicy.html">개인정보처리(취급)방침</a> |
+              <a href="./creditInfo.html">신용정보 활용체제</a> | <br /><a
+                href="./creditCollection.html"
                 >채권추심업무 처리절차</a
               >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
-                >불법채권추심 대응요령</a
-              >
-              •
-              <a href="#" style="color: #fff; text-decoration: none"
+              | <a href="./illegalCredit.html">불법채권추심 대응요령</a> |
+              <a href="./debtLimitation.html"
                 >소멸시효완성채권 추심관련유의사항</a
               >
             </p>
           </div>
 
           <!-- 금리 및 상환안내 -->
-          <div
-            class="loan-info"
-            style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2"
-          >
-            <p
-              style="
-                color: #fff;
-                font-weight: 600;
-                margin-bottom: 4px;
-                margin-top: 10px;
-                font-size: 20px;
-              "
-            >
-              금리 및 상환안내
-            </p>
+          <div class="loan-info-rates">
+            <p class="title">금리 및 상환안내</p>
             <p>
               대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
             </p>
-            <p style="line-height: 1.2">
+            <p>
               부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
-              지방교육세수료,국민주택채권매입비, 주소변경비용, 확인서면비용,
-              근저당말소비용 등 발생
+              지방교육세수료, | 국민주택채권매입비 |<br />
+              주소변경비용 | 확인서면비용 | 근저당말소비용 등 발생
             </p>
             <p>전당포대출 부대비용 : 없음</p>
             <p>조기상환조건 없음</p>
@@ -624,7 +657,8 @@
             <p>
               * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
             </p>
-            * 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며<br>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+            <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+            <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
           </div>
 
           <!-- 면책 문구 -->
@@ -658,7 +692,7 @@
         </div>
         <span>병원정보</span>
       </a>
-      
+
       <a href="./loan.html" class="menu-item">
         <div class="svg-icon">
           <img src="./img/loan.svg" alt="대출 아이콘" />
