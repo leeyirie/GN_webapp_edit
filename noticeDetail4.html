@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개인 정보 수집 이용 및 제공 동의 - 강남오빠</title>
+    <!-- Pretendard 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <style>
+      @supports (font-variation-settings: normal) {
+        * {
+          font-family:
+            'Pretendard Variable',
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            sans-serif;
+        }
+      }
+    </style>
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- 라이브러리 CSS -->
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <!-- 공통 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <!-- 하단 푸터 대부 약관용 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/loan-terms.css" />
+
+    <!-- 공지사항 목록 페이지 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/notice.css" />
+
+    <!-- Font Awesome 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
+          <div class="mobile-dept-text">
+            <div class="header-top-text">
+              2024-서울강남-0159(대부업)<br />
+              2024-서울강남-0160(대부중개업)
+            </div>
+          </div>
+          <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
+          <div class="header-top-bar">
+            <a href="./index.html">
+              <h1
+                class="logo"
+                style="background-image: url('./img/logo_purple.svg')"
+              ></h1>
+              <div class="company-name">(주)인크레더블버즈</div>
+            </a>
+            <div class="desktop-dept-text">
+              <div class="header-top-text">
+                <span style="display: inline-block; margin-bottom: 4px"
+                  >2024-서울강남-0159(대부업)</span
+                ><br />
+                <span>2024-서울강남-0160(대부중개업)</span>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
+        </div>
+      </header>
+      <div id="content" class="main">
+        <div class="terms-content">
+          <h2 class="page-title">
+            <a href="javascript:history.back();" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+개인정보 수집 이용 및 제공 동의(계약체결용)          </h2>
+          <div class="terms-section">
+            <p class="intro-text">
+              "본인은 개인정보보호법 제15조, 제22조, 신용정보의 이용 및 보호에 관한 법률 제15조, 제32조, 제33조에 따라 귀사가 본인이 신청한 대부거래와 관련하여 본인의 개인신용정보를 아래와 같이 수집·이용·제공하는 것에 동의합니다."
+            </p>
+
+            <div class="consent-section">
+              <h3 class="section-title">Ⅰ. 수집ㆍ이용에 관한 사항</h3>
+              
+              <h4>1. 수집ㆍ이용 목적</h4>
+              <ul class="terms-list">
+                <li>본인확인, 신용조회, 대금결제 등 대부계약의 체결·유지·이행·관리</li>
+                <li>신청 금융상품 서비스 제공</li>
+                <li>법령상 의무이행, 분쟁처리, 민원해결, 금융사고 조사 등</li>
+              </ul>
+              
+              <h4>2. 수집ㆍ이용 항목</h4>
+              <ul class="terms-list">
+                <li><strong>개인식별정보:</strong> 성명, 생년월일, 성별, 국적, 자택(직장)주소, 연락처, 직장명, 입금계좌, 연계정보(CI) 등</li>
+                <li><strong>신용거래정보:</strong> 대출, 보증, 담보제공, 현금서비스, 카드론, 신용카드와 같이 본 거래내용을 판단할 수 있는 정보</li>
+                <li><strong>신용능력정보:</strong> 재산, 채무, 소득의 총액, 납세실적 등 (※ 대부금액이 300만원을 초과하는 경우 의무적으로 파악)</li>
+                <li><strong>신용도 판단정보:</strong> 개인신용평점, 연체, 부도, 대위변제, 기타 신용질서 문란행위 관련 금액 등</li>
+                <li><strong>공공기관 정보:</strong> 개인회생, 파산, 면책, 채무불이행자 등재 등 법원의 재판 결정정보, 체납정보, 경매관련정보, 사회보험·공공요금 관련정보, 행정처분 관련 정보 등</li>
+              </ul>
+              <p>▶ 본 동의 이전에 발생한 상기 개인신용정보 포함 <br/>※ 주민등록번호 등 고유식별정보는 수집하지 않습니다.</p>
+              
+              <h4>3. 보유ㆍ이용 기간</h4>
+              <p>거래 종료일(채권채무관계 해소일)로부터 5년까지. 단, 관계 법령상 의무가 있는 경우 그에 따릅니다.</p>
+              
+              <div class="consent-notice">
+                <p>동의를 거부하실 수 있으나, 거부하실 경우 대출계약이 진행되지 않습니다.</p>
+              </div>
+              
+              <div class="consent-checkbox">
+                <p>◆ 본인은 귀사가 상기와 같이 본인의 개인신용정보를 수집ㆍ이용하는 것에 동의합니다.   [ ☐ 동의함 ☐ 동의하지 않음 ]</p>
+              </div>
+            </div>
+
+            <div class="consent-section">
+              <h3 class="section-title">Ⅱ. 신용정보 조회에 관한 사항</h3>
+              
+              <h4>1. 조회 목적</h4>
+              <p>신용도 평가 및 대출 심사를 위한 외부 신용조회회사의 정보 조회</p>
+              
+              <h4>2. 조회 항목</h4>
+              <p>성명, 생년월일, 휴대전화번호, 대출정보, 연체정보, 신용평점 등 <br/>※ 주민등록번호는 고객이 직접 입력하는 별도 인증절차(예: NICE 평가정보 인증페이지)를 통해서만 사용되며, 당사는 주민등록번호를 수집하거나 저장하지 않습니다.</p>
+              
+              <h4>3. 조회처</h4>
+              <p>코리아크레딧뷰로(KCB), NICE평가정보 등 신용조회회사</p>
+              
+              <h4>4. 조회 동의의 효력 기간</h4>
+              <p>본 대출 계약의 종료 시점까지. 단, 신청 철회 또는 거절 시 즉시 종료됩니다.</p>
+              
+              <div class="consent-notice">
+                <p>동의를 거부하실 수 있으나, 거부하실 경우 대출계약이 진행되지 않습니다.</p>
+              </div>
+              
+              <div class="consent-checkbox">
+                <p>◆ 본인은 귀사가 상기와 같이 본인의 개인(신용)정보를 조회하는 것에 동의합니다.   [ ☐ 동의함 ☐ 동의하지 않음 ]</p>
+              </div>
+            </div>
+
+            <div class="consent-section">
+              <h3 class="section-title">Ⅲ. 제3자 제공에 관한 사항</h3>
+              
+              <h4>1. 제공 대상</h4>
+              <p>신용조회회사, 신용정보집중기관, 수탁사, 법률 대리인 등</p>
+              
+              <h4>2. 제공 항목</h4>
+              <p>성명, 생년월일, 연락처, 대출정보, 신용등급, 채권관리 정보 등</p>
+              
+              <h4>3. 제공 목적</h4>
+              <p>신용조회, 계약 체결 이행, 채권추심 등 정당한 업무 목적</p>
+              
+              <h4>4. 보유 및 이용 기간</h4>
+              <p>거래 종료 후 5년 이내 또는 관계 법령상 보존 필요 시까지</p>
+              
+              <div class="consent-notice">
+                <p>동의를 거부하실 수 있으나, 거부하실 경우 대출계약이 진행되지 않습니다.</p>
+              </div>
+              
+              <div class="consent-checkbox">
+                <p>◆ 본인은 귀사가 상기와 같이 본인의 개인(신용)정보를 제공하는 것에 동의합니다.   [ ☐ 동의함 ☐ 동의하지 않음 ]</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="download-btn-container">
+            <a
+              href="./download/개인(신용)정보 이용 수집 동의서 (계약 체결용)_최종.docx"
+              download="개인정보수집이용동의서_계약체결용.docx"
+              class="download-button"
+            >
+              <i class="fas fa-file-word"></i> 개인정보 수집 이용 및 제공 동의(계약체결용)
+              <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+            </div>
+          </div>
+          <footer id="footer">
+            <div class="f-container">
+              <div class="f-top-con">
+                <a href="#" class="f-logo"></a>
+                <a href="#" class="request-btn">병원입점신청</a>
+              </div>
+    
+              <!-- 회사 정보 -->
+              <div class="company-info">
+                <p style="margin-bottom: 20px">
+                  주식회사 인크레더블대부 | 대표이사 임신영
+                </p>
+                <p>사업자등록번호: 349-87-02942</p>
+                <p>
+                  주식회사 인크레더블대부: 대부업 2024-서울강남-0159 |
+                  <br />대부중개업 2024 - 서울강남 - 0160
+                </p>
+                <p style="margin-bottom: 20px">
+                  대부업등록기관: 강남구청 지역경제과 02-3423-5524
+                </p>
+                <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+                <p>
+                  <a
+                    style="color: #fff"
+                    href="https://inbuzzloan.com/"
+                    target="_blank"
+                    >홈페이지: https://inbuzzloan.com/</a
+                  >
+                </p>
+                <p>TEL: 02-556-6474</p>
+                <p>FAX: 02-508-7752</p>
+                <p>E-MAIL: cs@ctwh.co.kr</p>
+              </div>
+    
+              <!-- 대부업 관련 정보 -->
+              <div class="loan-info-links">
+                <p>
+                  <a href="./loanTerms.html">대부거래표준약관</a> |
+                  <a href="./privacyPolicy.html">개인정보처리(취급)방침</a> |
+                  <a href="./creditInfo.html">신용정보 활용체제</a> | <br /><a
+                    href="./creditCollection.html"
+                    >채권추심업무 처리절차</a
+                  >
+                  | <a href="./illegalCredit.html">불법채권추심 대응요령</a> |
+                  <a href="./debtLimitation.html"
+                    >소멸시효완성채권 추심관련유의사항</a
+                  >
+                </p>
+              </div>
+    
+              <!-- 금리 및 상환안내 -->
+              <div class="loan-info-rates">
+                <p class="title">금리 및 상환안내</p>
+                <p>
+                  대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
+                </p>
+                <p>
+                  부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
+                  지방교육세수료, | 국민주택채권매입비 |<br />
+                  주소변경비용 | 확인서면비용 | 근저당말소비용 등 발생
+                </p>
+                <p>전당포대출 부대비용 : 없음</p>
+                <p>조기상환조건 없음</p>
+                <p>개인정보 관리 책임자 : 대표이사 임신영</p>
+              </div>
+    
+              <!-- 경고 텍스트 -->
+              <div class="warning-text">
+                <p>
+                  * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+                </p>
+                <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+                <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+              </div>
+    
+              <!-- 면책 문구 -->
+              <div class="disclaimer">
+                <p>주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로,</p>
+                <p>
+                  의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+                  않습니다.
+                </p>
+              </div>
+    
+              <!-- 저작권 -->
+              <div class="copyright">
+                <p>©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item active">
+        <div class="svg-icon">
+          <img src="./img/home.svg" alt="홈 아이콘" />
+        </div>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/hospital.svg" alt="병원 아이콘" />
+        </div>
+        <span>병원정보</span>
+      </a>
+
+      <a href="./loan.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/loan.svg" alt="대출 아이콘" />
+        </div>
+        <span>대출</span>
+      </a>
+      <a href="" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/bell.svg" alt="알림 아이콘" />
+        </div>
+        <span>공지사항</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+        </div>
+        <span>마이페이지</span>
+      </a>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

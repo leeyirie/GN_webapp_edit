@@ -1,0 +1,15 @@
+# 압축된 라이브러리 파일 제외
+js/slick.js
+js/jquery.js
+*.min.js
+
+# 문제가 있는 HTML 파일 제외
+noticeDetail2.html
+
+# 기타 포맷팅이 필요없는 파일
+node_modules
+.git
+.vscode
+package-lock.json
+dist
+build 

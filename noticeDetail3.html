@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>채무조정요청서 - 강남오빠</title>
+    <!-- Pretendard 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <style>
+      @supports (font-variation-settings: normal) {
+        * {
+          font-family:
+            'Pretendard Variable',
+            'Pretendard',
+            -apple-system,
+            BlinkMacSystemFont,
+            system-ui,
+            sans-serif;
+        }
+      }
+    </style>
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- 라이브러리 CSS -->
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+
+    <!-- 공통 CSS 파일 -->
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <!-- 하단 푸터 대부 약관용 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/loan-terms.css" />
+
+    <!-- 공지사항 목록 페이지 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/notice.css" />
+
+    <!-- Font Awesome 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
+          <div class="mobile-dept-text">
+            <div class="header-top-text">
+              2024-서울강남-0159(대부업)<br />
+              2024-서울강남-0160(대부중개업)
+            </div>
+          </div>
+          <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
+          <div class="header-top-bar">
+            <a href="./index.html">
+              <h1
+                class="logo"
+                style="background-image: url('./img/logo_purple.svg')"
+              ></h1>
+              <div class="company-name">(주)인크레더블버즈</div>
+            </a>
+            <div class="desktop-dept-text">
+              <div class="header-top-text">
+                <span style="display: inline-block; margin-bottom: 4px"
+                  >2024-서울강남-0159(대부업)</span
+                ><br />
+                <span>2024-서울강남-0160(대부중개업)</span>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
+        </div>
+      </header>
+      <div id="content" class="main">
+
+        <div class="terms-content">
+          <h2 class="page-title">
+            <a href="javascript:history.back();" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            채무조정 요청서
+          </h2>
+          <div class="notice-list-con">
+            <div class="container">
+              <div class="notice-detail-content">
+                <div class="notice-info"></div>
+
+                <div class="notice-image-container">
+                  <img
+                    src="./img/noticeDebt.png"
+                    alt="채무조정안 안내 이미지"
+                  />
+                </div>
+                <div class="terms-section">
+                  <h3 class="section-title">채무조정 요청 관련 안내사항</h3>
+                  
+                  <h4>▶ 채무조정 요청권이란?</h4>
+                  <p>『개인금융채권의 관리 및 개인금융채무자의 보호에 관한 법률』(이하 "법")에 따라 채무자 본인이 채권금융회사에 직접 채무조정을 요청할 수 있는 권리입니다.</p>
+                  
+                  <h4>▶ 다음의 경우에는 채무조정 요청이 불가합니다 (법 제35조)</h4>
+                  <ul class="terms-list">
+                    <li>채무조정의 합의가 해제된 후 3개월이 지나지 않은 경우</li>
+                    <li>개인금융채권의 존재 여부나 범위에 대하여 소송, 조정, 중재 또는 이에 준하는 절차가 진행 중인 경우</li>
+                    <li>『서민의 금융생활 지원에 관한 법률』 제72조에 따른 신용회복위원회 채무조정 절차가 진행 중인 경우</li>
+                    <li>『서민의 금융생활 지원에 관한 법률』 제74조 제1항에 따른 채무조정 합의가 성립된 후 합의의 효력이 상실되지 않은 경우</li>
+                    <li>『채무자 회생 및 파산에 관한 법률』에 따라 회생·간이회생·개인회생절차 또는 파산·면책절차가 진행 중인 경우</li>
+                    <li>『채무자 회생 및 파산에 관한 법률』에 따라 회생계획을 인가받은 후 회생절차폐지·간이회생절차폐지 또는 개인회생절차폐지의 결정이 확정되지 아니한 경우</li>
+                  </ul>
+                  
+                  <h4>다음의 경우에는 채무조정 요청이 거절될 수 있습니다(법 제36조)</h4>
+                  <ul class="terms-list">
+                    <li>고객이 법 제35조 제3항에 따른 당사의 미비한 서류 수정ㆍ보완 요청에 3회 이상 따르지 아니한 경우</li>
+                    <li>고객의 변제능력에 현저한 변동이 없음에도 불구하고 법 제39조에 따라 채무조정의 절차가 끝난 개인금융채권에 대하여 채무조정을 다시 요청하는 경우</li>
+                    <li>소멸시효가 완성된 채권에 대해 신청하는 경우</li>
+                  </ul>
+                  
+                  <h4>▶ 채무조정 요청 결과</h4>
+                  <p>요청 후 심사하여 10영업일 이내에 통지되며, 채무자가 조정안에 대한 동의 여부를 확정하지 않을 경우 채무조정 절차가 종료될 수 있습니다.</p>
+                  
+                  <h4>▶ 채무조정 요청이 거절될 경우</h4>
+                  <ul class="terms-list">
+                    <li>신용회복위원회 (☎1600-5500) 를 통해 도움을 받을 수 있습니다.</li>
+                    <li>채무조정 합의 후 3개월 이상 미납 시, 합의는 해제될 수 있습니다.</li>
+                    <li>당사 외 다른 금융사 다중채무로 인해 어려움이 있는 경우, 신용회복위원회 상담을 권유드립니다.</li>
+                  </ul>
+                  
+                  <h4>채무조정 요청 시 필요 서류</h4>
+                  <ul class="terms-list">
+                    <li>채무조정요청서</li>
+                    <li>개인(신용)정보 수집⸱이용⸱제공⸱조회 동의서</li>
+                    <li>채무조정안</li>
+                    <li>변제능력 입증자료</li>
+                  </ul>
+                  <p>※ 단, 채무조정안을 작성하기 곤란한 경우에는 그 서류 제출을 하지 않을 수 있습니다.</p>
+                  <p>※ 주소지 및 연락처가 변경될 경우 즉시 인크레더블대부(☎ 02-2135-5574)로 변경 내용을 통보하여 주시기 바랍니다.</p>
+                  <p>기타 문의 : 인크레더블대부 (☎ 02-2135-5574)</p>
+                  
+                  <div class="agreement-text">
+                    <p>■ 본인은 상기 항목의 내용을 사실대로 기재하였고, 채무조정 요청에 따른 안내사항을 숙지하였습니다. 이에 귀사의 규정에 따라 상기와 같이 채무조정을 요청합니다.</p>
+                  </div>
+                </div>
+                
+                <div class="download-btn-container">
+                  <a
+                    href="./download/채무조정요청서_최종.docx"
+                    download="채무조정요청서_최종.docx"
+                    class="download-button"
+                  >
+                    <i class="fas fa-file-word"></i> 채무조정요청서
+                    <i class="fas fa-arrow-down"></i>
+                  </a>
+                </div>
+                <div class="download-btn-container">
+                  <a
+                    href="./download/개인정보수집이용동의서_채무조정용.docx"
+                    download="개인정보수집이용동의서_채무조정용.docx"
+                    class="download-button"
+                  >
+                    <i class="fas fa-file-word"></i> 개인정보 수집이용 및 제공 동의(채무조정용)
+                    <i class="fas fa-arrow-down"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+            </div>
+          </div>
+          <footer id="footer">
+            <div class="f-container">
+              <div class="f-top-con">
+                <a href="#" class="f-logo"></a>
+                <a href="#" class="request-btn">병원입점신청</a>
+              </div>
+    
+              <!-- 회사 정보 -->
+              <div class="company-info">
+                <p style="margin-bottom: 20px">
+                  주식회사 인크레더블대부 | 대표이사 임신영
+                </p>
+                <p>사업자등록번호: 349-87-02942</p>
+                <p>
+                  주식회사 인크레더블대부: 대부업 2024-서울강남-0159 |
+                  <br />대부중개업 2024 - 서울강남 - 0160
+                </p>
+                <p style="margin-bottom: 20px">
+                  대부업등록기관: 강남구청 지역경제과 02-3423-5524
+                </p>
+                <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+                <p>
+                  <a
+                    style="color: #fff"
+                    href="https://inbuzzloan.com/"
+                    target="_blank"
+                    >홈페이지: https://inbuzzloan.com/</a
+                  >
+                </p>
+                <p>TEL: 02-556-6474</p>
+                <p>FAX: 02-508-7752</p>
+                <p>E-MAIL: cs@ctwh.co.kr</p>
+              </div>
+    
+              <!-- 대부업 관련 정보 -->
+              <div class="loan-info-links">
+                <p>
+                  <a href="./loanTerms.html">대부거래표준약관</a> |
+                  <a href="./privacyPolicy.html">개인정보처리(취급)방침</a> |
+                  <a href="./creditInfo.html">신용정보 활용체제</a> | <br /><a
+                    href="./creditCollection.html"
+                    >채권추심업무 처리절차</a
+                  >
+                  | <a href="./illegalCredit.html">불법채권추심 대응요령</a> |
+                  <a href="./debtLimitation.html"
+                    >소멸시효완성채권 추심관련유의사항</a
+                  >
+                </p>
+              </div>
+    
+              <!-- 금리 및 상환안내 -->
+              <div class="loan-info-rates">
+                <p class="title">금리 및 상환안내</p>
+                <p>
+                  대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
+                </p>
+                <p>
+                  부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
+                  지방교육세수료, | 국민주택채권매입비 |<br />
+                  주소변경비용 | 확인서면비용 | 근저당말소비용 등 발생
+                </p>
+                <p>전당포대출 부대비용 : 없음</p>
+                <p>조기상환조건 없음</p>
+                <p>개인정보 관리 책임자 : 대표이사 임신영</p>
+              </div>
+    
+              <!-- 경고 텍스트 -->
+              <div class="warning-text">
+                <p>
+                  * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+                </p>
+                <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+                <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+              </div>
+    
+              <!-- 면책 문구 -->
+              <div class="disclaimer">
+                <p>주식회사 인크레더블버즈는 통신판매의 당사자가 아니므로,</p>
+                <p>
+                  의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+                  않습니다.
+                </p>
+              </div>
+    
+              <!-- 저작권 -->
+              <div class="copyright">
+                <p>©INKREDIBLEBUZZ Co.,Ltd. all rights reserved.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item active">
+        <div class="svg-icon">
+          <img src="./img/home.svg" alt="홈 아이콘" />
+        </div>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/hospital.svg" alt="병원 아이콘" />
+        </div>
+        <span>병원정보</span>
+      </a>
+
+      <a href="./loan.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/loan.svg" alt="대출 아이콘" />
+        </div>
+        <span>대출</span>
+      </a>
+      <a href="" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/bell.svg" alt="알림 아이콘" />
+        </div>
+        <span>공지사항</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+        </div>
+        <span>마이페이지</span>
+      </a>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
