@@ -7,7 +7,7 @@
 }
 
 #footer .f-container {
-  padding: 40px 72px;
+  padding: 40px 82px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -213,7 +213,7 @@
 
 @media screen and (max-width: 990px) {
   #footer .f-container {
-    padding: 30px 40px;
+    padding: 30px 50px;
   }
 
   #footer .f-top-con .f-logo {
@@ -322,6 +322,10 @@
   #footer .f-top-con .f-logo {
     width: 120px;
     height: 30px;
+  }
+
+  #footer .f-container {
+    padding: 30px 24px;
   }
 
   #footer .f-top-con .request-btn {
@@ -486,7 +490,7 @@
 
 @media screen and (max-width: 380px) {
   #footer .f-container {
-    padding: 20px 24px;
+    padding: 20px 16px;
   }
 
   #footer .company-info {

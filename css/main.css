@@ -92,9 +92,9 @@
 .main-beauty-banner-con {
   position: relative;
   overflow: hidden;
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 12px 20px 12px;
+  padding: 12px 0px 12px;
 }
 .main-beauty-banner-con::before {
   content: '';
@@ -621,6 +621,11 @@
   .loan-items-list {
     gap: 16px;
   }
+
+  #header .header-inner {
+    padding: 0 14px;
+  }
+
   .loan-item {
     flex: 0 0 calc(33.33% - 12px);
   }
@@ -632,6 +637,10 @@
 @media screen and (max-width: 768px) {
   .inter-select-con {
     padding: 16px 0 10px;
+  }
+
+  #header .header-inner {
+    padding: 0 14px;
   }
 
   .inter-select-con .tit {
@@ -801,6 +810,10 @@
     font-size: 20px;
     margin-bottom: 20px;
     margin-top: 10px;
+  }
+
+  #header .header-inner {
+    padding: 0 6px;
   }
 
   .best-product-list-con .best-list .best-item {

@@ -23,7 +23,7 @@
   background-size: contain;
 }
 #header .header-inner {
-  padding: 0 42px;
+  padding: 0 54px;
 }
 
 /* 대부업 문구 */
@@ -518,10 +518,6 @@
 @media screen and (max-width: 480px) {
   #header {
     padding: 25px 10px 15px;
-  }
-
-  .header-inner {
-    padding: 10px 8px 0 8px;
   }
 
   #header .logo {
@@ -1036,7 +1032,7 @@
     height: 30px;
   }
   #header .header-inner {
-    padding: 0 14px;
+    padding: 0 6px;
   }
 }
 
@@ -1057,7 +1053,7 @@
   }
 
   #header .header-inner {
-    padding: 0 14px;
+    padding: 0 6px;
   }
 }
 
@@ -1089,7 +1085,7 @@
   }
 
   #header .header-inner {
-    padding: 0 14px;
+    padding: 0 6px;
   }
 }
 
