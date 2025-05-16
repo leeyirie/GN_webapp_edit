@@ -24,12 +24,14 @@
 }
 
 /* 공지사항 목록 컨테이너 */
-.notice-list-con {
-  padding: 0 20px;
-}
 
 .notice-list-items {
   margin-top: 20px;
+}
+
+.notice-list-con {
+  margin: 0 auto;
+  padding: 32px 0px;
 }
 
 /* 공지사항 아이템 스타일 */
@@ -75,12 +77,76 @@
   margin-left: 15px;
 }
 
+/* 공지사항 상세 페이지 스타일 */
+.notice-detail-content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.notice-info {
+  margin-bottom: 25px;
+}
+
+/* 공지사항 이미지 컨테이너 스타일 */
+.notice-image-container {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.notice-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 다운로드 버튼 컨테이너 스타일 */
+.download-btn-container {
+  margin: 30px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* 다운로드 버튼 스타일 */
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(103deg, #f6c 12.08%, #4d3dbf 83.91%), #fff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 280px;
+  height: 45px;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-button i {
+  margin-right: 8px;
+}
+
+.download-button .fa-arrow-down {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
 /* 반응형 스타일 */
 @media (min-width: 768px) {
   .notice-list-con {
-    max-width: 960px;
     margin: 0 auto;
-    padding: 0;
   }
 
   .notice-title {
@@ -93,6 +159,38 @@
 
   .page-header .back-link i {
     font-size: 20px;
+  }
+
+  /* 공지사항 상세 컨테이너 스타일 - 태블릿 이상 */
+  .notice-detail-content {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  .notice-image-container {
+    margin: 30px 0;
+  }
+
+  .notice-image-container img {
+    max-width: 100%;
+  }
+
+  .download-button {
+    width: 320px;
+    height: 50px;
+    font-size: 17px;
+    padding: 14px 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* 공지사항 상세 컨테이너 스타일 - PC */
+  .notice-detail-content {
+    max-width: 100%;
+  }
+
+  .notice-image-container img {
+    max-width: 80%;
   }
 }
 
@@ -117,5 +215,29 @@
   .page-header {
     padding: 15px 0 12px;
     margin-bottom: 15px;
+  }
+
+  /* 공지사항 상세 컨테이너 스타일 - 모바일 */
+  .notice-detail-content {
+    padding: 0 5px;
+  }
+
+  .notice-image-container {
+    margin: 15px 0;
+  }
+
+  .notice-image-container img {
+    max-width: 100%;
+  }
+
+  .download-btn-container {
+    margin: 20px 0;
+  }
+
+  .download-button {
+    width: 240px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }

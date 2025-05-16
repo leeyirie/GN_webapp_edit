@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>공지사항 - 강남오빠</title>
+    <title>채무조정안 - 강남오빠</title>
     <!-- Pretendard 폰트 로드 -->
     <link
       rel="stylesheet"
@@ -41,11 +41,11 @@
 
     <!-- 공통 CSS 파일 -->
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/bottom-menu.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/form.css" />
+
+    <!-- 하단 푸터 대부 약관용 스타일 CSS 파일 -->
+    <link rel="stylesheet" href="./css/loan-terms.css" />
+
+    <!-- 공지사항 목록 페이지 스타일 CSS 파일 -->
     <link rel="stylesheet" href="./css/notice.css" />
 
     <!-- Font Awesome 아이콘 -->
@@ -70,8 +70,9 @@
             <a href="./index.html">
               <h1
                 class="logo"
-                style="background-image: url('./img/gn-logo-white.svg')"
+                style="background-image: url('./img/logo_purple.svg')"
               ></h1>
+              <div class="company-name">(주)인크레더블버즈</div>
             </a>
             <div class="desktop-dept-text">
               <div class="header-top-text">
@@ -81,96 +82,41 @@
                 <span>2024-서울강남-0160(대부중개업)</span>
               </div>
             </div>
-            <div class="mobile-login">
-              <div class="util-box">
-                <div class="auth-buttons">
-                  <a href="./loginSelect.html" class="login-btn"
-                    >로그인/회원가입</a
-                  >
-                </div>
-              </div>
-            </div>
           </div>
           <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
-          <div class="header-bottom-bar">
-            <div class="header-search-wrap">
-              <a href="./search.html" class="search-input-con">
-                <div class="search-label">병원, 시술부위를 검색해보세요.</div>
-                <button class="search-icon" type="button">
-                  <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
-              </a>
-            </div>
-            <div class="desktop-login">
-              <div class="util-box">
-                <div class="auth-buttons">
-                  <a href="./loginSelect.html" class="login-btn"
-                    >로그인/회원가입</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </header>
       <div id="content" class="main">
-        <div class="container">
+        <div class="terms-content">
+          <h2 class="page-title">
+            <a href="javascript:history.back();" class="back-btn">
+              <i class="fas fa-arrow-left"></i>
+            </a>
+            채무 조정안
+          </h2>
+
           <div class="notice-list-con">
-            <div class="page-header">
-              <a href="javascript:history.back();" class="back-link">
-                <i class="fas fa-chevron-left"></i> 공지사항
-              </a>
-            </div>
+            <div class="container">
+              <div class="notice-detail-content">
+                <div class="notice-info"></div>
 
-            <div class="notice-list-items">
-              <div class="notice-item">
-                <a href="./noticeDetail1.html">
-                  <div class="notice-title">
-                    <i class="fas fa-file-alt"></i>
-                    채무조정안
-                  </div>
-                  <div class="notice-date">2025.05.13</div>
-                </a>
-              </div>
+                <div class="notice-image-container">
+                  <img
+                    src="./img/noticeDebt.png"
+                    alt="채무조정안 안내 이미지"
+                  />
+                </div>
 
-              <div class="notice-item">
-                <a href="./noticeDetail2.html">
-                  <div class="notice-title">
-                    <i class="fas fa-file-alt"></i>
-                    채무조정 신청 안내서
-                  </div>
-                  <div class="notice-date">2025.05.13</div>
-                </a>
-              </div>
-
-              <div class="notice-item">
-                <a href="./noticeDetail3.html">
-                  <div class="notice-title">
-                    <i class="fas fa-file-alt"></i>
-                    채무조정 요청서
-                  </div>
-                  <div class="notice-date">2025.05.13</div>
-                </a>
-              </div>
-
-              <div class="notice-item">
-                <a href="./noticeDetail4.html">
-                  <div class="notice-title">
-                    <i class="fas fa-file-alt"></i>
-                    개인 정보 수집 이용 및 제공 동의서(계약체결용)
-                  </div>
-                  <div class="notice-date">2025.05.13</div>
-                </a>
-              </div>
-
-              <div class="notice-item">
-                <a href="./noticeDetail5.html">
-                  <div class="notice-title">
-                    <i class="fas fa-file-alt"></i>
-                    통지 조회하기
-                  </div>
-                  <div class="notice-date">2025.05.13</div>
-                </a>
+                <div class="download-btn-container">
+                  <a
+                    href="./download/채무조정안_최종.docx"
+                    download="채무조정안_최종.docx"
+                    class="download-button"
+                  >
+                    <i class="fas fa-file-word"></i> 채무조정안
+                    <i class="fas fa-arrow-down"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -270,7 +216,7 @@
 
     <!-- 하단 메뉴바 추가 -->
     <div id="bottom-menu">
-      <a href="./index.html" class="menu-item">
+      <a href="./index.html" class="menu-item active">
         <div class="svg-icon">
           <img src="./img/home.svg" alt="홈 아이콘" />
         </div>
@@ -289,7 +235,7 @@
         </div>
         <span>대출</span>
       </a>
-      <a href="./notice.html" class="menu-item active">
+      <a href="" class="menu-item">
         <div class="svg-icon">
           <img src="./img/bell.svg" alt="알림 아이콘" />
         </div>
