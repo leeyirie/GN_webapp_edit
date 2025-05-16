@@ -9,8 +9,7 @@
 #header:before {
   content: '';
   position: absolute;
-  background: linear-gradient(180deg, #ff66cc 0%, #4d3dbf 45%, #4d3dbf 100%) 0%
-    0% no-repeat padding-box;
+  background-color: #fff;
   top: 0;
   left: 0;
   width: 100%;
@@ -29,10 +28,10 @@
 
 /* 로고 밑의 회사명 */
 #header .company-name {
-  font-size: 14px;
-  color: #fff;
+  font-size: 30px;
+  color: #000;
   margin-top: 6px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #header .header-inner {
@@ -42,8 +41,9 @@
 /* 대부업 문구 */
 #header .header-top-text {
   font-size: 30px;
-  font-weight: 400;
-  color: #fff;
+  font-weight: 500;
+  color: #000;
+  text-align: right;
 }
 
 #header .header-top-text span {
@@ -80,25 +80,24 @@
 
 /* === 메인 컨텐츠 영역 === */
 #content.main {
-  padding-top: 80px;
-  padding-bottom: 65px;
+  padding: 40px 58px;
 }
 
-/* Terms content container */
+/* container */
 .terms-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 0px;
   background-color: #fff;
   width: 100%;
 }
 
-/* Page Title Styles */
+/* 약관 타이틀! */
 .page-title {
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #eee;
   color: #222;
   text-align: center;
@@ -130,7 +129,7 @@
 
 /* Section Title Styles */
 .section-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
   color: #333;
@@ -138,9 +137,9 @@
 
 /* Paragraph Styles */
 .terms-section p {
-  margin-bottom: 15px;
+  margin-bottom: 22px;
   color: #444;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /* List Styles */
@@ -152,7 +151,8 @@
 .terms-list li {
   margin-bottom: 10px;
   color: #444;
-  font-size: 15px;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 /* Nested List Styles */

@@ -532,6 +532,52 @@
   font-weight: 700;
 }
 
+/* 인기 대출 섹션 스타일 */
+.loan-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.loan-item {
+  flex: 0 0 calc(33.33% - 16px);
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.loan-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.loan-img {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.loan-img-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.loan-img-content span {
+  color: #999;
+  font-size: 16px;
+}
+
 /* 반응형 - 메인 컨텐츠 */
 @media screen and (max-width: 1199px) {
   .best-product-list-con .best-list .best-item {
@@ -562,6 +608,24 @@
   }
   .main-beauty-banner-con .banner-item img {
     border-radius: 15px;
+  }
+  .loan-items-list {
+    gap: 20px;
+  }
+  .loan-item {
+    flex: 0 0 calc(33.33% - 14px);
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .loan-items-list {
+    gap: 16px;
+  }
+  .loan-item {
+    flex: 0 0 calc(33.33% - 12px);
+  }
+  .loan-img-content span {
+    font-size: 14px;
   }
 }
 
@@ -599,7 +663,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 10px 15px;
+    padding: 10px 24px;
   }
   .main-beauty-banner-con .banner-slide {
     max-width: 100%;
@@ -719,6 +783,13 @@
   .insight-con {
     padding: 10px 0;
   }
+
+  .loan-items-list {
+    gap: 15px;
+  }
+  .loan-item {
+    flex: 0 0 calc(50% - 8px);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -793,7 +864,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 8px 15px;
+    padding: 8px 16px;
   }
 
   .main-beauty-banner-con .banner-item {
@@ -806,6 +877,17 @@
 
   .insight-con {
     padding: 8px 0;
+  }
+
+  .loan-items-list {
+    gap: 12px;
+  }
+  .loan-item {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+  .loan-img-content span {
+    font-size: 13px;
   }
 }
 
@@ -842,7 +924,7 @@
   }
 
   .main-beauty-banner-con {
-    padding: 6px 10px;
+    padding: 6px 16px;
   }
   .main-beauty-banner-con .slick-list {
     padding: 5px 0;
@@ -871,6 +953,16 @@
   /* 고정 배너 스타일 */
   .fixed-banner-con {
     padding: 0 15px 16px;
+  }
+
+  .loan-items-list {
+    gap: 10px;
+  }
+  .loan-item {
+    margin-bottom: 12px;
+  }
+  .loan-img-content span {
+    font-size: 12px;
   }
 }
 
