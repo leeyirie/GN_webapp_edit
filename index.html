@@ -17,19 +17,6 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
     />
-    <style>
-      @supports (font-variation-settings: normal) {
-        * {
-          font-family:
-            'Pretendard Variable',
-            'Pretendard',
-            -apple-system,
-            BlinkMacSystemFont,
-            system-ui,
-            sans-serif;
-        }
-      }
-    </style>
     <!-- jquery 로드 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/slick.js"></script>
@@ -56,75 +43,6 @@
     />
 
     <!-- 인기 대출 섹션 반응형 스타일 -->
-    <style>
-      /* 인기 대출 섹션 반응형 스타일 */
-      @media screen and (max-width: 1200px) {
-        .loan-items-list {
-          gap: 20px;
-        }
-        .loan-item {
-          flex: 0 0 calc(33.33% - 14px) !important;
-        }
-      }
-
-      @media screen and (max-width: 990px) {
-        .loan-items-list {
-          gap: 16px;
-        }
-        .loan-item {
-          flex: 0 0 calc(33.33% - 12px) !important;
-        }
-        .loan-item .loan-img span {
-          font-size: 14px !important;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .insight-con {
-          padding: 10px 0;
-        }
-        .insight-con .container {
-          padding: 0 15px;
-        }
-        .loan-items-list {
-          gap: 15px;
-        }
-        .loan-item {
-          flex: 0 0 calc(50% - 8px) !important;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .insight-con {
-          padding: 8px 0;
-        }
-        .insight-con .container {
-          padding: 0 12px;
-        }
-        .loan-items-list {
-          gap: 12px;
-        }
-        .loan-item {
-          flex: 0 0 100% !important;
-          margin-bottom: 12px;
-        }
-        .loan-item .loan-img span {
-          font-size: 13px !important;
-        }
-      }
-
-      @media screen and (max-width: 380px) {
-        .insight-con .container {
-          padding: 0 10px;
-        }
-        .loan-items-list {
-          gap: 10px;
-        }
-        .loan-item .loan-img span {
-          font-size: 12px !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <div id="wrap">
