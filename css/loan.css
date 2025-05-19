@@ -7,7 +7,6 @@
 .loan-landing {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
 }
 
 /* 히어로 섹션 */
@@ -320,10 +319,6 @@
 
 /* 반응형 미디어 쿼리 */
 @media (max-width: 768px) {
-  .loan-landing {
-    padding: 0 24px;
-  }
-
   .hero-content {
     width: 100%;
   }
@@ -417,10 +412,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-  .loan-landing {
-    padding: 0 40px;
-  }
-
   .product-card {
     height: 200px;
   }
@@ -439,10 +430,6 @@
 }
 
 @media (min-width: 1201px) {
-  .loan-landing {
-    padding: 0 48px;
-  }
-
   .surgery-banners {
     max-width: 1000px;
   }
