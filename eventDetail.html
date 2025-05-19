@@ -758,9 +758,12 @@
           </div>
           <div class="form-check">
             <input type="checkbox" id="agree" name="agree" required />
-            <label for="agree"
-              >개인정보 수집 및 이용에 동의합니다. (필수)</label
-            >
+            <label for="agree">
+              개인정보 수집 및 이용에 동의합니다. (필수)
+              <a href="./privacyPolicy.html" target="_blank" class="terms-link"
+                >약관보기</a
+              >
+            </label>
           </div>
           <p class="privacy-info">
             * 수집된 개인정보는 병원 예약 및 상담 목적으로만 사용됩니다.
@@ -806,27 +809,42 @@
             <label for="loan-message">문의 내용 (선택)</label>
             <textarea id="loan-message" name="loan-message" rows="3"></textarea>
           </div>
-          <div class="form-check">
-            <input type="checkbox" id="loan-agree" name="loan-agree" required />
-            <label for="loan-agree"
-              >개인정보 수집 및 이용에 동의합니다. (필수)</label
-            >
+          <div class="form-check-row">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="loan-agree"
+                name="loan-agree"
+                required
+              />
+              <label for="loan-agree">
+                개인정보 수집 및 이용에 동의합니다. (필수)
+                <a
+                  href="./privacyPolicy.html"
+                  target="_blank"
+                  class="terms-link"
+                  >약관보기</a
+                >
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="loan-credit-check"
+                name="loan-credit-check"
+                required
+              />
+              <label for="loan-credit-check">
+                신용등급 하락 가능성 인지 (필수)
+                <a href="./creditInfo.html" target="_blank" class="terms-link"
+                  >약관보기</a
+                >
+              </label>
+            </div>
           </div>
           <p class="privacy-info">
             * 수집된 개인정보는 대출 상담 목적으로만 사용됩니다.
           </p>
-          <div class="form-check">
-            <input
-              type="checkbox"
-              id="loan-credit-check"
-              name="loan-credit-check"
-              required
-            />
-            <label for="loan-credit-check"
-              >대출 시 신용등급 또는 개인신용평점이 하락할 수 있음을 인지합니다.
-              (필수)</label
-            >
-          </div>
           <button type="submit" class="modal-submit-btn">상담 신청하기</button>
         </form>
       </div>

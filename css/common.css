@@ -281,17 +281,52 @@ body {
 .form-check {
   display: flex;
   margin-bottom: 15px;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .form-check input {
-  margin-top: 3px;
+  margin-top: 0;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .form-check label {
   font-size: 14px;
   color: #555;
+  white-space: normal;
+  flex: 1;
+}
+
+/* 약관 링크 스타일 */
+.terms-link {
+  display: inline-block;
+  margin-left: 8px;
+  color: #4d3dbf;
+  font-size: 13px;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #3f31a0;
+}
+
+/* 체크박스를 가로로 배열하기 위한 스타일 */
+.form-check-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-check-row .form-check {
+  width: auto;
+  margin-bottom: 5px;
 }
 
 .privacy-info {
@@ -402,6 +437,16 @@ body {
   /* 모달 반응형 */
   .modal-content {
     padding: 20px;
+  }
+
+  /* 체크박스를 가로로 배열하기 위한 스타일 */
+  .form-check-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-check-row .form-check {
+    width: 100%;
   }
 }
 
