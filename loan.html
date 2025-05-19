@@ -43,10 +43,15 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/form.css" />
     <link rel="stylesheet" href="./css/bottom-menu.css" />
+
+    <!-- 대출 페이지 스타일 -->
+    <link rel="stylesheet" href="./css/loan.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="./css/loan.css" />
   </head>
   <body>
     <div id="wrap">
@@ -109,10 +114,170 @@
       </header>
 
       <div id="content" class="loan-page">
-        <div class="container">
-          <div class="cm-title-con">
-            <h2 class="tit">대출 상세 페이지(이미지 추가 예정)</h2>
+        <div class="container loan-landing">
+          <section class="loan-hero">
+            <div class="hero-content">
+              <h2>
+                최대 <span class="highlight">4%</span> 우대금리<br />낮은 금리로
+                부담없는 대출 상담 가능
+              </h2>
+              <p>
+                신용정보 조회, 복잡하고 걱정되셨나요?<br />간편신청 조회로
+                빠르게 승인결과를 확인하실 수 있습니다.
+              </p>
+              <p>
+                높은 금리로 부담되셨나요?<br />최대 4%의 우대금리 혜택으로
+                부담없는 상환 비용을 확인해보세요.
+              </p>
+            </div>
+            <div class="hero-image">
+              <img
+                src="./img/loan-hero-face1.png"
+                alt="성형 대출 대표 이미지"
+              />
+            </div>
+          </section>
+
+          <h3 class="loan-section-title">강남오빠 대출 혜택</h3>
+          <section class="loan-benefits">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img src="./img/loan-low-rate-icon.png" alt="낮은 금리" />
+              </div>
+              <span>낮은 금리</span>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img src="./img/loan-premium-icon.png" alt="우대 금리" />
+              </div>
+              <span>우대 금리</span>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <img src="./img/loan-flexible-icon.png" alt="자유로운 상환" />
+              </div>
+              <span>자유로운 상환</span>
+            </div>
+          </section>
+
+          <div class="loan-info-block">
+            <h3>
+              높은 금리 부담은 그만! <br />우대 금리 조건으로 성형 대출 상담
+            </h3>
           </div>
+
+          <section class="loan-products">
+            <div class="product-card">
+              <div class="product-info">
+                <h3>눈 성형</h3>
+                <p class="loan-amount">대출 최대 210만원</p>
+                <p class="loan-desc">
+                  최저 월 28,000원<br />부담 없이 눈 성형 대출 상담을 신청해
+                  보세요.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="./img/loan-eye.png" alt="눈 성형" />
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-info">
+                <h3>코 성형</h3>
+                <p class="loan-amount">대출 최대 350만원</p>
+                <p class="loan-desc">
+                  최저 월 47,000원<br />저금리로 코 성형 대출 상담을 신청해
+                  보세요.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="./img/loan-nose.png" alt="코 성형" />
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-info">
+                <h3>윤곽 성형</h3>
+                <p class="loan-amount">대출 최대 420만원</p>
+                <p class="loan-desc">
+                  최저 월 56,000원<br />부담 없이 윤곽 성형 대출 상담을 신청해
+                  보세요.
+                </p>
+              </div>
+              <div class="product-img">
+                <img src="./img/loan-face.png" alt="윤곽 성형" />
+              </div>
+            </div>
+          </section>
+
+          <div class="loan-info-block">
+            <p>
+              대출기간, 자유롭게 선택 가능! <br />상환 능력에 맞게 1년~5년까지
+              이용률이 생각보다 높습니다.
+            </p>
+            <p>
+              중도상환수수료? 위급수수료? 걱정마세요 <br />만기일 전 반환하는
+              날짜에 중도상환가능수수료 지정되지 않으니요.
+            </p>
+          </div>
+
+          <h3 class="loan-section-title">강남오빠 대출 혜택</h3>
+          <section class="loan-security-features">
+            <div class="security-item">
+              <div class="security-icon">
+                <img src="./img/fast-approval-icon.png" alt="빠른 승인" />
+              </div>
+              <span>빠른 승인</span>
+            </div>
+            <div class="security-item">
+              <div class="security-icon">
+                <img
+                  src="./img/secure-info-icon.png"
+                  alt="안전한 개인정보보호"
+                />
+              </div>
+              <span>안전한 개인정보보호</span>
+            </div>
+            <div class="security-item">
+              <div class="security-icon">
+                <img src="./img/doc-icon.png" alt="필요 서류 최소화" />
+              </div>
+              <span>필요 서류 최소화</span>
+            </div>
+          </section>
+
+          <div class="loan-info-block">
+            <h3>확실하고 안전한 성형 대출, <br />전문가와 바로 상담 가능</h3>
+          </div>
+
+          <div class="product-card featured">
+            <div class="product-info">
+              <h3>윤곽 성형</h3>
+              <p class="loan-amount">대출 최대 420만원</p>
+              <p class="loan-desc">
+                최저 월 56,000원<br />부담 없이 윤곽 성형 대출 상담을 신청해
+                보세요.
+              </p>
+            </div>
+            <div class="product-img">
+              <img src="./img/loan-face.png" alt="윤곽 성형" />
+            </div>
+          </div>
+
+          <div class="loan-info-block">
+            <p>
+              개인 신용이 걱정되셨나요? <br />고객의 신용을 존중하여 보호하며,
+              앞선 여부는 빠르게 진행됩니다.
+            </p>
+            <p>
+              복잡한 상담 없이, 바로 결과 확인! <br />상담 신청 후 빠른 승인,
+              결과 통보하여 간편하게 이용할 수 있습니다.
+            </p>
+          </div>
+
+          <section class="loan-cta">
+            <h4>전문가와 빠른 상담</h4>
+            <p>확실하고 안전한 성형 대출, 지금 바로 상담 신청하세요!</p>
+            <a href="#" class="cta-btn">상담 신청하기</a>
+          </section>
         </div>
       </div>
 
