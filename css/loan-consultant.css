@@ -1,0 +1,321 @@
+/* Loan Consultant Page Styles */
+:root {
+  --primary-color: #5b3cd3;
+  --primary-light: #8264f0;
+  --primary-dark: #4d3dbf;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --border-radius: 12px;
+}
+
+.loan-consultant-page {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Consultant Profile Header */
+.consultant-profile-header {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.consultant-title {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.consultant-title h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.consultant-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.consultant-image {
+  width: 100%;
+  max-width: 280px;
+  margin-top: 10px;
+}
+
+.consultant-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+/* Consultant Introduction */
+.consultant-intro {
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.intro-heading h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.intro-content p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: var(--gray-800);
+}
+
+/* Benefits Cloud Section */
+.benefits-cloud {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.benefits-cloud h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+}
+
+.cloud-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.thought-cloud {
+  background-color: white;
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.thought-cloud:before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  bottom: -10px;
+  left: 30px;
+  transform: rotate(45deg);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.thought-cloud .benefit-item {
+  background-color: var(--gray-200);
+  border-radius: 15px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  text-align: center;
+}
+
+/* Loan Benefits */
+.loan-benefits {
+  padding: 24px 0;
+}
+
+.loan-benefits h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .benefits-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.benefit-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+  background-color: var(--primary-light);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.benefit-icon i {
+  color: white;
+  font-size: 24px;
+}
+
+.benefit-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.loan-cta {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .consultant-profile-header {
+    flex-direction: row;
+    text-align: left;
+    padding: 32px;
+  }
+
+  .consultant-title {
+    width: 60%;
+    padding-bottom: 0;
+  }
+
+  .consultant-image {
+    width: 40%;
+    margin-top: 0;
+  }
+
+  .intro-heading h2 {
+    font-size: 22px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+  }
+}
+
+/* Modal Popup Enhancements */
+.cm-modal-popup {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.cm-modal-header {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.loan-consult-form .form-group label {
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.loan-consult-form input,
+.loan-consult-form select,
+.loan-consult-form textarea {
+  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  padding: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.loan-consult-form input:focus,
+.loan-consult-form select:focus,
+.loan-consult-form textarea:focus {
+  border-color: var(--primary-light);
+  outline: none;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+}
