@@ -60,8 +60,8 @@
           <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
           <div class="mobile-dept-text">
             <div class="header-top-text">
-              <span>2024-서울강남-0159(대부업)</span><br />
-              <span>2024-서울강남-0160(대부중개업)</span>
+              2024-서울강남-0159(대부업)<br />
+              2024-서울강남-0160(대부중개업)
             </div>
           </div>
           <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
@@ -74,7 +74,9 @@
             </a>
             <div class="desktop-dept-text">
               <div class="header-top-text">
-                <span>2024-서울강남-0159(대부업)</span><br />
+                <span style="display: inline-block; margin-bottom: 4px"
+                  >2024-서울강남-0159(대부업)</span
+                ><br />
                 <span>2024-서울강남-0160(대부중개업)</span>
               </div>
             </div>
@@ -403,12 +405,9 @@
           <div class="company-info">
             <p style="margin-bottom: 20px">
               주식회사 인크레더블대부 | 대표이사 임신영
-              <br style="margin-bottom: 10px;" />사업자등록번호: 349-87-02942
+              <br style="margin-bottom: 10px" />사업자등록번호: 349-87-02942
             </p>
-            <p>
-              대부업 2024-서울강남-0159 |
-              대부중개업 2024 - 서울강남 - 0160
-            </p>
+            <p>대부업 2024-서울강남-0159 | 대부중개업 2024 - 서울강남 - 0160</p>
             <p style="margin-bottom: 20px">
               대부업등록기관: 강남구청 지역경제과 02-3423-5524
             </p>
@@ -518,55 +517,5 @@
         <span>마이페이지</span>
       </a>
     </div>
-
-    <style>
-      /* 모바일 반응형에서 검색바 스타일 */
-      @media (max-width: 768px) {
-        .header-search-wrap {
-          padding: 15px 20px;
-          display: flex;
-          justify-content: center;
-        }
-        .search-input-con {
-          margin-left: 0;
-          width: 100%;
-          max-width: 90%;
-        }
-        /* 본문 margin-bottom 제거하고 푸터에 margin-bottom 추가 */
-        #footer {
-          margin-bottom: 60px;
-        }
-      }
-    </style>
-
-    <!-- 모달 스크립트를 인라인 표시로 변경 -->
-    <script>
-      $(document).ready(function () {
-        // 정보수정 버튼 클릭 시 정보수정 섹션 표시하고 컨텐츠 영역 숨기기
-        $('#editProfileBtn').click(function () {
-          $('#profileEditSection').show();
-          $('#mypageContent').hide();
-        });
-
-        // 뒤로가기 버튼 클릭 시 정보수정 섹션 숨기고 컨텐츠 영역 표시
-        $('#backToProfileBtn').click(function () {
-          $('#profileEditSection').hide();
-          $('#mypageContent').show();
-        });
-
-        // 비밀번호 변경 버튼 클릭 시
-        $('.change-btn').click(function () {
-          alert('준비 중인 기능입니다.');
-        });
-
-        // 회원 탈퇴 버튼 클릭 시
-        $('.withdraw-btn').click(function () {
-          if (confirm('정말 탈퇴하시겠습니까? 이 작업은 되돌릴 수 없습니다.')) {
-            alert('탈퇴 처리되었습니다.');
-            window.location.href = 'index.html';
-          }
-        });
-      });
-    </script>
   </body>
 </html>
