@@ -233,14 +233,15 @@
 }
 
 .hospital-location {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+  font-size: 18px;
+  color: hsl(0, 0%, 40.8%);
+  font-weight: 500;
+  margin-bottom: 2px;
 }
 
 .event-title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
   color: #333;
   margin-bottom: 0;
   line-height: 1.4;
@@ -250,13 +251,12 @@
 .price-info {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .price-info .price {
   font-weight: 600;
-  font-size: 18px;
-  color: #333;
+  color: #4d3dbf;
+  font-size: 24px;
 }
 
 .price-info .price-before {
@@ -383,16 +383,8 @@
     flex-direction: column;
   }
 
-  .price-info {
-    margin-top: 12px;
-  }
-
   .rating-common {
     justify-content: flex-end;
-  }
-
-  .hospital-location {
-    font-size: 16px;
   }
 
   .event-title {
@@ -506,11 +498,6 @@
     margin-bottom: 10px;
   }
 
-  .price-info {
-    margin-top: 4px;
-    gap: 2px;
-  }
-
   .price-info .price-before {
     font-size: 10px;
     text-decoration: line-through;
@@ -519,9 +506,9 @@
   }
 
   .price-info .price {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: #4d3dbf;
   }
 
   /* Pagination */
@@ -578,7 +565,6 @@
   }
 
   .price-info {
-    margin-top: 6px;
     margin-bottom: 6px;
     display: flex;
     align-items: center;

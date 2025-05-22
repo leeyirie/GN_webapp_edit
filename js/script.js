@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
   } else if (currentPage.includes('loan')) {
     // Loan page
     document
-      .querySelector('#bottom-menu .menu-item[href="./loan.html"]')
+      .querySelector('#bottom-menu .menu-item[href="./loanMain.html"]')
       .classList.add('active');
   } else if (currentPage.includes('notice')) {
     // Notice page
