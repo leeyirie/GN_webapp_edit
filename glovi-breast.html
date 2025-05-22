@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 상세 - 강남오빠</title>
+    <!-- 폰트 로드 -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- jquery 로드 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/bottom-menu.css" />
+
+    <!-- 병원 이벤트 상세 페이지 CSS -->
+    <link rel="stylesheet" href="./css/detail.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="header-inner">
+          <!-- 모바일에서 맨 위에 표시될 대부업 문구 -->
+          <div class="mobile-dept-text">
+            <div class="header-top-text">
+              주식회사 인크레더블대부<br />
+              2024-서울강남-0159(대부업)<br />
+              2024-서울강남-0160(대부중개업)
+            </div>
+          </div>
+          <!-- 로고와 데스크톱 대부업 문구, 모바일 로그인 버튼이 있는 라인 -->
+          <div class="header-top-bar">
+            <a href="./index.html">
+              <h1
+                class="logo"
+                style="background-image: url('./img/gn-logo-white.svg')"
+              ></h1>
+            </a>
+            <div class="desktop-dept-text">
+              <div class="header-top-text">
+                <span style="display: inline-block; margin-bottom: 4px"
+                  >주식회사 인크레더블대부</span
+                ><br />
+                <span style="display: inline-block; margin-bottom: 4px"
+                  >2024-서울강남-0159(대부업)</span
+                ><br />
+                <span>2024-서울강남-0160(대부중개업)</span>
+              </div>
+            </div>
+            <div class="mobile-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 검색창과 데스크톱 로그인 버튼이 있는 라인 -->
+          <div class="header-bottom-bar">
+            <div class="header-search-wrap">
+              <a href="./search.html" class="search-input-con">
+                <div class="search-label">병원, 시술부위를 검색해보세요.</div>
+                <button class="search-icon" type="button">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </a>
+            </div>
+            <div class="desktop-login">
+              <div class="util-box">
+                <div class="auth-buttons">
+                  <a href="./loginSelect.html" class="login-btn"
+                    >로그인/회원가입</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="content" class="event-detail-page">
+        <div class="container">
+          <div class="page-header">
+            <div class="left-section">
+              <a href="javascript:history.back()" class="back-btn"
+                ><i class="fas fa-arrow-left"></i
+              ></a>
+              <h2 class="page-title">글로비 찰떡가슴성형</h2>
+            </div>
+          </div>
+          <div class="procedure-showcase">
+            <div class="procedure-banner">
+              <img
+                src="./img/glovi-breast-800x400.jpg"
+                alt="이벤트 이미지"
+                onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 800 420\'%3E%3Crect fill=\'%23f0f0f0\' width=\'800\' height=\'420\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'28\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E병원 제공 배너%3C/text%3E%3C/svg%3E';"
+              />
+            </div>
+            <div class="procedure-information">
+              <div class="procedure-content">
+                <div class="procedure-details">
+                  <h2 class="procedure-title">글로비 찰떡 가슴성형</h2>
+                  <div class="hospital-title">글로비 성형외과</div>
+                  <div class="sale-price">
+                    <!-- <span class="discount">49%</span> -->
+                    <span class="price">
+                      <!-- <span class="price-before">1,400,000원</span> -->
+                      2,500,000원</span
+                    >
+                  </div>
+                  <div class="rating-common">
+                    <span class="stars">★</span>
+                    <span class="score">4.8</span>
+                    <span class="score">(150)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="action-buttons">
+                <button class="btn-reserve">예약하기</button>
+                <button class="btn-favorite">♡ 찜하기</button>
+              </div>
+            </div>
+          </div>
+          <div class="event-detail-content">
+            <div class="detail-tabs">
+              <button class="tab-btn active">시술안내</button>
+              <button class="tab-btn">병원정보</button>
+              <button class="tab-btn">리뷰</button>
+            </div>
+
+            <div class="tab-content surgery-info active">
+              <!-- <h3>시술 상세 정보</h3>
+              <div class="surgery-desc">
+                <p>
+                  자연유착 쌍꺼풀 매몰은 실로 눈 안쪽 조직을 고정하여 자연스러운
+                  쌍꺼풀 라인을 만드는 시술입니다. <br />
+                  흉터가 거의 남지 않고 회복 기간이 짧아 인기 있는 시술입니다.
+                </p>
+                <ul class="surgery-features">
+                  <li>자연스러운 라인 형성</li>
+                  <li>흉터 최소화</li>
+                  <li>빠른 회복</li>
+                  <li>개인별 맞춤 디자인</li>
+                </ul>
+              </div>
+              <h3>시술 과정</h3>
+              <div class="surgery-process">
+                <div class="process-item">
+                  <div class="process-num">01</div>
+                  <div class="process-desc">
+                    <h4>상담 및 진단</h4>
+                    <p>
+                      의사와 상담을 통해 눈 형태에 맞는 쌍꺼풀 라인을
+                      디자인합니다.
+                    </p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">02</div>
+                  <div class="process-desc">
+                    <h4>마취</h4>
+                    <p>국소마취를 통해 통증을 최소화합니다.</p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">03</div>
+                  <div class="process-desc">
+                    <h4>시술</h4>
+                    <p>미세한 구멍을 통해 특수 실로 눈 조직을 고정합니다.</p>
+                  </div>
+                </div>
+                <div class="process-item">
+                  <div class="process-num">04</div>
+                  <div class="process-desc">
+                    <h4>회복</h4>
+                    <p>
+                      시술 후 1~2일간 부기가 있으며, 약 1주일 내 일상 복귀가
+                      가능합니다.
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="surgery-detail-img">
+                <img src="./img/glovi-breast-detail.jpg" alt="병원상세" />
+              </div>
+            </div>
+
+            <div class="tab-content hospital-info">
+              <h3>병원 위치</h3>
+              <div class="hospital-detail">
+                <!-- <div class="hospital-image">
+                  <img
+                    src="./img/hospital.jpg"
+                    alt="병원 이미지"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E병원 이미지%3C/text%3E%3C/svg%3E';"
+                  />
+                </div> -->
+                <div class="hospital-address">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <p>서울특별시 강남구 압구정로 123</p>
+                </div>
+
+                <h3>진료 시간</h3>
+                <div>
+                  <ul class="surgery-features">
+                    <li>평일: 10:00 - 19:00</li>
+                    <li>토요일: 10:00 - 16:00</li>
+                    <li>일요일 및 공휴일: 휴진</li>
+                  </ul>
+                </div>
+                <h3>진료 항목</h3>
+                <div class="treatment-items">
+                  <ul>
+                    <li>
+                      <span class="treatment-name">눈성형</span>
+                    </li>
+                    <li>
+                      <span class="treatment-name">코성형</span>
+                    </li>
+                  </ul>
+                </div>
+                <h3>의사 정보</h3>
+                <div class="doctor-info">
+                  <div class="doctor-profile">
+                    <div class="doctor-image">
+                      <img
+                        src="./img/doctor.jpg"
+                        alt="의사 프로필"
+                        onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'200\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E의사 프로필%3C/text%3E%3C/svg%3E';"
+                      />
+                    </div>
+                    <div class="doctor-details">
+                      <div class="doctor-name">
+                        <h4>이름</h4>
+                        <span class="specialist-text">성형외과 전문의</span>
+                      </div>
+                      <div class="doctor-specialties">
+                        <ul>
+                          <li><span class="treatment-name">눈성형</span></li>
+                          <li>
+                            <span class="treatment-name">코성형</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-content reviews">
+              <div class="reviews-header">
+                <h3>리뷰 (10)</h3>
+                <button id="write-review-btn" class="write-review-btn">
+                  리뷰 작성하기
+                </button>
+              </div>
+
+              <!-- 리뷰 작성 폼 -->
+              <div
+                id="review-form-container"
+                class="review-form-container"
+                style="display: none"
+              >
+                <form id="review-form" class="review-form">
+                  <h4>리뷰 작성하기</h4>
+
+                  <div class="form-group">
+                    <label>평점</label>
+                    <div class="rating-input">
+                      <div class="star-rating">
+                        <input
+                          type="radio"
+                          id="star5"
+                          name="rating"
+                          value="5"
+                          checked
+                        />
+                        <label for="star5">★</label>
+                        <input
+                          type="radio"
+                          id="star4"
+                          name="rating"
+                          value="4"
+                        />
+                        <label for="star4">★</label>
+                        <input
+                          type="radio"
+                          id="star3"
+                          name="rating"
+                          value="3"
+                        />
+                        <label for="star3">★</label>
+                        <input
+                          type="radio"
+                          id="star2"
+                          name="rating"
+                          value="2"
+                        />
+                        <label for="star2">★</label>
+                        <input
+                          type="radio"
+                          id="star1"
+                          name="rating"
+                          value="1"
+                        />
+                        <label for="star1">★</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="review-category">평가 항목</label>
+                    <div class="category-rating">
+                      <div class="category-item">
+                        <span>만족도</span>
+                        <select name="satisfaction">
+                          <option value="10">10점</option>
+                          <option value="9">9점</option>
+                          <option value="8">8점</option>
+                          <option value="7">7점</option>
+                          <option value="6">6점</option>
+                          <option value="5">5점</option>
+                        </select>
+                      </div>
+                      <div class="category-item">
+                        <span>친절도</span>
+                        <select name="kindness">
+                          <option value="10">10점</option>
+                          <option value="9">9점</option>
+                          <option value="8">8점</option>
+                          <option value="7">7점</option>
+                          <option value="6">6점</option>
+                          <option value="5">5점</option>
+                        </select>
+                      </div>
+                      <div class="category-item">
+                        <span>시술결과</span>
+                        <select name="result">
+                          <option value="10">10점</option>
+                          <option value="9">9점</option>
+                          <option value="8">8점</option>
+                          <option value="7">7점</option>
+                          <option value="6">6점</option>
+                          <option value="5">5점</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="review-content">리뷰 내용</label>
+                    <textarea
+                      id="review-content"
+                      name="content"
+                      rows="5"
+                      placeholder="시술 경험에 대한 솔직한 리뷰를 작성해주세요."
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>사진 첨부 (선택)</label>
+                    <div class="file-upload">
+                      <input
+                        type="file"
+                        id="review-image"
+                        name="image"
+                        accept="image/*"
+                      />
+                      <label for="review-image" class="file-label"
+                        >사진 선택</label
+                      >
+                      <span class="selected-file-name">선택된 파일 없음</span>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      type="checkbox"
+                      id="review-agree"
+                      name="agree"
+                      required
+                    />
+                    <label for="review-agree"
+                      >작성한 리뷰의 수정 및 삭제에 제한이 있을 수 있음을
+                      인지합니다. (필수)</label
+                    >
+                  </div>
+
+                  <div class="form-actions">
+                    <button
+                      type="button"
+                      id="cancel-review-btn"
+                      class="cancel-btn"
+                    >
+                      취소
+                    </button>
+                    <button type="submit" class="submit-btn">등록하기</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="review-summary">
+                <div class="total-rating">
+                  <div class="rating-score">4.8</div>
+                  <div class="rating-stars">★★★★★</div>
+                </div>
+                <div class="rating-bars">
+                  <div class="rating-bar-item">
+                    <span class="bar-label">만족도</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 95%"></div>
+                    </div>
+                    <span class="bar-value">9.5</span>
+                  </div>
+                  <div class="rating-bar-item">
+                    <span class="bar-label">친절도</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 94%"></div>
+                    </div>
+                    <span class="bar-value">9.4</span>
+                  </div>
+                  <div class="rating-bar-item">
+                    <span class="bar-label">시술결과</span>
+                    <div class="bar-graph">
+                      <div class="bar-fill" style="width: 96%"></div>
+                    </div>
+                    <span class="bar-value">9.6</span>
+                  </div>
+                </div>
+              </div>
+              <div class="review-list">
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">user***</span>
+                      <span class="review-date">2024.05.10</span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★★★★★</span>
+                      <span class="score">4.9</span>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      자연스러운 쌍꺼풀로 원하는 결과를 얻었어요! 의사선생님의
+                      섬세한 상담과 시술에 정말 만족합니다. 회복도 빨랐고 결과도
+                      너무 좋아요.
+                    </p>
+                  </div>
+                  <div class="review-images">
+                    <img
+                      src="./img/review-01.jpg"
+                      alt="리뷰이미지"
+                      onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E리뷰 이미지%3C/text%3E%3C/svg%3E';"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">beauty***</span>
+                      <span class="review-date">2024.05.08</span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★★★★★</span>
+                      <span class="score">4.7</span>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      상담부터 시술까지 정말 꼼꼼하게 설명해주셔서 안심하고 받을
+                      수 있었어요. 원하던 눈매가 되어서 너무 행복합니다!
+                    </p>
+                  </div>
+                  <div class="review-images">
+                    <img
+                      src="./img/review-02.jpg"
+                      alt="리뷰이미지"
+                      onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%25\' height=\'100%25\' viewBox=\'0 0 300 200\'%3E%3Crect fill=\'%23f0f0f0\' width=\'300\' height=\'200\'/%3E%3Ctext fill=\'%23666\' font-family=\'Arial\' font-size=\'18\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E리뷰 이미지%3C/text%3E%3C/svg%3E';"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-item">
+                  <div class="review-header">
+                    <div class="reviewer-info">
+                      <span class="reviewer-id">happy***</span>
+                      <span class="review-date">2024.05.05</span>
+                    </div>
+                    <div class="rating-common">
+                      <span class="stars">★★★★★</span>
+                      <span class="score">4.9</span>
+                    </div>
+                  </div>
+                  <div class="review-content">
+                    <p>
+                      처음에는 걱정이 많았는데, 의사선생님이 친절하게
+                      상담해주시고 내 얼굴형에 맞는 쌍꺼풀을 디자인해주셨어요.
+                      결과가 너무 자연스러워서 주변에서도 호평이에요!
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pagination">
+                <button class="page-btn prev" disabled>
+                  <span class="arrow">〈</span>
+                </button>
+                <div class="page-numbers">
+                  <button class="page-number active">1</button>
+                  <button class="page-number">2</button>
+                  <button class="page-number">3</button>
+                  <button class="page-number">4</button>
+                  <button class="page-number">5</button>
+                  <span class="page-dots">...</span>
+                  <button class="page-number">100</button>
+                </div>
+                <button class="page-btn next">
+                  <span class="arrow">〉</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="f-container">
+          <div class="f-top-con">
+            <a href="#" class="f-logo"></a>
+            <a href="#" class="request-btn">병원입점신청</a>
+          </div>
+
+          <!-- 회사 정보 -->
+          <div class="company-info">
+            <p style="margin-bottom: 20px">
+              주식회사 인크레더블대부 | 대표이사 임신영
+              <br style="margin-bottom: 10px" />사업자등록번호: 349-87-02942
+            </p>
+            <p>대부업 2024-서울강남-0159 | 대부중개업 2024 - 서울강남 - 0160</p>
+            <p style="margin-bottom: 20px">
+              대부업등록기관: 강남구청 지역경제과 02-3423-5524
+            </p>
+            <p>주소: 서울시 강남구 테헤란로 98길 15, 5층 (대치동, 송강빌딩)</p>
+            <p>
+              <a
+                style="color: #fff"
+                href="https://inbuzzloan.com/"
+                target="_blank"
+                >홈페이지: https://inbuzzloan.com/</a
+              >
+            </p>
+            <p>TEL: 02-2135-5574</p>
+            <p>FAX: 02-508-7752</p>
+            <p>E-MAIL: cs@gnoppa.kr</p>
+          </div>
+
+          <!-- 대부업 관련 정보 -->
+          <div class="loan-info-links">
+            <p>
+              <a href="./loanTerms.html">대부거래표준약관</a> |
+              <a href="./privacyPolicy.html">개인정보처리(취급)방침</a> |
+              <a href="./creditInfo.html">신용정보 활용체제</a> | <br /><a
+                href="./creditCollection.html"
+                >채권추심업무 처리절차</a
+              >
+              | <a href="./illegalCredit.html">불법채권추심 대응요령</a> |
+              <a href="./debtLimitation.html"
+                >소멸시효완성채권 추심관련유의사항</a
+              >
+            </p>
+          </div>
+
+          <!-- 금리 및 상환안내 -->
+          <div class="loan-info-rates">
+            <p class="title">금리 및 상환안내</p>
+            <p>
+              대출금리 : 연20%이내, 연체금리는 약정이자율+3% 이내 (연20%이내)
+            </p>
+            <!-- <p>
+              부동산담보대출 부대비용 : 부동산담보대출의 경우 등록면허세,
+              지방교육세수료, | 국민주택채권매입비 |<br />
+              주소변경비용 | 확인서면비용 | 근저당말소비용 등 발생
+            </p>
+            <p>전당포대출 부대비용 : 없음</p>
+            <p>조기상환조건 없음</p>
+            <p>개인정보 관리 책임자 : 대표이사 임신영</p> -->
+          </div>
+
+          <!-- 경고 텍스트 -->
+          <div class="warning-text">
+            <p>
+              * 대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.
+            </p>
+            <p>* 이자외 별도로 중개수수료를 요구하거나 받는 것은 불법이며</p>
+            <p>과도한 빚은 당신에게 불행을 안겨 줄 수 있습니다.</p>
+          </div>
+
+          <!-- 면책 문구 -->
+          <div class="disclaimer">
+            <p>주식회사 인크레더블대부는 통신판매의 당사자가 아니므로,</p>
+            <p>
+              의료기관이 등록한 시/수술 정보 및 거래 등에 대해 책임을 지지
+              않습니다.
+            </p>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="copyright">
+            <p>©IncredibleLender Co.Ltd. all rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 하단 메뉴바 추가 -->
+    <div id="bottom-menu">
+      <a href="./index.html" class="menu-item active">
+        <div class="svg-icon">
+          <img src="./img/home.svg" alt="홈 아이콘" />
+        </div>
+        <span>홈</span>
+      </a>
+      <a href="./hospital.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/hospital.svg" alt="병원 아이콘" />
+        </div>
+        <span>병원정보</span>
+      </a>
+
+      <a href="./loan.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/loan.svg" alt="대출 아이콘" />
+        </div>
+        <span>대출</span>
+      </a>
+      <a href="" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/bell.svg" alt="알림 아이콘" />
+        </div>
+        <span>공지사항</span>
+      </a>
+      <a href="./mypage.html" class="menu-item">
+        <div class="svg-icon">
+          <img src="./img/mypage.svg" alt="마이페이지 아이콘" />
+        </div>
+        <span>마이페이지</span>
+      </a>
+    </div>
+
+    <!-- 예약하기 모달 팝업 -->
+    <div id="reservationModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>시술 예약하기</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">연락처</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="010-0000-0000"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">예약 희망일</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">예약 희망 시간</label>
+            <select id="time" name="time" required>
+              <option value="">선택해주세요</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">상담 요청사항 (선택)</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">
+              개인정보 수집 및 이용에 동의합니다. (필수)
+              <a href="./privacyPolicy.html" target="_blank" class="terms-link"
+                >약관보기</a
+              >
+            </label>
+          </div>
+          <p class="privacy-info">
+            * 수집된 개인정보는 병원 예약 및 상담 목적으로만 사용됩니다.
+          </p>
+          <button type="submit" class="modal-submit-btn">예약하기</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 대출상담 모달 팝업 -->
+    <div id="loanModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>시술 대출 상담 신청</h2>
+        <form id="loanForm">
+          <div class="form-group">
+            <label for="loan-name">이름</label>
+            <input type="text" id="loan-name" name="loan-name" required />
+          </div>
+          <div class="form-group">
+            <label for="loan-phone">연락처</label>
+            <input
+              type="tel"
+              id="loan-phone"
+              name="loan-phone"
+              placeholder="010-0000-0000"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="loan-amount">희망 대출 금액</label>
+            <select id="loan-amount" name="loan-amount" required>
+              <option value="">선택해주세요</option>
+              <option value="500000">50만원</option>
+              <option value="1000000">100만원</option>
+              <option value="2000000">200만원</option>
+              <option value="3000000">300만원</option>
+              <option value="5000000">500만원</option>
+              <option value="10000000">1,000만원 이상</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="loan-message">문의 내용 (선택)</label>
+            <textarea id="loan-message" name="loan-message" rows="3"></textarea>
+          </div>
+          <div class="form-check-row">
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="loan-agree"
+                name="loan-agree"
+                required
+              />
+              <label for="loan-agree">
+                개인정보 수집 및 이용에 동의합니다. (필수)
+                <a
+                  href="./privacyPolicy.html"
+                  target="_blank"
+                  class="terms-link"
+                  >약관보기</a
+                >
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                type="checkbox"
+                id="loan-credit-check"
+                name="loan-credit-check"
+                required
+              />
+              <label for="loan-credit-check">
+                신용등급 하락 가능성 인지 (필수)
+                <a href="./creditInfo.html" target="_blank" class="terms-link"
+                  >약관보기</a
+                >
+              </label>
+            </div>
+          </div>
+          <p class="privacy-info">
+            * 수집된 개인정보는 대출 상담 목적으로만 사용됩니다.
+          </p>
+          <button type="submit" class="modal-submit-btn">상담 신청하기</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/detail.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
+</html>

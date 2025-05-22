@@ -154,9 +154,7 @@
 
 /* Event count */
 .event-count {
-  font-size: 24px;
   font-weight: 600;
-  color: #333;
   margin-bottom: 20px;
 }
 
@@ -209,14 +207,22 @@
   font-size: 18px;
   color: #777;
   font-weight: 500;
-  z-index: 1; /* Show on top of image if present */
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.event-image:empty::after {
   opacity: 0.8; /* Only visible when no image is present */
 }
 
 /* Event information */
 .event-info {
   flex: 1;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -233,16 +239,16 @@
 }
 
 .hospital-location {
-  font-size: 22px;
-  color: hsl(0, 0%, 40.8%);
-  font-weight: 500;
-  margin-bottom: 2px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 4px;
 }
 
 .event-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
-  color: #333;
+  color: #000;
   margin-bottom: 0;
   line-height: 1.4;
 }
