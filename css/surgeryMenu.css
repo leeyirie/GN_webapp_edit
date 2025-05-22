@@ -233,7 +233,7 @@
 }
 
 .hospital-location {
-  font-size: 18px;
+  font-size: 22px;
   color: hsl(0, 0%, 40.8%);
   font-weight: 500;
   margin-bottom: 2px;
@@ -300,7 +300,13 @@
 /* Responsive styles */
 @media screen and (max-width: 1200px) {
   .surgery-detail-page .container {
-    padding: 20px 20px;
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .surgery-detail-page .container {
+    padding: 20px 40px;
   }
 }
 
@@ -413,6 +419,12 @@
     min-width: 28px;
     height: 28px;
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .surgery-detail-page .container {
+    padding: 20px 20px;
   }
 }
 
