@@ -172,7 +172,6 @@
 
 /* 고정 배너 스타일 */
 .fixed-banner-con {
-  padding: 0 20px 30px;
   max-width: 1080px;
   margin: 0 auto;
   overflow: hidden;
