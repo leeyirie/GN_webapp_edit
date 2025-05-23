@@ -22,9 +22,6 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-#header .header-inner {
-  padding: 0 54px;
-}
 
 /* 대부업 문구 */
 #header .header-top-text {
