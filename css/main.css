@@ -213,7 +213,7 @@
 /* 반응형 - 태블릿 */
 @media screen and (max-width: 768px) {
   .fixed-banner-con {
-    padding: 0 20px 24px;
+    padding: 0 24px;
     margin: 0 auto;
   }
 
@@ -232,7 +232,7 @@
 /* 반응형 - 모바일 */
 @media screen and (max-width: 480px) {
   .fixed-banner-con {
-    padding: 0 15px 20px;
+    padding: 0 20px;
     margin: 0 auto;
   }
 
@@ -813,7 +813,7 @@
 
   /* 고정 배너 스타일 */
   .fixed-banner-con {
-    padding: 0 15px 16px;
+    padding: 0 16px;
   }
 
   .loan-items-list {
@@ -1362,7 +1362,7 @@
 
   /* 고정 배너 스타일 */
   .fixed-banner-con {
-    padding: 0 15px 16px;
+    padding: 0 16px;
   }
 
   .loan-items-list {
